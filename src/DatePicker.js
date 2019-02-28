@@ -44,11 +44,11 @@ export class DatePicker extends Component {
                     >
                         {this.state.chosenDate ? this.formatChosenDate(this.state.chosenDate) : !placeholder ? "Select Date" : placeholder}
                     </Text>
-                    <Ionicon onPress={() => this.openIosDatePicker()} name="ios-calendar" style={styles.icon} color={underLineColor} size={20} />
+                    <Ionicon onPress={() => this.openIosDatePicker()} name="ios-calendar" style={styles.icon} color={"#e2e2e2"} size={20} />
                 </View>
                 <Modal
                     supportedOrientations={['portrait', 'landscape']}
-                    animationType={animationType}
+                    animationType={animationType ? animationType : "fade"}
                     transparent={modalTransparent}
                     visible={this.state.modalVisible}
                     onRequestClose={() => { }}
@@ -145,18 +145,17 @@ const styles = StyleSheet.create({
         paddingHorizontal: 5,
     },
     datePickerIos: {
-        backgroundColor: "white",
+        width: "100%",
+        flexDirection: 'row',
         borderRadius: 10,
-        paddingHorizontal: 5,
         marginVertical: 10,
-        flex: 1,
         borderColor: "#e2e2e2",
         borderWidth: 0.9,
-        height: 45,
-        flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        height: 50
+        height: 50,
+        paddingHorizontal: 5,
+        backgroundColor: "white"
     },
     icon: {
         paddingRight: 12
