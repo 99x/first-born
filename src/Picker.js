@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, Platform, Picker, View } from "react-native";
+import { StyleSheet, Platform, Picker, View, Modal, Text } from "react-native";
 import createReactClass from "create-react-class";
 import Ionicon from "react-native-vector-icons/Ionicons";
 
@@ -8,12 +8,20 @@ class PickerAE extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            focused: false
+            focused: false,
+            chosenValue: props.selectedValue ? props.selectedValue : undefined
+        }
+    }
+
+    setValue = (value) => {
+        this.setState({ chosenValue: value });
+        if (this.props.onValueChange) {
+            this.props.onValueChange(value);
         }
     }
 
     render() {
-        const { color, ...otherProps } = this.props;
+        const { color, placeholder, animationType, modalTransparent, selectedValue, ...otherProps } = this.props;
 
         const underLineColor = !color ? "#000" : color;
 
@@ -35,12 +43,37 @@ class PickerAE extends Component {
             )
         }
         return (
-            <View style={styles.pickerIos}>
-                <Picker
-                    ref={c => (this._root = c)}
-                    {...otherProps}>
-                    {otherProps.children}
-                </Picker>
+            <View>
+                <View style={styles.pickerIos}>
+                    <Text
+                        ref={(c) => this._root = c}
+                        style={styles.input}
+                        onPress={() => this.setState({ focused: true })}
+                    >
+                        {this.state.chosenValue ? this.state.chosenValue : !placeholder ? "Select Option" : placeholder}
+                    </Text>
+                    <Ionicon onPress={() => this.setState({ focused: true })} name={this.state.focused ? "ios-arrow-dropup" : "ios-arrow-dropdown"} style={styles.icon} color={"#e2e2e2"} size={24} />
+                </View>
+                <Modal
+                    supportedOrientations={['portrait', 'landscape']}
+                    animationType={animationType ? animationType : "fade"}
+                    transparent={modalTransparent}
+                    visible={this.state.focused}
+                    onRequestClose={() => { }}
+                >
+                    <Text
+                        onPress={() => this.setState({ focused: false })}
+                        style={{ backgroundColor: "#F5FCFF", flex: 1 }}
+                    />
+                    <Picker
+                        ref={c => (this._root = c)}
+                        {...otherProps}
+                        selectedValue={this.state.chosenValue}
+                        onValueChange={this.setValue.bind(this)}
+                    >
+                        {otherProps.children}
+                    </Picker>
+                </Modal>
             </View>
         )
     }
@@ -64,19 +97,25 @@ const styles = StyleSheet.create({
         marginVertical: 10,
     },
     pickerIos: {
-        backgroundColor: "white",
+        width: "100%",
+        flexDirection: 'row',
         borderRadius: 10,
-        paddingHorizontal: 5,
         marginVertical: 10,
-        width: '100%',
         borderColor: "#e2e2e2",
         borderWidth: 0.9,
-        height: 50
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 50,
+        paddingHorizontal: 5,
+        backgroundColor: "white"
     },
     icon: {
         position: "absolute",
         top: 13,
         right: 18
+    },
+    input: {
+        flex: 1
     }
 });
 
