@@ -38,7 +38,7 @@ export class TextArea extends Component {
         return (
             <TextInput
                 ref={(c) => this._root = c}
-                style={[styles.inputIos, { height: Math.max(50, this.state.inputHeight) }]}
+                style={[styles.inputIos, { height: Math.max(50, this.state.inputHeight + 5) }]}
                 underlineColorAndroid={"transparent"}
                 placeholder={placeholder}
                 onChangeText={onChangeText}
@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         borderRadius: 10,
         paddingHorizontal: 5,
+        paddingTop: 10,
         marginVertical: 10,
         width: '100%',
         borderColor: "#e2e2e2",
