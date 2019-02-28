@@ -128,7 +128,7 @@ DatePicker.propTypes = {
     locale: PropTypes.string,
     modalTransparent: PropTypes.bool,
     androidMode: PropTypes.string,
-    animationType:PropTypes.string,
+    animationType: PropTypes.string,
     ...TextInput.propTypes
 }
 
@@ -157,9 +157,14 @@ const styles = StyleSheet.create({
         paddingHorizontal: 5,
         backgroundColor: "white"
     },
-    icon: {
-        paddingRight: 12
-    },
+    icon: Platform.select({
+        android: {
+            paddingRight: 12
+        },
+        ios: {
+            paddingRight: 15
+        }
+    }),
     input: {
         flex: 1
     }
