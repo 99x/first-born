@@ -76,6 +76,10 @@ class PickerAE extends Component {
                     >
                         {otherProps.children}
                     </Picker>
+                    <Text
+                        onPress={() => this.setState({ focused: false })}
+                        style={{ backgroundColor: "#F5FCFF", flex: 1 }}
+                    />
                 </Modal>
             </View>
         )

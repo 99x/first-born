@@ -66,6 +66,10 @@ export class DatePicker extends Component {
                         locale={locale}
                         timeZoneOffsetInMinutes={timeZoneOffsetInMinutes}
                     />
+                    <Text
+                        onPress={() => this.setState({ modalVisible: false })}
+                        style={{ backgroundColor: "#F5FCFF", flex: 1 }}
+                    />
                 </Modal>
             </View>
         )
