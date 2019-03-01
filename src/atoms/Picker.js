@@ -28,14 +28,17 @@ class PickerAE extends Component {
         if (Platform.OS === "android") {
             return (
                 <View
-                    style={this.state.focused ? [styles.pickerAndroid, { borderBottomColor: underLineColor, borderBottomWidth: 2 }] : [styles.pickerAndroid, { borderBottomColor: underLineColor, borderBottomWidth: 1 }]}
+                    style={this.state.focused ? [styles.pickerAndroid, { borderBottomColor: underLineColor, borderBottomWidth: 2 }] : [styles.pickerAndroid, { borderBottomColor: underLineColor, borderBottomWidth: 0.5 }]}
                     onResponderGrant={() => this.setState({ focused: true })}
                     onResponderTerminate={() => this.setState({ focused: false })}
                 >
                     <Picker
                         ref={c => (this._root = c)}
                         mode="dropdown"
-                        {...otherProps}>
+                        {...otherProps}
+                        selectedValue={this.state.chosenValue}
+                        onValueChange={this.setValue.bind(this)}
+                    >
                         {otherProps.children}
                     </Picker>
                     <Ionicon style={styles.icon} size={24} color={underLineColor} name={this.state.focused ? "md-arrow-dropup" : "md-arrow-dropdown"} />
@@ -92,8 +95,6 @@ PickerAE.propTypes = {
 const styles = StyleSheet.create({
     pickerAndroid: {
         width: "100%",
-        borderTopRightRadius: 3,
-        borderTopLeftRadius: 3,
         marginVertical: 10,
     },
     pickerIos: {

@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { TextInput, StyleSheet, Dimensions, Platform, Keyboard } from "react-native";
+import { TextInput, StyleSheet, Platform, Keyboard } from "react-native";
 import PropTypes from "prop-types";
 
-const { width } = Dimensions.get("window");
 
 export class Input extends Component {
 
@@ -22,7 +21,7 @@ export class Input extends Component {
             return (
                 <TextInput
                     ref={(c) => this._root = c}
-                    style={this.state.focused ? [styles.inputAndroid, { borderBottomColor: underLineColor, borderBottomWidth: 2 }] : [styles.inputAndroid, { borderBottomColor: underLineColor, borderBottomWidth: 1 }]}
+                    style={this.state.focused ? [styles.inputAndroid, { borderBottomColor: underLineColor, borderBottomWidth: 2 }] : [styles.inputAndroid, { borderBottomColor: underLineColor, borderBottomWidth: 0.5 }]}
                     underlineColorAndroid={"transparent"}
                     placeholder={placeholder}
                     onChangeText={onChangeText}
@@ -54,8 +53,6 @@ Input.propTypes = {
 const styles = StyleSheet.create({
     inputAndroid: {
         width: "100%",
-        borderTopRightRadius: 3,
-        borderTopLeftRadius: 3,
         marginVertical: 10,
     },
     inputIos: {

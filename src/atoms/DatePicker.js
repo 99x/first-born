@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { TextInput, Text, StyleSheet, View, Modal, Platform, DatePickerIOS, DatePickerAndroid } from "react-native";
 import PropTypes from "prop-types";
-import Ionicon from "react-native-vector-icons/Ionicons";
+import Icon from "react-native-vector-icons/Ionicons";
 
 export class DatePicker extends Component {
 
@@ -22,7 +22,7 @@ export class DatePicker extends Component {
 
         if (Platform.OS === "android") {
             return (
-                <View style={this.state.focused ? [styles.datePickerAndroid, { borderBottomColor: underLineColor, borderBottomWidth: 2 }] : [styles.datePickerAndroid, { borderBottomColor: underLineColor, borderBottomWidth: 1 }]}>
+                <View style={this.state.focused ? [styles.datePickerAndroid, { borderBottomColor: underLineColor, borderBottomWidth: 2 }] : [styles.datePickerAndroid, { borderBottomColor: underLineColor, borderBottomWidth: 0.5 }]}>
                     <Text
                         ref={(c) => this._root = c}
                         style={styles.input}
@@ -30,7 +30,7 @@ export class DatePicker extends Component {
                     >
                         {this.state.chosenDate ? this.formatChosenDate(this.state.chosenDate) : !placeholder ? "Select Date" : placeholder}
                     </Text>
-                    <Ionicon name="md-calendar" onPress={() => this.openAndroidDatePicker()} style={styles.icon} color={underLineColor} size={20} />
+                    <Icon name="md-calendar" onPress={() => this.openAndroidDatePicker()} style={styles.icon} color={underLineColor} size={20} />
                 </View>
             )
         }
@@ -44,7 +44,7 @@ export class DatePicker extends Component {
                     >
                         {this.state.chosenDate ? this.formatChosenDate(this.state.chosenDate) : !placeholder ? "Select Date" : placeholder}
                     </Text>
-                    <Ionicon onPress={() => this.openIosDatePicker()} name="ios-calendar" style={styles.icon} color={"#e2e2e2"} size={20} />
+                    <Icon onPress={() => this.openIosDatePicker()} name="ios-calendar" style={styles.icon} color={"#e2e2e2"} size={20} />
                 </View>
                 <Modal
                     supportedOrientations={['portrait', 'landscape']}
@@ -97,8 +97,8 @@ export class DatePicker extends Component {
             if (action === DatePickerAndroid.dateSetAction) {
                 const selectedDate = new Date(year, month, day);
                 this.setDate(selectedDate);
-                this.setState({ focused: false });
             }
+            this.setState({ focused: false });
         } catch ({ code, message }) {
             console.warn('Cannot open date picker', message);
             this.setState({ focused: false });
@@ -136,8 +136,6 @@ const styles = StyleSheet.create({
     datePickerAndroid: {
         width: "100%",
         flexDirection: 'row',
-        borderTopRightRadius: 3,
-        borderTopLeftRadius: 3,
         marginVertical: 10,
         justifyContent: 'center',
         alignItems: 'center',

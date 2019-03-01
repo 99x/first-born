@@ -21,7 +21,7 @@ export class TextArea extends Component {
             return (
                 <TextInput
                     ref={(c) => this._root = c}
-                    style={this.state.focused ? [styles.inputAndroid, { height: Math.max(50, this.state.inputHeight), borderBottomColor: underLineColor, borderBottomWidth: 2 }] : [styles.inputAndroid, { height: Math.max(50, this.state.inputHeight), borderBottomColor: underLineColor, borderBottomWidth: 1 }]}
+                    style={this.state.focused ? [styles.inputAndroid, { height: Math.max(50, this.state.inputHeight), borderBottomColor: underLineColor, borderBottomWidth: 2 }] : [styles.inputAndroid, { height: Math.max(50, this.state.inputHeight), borderBottomColor: underLineColor, borderBottomWidth: 0.5 }]}
                     underlineColorAndroid={"transparent"}
                     placeholder={placeholder}
                     onChangeText={onChangeText}
@@ -61,8 +61,6 @@ TextArea.propTypes = {
 const styles = StyleSheet.create({
     inputAndroid: {
         width: "100%",
-        borderTopRightRadius: 3,
-        borderTopLeftRadius: 3,
         marginVertical: 10,
     },
     inputIos: {
