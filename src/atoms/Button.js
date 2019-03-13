@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
 import PropTypes from "prop-types";
 import Icon from "react-native-vector-icons/Ionicons";
-import { getFontSize, getButtonPadding, getRoundRadius, getIconSize } from "react-native-atom-elements/src/variables/sizeVariables";
+import { getFontSize, getButtonPadding, getRoundRadius, getIconSize } from "../variables/sizeVariables";
 
 export class Button extends Component {
     render() {
