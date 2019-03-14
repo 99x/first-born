@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { TextInput, Text, StyleSheet, View, Modal, Platform, DatePickerIOS, DatePickerAndroid } from "react-native";
 import PropTypes from "prop-types";
-import Icon from "react-native-vector-icons/Ionicons";
+import { Icon } from "./Icon";
+import { commonColors } from "../utils/color";
 
 export class DatePicker extends Component {
 
@@ -18,7 +19,7 @@ export class DatePicker extends Component {
     render() {
         const { placeholder, color, modalTransparent, animationType, minimumDate, maximumDate, locale, timeZoneOffsetInMinutes } = this.props;
 
-        const underLineColor = !color ? "#000" : color
+        const underLineColor = !color ? commonColors.black : color
 
         if (Platform.OS === "android") {
             return (
@@ -30,7 +31,7 @@ export class DatePicker extends Component {
                     >
                         {this.state.chosenDate ? this.formatChosenDate(this.state.chosenDate) : !placeholder ? "Select Date" : placeholder}
                     </Text>
-                    <Icon name="md-calendar" onPress={() => this.openAndroidDatePicker()} style={styles.icon} color={underLineColor} size={20} />
+                    <Icon name="calendar" onPress={() => this.openAndroidDatePicker()} style={styles.icon} color={underLineColor} size={20} />
                 </View>
             )
         }
@@ -44,7 +45,7 @@ export class DatePicker extends Component {
                     >
                         {this.state.chosenDate ? this.formatChosenDate(this.state.chosenDate) : !placeholder ? "Select Date" : placeholder}
                     </Text>
-                    <Icon onPress={() => this.openIosDatePicker()} name="ios-calendar" style={styles.icon} color={"#e2e2e2"} size={20} />
+                    <Icon onPress={() => this.openIosDatePicker()} name="calendar" style={styles.icon} color={"#e2e2e2"} size={20} />
                 </View>
                 <Modal
                     supportedOrientations={['portrait', 'landscape']}
@@ -65,6 +66,10 @@ export class DatePicker extends Component {
                         mode="date"
                         locale={locale}
                         timeZoneOffsetInMinutes={timeZoneOffsetInMinutes}
+                    />
+                    <Text
+                        onPress={() => this.setState({ modalVisible: false })}
+                        style={{ backgroundColor: "#F5FCFF", flex: 1 }}
                     />
                 </Modal>
             </View>

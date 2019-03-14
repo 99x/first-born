@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { StyleSheet, Platform, Picker, View, Modal, Text } from "react-native";
 import createReactClass from "create-react-class";
 import Ionicon from "react-native-vector-icons/Ionicons";
+import { commonColors } from "../utils/color";
 
 class PickerAE extends Component {
 
@@ -23,7 +24,7 @@ class PickerAE extends Component {
     render() {
         const { color, placeholder, animationType, modalTransparent, selectedValue, ...otherProps } = this.props;
 
-        const underLineColor = !color ? "#000" : color;
+        const underLineColor = !color ? commonColors.black : color;
 
         if (Platform.OS === "android") {
             return (
@@ -76,6 +77,10 @@ class PickerAE extends Component {
                     >
                         {otherProps.children}
                     </Picker>
+                    <Text
+                        onPress={() => this.setState({ focused: false })}
+                        style={{ backgroundColor: "#F5FCFF", flex: 1 }}
+                    />
                 </Modal>
             </View>
         )

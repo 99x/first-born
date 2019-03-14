@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
 import PropTypes from "prop-types";
-import Icon from "react-native-vector-icons/Ionicons";
+import { Icon } from "./Icon";
 import { getFontSize, getButtonPadding, getRoundRadius, getIconSize } from "../variables/sizeVariables";
+import { commonColors } from "../utils/color";
 
 export class Button extends Component {
     render() {
         const { title, color, rounded, outline, block, size, ...otherProps } = this.props;
 
-        const buttonColor = !color ? "#000" : color;
+        const buttonColor = !color ? commonColors.black : color;
 
         const buttonSize = !size ? "default" : size;
 
@@ -59,7 +60,9 @@ Button.propTypes = {
 }
 
 const styles = StyleSheet.create({
-    text: { color: "#FFF" },
+    text: {
+        color: commonColors.white
+    },
     defaultButton: {
         borderRadius: 2,
         margin: 10

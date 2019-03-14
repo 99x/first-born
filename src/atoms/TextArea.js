@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { TextInput, StyleSheet, Keyboard, Platform } from "react-native";
+import { TextInput, StyleSheet, Platform } from "react-native";
 import PropTypes from "prop-types";
+import { commonColors } from "../utils/color";
 
 export class TextArea extends Component {
 
@@ -15,7 +16,7 @@ export class TextArea extends Component {
     render() {
         const { onChangeText, placeholder, color, ...otherProps } = this.props;
 
-        const underLineColor = !color ? "#000" : color
+        const underLineColor = !color ? commonColors.black : color
 
         if (Platform.OS === "android") {
             return (

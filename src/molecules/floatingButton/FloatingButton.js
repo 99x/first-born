@@ -1,13 +1,13 @@
-import React, { Component } from 'react'; // eslint-disable-line
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, Animated, Dimensions, TouchableOpacity, LayoutAnimation, Platform, Keyboard } from 'react-native';
 
-import Icon from "react-native-vector-icons/Ionicons";
-
+import { Icon } from "../../atoms/Icon";
 import FloatingButtonItem from './FloatingButtonItem';
 
 import { isIphoneX } from '../../utils/platform';
 import { getTouchableComponent, getRippleProps } from '../../utils/touchable';
+import { commonColors } from "../../utils/color";
 
 const DEVICE_WIDTH = Dimensions.get('window').width;
 const ACTION_BUTTON_SIZE = 56;
@@ -123,7 +123,7 @@ export class FloatingButton extends Component {
   getIcon = () => {
     const { iconName } = this.props;
 
-    return <Icon name={iconName ? "md-" + iconName : !this.state.active ? "md-add" : "md-close"} size={22} color={"#FFF"} />;
+    return <Icon name={iconName ? iconName : !this.state.active ? "add" : "close"} size={22} color={commonColors.white} />;
   };
 
   handlePressItem = (itemName) => {
@@ -150,11 +150,9 @@ export class FloatingButton extends Component {
 
   animateButton = () => {
     const {
-      overrideWithAction,
-      actions,
-      floatingIcon,
       dismissKeyboardOnPress,
-      onPressMain
+      onPressMain,
+      onPress
     } = this.props;
     const { active } = this.state;
 
@@ -162,8 +160,8 @@ export class FloatingButton extends Component {
       Keyboard.dismiss();
     }
 
-    if (overrideWithAction) {
-      this.handlePressItem(actions[0].name);
+    if (onPress) {
+      onPress();
 
       return;
     }
@@ -200,27 +198,11 @@ export class FloatingButton extends Component {
   renderMainButton() {
     const {
       color,
-      overrideWithAction,
       distanceToEdge
     } = this.props;
     const { active } = this.state;
 
     const position = Platform.OS === "android" ? "right" : "center";
-
-    const animatedVisibleView = {
-      opacity: this.fadeAnimation,
-      transform: [{
-        rotate: this.visibleAnimation.interpolate({
-          inputRange: [0, 1],
-          outputRange: ['0deg', '90deg']
-        })
-      }, {
-        scale: this.visibleAnimation.interpolate({
-          inputRange: [0, 1],
-          outputRange: [1, 0]
-        })
-      }]
-    };
 
     let animatedViewStyle = {
       transform: [{
@@ -230,10 +212,6 @@ export class FloatingButton extends Component {
         })
       }]
     };
-
-    if (overrideWithAction) {
-      animatedViewStyle = {};
-    }
 
     const Touchable = getTouchableComponent();
     const propStyles = {
@@ -272,7 +250,6 @@ export class FloatingButton extends Component {
   renderActions() {
     const {
       actions,
-      overrideWithAction,
       distanceToEdge,
       actionsPaddingTopBottom
     } = this.props;
@@ -282,10 +259,6 @@ export class FloatingButton extends Component {
 
     if (!actions || actions.length === 0) {
       return undefined;
-    }
-
-    if (overrideWithAction) {
-      return null;
     }
 
     const animatedActionsStyle = {
@@ -411,8 +384,6 @@ FloatingButton.propTypes = {
   visible: PropTypes.bool,
   overlayColor: PropTypes.string,
   position: PropTypes.oneOf(['right', 'left', 'center']),
-  overrideWithAction: PropTypes.bool, // replace mainAction with first action from actions
-  floatingIcon: PropTypes.any,
   showBackground: PropTypes.bool,
   openOnMount: PropTypes.bool,
   actionsPaddingTopBottom: PropTypes.number,
@@ -432,9 +403,8 @@ FloatingButton.defaultProps = {
   dismissKeyboardOnPress: false,
   listenKeyboard: false,
   actionsPaddingTopBottom: 8,
-  overrideWithAction: false,
   visible: true,
-  color: '#000',
+  color: commonColors.black,
   overlayColor: 'rgba(68, 68, 68, 0.6)',
   position: 'right',
   distanceToEdge: 30,

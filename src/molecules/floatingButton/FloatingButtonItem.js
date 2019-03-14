@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, Text, View, Animated, Platform } from 'react-native';
-
-import Icon from "react-native-vector-icons/Ionicons";
+import { Icon } from "../../atoms/Icon";
 
 import { getTouchableComponent } from '../../utils/touchable';
+import { commonColors } from "../../utils/color";
 
 class FloatingButtonItem extends Component {
     constructor(props) {
         super(props);
-
         this.animation = new Animated.Value(0);
     }
 
@@ -25,17 +24,7 @@ class FloatingButtonItem extends Component {
     };
 
     renderText() {
-        const {
-            // @deprecated in favor of textElevation
-            text,
-            position,
-            textElevation,
-            textBackground,
-            textColor,
-            textStyle,
-            textProps,
-            textContainerStyle
-        } = this.props;
+        const { text, position, textElevation, textBackground, textColor, textStyle, textProps, textContainerStyle } = this.props;
 
         if (text) {
             return (
@@ -55,13 +44,7 @@ class FloatingButtonItem extends Component {
                     ]}
                 >
                     <Text
-                        style={[
-                            styles.text,
-                            {
-                                color: textColor
-                            },
-                            textStyle
-                        ]}
+                        style={[styles.text, { color: textColor }, textStyle]}
                         {...textProps}
                     >
                         {text}
@@ -78,9 +61,7 @@ class FloatingButtonItem extends Component {
 
         return (
             <View key="button" style={[styles.button, { backgroundColor: color }]}>
-                {
-                    !icon.includes("logo") ? <Icon name={Platform.OS === "android" ? "md-" + icon : "ios-" + icon} size={25} color={"#FFF"} /> : <Icon name={icon} size={22} color={"#FFF"} />
-                }
+                <Icon name={icon} size={25} color={commonColors.white} />
             </View>
         );
     }
@@ -152,7 +133,7 @@ FloatingButtonItem.propTypes = {
 };
 
 FloatingButtonItem.defaultProps = {
-    color: '#000',
+    color: commonColors.black,
     distanceToEdge: 30,
     textElevation: 5,
     textColor: '#444444',
