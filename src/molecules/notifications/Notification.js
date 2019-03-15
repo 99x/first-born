@@ -61,7 +61,6 @@ export class Notification extends Component {
     }
 
     showMessageBarAlert() {
-        // If an alert is already shonw or doesn't have a message, do nothing
         if (this.alertShown || (this.state.message === null)) {
             return;
         }
@@ -75,16 +74,11 @@ export class Notification extends Component {
     }
 
     _showMessageBarAlertComplete() {
-        // If the duration is null, do not hide the
         if (this.state.shouldHideAfterDelay) {
             this.timeoutHide = setTimeout(() => {
                 this.hideMessageBarAlert();
             }, this.state.duration);
         }
-    }
-
-    isMessageBarShown() {
-        return this.alertShown;
     }
 
     hideMessageBarAlert() {
@@ -94,7 +88,6 @@ export class Notification extends Component {
 
         clearTimeout(this.timeoutHide);
 
-        // Animate the alert to hide it to the top of the screen
         Animated.timing(this.animatedValue, {
             toValue: 0,
             duration: this.state.durationToHide
@@ -102,23 +95,12 @@ export class Notification extends Component {
     }
 
     _hideMessageBarAlertComplete() {
-        // The alert is not shown anymore
         this.alertShown = false;
     }
 
-    _apllyAnimationTypeTransformation() {
-        var animationY = this.animatedValue.interpolate({
-            inputRange: [0, 1],
-            outputRange: [-height, 0]
-        });
-        this.animationTypeTransform = [{ translateY: animationY }];
-    }
-
     render() {
-        this._apllyAnimationTypeTransformation();
-
         return (
-            <Animated.View style={[styles.notificationContainer, { transform: this.animationTypeTransform, backgroundColor: this.state.color }]}>
+            <Animated.View style={[styles.notificationContainer, { opacity: this.animatedValue, backgroundColor: this.state.color }]}>
                 {this.renderIcon()}
                 {this.renderMessage()}
             </Animated.View>
