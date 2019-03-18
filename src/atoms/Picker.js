@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { StyleSheet, Platform, Picker, View, Modal, Text } from "react-native";
+import { StyleSheet, Platform, Picker, View, Modal } from "react-native";
 import createReactClass from "create-react-class";
 import Ionicon from "react-native-vector-icons/Ionicons";
 import { commonColors } from "../utils/color";
+import { Text } from "./Text";
 
 class PickerAE extends Component {
 

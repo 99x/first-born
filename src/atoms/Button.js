@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { TouchableOpacity, Text, StyleSheet } from "react-native";
+import { TouchableOpacity, StyleSheet } from "react-native";
 import PropTypes from "prop-types";
 import { Icon } from "./Icon";
-import { getFontSize, getButtonPadding, getRoundRadius, getIconSize } from "../variables/sizeVariables";
+import { getFontSize, getButtonPadding, getRoundRadius, getIconSize } from "../variables/buttonSizeVariables";
 import { commonColors } from "../utils/color";
+import { Text } from "./Text";
 
 export class Button extends Component {
     render() {

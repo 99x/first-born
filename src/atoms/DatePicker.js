@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { TextInput, Text, StyleSheet, View, Modal, Platform, DatePickerIOS, DatePickerAndroid } from "react-native";
+import { TextInput, StyleSheet, View, Modal, Platform, DatePickerIOS, DatePickerAndroid } from "react-native";
 import PropTypes from "prop-types";
 import { Icon } from "./Icon";
 import { commonColors } from "../utils/color";
+import { Text } from "./Text";
 
 export class DatePicker extends Component {
 

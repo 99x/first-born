@@ -1,9 +1,11 @@
 "use strict"
 
-import { AppRegistry, StyleSheet, Text, View, TouchableOpacity, Animated, Dimensions, Image, } from 'react-native';
+import { StyleSheet, View, Animated, Dimensions } from 'react-native';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Icon } from "../../atoms/Icon";
+import { Text } from "../../atoms/Text";
+
 import { commonColors } from "../../utils/color";
 
 const { width, height } = Dimensions.get('window');

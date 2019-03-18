@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, Text, View, Animated, Platform } from 'react-native';
+import { StyleSheet, View, Animated, Platform } from 'react-native';
 import { Icon } from "../../atoms/Icon";
+import { Text } from "../../atoms/Text";
 
 import { getTouchableComponent } from '../../utils/touchable';
 import { commonColors } from "../../utils/color";

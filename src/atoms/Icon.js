@@ -19,7 +19,7 @@ export class Icon extends Component {
 }
 
 Icon.propTypes = {
-    ...Icon.propTypes
+    ...Ionicon.propTypes
 };
 
 Icon.defaultProps = {
