@@ -1,6 +1,7 @@
 import { Platform } from 'react-native';
 import React, { Component } from 'react';
 import Ionicon from "react-native-vector-icons/Ionicons";
+import PropTypes from 'prop-types';
 import { commonColors } from "../utils/color";
 
 export class Icon extends Component {
@@ -13,13 +14,14 @@ export class Icon extends Component {
             )
         }
         return (
-            <Ionicon name={name} size={size} color={color} />
+            <Ionicon name={name} size={size} color={color} {...otherProps} />
         );
     }
 }
 
 Icon.propTypes = {
-    ...Ionicon.propTypes
+    ...Ionicon.propTypes,
+    name: PropTypes.string
 };
 
 Icon.defaultProps = {

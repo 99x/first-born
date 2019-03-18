@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Text } from "react-native";
+import PropTypes from 'prop-types';
 import { commonColors } from "../utils/color";
 import { getFontSize } from "../variables/textSizeVariables";
 

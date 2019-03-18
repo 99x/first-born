@@ -123,7 +123,7 @@ export class FloatingButton extends Component {
   getIcon = () => {
     const { iconName } = this.props;
 
-    return <Icon name={iconName ? iconName : !this.state.active ? "add" : "close"} size={22} color={commonColors.white} />;
+    return <Icon name={iconName ? iconName : !this.state.active ? "add" : "close"} size={30} color={commonColors.white} />;
   };
 
   handlePressItem = (itemName) => {
