@@ -1,6 +1,6 @@
 "use strict"
 
-import { StyleSheet, View, Animated, Dimensions } from 'react-native';
+import { StyleSheet, View, Animated, Dimensions, Image } from 'react-native';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Icon } from "../../atoms/Icon";
@@ -26,6 +26,10 @@ const styles = StyleSheet.create({
     },
     iconStyle: {
         paddingRight: 10
+    },
+    imageStyle: {
+        width: 18,
+        height: 18
     }
 });
 
@@ -54,6 +58,7 @@ export class Notification extends Component {
         return {
             color: props.color || '#007bff',
             icon: props.icon || "alert",
+            image: props.image || undefined,
             message: props.message,
             duration: props.duration || 3000,
             shouldHideAfterDelay: (props.shouldHideAfterDelay == undefined) ? true : props.shouldHideAfterDelay,
@@ -110,7 +115,14 @@ export class Notification extends Component {
     }
 
     renderIcon() {
-        const { icon } = this.state;
+        const { icon, image } = this.state;
+        if (image) {
+            return (
+                <View style={styles.iconStyle}>
+                    <Image source={image} style={styles.imageStyle} />
+                </View>
+            )
+        }
         return (
             <View style={styles.iconStyle}>
                 <Icon name={icon} />
@@ -130,6 +142,17 @@ export class Notification extends Component {
 }
 
 Notification.propTypes = {
+    message: PropTypes.string,
     icon: PropTypes.string,
-    color: PropTypes.string
+    color: PropTypes.string,
+    image: PropTypes.object,
+    duration: PropTypes.number,
+    shouldHideAfterDelay: PropTypes.bool,
+    durationToShow: PropTypes.number,
+    durationToHide: PropTypes.number
+}
+
+Notification.defaultProps = {
+    color: commonColors.white,
+    image: undefined
 }

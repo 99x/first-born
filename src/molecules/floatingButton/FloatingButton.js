@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, Animated, Dimensions, TouchableOpacity, LayoutAnimation, Platform, Keyboard } from 'react-native';
+import { StyleSheet, Animated, Dimensions, TouchableOpacity, LayoutAnimation, Platform, Keyboard, Image } from 'react-native';
 
 import { Icon } from "../../atoms/Icon";
 import FloatingButtonItem from './FloatingButtonItem';
@@ -121,8 +121,11 @@ export class FloatingButton extends Component {
   };
 
   getIcon = () => {
-    const { iconName } = this.props;
+    const { iconName, image } = this.props;
 
+    if (image) {
+      return <Image source={image} style={styles.imageStyle} resizeMode={"contain"}/>;
+    }
     return <Icon name={iconName ? iconName : !this.state.active ? "add" : "close"} size={30} color={commonColors.white} />;
   };
 
@@ -376,7 +379,8 @@ FloatingButton.propTypes = {
     text: PropTypes.string,
     textBackground: PropTypes.string,
     textColor: PropTypes.string,
-    component: PropTypes.func
+    component: PropTypes.func,
+    image: PropTypes.any
   })),
   color: PropTypes.string,
   distanceToEdge: PropTypes.number,
@@ -396,7 +400,8 @@ FloatingButton.propTypes = {
   onClose: PropTypes.func,
   onOpen: PropTypes.func,
   onPressBackdrop: PropTypes.func,
-  onStateChange: PropTypes.func
+  onStateChange: PropTypes.func,
+  image: PropTypes.any
 };
 
 FloatingButton.defaultProps = {
@@ -412,7 +417,8 @@ FloatingButton.defaultProps = {
   showBackground: true,
   iconHeight: 15,
   iconWidth: 15,
-  mainVerticalDistance: 0
+  mainVerticalDistance: 0,
+  image: undefined
 };
 
 const styles = StyleSheet.create({
@@ -488,5 +494,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  imageStyle: {
+    width: 30,
+    height: 30
   }
 });

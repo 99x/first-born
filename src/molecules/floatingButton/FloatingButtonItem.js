@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, View, Animated, Platform } from 'react-native';
+import { StyleSheet, View, Animated, Image } from 'react-native';
 import { Icon } from "../../atoms/Icon";
 import { Text } from "../../atoms/Text";
 
@@ -58,7 +58,15 @@ class FloatingButtonItem extends Component {
     }
 
     renderButton() {
-        const { icon, color } = this.props;
+        const { icon, color, image } = this.props;
+
+        if (image) {
+            return (
+                <View key="button" style={[styles.button, { backgroundColor: color }]}>
+                    <Image source={image} style={styles.imageStyle} />
+                </View>
+            );
+        }
 
         return (
             <View key="button" style={[styles.button, { backgroundColor: color }]}>
@@ -139,7 +147,8 @@ FloatingButtonItem.defaultProps = {
     textElevation: 5,
     textColor: '#444444',
     textBackground: '#ffffff',
-    margin: 8
+    margin: 8,
+    image: undefined
 };
 
 const styles = StyleSheet.create({
@@ -201,11 +210,9 @@ const styles = StyleSheet.create({
         height: 40,
         padding: 5
     },
-    icon: {
-        width: 30,
-        height: 30,
-        alignItems: 'center',
-        justifyContent: 'center',
+    imageStyle: {
+        width: 25,
+        height: 25
     }
 });
 
