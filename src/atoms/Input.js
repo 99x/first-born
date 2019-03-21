@@ -14,33 +14,33 @@ export class Input extends Component {
         }
     }
 
-    onChangeText = (text) => {
+    handleTextChange = (text) => {
         const { isValid, onChangeText } = this.props;
         onChangeText(text);
         if (isValid) {
-            this.setState({ error: isValid(text) });
+            this.setState({ error: !isValid(text) });
         }
     }
 
     render() {
-        const { onChangeText, placeholder, color, ...otherProps } = this.props;
+        const { placeholder, color, ...otherProps } = this.props;
 
         const underLineColor = !color ? commonColors.black : color
 
         if (Platform.OS === "android") {
             return (
-                <View style={this.state.focused ? [styles.input, { borderColor: underLineColor, borderWidth: 2 }] : this.state.error ? [styles.input, { borderColor: "#e74c3c", borderWidth: 2 }] : styles.input}>
+                <View style={this.state.error ? [styles.input, { borderColor: "#e74c3c", borderWidth: 2 }] : this.state.focused ? [styles.input, { borderColor: underLineColor, borderWidth: 2 }] : styles.input}>
                     <TextInput
                         ref={(c) => this._root = c}
                         style={{ width: "100%" }}
                         underlineColorAndroid={"transparent"}
                         placeholder={placeholder}
                         placeholderTextColor={this.state.error ? '#e74c3c' : 'rgba(33, 33, 33, 0.5)'}
-                        onChangeText={this.onChangeText}
                         onFocus={() => this.setState({ focused: true })}
                         onBlur={() => this.setState({ focused: false })}
                         onSubmitEditing={() => { this.setState({ focused: true }); Keyboard.dismiss() }}
                         {...otherProps}
+                        onChangeText={this.handleTextChange}
                     />
                 </View>
             )
@@ -60,6 +60,7 @@ export class Input extends Component {
 
 Input.propTypes = {
     color: PropTypes.string,
+    isValid: PropTypes.func,
     ...TextInput.propTypes
 }
 
