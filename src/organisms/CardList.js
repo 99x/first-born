@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { FlatList, StyleSheet } from "react-native";
-import PropTypes from "prop-types";
-import { Card } from "react-native-atom-elements/src/molecules/cards/Card";
+import { FlatList, Dimensions, View } from "react-native";
+import { Card } from "../molecules/cards/Card";
+
+const { width } = Dimensions.get("window");
 
 export class CardList extends Component {
 
@@ -12,12 +13,19 @@ export class CardList extends Component {
             <FlatList
                 style={{ marginTop: 5 }}
                 keyExtractor={this.keyExtractor}
-                renderItem={({ item }) => { return (<Card image={item.image} title={item.title} description={item.description} backgroundColor={backgroundColor} />) }}
+                renderItem={({ item }) => {
+                    return (
+                        <View style={{ marginRight: 10 }}>
+                            <Card image={item.image} title={item.title} description={item.description} backgroundColor={backgroundColor} style={{ width: width - 40 }} />
+                        </View>
+                    )
+                }}
+                horizontal
                 {...otherProps} />
         )
     }
 
-    keyExtractor = (item) => (item).toString();
+    keyExtractor = () => (Math.floor(Math.random() * 1000000) + 1).toString();
 }
 
 CardList.propTypes = {

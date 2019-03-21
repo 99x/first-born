@@ -10,11 +10,15 @@ const { width } = Dimensions.get("window");
 export class Card extends Component {
 
     render() {
-        const { title, description, image, onPress, block, backgroundColor, ...otherProps } = this.props;
+        const { title, description, image, onPress, block, backgroundColor, style, ...otherProps } = this.props;
 
         const cardBackColor = backgroundColor ? backgroundColor : commonColors.white;
 
-        const cardStyle = block ? [styles.containerBlock, { backgroundColor: cardBackColor }] : [styles.container, , { backgroundColor: cardBackColor }];
+        let cardStyle = block ? [styles.containerBlock, { backgroundColor: cardBackColor }] : [styles.container, , { backgroundColor: cardBackColor }];
+
+        if (style) {
+            cardStyle.push(style);
+        }
 
         return (
             <TouchableOpacity style={cardStyle} disabled={!onPress} onPress={onPress} {...otherProps}>
