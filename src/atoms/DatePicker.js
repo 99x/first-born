@@ -24,16 +24,16 @@ export class DatePicker extends Component {
 
         if (Platform.OS === "android") {
             return (
-                <View style={this.state.focused ? [styles.datePickerAndroid, { borderBottomColor: underLineColor, borderBottomWidth: 2 }] : [styles.datePickerAndroid, { borderBottomColor: underLineColor, borderBottomWidth: 0.5 }]}>
+                <View style={this.state.focused ? [styles.datePicker, { borderColor: underLineColor, borderWidth: 2 }] : styles.datePicker}>
                     <Text
                         ref={(c) => this._root = c}
-                        style={styles.input}
+                        style={!this.state.chosenDate ? [styles.input, { color: "rgba(33, 33, 33, 0.5)" }] : [styles.input, { color: "black" }]}
                         onPress={() => this.openAndroidDatePicker()}
                     >
                         {this.state.chosenDate ? this.formatChosenDate(this.state.chosenDate) : !placeholder ? "Select Date" : placeholder}
                     </Text>
-                    <Icon name="calendar" onPress={() => this.openAndroidDatePicker()} style={styles.icon} color={underLineColor} size={20} />
-                </View>
+                    <Icon name="calendar" onPress={() => this.openAndroidDatePicker()} style={styles.icon} color={this.state.focused ? underLineColor : "rgba(33, 33, 33, 0.5)"} size={20} />
+                </View >
             )
         }
         return (
@@ -46,7 +46,7 @@ export class DatePicker extends Component {
                     >
                         {this.state.chosenDate ? this.formatChosenDate(this.state.chosenDate) : !placeholder ? "Select Date" : placeholder}
                     </Text>
-                    <Icon onPress={() => this.openIosDatePicker()} name="calendar" style={styles.icon} color={"#e2e2e2"} size={20} />
+                    <Icon onPress={() => this.openIosDatePicker()} name="calendar" style={styles.icon} color={"rgba(33, 33, 33, 0.5)"} size={20} />
                 </View>
                 <Modal
                     supportedOrientations={['portrait', 'landscape']}
@@ -139,25 +139,28 @@ DatePicker.propTypes = {
 }
 
 const styles = StyleSheet.create({
-    datePickerAndroid: {
+    datePicker: {
         width: "100%",
         flexDirection: 'row',
         marginVertical: 10,
         justifyContent: 'center',
         alignItems: 'center',
-        height: 50,
-        paddingHorizontal: 5,
+        height: 45,
+        paddingHorizontal: 10,
+        borderRadius: 10,
+        borderColor: "rgba(33, 33, 33, 0.5)",
+        borderWidth: 0.9,
     },
     datePickerIos: {
         width: "100%",
         flexDirection: 'row',
         borderRadius: 10,
         marginVertical: 10,
-        borderColor: "#e2e2e2",
+        borderColor: "rgba(33, 33, 33, 0.5)",
         borderWidth: 0.9,
         justifyContent: 'center',
         alignItems: 'center',
-        height: 50,
+        height: 45,
         paddingHorizontal: 5,
         backgroundColor: "white"
     },
@@ -170,6 +173,6 @@ const styles = StyleSheet.create({
         }
     }),
     input: {
-        flex: 1
+        flex: 1,
     }
 })

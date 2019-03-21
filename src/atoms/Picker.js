@@ -23,27 +23,24 @@ class PickerAE extends Component {
     }
 
     render() {
-        const { color, placeholder, animationType, modalTransparent, selectedValue, ...otherProps } = this.props;
+        const { color, placeholder, animationType, modalTransparent, selectedValue, children, ...otherProps } = this.props;
 
         const underLineColor = !color ? commonColors.black : color;
 
         if (Platform.OS === "android") {
             return (
                 <View
-                    style={this.state.focused ? [styles.pickerAndroid, { borderBottomColor: underLineColor, borderBottomWidth: 2 }] : [styles.pickerAndroid, { borderBottomColor: underLineColor, borderBottomWidth: 0.5 }]}
-                    onResponderGrant={() => this.setState({ focused: true })}
-                    onResponderTerminate={() => this.setState({ focused: false })}
-                >
+                    style={this.state.focused ? [styles.picker, { borderColor: underLineColor, borderWidth: 2 }] : styles.picker}                >
                     <Picker
+                        style={{ height: 45 }}
                         ref={c => (this._root = c)}
                         mode="dropdown"
                         {...otherProps}
                         selectedValue={this.state.chosenValue}
                         onValueChange={this.setValue.bind(this)}
                     >
-                        {otherProps.children}
+                        {children}
                     </Picker>
-                    <Ionicon style={styles.icon} size={24} color={underLineColor} name={this.state.focused ? "md-arrow-dropup" : "md-arrow-dropdown"} />
                 </View>
             )
         }
@@ -57,7 +54,7 @@ class PickerAE extends Component {
                     >
                         {this.state.chosenValue ? this.state.chosenValue : !placeholder ? "Select Option" : placeholder}
                     </Text>
-                    <Ionicon onPress={() => this.setState({ focused: true })} name={this.state.focused ? "ios-arrow-dropup" : "ios-arrow-dropdown"} style={styles.icon} color={"#e2e2e2"} size={24} />
+                    <Ionicon onPress={() => this.setState({ focused: true })} name={this.state.focused ? "ios-arrow-dropup" : "ios-arrow-dropdown"} style={styles.icon} color={"rgba(33, 33, 33, 0.5)"} size={24} />
                 </View>
                 <Modal
                     supportedOrientations={['portrait', 'landscape']}
@@ -99,20 +96,24 @@ PickerAE.propTypes = {
 }
 
 const styles = StyleSheet.create({
-    pickerAndroid: {
+    picker: {
         width: "100%",
         marginVertical: 10,
+        borderRadius: 10,
+        paddingHorizontal: 5,
+        borderColor: "rgba(33, 33, 33, 0.5)",
+        borderWidth: 0.9
     },
     pickerIos: {
         width: "100%",
         flexDirection: 'row',
         borderRadius: 10,
         marginVertical: 10,
-        borderColor: "#e2e2e2",
+        borderColor: "rgba(33, 33, 33, 0.5)",
         borderWidth: 0.9,
         justifyContent: 'center',
         alignItems: 'center',
-        height: 50,
+        height: 45,
         paddingHorizontal: 5,
         backgroundColor: "white"
     },

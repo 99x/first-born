@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { TouchableOpacity, StyleSheet } from "react-native";
+import { TouchableOpacity, StyleSheet, Platform } from "react-native";
 import PropTypes from "prop-types";
 import { Icon } from "./Icon";
 import { getFontSize, getButtonPadding, getRoundRadius, getIconSize } from "../variables/buttonSizeVariables";
@@ -65,14 +65,36 @@ const styles = StyleSheet.create({
         color: commonColors.white
     },
     defaultButton: {
-        borderRadius: 2,
-        margin: 10
+        borderRadius: 5,
+        margin: 10,
+        ...Platform.select({
+            android: {
+                elevation: 5,
+            },
+            ios: {
+                shadowColor: 'rgba(0,0,0, .4)',
+                shadowOffset: { height: 1, width: 1 },
+                shadowOpacity: 1,
+                shadowRadius: 1,
+            }
+        })
     },
     blockButton: {
         width: "100%",
-        borderRadius: 2,
+        borderRadius: 5,
         margin: 10,
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        ...Platform.select({
+            android: {
+                elevation: 5,
+            },
+            ios: {
+                shadowColor: 'rgba(0,0,0, .4)',
+                shadowOffset: { height: 1, width: 1 },
+                shadowOpacity: 1,
+                shadowRadius: 1,
+            }
+        })
     }
 })
