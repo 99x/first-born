@@ -67,17 +67,11 @@ const styles = StyleSheet.create({
     defaultButton: {
         borderRadius: 5,
         margin: 10,
-        ...Platform.select({
-            android: {
-                elevation: 5,
-            },
-            ios: {
-                shadowColor: 'rgba(0,0,0, .4)',
-                shadowOffset: { height: 1, width: 1 },
-                shadowOpacity: 1,
-                shadowRadius: 1,
-            }
-        })
+        shadowColor: "#000",
+        shadowOffset: { width: 3, height: 3 },
+        shadowOpacity: 0.3,
+        shadowRadius: 3,
+        elevation: 3,
     },
     blockButton: {
         width: "100%",
@@ -85,16 +79,10 @@ const styles = StyleSheet.create({
         margin: 10,
         justifyContent: "center",
         alignItems: "center",
-        ...Platform.select({
-            android: {
-                elevation: 5,
-            },
-            ios: {
-                shadowColor: 'rgba(0,0,0, .4)',
-                shadowOffset: { height: 1, width: 1 },
-                shadowOpacity: 1,
-                shadowRadius: 1,
-            }
-        })
+        shadowColor: "#000",
+        shadowOffset: { width: 3, height: 3 },
+        shadowOpacity: 0.3,
+        shadowRadius: 3,
+        elevation: 3,
     }
 })
