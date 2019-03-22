@@ -9,13 +9,9 @@ class TextAE extends Component {
     render() {
         const { color, size, bold, children, ...otherProps } = this.props;
 
-        const textColor = !color ? commonColors.black : color;
-
-        const textSize = !size ? "p" : size;
-
         const textBold = !bold ? "normal" : "bold";
 
-        const textStyle = { color: textColor, fontSize: getFontSize(textSize), fontWeight: textBold };
+        const textStyle = { color: color, fontSize: getFontSize(size), fontWeight: textBold };
 
         return (
             <Text
