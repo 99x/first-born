@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { FlatList, Dimensions, View } from "react-native";
+import { FlatList, Dimensions, View, Platform } from "react-native";
 import { Card } from "../molecules/cards/Card";
 
 const { width } = Dimensions.get("window");
@@ -7,7 +7,7 @@ const { width } = Dimensions.get("window");
 export class CardList extends Component {
 
     render() {
-        const { backgroundColor, horizontal, ...otherProps } = this.props;
+        const { backgroundColor, horizontal, margin, ...otherProps } = this.props;
 
         return (
             <FlatList
@@ -15,7 +15,7 @@ export class CardList extends Component {
                 keyExtractor={this.keyExtractor}
                 renderItem={({ item }) => {
                     return (
-                        <View style={{ marginRight: 10 }}>
+                        <View style={{ marginRight: margin }}>
                             <Card image={item.image} title={item.title} description={item.description} backgroundColor={backgroundColor} style={{ width: width - 40 }} />
                         </View>
                     )
@@ -30,4 +30,8 @@ export class CardList extends Component {
 
 CardList.propTypes = {
     ...FlatList.propTypes
+}
+
+CardList.defaultProps = {
+    margin: Platform.OS === "ios" ? 15 : 10
 }
