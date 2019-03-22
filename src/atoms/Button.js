@@ -8,14 +8,12 @@ import { Text } from "./Text";
 
 export class Button extends Component {
     render() {
-        const { title, color, rounded, outline, block, size, ...otherProps } = this.props;
+        const { title, color, rounded, outline, block, size, secondary, ...otherProps } = this.props;
 
-        const buttonColor = !color ? commonColors.black : color;
-
-        const buttonSize = !size ? "default" : size;
+        const buttonColor = secondary ? commonColors.secondary : color;
 
         let buttonStyle = [styles.defaultButton];
-        let iconSize = getIconSize(buttonSize);
+        let iconSize = getIconSize(size);
         let textStyle;
         let iconColor;
 
@@ -24,17 +22,17 @@ export class Button extends Component {
         }
 
         if (rounded) {
-            buttonStyle.push({ paddingHorizontal: getButtonPadding(buttonSize) + (getButtonPadding(buttonSize) / 3), borderRadius: getRoundRadius(buttonSize) });
+            buttonStyle.push({ paddingHorizontal: getButtonPadding(size) + (getButtonPadding(size) / 3), borderRadius: getRoundRadius(size) });
         }
 
         if (outline) {
-            textStyle = { color: buttonColor, fontSize: getFontSize(buttonSize) };
-            buttonStyle.push({ borderColor: buttonColor, borderWidth: 1, padding: getButtonPadding(buttonSize) });
+            textStyle = { color: buttonColor, fontSize: getFontSize(size) };
+            buttonStyle.push({ borderColor: buttonColor, borderWidth: 1, padding: getButtonPadding(size) });
             iconColor = buttonColor;
         } else {
-            textStyle = { color: "white", fontSize: getFontSize(buttonSize) };
-            buttonStyle.push({ backgroundColor: buttonColor, padding: getButtonPadding(buttonSize) });
-            iconColor = "white";
+            textStyle = { color: commonColors.white, fontSize: getFontSize(size) };
+            buttonStyle.push({ backgroundColor: buttonColor, padding: getButtonPadding(size) });
+            iconColor = commonColors.white;
         }
 
         const children = React.Children.map(this.props.children, child => child && child.type === Text ?
@@ -60,12 +58,24 @@ Button.propTypes = {
     ...TouchableOpacity.propTypes
 }
 
+Button.defaultProps = {
+    color: commonColors.primary,
+    size: "default"
+}
+
 const styles = StyleSheet.create({
     text: {
         color: commonColors.white
     },
     defaultButton: {
-        borderRadius: 5,
+        ...Platform.select({
+            android: {
+                borderRadius: 5,
+            },
+            ios: {
+                borderRadius: 10,
+            }
+        }),
         margin: 10,
         shadowColor: "#000",
         shadowOffset: { width: 3, height: 3 },
@@ -75,14 +85,7 @@ const styles = StyleSheet.create({
     },
     blockButton: {
         width: "100%",
-        borderRadius: 5,
-        margin: 10,
         justifyContent: "center",
         alignItems: "center",
-        shadowColor: "#000",
-        shadowOffset: { width: 3, height: 3 },
-        shadowOpacity: 0.3,
-        shadowRadius: 3,
-        elevation: 3,
     }
 })
