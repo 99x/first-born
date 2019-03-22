@@ -25,17 +25,15 @@ export class Input extends Component {
     render() {
         const { placeholder, color, ...otherProps } = this.props;
 
-        const underLineColor = !color ? commonColors.black : color
-
-        if (Platform.OS === "android") {
+        if (Platform.OS !== "android") {
             return (
-                <View style={this.state.error ? [styles.input, { borderColor: "#e74c3c", borderWidth: 2 }] : this.state.focused ? [styles.input, { borderColor: underLineColor, borderWidth: 2 }] : styles.input}>
+                <View style={this.state.error ? [styles.inputAndroid, { borderColor: commonColors.error, borderWidth: 2 }] : this.state.focused ? [styles.inputAndroid, { borderColor: color, borderWidth: 2 }] : styles.inputAndroid}>
                     <TextInput
                         ref={(c) => this._root = c}
                         style={{ width: "100%" }}
                         underlineColorAndroid={"transparent"}
                         placeholder={placeholder}
-                        placeholderTextColor={this.state.error ? '#e74c3c' : 'rgba(33, 33, 33, 0.5)'}
+                        placeholderTextColor={this.state.error ? commonColors.error : commonColors.inputGrey}
                         onFocus={() => this.setState({ focused: true })}
                         onBlur={() => this.setState({ focused: false })}
                         onSubmitEditing={() => { this.setState({ focused: true }); Keyboard.dismiss() }}
@@ -46,14 +44,20 @@ export class Input extends Component {
             )
         }
         return (
-            <TextInput
-                ref={(c) => this._root = c}
-                style={styles.input}
-                underlineColorAndroid={"transparent"}
-                placeholder={placeholder}
-                onChangeText={onChangeText}
-                {...otherProps}
-            />
+            <View style={this.state.error ? [styles.inputIos, { borderColor: commonColors.error, borderWidth: 2 }] : this.state.focused ? [styles.inputIos, { borderColor: color, borderWidth: 2 }] : styles.inputIos}>
+                <TextInput
+                    ref={(c) => this._root = c}
+                    style={{ width: "100%" }}
+                    underlineColorAndroid={"transparent"}
+                    placeholder={placeholder}
+                    placeholderTextColor={this.state.error ? commonColors.error : commonColors.inputGrey}
+                    onFocus={() => this.setState({ focused: true })}
+                    onBlur={() => this.setState({ focused: false })}
+                    onSubmitEditing={() => { this.setState({ focused: true }); Keyboard.dismiss() }}
+                    {...otherProps}
+                    onChangeText={this.handleTextChange}
+                />
+            </View>
         )
     }
 }
@@ -64,13 +68,26 @@ Input.propTypes = {
     ...TextInput.propTypes
 }
 
+Input.defaultProps = {
+    color: commonColors.primary
+}
+
 const styles = StyleSheet.create({
-    input: {
+    inputAndroid: {
         borderRadius: 10,
         paddingHorizontal: 5,
         marginVertical: 10,
         width: '100%',
-        borderColor: "rgba(33, 33, 33, 0.5)",
+        borderColor: commonColors.inputGrey,
+        borderWidth: 0.9,
+        height: 45
+    },
+    inputIos: {
+        borderRadius: 15,
+        paddingHorizontal: 5,
+        marginVertical: 10,
+        width: '100%',
+        borderColor: commonColors.inputGrey,
         borderWidth: 0.9,
         height: 45
     }
