@@ -25,16 +25,12 @@ class PickerAE extends Component {
     render() {
         const { color, placeholder, animationType, modalTransparent, selectedValue, children, ...otherProps } = this.props;
 
-        const underLineColor = !color ? commonColors.black : color;
-
         if (Platform.OS === "android") {
             return (
-                <View
-                    style={this.state.focused ? [styles.picker, { borderColor: underLineColor, borderWidth: 2 }] : styles.picker}                >
+                <View style={this.state.focused ? [styles.pickerAndroid, { borderColor: color, borderWidth: 2 }] : styles.pickerAndroid} >
                     <Picker
                         style={{ height: 45 }}
                         ref={c => (this._root = c)}
-                        mode="dropdown"
                         {...otherProps}
                         selectedValue={this.state.chosenValue}
                         onValueChange={this.setValue.bind(this)}
@@ -46,26 +42,26 @@ class PickerAE extends Component {
         }
         return (
             <View>
-                <View style={styles.pickerIos}>
+                <View style={this.state.focused ? [styles.pickerIos, { borderColor: color, borderWidth: 2 }] : styles.pickerIos}>
                     <Text
                         ref={(c) => this._root = c}
                         style={styles.input}
                         onPress={() => this.setState({ focused: true })}
                     >
-                        {this.state.chosenValue ? this.state.chosenValue : !placeholder ? "Select Option" : placeholder}
+                        {this.state.chosenValue ? this.state.chosenValue : placeholder}
                     </Text>
-                    <Ionicon onPress={() => this.setState({ focused: true })} name={this.state.focused ? "ios-arrow-dropup" : "ios-arrow-dropdown"} style={styles.icon} color={"rgba(33, 33, 33, 0.5)"} size={24} />
+                    <Ionicon onPress={() => this.setState({ focused: true })} name={this.state.focused ? "ios-arrow-dropup" : "ios-arrow-dropdown"} style={styles.icon} color={commonColors.inputGrey} size={24} />
                 </View>
                 <Modal
                     supportedOrientations={['portrait', 'landscape']}
-                    animationType={animationType ? animationType : "fade"}
+                    animationType={animationType}
                     transparent={modalTransparent}
                     visible={this.state.focused}
                     onRequestClose={() => { }}
                 >
                     <Text
                         onPress={() => this.setState({ focused: false })}
-                        style={{ backgroundColor: "#F5FCFF", flex: 1 }}
+                        style={{ flex: 1 }}
                     />
                     <Picker
                         ref={c => (this._root = c)}
@@ -77,7 +73,7 @@ class PickerAE extends Component {
                     </Picker>
                     <Text
                         onPress={() => this.setState({ focused: false })}
-                        style={{ backgroundColor: "#F5FCFF", flex: 1 }}
+                        style={{ flex: 1 }}
                     />
                 </Modal>
             </View>
@@ -95,27 +91,34 @@ PickerAE.propTypes = {
     ...Picker.propTypes
 }
 
+Picker.defaultProps = {
+    modalTransparent: true,
+    color: commonColors.primary,
+    animationType: "fade",
+    mode: "dropdown",
+    placeholder: "Select Option"
+}
+
 const styles = StyleSheet.create({
-    picker: {
+    pickerAndroid: {
         width: "100%",
         marginVertical: 10,
         borderRadius: 10,
         paddingHorizontal: 5,
-        borderColor: "rgba(33, 33, 33, 0.5)",
+        borderColor: commonColors.inputGrey,
         borderWidth: 0.9
     },
     pickerIos: {
         width: "100%",
         flexDirection: 'row',
-        borderRadius: 10,
+        borderRadius: 15,
         marginVertical: 10,
-        borderColor: "rgba(33, 33, 33, 0.5)",
+        borderColor: commonColors.inputGrey,
         borderWidth: 0.9,
         justifyContent: 'center',
         alignItems: 'center',
         height: 45,
-        paddingHorizontal: 5,
-        backgroundColor: "white"
+        paddingHorizontal: 5
     },
     icon: {
         position: "absolute",
