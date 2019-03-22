@@ -16,11 +16,9 @@ export class TextArea extends Component {
     render() {
         const { onChangeText, placeholder, color, ...otherProps } = this.props;
 
-        const underLineColor = !color ? commonColors.black : color
-
-        if (Platform.OS === "android") {
+        if (Platform.OS !== "android") {
             return (
-                <View style={this.state.focused ? [styles.inputAndroid, { borderColor: underLineColor, borderWidth: 2 }] : styles.inputAndroid}>
+                <View style={this.state.focused ? [styles.inputAndroid, { borderColor: color, borderWidth: 2 }] : styles.inputAndroid}>
                     <TextInput
                         ref={(c) => this._root = c}
                         style={{ width: "100%", height: Math.max(90, this.state.inputHeight), textAlignVertical: "top" }}
@@ -39,18 +37,22 @@ export class TextArea extends Component {
             )
         }
         return (
-            <TextInput
-                ref={(c) => this._root = c}
-                style={[styles.inputIos, { height: Math.max(90, this.state.inputHeight + 5) }]}
-                underlineColorAndroid={"transparent"}
-                placeholder={placeholder}
-                onChangeText={onChangeText}
-                multiline
-                onContentSizeChange={(event) => {
-                    this.setState({ inputHeight: event.nativeEvent.contentSize.height })
-                }}
-                {...otherProps}
-            />
+            <View style={this.state.focused ? [styles.inputIos, { borderColor: color, borderWidth: 2 }] : styles.inputIos}>
+                <TextInput
+                    ref={(c) => this._root = c}
+                    style={{ width: "100%", height: Math.max(90, this.state.inputHeight) }}
+                    underlineColorAndroid={"transparent"}
+                    placeholder={placeholder}
+                    onChangeText={onChangeText}
+                    multiline
+                    onContentSizeChange={(event) => {
+                        this.setState({ inputHeight: event.nativeEvent.contentSize.height })
+                    }}
+                    onFocus={() => this.setState({ focused: true })}
+                    onBlur={() => this.setState({ focused: false })}
+                    {...otherProps}
+                />
+            </View>
         )
     }
 }
@@ -61,23 +63,26 @@ TextArea.propTypes = {
     onChangeText: PropTypes.func
 }
 
+TextArea.defaultProps = {
+    color: commonColors.primary
+}
+
 const styles = StyleSheet.create({
     inputAndroid: {
         width: "100%",
         marginVertical: 10,
         borderRadius: 10,
         paddingHorizontal: 5,
-        borderColor: "rgba(33, 33, 33, 0.5)",
+        borderColor: commonColors.inputGrey,
         borderWidth: 0.9
     },
     inputIos: {
-        backgroundColor: "white",
-        borderRadius: 10,
+        borderRadius: 15,
         paddingHorizontal: 5,
         paddingTop: 10,
         marginVertical: 10,
         width: '100%',
-        borderColor: "rgba(33, 33, 33, 0.5)",
+        borderColor: commonColors.inputGrey,
         borderWidth: 0.9
     }
 })
