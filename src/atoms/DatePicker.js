@@ -20,44 +20,42 @@ export class DatePicker extends Component {
     render() {
         const { placeholder, color, modalTransparent, animationType, minimumDate, maximumDate, locale, timeZoneOffsetInMinutes } = this.props;
 
-        const underLineColor = !color ? commonColors.black : color
-
         if (Platform.OS === "android") {
             return (
-                <View style={this.state.focused ? [styles.datePicker, { borderColor: underLineColor, borderWidth: 2 }] : styles.datePicker}>
+                <View style={this.state.focused ? [styles.datePickerAndroid, { borderColor: color, borderWidth: 2 }] : styles.datePickerAndroid}>
                     <Text
                         ref={(c) => this._root = c}
-                        style={!this.state.chosenDate ? [styles.input, { color: "rgba(33, 33, 33, 0.5)" }] : [styles.input, { color: "black" }]}
+                        style={!this.state.chosenDate ? styles.input : [styles.input, { color: commonColors.black }]}
                         onPress={() => this.openAndroidDatePicker()}
                     >
-                        {this.state.chosenDate ? this.formatChosenDate(this.state.chosenDate) : !placeholder ? "Select Date" : placeholder}
+                        {this.state.chosenDate ? this.formatChosenDate(this.state.chosenDate) : placeholder}
                     </Text>
-                    <Icon name="calendar" onPress={() => this.openAndroidDatePicker()} style={styles.icon} color={this.state.focused ? underLineColor : "rgba(33, 33, 33, 0.5)"} size={20} />
+                    <Icon name="calendar" onPress={() => this.openAndroidDatePicker()} style={styles.icon} color={this.state.focused ? color : commonColors.inputGrey} size={20} />
                 </View >
             )
         }
         return (
             <View>
-                <View style={styles.datePickerIos} >
+                <View style={this.state.focused ? [styles.datePickerIos, { borderColor: color, borderWidth: 2 }] : styles.datePickerIos} >
                     <Text
                         ref={(c) => this._root = c}
-                        style={styles.input}
+                        style={!this.state.chosenDate ? styles.input : [styles.input, { color: commonColors.black }]}
                         onPress={() => this.openIosDatePicker()}
                     >
-                        {this.state.chosenDate ? this.formatChosenDate(this.state.chosenDate) : !placeholder ? "Select Date" : placeholder}
+                        {this.state.chosenDate ? this.formatChosenDate(this.state.chosenDate) : placeholder}
                     </Text>
-                    <Icon onPress={() => this.openIosDatePicker()} name="calendar" style={styles.icon} color={"rgba(33, 33, 33, 0.5)"} size={20} />
+                    <Icon onPress={() => this.openIosDatePicker()} name="calendar" style={styles.icon} color={this.state.focused ? color : commonColors.inputGrey} size={20} />
                 </View>
                 <Modal
                     supportedOrientations={['portrait', 'landscape']}
-                    animationType={animationType ? animationType : "fade"}
+                    animationType={animationType}
                     transparent={modalTransparent}
                     visible={this.state.modalVisible}
                     onRequestClose={() => { }}
                 >
                     <Text
                         onPress={() => this.setState({ modalVisible: false })}
-                        style={{ backgroundColor: "#F5FCFF", flex: 1 }}
+                        style={{ flex: 1 }}
                     />
                     <DatePickerIOS
                         date={this.state.chosenDate ? this.state.chosenDate : this.state.defaultDate}
@@ -70,10 +68,10 @@ export class DatePicker extends Component {
                     />
                     <Text
                         onPress={() => this.setState({ modalVisible: false })}
-                        style={{ backgroundColor: "#F5FCFF", flex: 1 }}
+                        style={{ flex: 1 }}
                     />
                 </Modal>
-            </View>
+            </View >
         )
     }
 
@@ -138,8 +136,15 @@ DatePicker.propTypes = {
     ...TextInput.propTypes
 }
 
+DatePicker.defaultProps = {
+    modalTransparent: true,
+    color: commonColors.primary,
+    animationType: "fade",
+    placeholder: "Select Date"
+}
+
 const styles = StyleSheet.create({
-    datePicker: {
+    datePickerAndroid: {
         width: "100%",
         flexDirection: 'row',
         marginVertical: 10,
@@ -148,31 +153,26 @@ const styles = StyleSheet.create({
         height: 45,
         paddingHorizontal: 10,
         borderRadius: 10,
-        borderColor: "rgba(33, 33, 33, 0.5)",
+        borderColor: commonColors.inputGrey,
         borderWidth: 0.9,
     },
     datePickerIos: {
         width: "100%",
         flexDirection: 'row',
-        borderRadius: 10,
+        borderRadius: 15,
         marginVertical: 10,
-        borderColor: "rgba(33, 33, 33, 0.5)",
+        borderColor: commonColors.inputGrey,
         borderWidth: 0.9,
         justifyContent: 'center',
         alignItems: 'center',
         height: 45,
-        paddingHorizontal: 5,
-        backgroundColor: "white"
+        paddingHorizontal: 10
     },
-    icon: Platform.select({
-        android: {
-            paddingRight: 12
-        },
-        ios: {
-            paddingRight: 15
-        }
-    }),
+    icon: {
+        paddingRight: 12
+    },
     input: {
         flex: 1,
+        color: commonColors.inputGrey
     }
 })
