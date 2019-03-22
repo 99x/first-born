@@ -1,6 +1,23 @@
+import React, { Component } from "react";
+import { Platform } from "react-native";
+
 export const commonColors = {
     white: "#FFF",
-    black: "#000"
+    black: "#000",
+    primary: "#486c86",
+    secondary: "#8dd9d5",
+    error: "#e74c3c",
+    inputGrey: "rgba(33, 33, 33, 0.5)",
+    darkGrey: "rgba(33, 33, 33, 0.87)",
+    lightGrey: "rgba(33, 33, 33, 0.4)",
+    ...Platform.select({
+        android: {
+            secondaryBackground: "rgba(125, 167, 217, 0.2)"
+        },
+        ios: {
+            secondaryBackground: "#ecf8fa"
+        }
+    }),
 }
 
 export function shadeColor(color, percent) {
