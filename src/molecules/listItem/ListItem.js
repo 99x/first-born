@@ -18,12 +18,15 @@ export class ListItem extends Component {
     }
 
     render() {
-        const { title, description, image, onPress, block, backgroundColor, secondary, children, ...otherProps } = this.props;
+        const { title, description, image, onPress, block, backgroundColor, secondary, ...otherProps } = this.props;
         const { expanded } = this.state;
 
-        const cardBackColor = backgroundColor ? backgroundColor : secondary ? "#7da7d9" : commonColors.white;
+        const children = React.Children.map(this.props.children, child => child ?
+            React.cloneElement(child, { ...child.props, secondary: true }) : null);
 
-        const cardStyle = block ? [styles.containerBlock, { backgroundColor: cardBackColor }] : [styles.container, , { backgroundColor: cardBackColor }];
+        const cardBackColor = secondary ? commonColors.secondaryBackground : backgroundColor;
+
+        const cardStyle = block ? [styles.containerBlock, { backgroundColor: cardBackColor }] : [styles.container, { backgroundColor: cardBackColor }];
 
         const onListItemTap = children ? this.expandListItem : onPress ? onPress : undefined;
 
@@ -36,12 +39,12 @@ export class ListItem extends Component {
                         </View>
                     }
                     <View style={styles.textContainer}>
-                        <Text size="h6" color="rgba(33, 33, 33, 0.87)" bold >{title}</Text>
-                        {description && <Text size="sub_heading" color="rgba(33, 33, 33, 0.4)">{description}</Text>}
+                        <Text size="h6" color={commonColors.darkGrey} bold >{title}</Text>
+                        {description && <Text size="sub_heading" color={commonColors.lightGrey}>{description}</Text>}
                     </View>
                     <View style={styles.imageContainer}>
                         {children &&
-                            <Icon name={expanded ? "arrow-dropup" : "arrow-dropdown"} size={20} color="#959595" />
+                            <Icon name={expanded ? Platform.OS === "ios" ? "arrow-up" : "arrow-dropup" : Platform.OS === "ios" ? "arrow-down" : "arrow-dropdown"} size={20} color={commonColors.inputGrey} />
                         }
                     </View>
                 </TouchableOpacity>
@@ -66,12 +69,28 @@ ListItem.propTypes = {
     ...TouchableOpacity.propTypes
 }
 
+ListItem.defaultProps = {
+    backgroundColor: commonColors.white,
+    secondary: false
+}
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: "row",
-        borderWidth: 0.5,
-        borderColor: "rgba(33, 33, 33,  0.4)",
+        ...Platform.select({
+            android: {
+                borderWidth: 0.5,
+                borderColor: commonColors.lightGrey,
+            },
+            ios: {
+                borderTopWidth: 0.5,
+                borderBottomWidth: 0.5,
+                borderTopColor: commonColors.lightGrey,
+                borderBottomColor: commonColors.lightGrey,
+            }
+        }),
+
         paddingHorizontal: 5
     },
     containerBlock: {
@@ -80,8 +99,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         borderTopWidth: 0.5,
         borderBottomWidth: 0.5,
-        borderTopColor: "rgba(33, 33, 33,  0.4)",
-        borderBottomColor: "rgba(33, 33, 33,  0.4)",
+        borderTopColor: commonColors.lightGrey,
+        borderBottomColor: commonColors.lightGrey,
         paddingHorizontal: 15
     },
     textContainer: {
