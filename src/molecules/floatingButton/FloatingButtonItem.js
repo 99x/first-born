@@ -142,11 +142,11 @@ FloatingButtonItem.propTypes = {
 };
 
 FloatingButtonItem.defaultProps = {
-    color: commonColors.black,
+    color: commonColors.primary,
     distanceToEdge: 30,
     textElevation: 5,
-    textColor: '#444444',
-    textBackground: '#ffffff',
+    textColor: commonColors.darkGrey,
+    textBackground: commonColors.white,
     margin: 8,
     image: undefined
 };
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
             width: 0,
             height: 5
         },
-        shadowColor: '#000000',
+        shadowColor: commonColors.black,
         shadowRadius: 3,
         elevation: 5,
         borderRadius: 4,
@@ -203,7 +203,7 @@ const styles = StyleSheet.create({
             width: 0,
             height: 5
         },
-        shadowColor: '#000000',
+        shadowColor: commonColors.black,
         shadowRadius: 3,
         elevation: 5,
         width: 40,
