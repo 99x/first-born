@@ -55,7 +55,7 @@ export class DatePicker extends Component {
                 >
                     <Text
                         onPress={() => this.setState({ modalVisible: false })}
-                        style={{ flex: 1 }}
+                        style={{ flex: 1}}
                     />
                     <DatePickerIOS
                         date={this.state.chosenDate ? this.state.chosenDate : this.state.defaultDate}
@@ -65,6 +65,7 @@ export class DatePicker extends Component {
                         mode="date"
                         locale={locale}
                         timeZoneOffsetInMinutes={timeZoneOffsetInMinutes}
+                        style={{ flex: 1, backgroundColor: commonColors.white }}
                     />
                     <Text
                         onPress={() => this.setState({ modalVisible: false })}
@@ -166,10 +167,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         height: 45,
-        paddingHorizontal: 10
+        paddingLeft: 10
     },
     icon: {
-        paddingRight: 12
+        paddingRight: 18
     },
     input: {
         flex: 1,

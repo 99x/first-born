@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 import { DatePicker } from "../../atoms/DatePicker";
 import { Text } from "../../atoms/Text";
+import { commonColors } from "../../utils/color";
 
 export class FormDatePicker extends Component {
 
@@ -12,7 +13,7 @@ export class FormDatePicker extends Component {
 
         return (
             <View style={styles.container}>
-                <Text size="sub_heading" color="rgba(33, 33, 33, 0.87)">{label}</Text>
+                <Text size="sub_heading" color={commonColors.darkGrey}>{label}</Text>
                 <DatePicker {...otherProps} />
             </View>
         )

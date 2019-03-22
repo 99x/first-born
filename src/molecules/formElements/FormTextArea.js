@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 import { TextArea } from "../../atoms/TextArea";
 import { Text } from "../../atoms/Text";
+import { commonColors } from "../../utils/color";
 
 export class FormTextArea extends Component {
 
@@ -12,7 +13,7 @@ export class FormTextArea extends Component {
 
         return (
             <View style={styles.container}>
-                <Text size="sub_heading" color="rgba(33, 33, 33, 0.87)">{label}</Text>
+                <Text size="sub_heading" color={commonColors.darkGrey}>{label}</Text>
                 <TextArea {...otherProps} />
             </View>
         )

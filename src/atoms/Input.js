@@ -25,7 +25,7 @@ export class Input extends Component {
     render() {
         const { placeholder, color, ...otherProps } = this.props;
 
-        if (Platform.OS !== "android") {
+        if (Platform.OS === "android") {
             return (
                 <View style={this.state.error ? [styles.inputAndroid, { borderColor: commonColors.error, borderWidth: 2 }] : this.state.focused ? [styles.inputAndroid, { borderColor: color, borderWidth: 2 }] : styles.inputAndroid}>
                     <TextInput
@@ -47,7 +47,7 @@ export class Input extends Component {
             <View style={this.state.error ? [styles.inputIos, { borderColor: commonColors.error, borderWidth: 2 }] : this.state.focused ? [styles.inputIos, { borderColor: color, borderWidth: 2 }] : styles.inputIos}>
                 <TextInput
                     ref={(c) => this._root = c}
-                    style={{ width: "100%" }}
+                    style={{ width: "100%", height: "100%", textAlignVertical: "bottom" }}
                     underlineColorAndroid={"transparent"}
                     placeholder={placeholder}
                     placeholderTextColor={this.state.error ? commonColors.error : commonColors.inputGrey}
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     },
     inputIos: {
         borderRadius: 15,
-        paddingHorizontal: 5,
+        paddingHorizontal: 10,
         marginVertical: 10,
         width: '100%',
         borderColor: commonColors.inputGrey,

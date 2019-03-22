@@ -16,7 +16,7 @@ export class TextArea extends Component {
     render() {
         const { onChangeText, placeholder, color, ...otherProps } = this.props;
 
-        if (Platform.OS !== "android") {
+        if (Platform.OS === "android") {
             return (
                 <View style={this.state.focused ? [styles.inputAndroid, { borderColor: color, borderWidth: 2 }] : styles.inputAndroid}>
                     <TextInput
@@ -78,8 +78,8 @@ const styles = StyleSheet.create({
     },
     inputIos: {
         borderRadius: 15,
-        paddingHorizontal: 5,
-        paddingTop: 10,
+        paddingHorizontal: 10,
+        paddingTop: 5,
         marginVertical: 10,
         width: '100%',
         borderColor: commonColors.inputGrey,

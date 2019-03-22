@@ -4,17 +4,21 @@ import PropTypes from "prop-types";
 
 import { Picker } from "../../atoms/Picker";
 import { Text } from "../../atoms/Text";
+import { commonColors } from "../../utils/color";
 
 export class FormPicker extends Component {
 
     render() {
-        const { label, children, ...otherProps } = this.props;
+        const { label, children, data, ...otherProps } = this.props;
 
         return (
             <View style={styles.container}>
-                <Text size="sub_heading" color="rgba(33, 33, 33, 0.87)">{label}</Text>
+                <Text size="sub_heading" color={commonColors.darkGrey}>{label}</Text>
                 <Picker {...otherProps}>
-                    {children}
+                    {children && children}
+                    {data && data.map((dataElement, key) =>
+                        <Picker.Item {...dataElement} key={key} />
+                    )}
                 </Picker>
             </View>
         )

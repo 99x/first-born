@@ -11,7 +11,7 @@ class PickerAE extends Component {
         super(props);
         this.state = {
             focused: false,
-            chosenValue: props.selectedValue ? props.selectedValue : undefined
+            chosenValue: !props.placeholder && props.selectedValue ? props.selectedValue : undefined
         }
     }
 
@@ -24,15 +24,16 @@ class PickerAE extends Component {
 
     render() {
         const { color, placeholder, animationType, modalTransparent, selectedValue, children, ...otherProps } = this.props;
+        const { focused, chosenValue } = this.state;
 
         if (Platform.OS === "android") {
             return (
-                <View style={this.state.focused ? [styles.pickerAndroid, { borderColor: color, borderWidth: 2 }] : styles.pickerAndroid} >
+                <View style={focused ? [styles.pickerAndroid, { borderColor: color, borderWidth: 2 }] : styles.pickerAndroid} >
                     <Picker
                         style={{ height: 45 }}
                         ref={c => (this._root = c)}
                         {...otherProps}
-                        selectedValue={this.state.chosenValue}
+                        selectedValue={chosenValue}
                         onValueChange={this.setValue.bind(this)}
                     >
                         {children}
@@ -42,21 +43,21 @@ class PickerAE extends Component {
         }
         return (
             <View>
-                <View style={this.state.focused ? [styles.pickerIos, { borderColor: color, borderWidth: 2 }] : styles.pickerIos}>
+                <View style={focused ? [styles.pickerIos, { borderColor: color, borderWidth: 2 }] : styles.pickerIos}>
                     <Text
                         ref={(c) => this._root = c}
                         style={styles.input}
                         onPress={() => this.setState({ focused: true })}
                     >
-                        {this.state.chosenValue ? this.state.chosenValue : placeholder}
+                        {chosenValue ? chosenValue : placeholder}
                     </Text>
-                    <Ionicon onPress={() => this.setState({ focused: true })} name={this.state.focused ? "ios-arrow-dropup" : "ios-arrow-dropdown"} style={styles.icon} color={commonColors.inputGrey} size={24} />
+                    <Ionicon onPress={() => this.setState({ focused: true })} name={focused ? "ios-arrow-up" : "ios-arrow-down"} style={styles.icon} color={commonColors.inputGrey} size={24} />
                 </View>
                 <Modal
                     supportedOrientations={['portrait', 'landscape']}
                     animationType={animationType}
                     transparent={modalTransparent}
-                    visible={this.state.focused}
+                    visible={focused}
                     onRequestClose={() => { }}
                 >
                     <Text
@@ -66,10 +67,11 @@ class PickerAE extends Component {
                     <Picker
                         ref={c => (this._root = c)}
                         {...otherProps}
-                        selectedValue={this.state.chosenValue}
+                        selectedValue={chosenValue}
                         onValueChange={this.setValue.bind(this)}
+                        style={{ flex: 1, backgroundColor: commonColors.white }}
                     >
-                        {otherProps.children}
+                        {children}
                     </Picker>
                     <Text
                         onPress={() => this.setState({ focused: false })}
@@ -91,7 +93,7 @@ PickerAE.propTypes = {
     ...Picker.propTypes
 }
 
-Picker.defaultProps = {
+PickerAE.defaultProps = {
     modalTransparent: true,
     color: commonColors.primary,
     animationType: "fade",
@@ -126,7 +128,8 @@ const styles = StyleSheet.create({
         right: 18
     },
     input: {
-        flex: 1
+        flex: 1,
+        paddingLeft: 10
     }
 });
 
