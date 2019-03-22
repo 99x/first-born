@@ -124,7 +124,7 @@ export class FloatingButton extends Component {
     const { iconName, image } = this.props;
 
     if (image) {
-      return <Image source={image} style={styles.imageStyle} resizeMode={"contain"}/>;
+      return <Image source={image} style={styles.imageStyle} resizeMode={"contain"} />;
     }
     return <Icon name={iconName ? iconName : !this.state.active ? "add" : "close"} size={30} color={commonColors.white} />;
   };
@@ -218,7 +218,7 @@ export class FloatingButton extends Component {
 
     const Touchable = getTouchableComponent();
     const propStyles = {
-      backgroundColor: !active ? color : "#d81717",
+      backgroundColor: !active ? color : commonColors.error,
       bottom: this.mainBottomAnimation // I need to imporove this to run on native thread and not on JS thread
     };
 
@@ -409,8 +409,8 @@ FloatingButton.defaultProps = {
   listenKeyboard: false,
   actionsPaddingTopBottom: 8,
   visible: true,
-  color: commonColors.black,
-  overlayColor: 'rgba(68, 68, 68, 0.6)',
+  color: commonColors.primary,
+  overlayColor: commonColors.overlay,
   position: 'right',
   distanceToEdge: 30,
   openOnMount: false,
@@ -469,7 +469,7 @@ const styles = StyleSheet.create({
       width: 0,
       height: 5
     },
-    shadowColor: '#000000',
+    shadowColor: commonColors.black,
     shadowRadius: 3,
     elevation: 5,
     position: 'absolute'

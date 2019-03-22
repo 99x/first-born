@@ -10,6 +10,7 @@ export const commonColors = {
     inputGrey: "rgba(33, 33, 33, 0.5)",
     darkGrey: "rgba(33, 33, 33, 0.87)",
     lightGrey: "rgba(33, 33, 33, 0.4)",
+    overlay: 'rgba(68, 68, 68, 0.6)',
     ...Platform.select({
         android: {
             secondaryBackground: "rgba(125, 167, 217, 0.2)"
