@@ -46,12 +46,12 @@ class PickerAE extends Component {
                 <View style={focused ? [styles.pickerIos, { borderColor: color, borderWidth: 2 }] : styles.pickerIos}>
                     <Text
                         ref={(c) => this._root = c}
-                        style={styles.input}
+                        style={!this.state.chosenValue ? styles.input : [styles.input, { color: commonColors.black }]}
                         onPress={() => this.setState({ focused: true })}
                     >
                         {chosenValue ? chosenValue : placeholder}
                     </Text>
-                    <Ionicon onPress={() => this.setState({ focused: true })} name={focused ? "ios-arrow-up" : "ios-arrow-down"} style={styles.icon} color={commonColors.inputGrey} size={24} />
+                    <Ionicon onPress={() => this.setState({ focused: true })} name={focused ? "ios-arrow-up" : "ios-arrow-down"} style={styles.icon} color={focused ? color : commonColors.inputGrey} size={24} />
                 </View>
                 <Modal
                     supportedOrientations={['portrait', 'landscape']}
@@ -120,16 +120,14 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         height: 45,
-        paddingHorizontal: 5
+        paddingLeft: 10,
     },
     icon: {
-        position: "absolute",
-        top: 13,
-        right: 18
+        paddingRight: 15
     },
     input: {
         flex: 1,
-        paddingLeft: 10
+        color: commonColors.inputGrey
     }
 });
 

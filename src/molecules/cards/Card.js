@@ -46,21 +46,21 @@ Card.defaultProps = {
 const styles = StyleSheet.create({
     container: {
         width: "100%",
-        shadowColor: "#000",
-        shadowOffset: { width: 3, height: 3 },
-        shadowOpacity: 0.3,
-        shadowRadius: 3,
-        elevation: 3,
         ...Platform.select({
             android: {
                 borderRadius: 3,
+                elevation: 3,
             },
             ios: {
                 borderRadius: 10,
+                shadowOpacity: 0.75,
+                shadowRadius: 5,
+                shadowColor: commonColors.black,
+                shadowOffset: { height: 5, width: 5 },
             }
         }),
         overflow: "hidden",
-        marginBottom: 5
+        margin: 5
     },
     containerBlock: {
         width,

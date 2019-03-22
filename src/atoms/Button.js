@@ -71,17 +71,17 @@ const styles = StyleSheet.create({
         ...Platform.select({
             android: {
                 borderRadius: 5,
+                elevation: 3,
             },
             ios: {
                 borderRadius: 10,
+                shadowOffset: { width: 3, height: 3 },
+                shadowOpacity: 0.3,
+                shadowRadius: 3,
             }
         }),
         margin: 10,
         shadowColor: "#000",
-        shadowOffset: { width: 3, height: 3 },
-        shadowOpacity: 0.3,
-        shadowRadius: 3,
-        elevation: 3,
     },
     blockButton: {
         width: "100%",

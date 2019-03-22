@@ -11,7 +11,6 @@ export class DatePicker extends Component {
         super(props);
         this.state = {
             focused: false,
-            modalVisible: false,
             defaultDate: props.defaultDate ? props.defaultDate : new Date(),
             chosenDate: !props.placeholder && props.defaultDate ? props.defaultDate : undefined
         }
@@ -20,45 +19,47 @@ export class DatePicker extends Component {
     render() {
         const { placeholder, color, modalTransparent, animationType, minimumDate, maximumDate, locale, timeZoneOffsetInMinutes } = this.props;
 
+        const { focused, chosenDate, defaultDate } = this.state;
+
         if (Platform.OS === "android") {
             return (
-                <View style={this.state.focused ? [styles.datePickerAndroid, { borderColor: color, borderWidth: 2 }] : styles.datePickerAndroid}>
+                <View style={focused ? [styles.datePickerAndroid, { borderColor: color, borderWidth: 2 }] : styles.datePickerAndroid}>
                     <Text
                         ref={(c) => this._root = c}
-                        style={!this.state.chosenDate ? styles.input : [styles.input, { color: commonColors.black }]}
+                        style={!chosenDate ? styles.input : [styles.input, { color: commonColors.black }]}
                         onPress={() => this.openAndroidDatePicker()}
                     >
-                        {this.state.chosenDate ? this.formatChosenDate(this.state.chosenDate) : placeholder}
+                        {chosenDate ? this.formatChosenDate(chosenDate) : placeholder}
                     </Text>
-                    <Icon name="calendar" onPress={() => this.openAndroidDatePicker()} style={styles.icon} color={this.state.focused ? color : commonColors.inputGrey} size={20} />
+                    <Icon name="calendar" onPress={() => this.openAndroidDatePicker()} style={styles.icon} color={focused ? color : commonColors.inputGrey} size={20} />
                 </View >
             )
         }
         return (
             <View>
-                <View style={this.state.focused ? [styles.datePickerIos, { borderColor: color, borderWidth: 2 }] : styles.datePickerIos} >
+                <View style={focused ? [styles.datePickerIos, { borderColor: color, borderWidth: 2 }] : styles.datePickerIos} >
                     <Text
                         ref={(c) => this._root = c}
-                        style={!this.state.chosenDate ? styles.input : [styles.input, { color: commonColors.black }]}
+                        style={!chosenDate ? styles.input : [styles.input, { color: commonColors.black }]}
                         onPress={() => this.openIosDatePicker()}
                     >
-                        {this.state.chosenDate ? this.formatChosenDate(this.state.chosenDate) : placeholder}
+                        {chosenDate ? this.formatChosenDate(chosenDate) : placeholder}
                     </Text>
-                    <Icon onPress={() => this.openIosDatePicker()} name="calendar" style={styles.icon} color={this.state.focused ? color : commonColors.inputGrey} size={20} />
+                    <Icon onPress={() => this.openIosDatePicker()} name="calendar" style={styles.icon} color={focused ? color : commonColors.inputGrey} size={20} />
                 </View>
                 <Modal
                     supportedOrientations={['portrait', 'landscape']}
                     animationType={animationType}
                     transparent={modalTransparent}
-                    visible={this.state.modalVisible}
+                    visible={focused}
                     onRequestClose={() => { }}
                 >
                     <Text
-                        onPress={() => this.setState({ modalVisible: false })}
-                        style={{ flex: 1}}
+                        onPress={() => this.setState({ focused: false })}
+                        style={{ flex: 1 }}
                     />
                     <DatePickerIOS
-                        date={this.state.chosenDate ? this.state.chosenDate : this.state.defaultDate}
+                        date={chosenDate ? chosenDate : defaultDate}
                         onDateChange={this.setDate.bind(this)}
                         minimumDate={minimumDate}
                         maximumDate={maximumDate}
@@ -68,7 +69,7 @@ export class DatePicker extends Component {
                         style={{ flex: 1, backgroundColor: commonColors.white }}
                     />
                     <Text
-                        onPress={() => this.setState({ modalVisible: false })}
+                        onPress={() => this.setState({ focused: false })}
                         style={{ flex: 1 }}
                     />
                 </Modal>
@@ -84,7 +85,7 @@ export class DatePicker extends Component {
     }
 
     openIosDatePicker() {
-        this.setState({ modalVisible: true });
+        this.setState({ focused: true });
     }
 
     async openAndroidDatePicker() {
@@ -170,7 +171,7 @@ const styles = StyleSheet.create({
         paddingLeft: 10
     },
     icon: {
-        paddingRight: 18
+        paddingRight: 15
     },
     input: {
         flex: 1,
