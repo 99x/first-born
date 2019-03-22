@@ -12,9 +12,7 @@ export class Card extends Component {
     render() {
         const { title, description, image, onPress, block, backgroundColor, style, ...otherProps } = this.props;
 
-        const cardBackColor = backgroundColor ? backgroundColor : commonColors.white;
-
-        let cardStyle = block ? [styles.containerBlock, { backgroundColor: cardBackColor }] : [styles.container, , { backgroundColor: cardBackColor }];
+        let cardStyle = block ? [styles.containerBlock, { backgroundColor }] : [styles.container, { backgroundColor }];
 
         if (style) {
             cardStyle.push(style);
@@ -24,8 +22,8 @@ export class Card extends Component {
             <TouchableOpacity style={cardStyle} disabled={!onPress} onPress={onPress} {...otherProps}>
                 {image && <Image source={image} style={styles.image} />}
                 <View style={styles.textContainer}>
-                    <Text size="h6" color="rgba(33, 33, 33, 0.87)" bold >{title}</Text>
-                    {description && <Text size="sub_heading" color="rgba(33, 33, 33, 0.4)">{description}</Text>}
+                    <Text size="h6" color={commonColors.darkGrey} bold >{title}</Text>
+                    {description && <Text size="sub_heading" color={commonColors.lightGrey}>{description}</Text>}
                 </View>
             </TouchableOpacity>
         )
@@ -41,6 +39,10 @@ Card.propTypes = {
     ...TouchableOpacity.propTypes
 }
 
+Card.defaultProps = {
+    backgroundColor: commonColors.white
+}
+
 const styles = StyleSheet.create({
     container: {
         width: "100%",
@@ -49,7 +51,14 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.3,
         shadowRadius: 3,
         elevation: 3,
-        borderRadius: 3,
+        ...Platform.select({
+            android: {
+                borderRadius: 3,
+            },
+            ios: {
+                borderRadius: 10,
+            }
+        }),
         overflow: "hidden",
         marginBottom: 5
     },
@@ -58,8 +67,8 @@ const styles = StyleSheet.create({
         overflow: "hidden",
         borderTopWidth: 1,
         borderBottomWidth: 1,
-        borderTopColor: "rgba(33, 33, 33,  0.4)",
-        borderBottomColor: "rgba(33, 33, 33,  0.4)",
+        borderTopColor: commonColors.lightGrey,
+        borderBottomColor: commonColors.lightGrey,
         marginBottom: 5
     },
     textContainer: {
@@ -71,8 +80,17 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        height: 150,
-        borderTopLeftRadius: 3,
-        borderTopRightRadius: 3
+        ...Platform.select({
+            android: {
+                height: 150,
+                borderTopLeftRadius: 3,
+                borderTopRightRadius: 3
+            },
+            ios: {
+                height: 200,
+                borderTopLeftRadius: 10,
+                borderTopRightRadius: 10
+            }
+        }),
     }
 })
