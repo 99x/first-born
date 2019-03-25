@@ -8,7 +8,6 @@ import { Icon } from "../../../atoms/Icon";
 
 export class TabItem extends Component {
 
-
     constructor(props) {
         super(props);
 
