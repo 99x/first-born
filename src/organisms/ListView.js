@@ -11,7 +11,7 @@ export class ListView extends Component {
             <FlatList
                 style={{ marginTop: 5, width: "100%" }}
                 keyExtractor={this.keyExtractor}
-                renderItem={({ item }) => { return (<ListItem image={item.image} title={item.title} description={item.description} backgroundColor={backgroundColor} />) }}
+                renderItem={({ item }) => { return (<ListItem image={item.image} title={item.title} description={item.description} backgroundColor={backgroundColor} {...otherProps} />) }}
                 {...otherProps} />
         )
     }
@@ -20,5 +20,6 @@ export class ListView extends Component {
 }
 
 ListView.propTypes = {
-    ...FlatList.propTypes
+    ...FlatList.propTypes,
+    ...ListItem.propTypes
 }

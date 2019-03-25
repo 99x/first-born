@@ -15,7 +15,7 @@ export class CardList extends Component {
                 renderItem={({ item }) => {
                     return (
                         <View style={{ marginRight: margin }}>
-                            <Card image={item.image} title={item.title} description={item.description} backgroundColor={backgroundColor} style={{ width: deviceVariables.width - 40 }} />
+                            <Card image={item.image} title={item.title} description={item.description} backgroundColor={backgroundColor} style={{ width: deviceVariables.width - 40 }} {...otherProps} />
                         </View>
                     )
                 }}
@@ -28,7 +28,8 @@ export class CardList extends Component {
 }
 
 CardList.propTypes = {
-    ...FlatList.propTypes
+    ...FlatList.propTypes,
+    ...CardList.propTypes
 }
 
 CardList.defaultProps = {
