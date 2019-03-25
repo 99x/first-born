@@ -19,7 +19,7 @@ export class FloatingButton extends Component {
     this.state = {
       active: false,
       keyboardHeight: 0,
-      distanceToEdge: props.tabs ? isIphoneX() ? props.distanceToEdge + 30 : props.distanceToEdge + 20 : props.distanceToEdge
+      distanceToEdge: props.tabs ? Platform.OS === "ios" ? isIphoneX() ? props.distanceToEdge + 30 : props.distanceToEdge + 20 : props.distanceToEdge + 60 : props.distanceToEdge
     };
 
     this.mainBottomAnimation = new Animated.Value(this.state.distanceToEdge + props.mainVerticalDistance);
@@ -202,7 +202,7 @@ export class FloatingButton extends Component {
   };
 
   renderMainButton() {
-    const { color } = this.props;
+    const { color, tabs } = this.props;
     const { active, distanceToEdge } = this.state;
 
     const position = Platform.OS === "android" ? "right" : "center";
@@ -219,10 +219,12 @@ export class FloatingButton extends Component {
     const Touchable = getTouchableComponent();
     const propStyles = {
       backgroundColor: !active ? color : commonColors.error,
-      bottom: this.mainBottomAnimation // I need to imporove this to run on native thread and not on JS thread
+      bottom: this.mainBottomAnimation
     };
 
-    if (['left', 'right'].indexOf(position) > -1) {
+    if (position === "right" && tabs) {
+      propStyles[position] = 20;
+    } else {
       propStyles[position] = distanceToEdge;
     }
 
@@ -398,7 +400,8 @@ FloatingButton.propTypes = {
   onOpen: PropTypes.func,
   onPressBackdrop: PropTypes.func,
   onStateChange: PropTypes.func,
-  image: PropTypes.any
+  image: PropTypes.any,
+  tabs: PropTypes.bool
 };
 
 FloatingButton.defaultProps = {
@@ -415,7 +418,8 @@ FloatingButton.defaultProps = {
   iconHeight: 15,
   iconWidth: 15,
   mainVerticalDistance: 0,
-  image: undefined
+  image: undefined,
+  tabs: false
 };
 
 const styles = StyleSheet.create({
