@@ -34,7 +34,12 @@ export class NavBar extends Component {
             oldHeight = toolbarHeight;
         }
 
-        let height = oldHeight + insetValues.topInset;
+        let height = oldHeight + insetValues.bottomInset;
+
+        if (!isIphoneX()) {
+            height -= 20;
+        }
+
         return height;
     }
 
@@ -71,7 +76,7 @@ export class NavBar extends Component {
             }
             return (
                 <View onLayout={e => this.layoutChange(e.nativeEvent.layout)} style={{
-                    height: toolbarHeight,
+                    height: this.calculateHeight(orientation, deviceVariables.Inset),
                     paddingTop: paddingTop,
                     backgroundColor: "#f8f8f8"
                 }}>
@@ -116,13 +121,9 @@ NavBar.propTypes = {
 NavBar.defaultProps = {
     statusBarColor: Platform.OS === "android" ? commonColors.primary : "#f8f8f8",
     toolbarHeight: Platform.OS === "android" ? 56 : 64,
-    paddingTop: Platform.OS === "android" ? 0 : 18,
+    paddingTop: Platform.OS === "android" ? 0 : 20,
     style: {
         flex: 1,
-        flexDirection: "row",
-        elevation: 3,
-        shadowOffset: { width: 10, height: 10, },
-        shadowColor: 'black',
-        shadowOpacity: 1.0,
+        flexDirection: "row"
     }
 };

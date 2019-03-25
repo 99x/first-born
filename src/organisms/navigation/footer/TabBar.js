@@ -1,17 +1,22 @@
 import React, { Component } from "react";
 import { View, StyleSheet, Platform } from "react-native";
 import PropTypes from "prop-types";
-
-import { Text } from "../../../atoms/Text";
 import { commonColors } from "../../../utils/color";
+import { isIphoneX } from "../../../utils/platform";
 
 export class TabBar extends Component {
 
     render() {
         const { color, children, ...otherProps } = this.props;
 
+        let tabBarStyle = [styles.container, { backgroundColor: color }];
+
+        if (isIphoneX()) {
+            tabBarStyle.push({ paddingBottom: 15 })
+        }
+
         return (
-            <View style={[styles.container, { backgroundColor: color }]} {...otherProps}>
+            <View style={tabBarStyle} {...otherProps}>
                 {children && children}
             </View>
         )
@@ -29,6 +34,12 @@ TabBar.defaultProps = {
 
 const styles = StyleSheet.create({
     container: {
-        flexDirection: "row"
+        flexDirection: "row",
+        ...Platform.select({
+            ios: {
+                borderTopColor: commonColors.inputGrey,
+                borderTopWidth: 1
+            }
+        })
     }
 })

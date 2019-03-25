@@ -18,11 +18,12 @@ export class FloatingButton extends Component {
 
     this.state = {
       active: false,
-      keyboardHeight: 0
+      keyboardHeight: 0,
+      distanceToEdge: props.tabs ? isIphoneX() ? props.distanceToEdge + 30 : props.distanceToEdge + 20 : props.distanceToEdge
     };
 
-    this.mainBottomAnimation = new Animated.Value(props.distanceToEdge + props.mainVerticalDistance);
-    this.actionsBottomAnimation = new Animated.Value(ACTION_BUTTON_SIZE + props.distanceToEdge + props.actionsPaddingTopBottom + props.mainVerticalDistance);
+    this.mainBottomAnimation = new Animated.Value(this.state.distanceToEdge + props.mainVerticalDistance);
+    this.actionsBottomAnimation = new Animated.Value(ACTION_BUTTON_SIZE + this.state.distanceToEdge + props.actionsPaddingTopBottom + props.mainVerticalDistance);
     this.animation = new Animated.Value(0);
     this.actionsAnimation = new Animated.Value(0);
     this.visibleAnimation = new Animated.Value(props.visible ? 0 : 1);
@@ -74,7 +75,8 @@ export class FloatingButton extends Component {
   }
 
   onKeyboardShow = (e) => {
-    const { distanceToEdge, actionsPaddingTopBottom } = this.props;
+    const { actionsPaddingTopBottom } = this.props;
+    const { distanceToEdge } = this.state;
     const { height } = e.endCoordinates;
 
     Animated.parallel([
@@ -98,7 +100,8 @@ export class FloatingButton extends Component {
   };
 
   onKeyboardHideHide = () => {
-    const { distanceToEdge, actionsPaddingTopBottom } = this.props;
+    const { actionsPaddingTopBottom } = this.props;
+    const { distanceToEdge } = this.state;
 
     Animated.parallel([
       Animated.spring(
@@ -199,11 +202,8 @@ export class FloatingButton extends Component {
   };
 
   renderMainButton() {
-    const {
-      color,
-      distanceToEdge
-    } = this.props;
-    const { active } = this.state;
+    const { color } = this.props;
+    const { active, distanceToEdge } = this.state;
 
     const position = Platform.OS === "android" ? "right" : "center";
 
@@ -251,11 +251,8 @@ export class FloatingButton extends Component {
   }
 
   renderActions() {
-    const {
-      actions,
-      distanceToEdge,
-      actionsPaddingTopBottom
-    } = this.props;
+    const { actions, actionsPaddingTopBottom } = this.props;
+    const { distanceToEdge } = this.state;
 
     const position = Platform.OS === "android" ? "right" : "center";
     const { active, keyboardHeight } = this.state;

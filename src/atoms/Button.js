@@ -41,7 +41,7 @@ export class Button extends Component {
 
         const children = React.Children.map(this.props.children, child => child && child.type === Text ?
             React.cloneElement(child, { style: textStyle, ...child.props }) : child && child.type === Icon ?
-                React.cloneElement(child, { color: iconColor, size: iconSize, ...child.props }) : child && child.type === Image ?
+                React.cloneElement(child, { size: iconSize, ...child.props, color: iconColor }) : child && child.type === Image ?
                     React.cloneElement(child, { style: { width: 25, height: 25 }, ...child.props }) : null);
 
         return (

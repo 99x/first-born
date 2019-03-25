@@ -10,7 +10,7 @@ export const deviceVariables = {
             topInset: 24,
             leftInset: 0,
             rightInset: 0,
-            bottomInset: 34
+            bottomInset: 40
         },
         landscape: {
             topInset: 0,

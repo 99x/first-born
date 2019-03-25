@@ -47,7 +47,7 @@ export class NavBarButton extends Component {
             );
         } else {
             return (
-                <Button {...otherProps} outline transparent color="#0a60ff">
+                <Button {...otherProps} color="#0a60ff" outline transparent>
                     {newChildren && newChildren}
                 </Button>
             );
