@@ -15,10 +15,9 @@ export class FormPicker extends Component {
             <View style={styles.container}>
                 <Text size="sub_heading" color={commonColors.darkGrey}>{label}</Text>
                 <Picker {...otherProps}>
-                    {children && children}
-                    {data && data.map((dataElement, key) =>
+                    {children ? children : data ? data.map((dataElement, key) =>
                         <Picker.Item {...dataElement} key={key} />
-                    )}
+                    ) : null}
                 </Picker>
             </View>
         )
