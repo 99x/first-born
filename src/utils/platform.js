@@ -1,12 +1,11 @@
-import { Dimensions, Platform } from 'react-native';
+import { Platform } from 'react-native';
+import { deviceVariables } from '../variables/deviceVariables';
 
 export function isIphoneX() {
-    const dimension = Dimensions.get('window');
-
     return (
         Platform.OS === 'ios' &&
         !Platform.isPad &&
         !Platform.isTVOS &&
-        (dimension.height === 812 || dimension.width === 812)
+        (deviceVariables.height === 812 || deviceVariables.width === 812)
     );
 }

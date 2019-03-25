@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { FlatList, Dimensions, View, Platform } from "react-native";
+import { FlatList, View, Platform } from "react-native";
 import { Card } from "../molecules/cards/Card";
-
-const { width } = Dimensions.get("window");
+import { deviceVariables } from "../variables/deviceVariables";
 
 export class CardList extends Component {
 
@@ -16,7 +15,7 @@ export class CardList extends Component {
                 renderItem={({ item }) => {
                     return (
                         <View style={{ marginRight: margin }}>
-                            <Card image={item.image} title={item.title} description={item.description} backgroundColor={backgroundColor} style={{ width: width - 40 }} />
+                            <Card image={item.image} title={item.title} description={item.description} backgroundColor={backgroundColor} style={{ width: deviceVariables.width - 40 }} />
                         </View>
                     )
                 }}

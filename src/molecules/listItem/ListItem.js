@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import { View, StyleSheet, TouchableOpacity, Image, Platform, Dimensions } from "react-native";
+import { View, StyleSheet, TouchableOpacity, Image, Platform } from "react-native";
 import PropTypes from "prop-types";
 
 import { Text } from "../../atoms/Text";
 import { Icon } from "../../atoms/Icon";
-import { commonColors } from "react-native-atom-elements/src/utils/color";
-
-const { width } = Dimensions.get("window");
+import { commonColors } from "../../utils/color";
+import { deviceVariables } from "../../variables/deviceVariables";
 
 export class ListItem extends Component {
 
@@ -94,7 +93,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 5
     },
     containerBlock: {
-        width,
+        width: deviceVariables.width,
         flex: 1,
         flexDirection: "row",
         borderTopWidth: 0.5,

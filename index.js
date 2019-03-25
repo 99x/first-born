@@ -5,6 +5,7 @@ export { TextArea } from "./src/atoms/TextArea";
 export { Picker } from "./src/atoms/Picker";
 export { DatePicker } from "./src/atoms/DatePicker";
 export { Text } from "./src/atoms/Text";
+export { Icon } from "./src/atoms/Icon";
 
 // Molecules
 // Form molecules
@@ -37,3 +38,10 @@ export { ListView } from "./src/organisms/ListView";
 
 // Form organism
 export { Form } from "./src/organisms/Form";
+
+// Navigation Header
+export { NavBar } from "./src/organisms/navigation/header/NavBar";
+export { NavBarRight } from "./src/organisms/navigation/header/NavBarRight";
+export { NavBarLeft } from "./src/organisms/navigation/header/NavBarLeft";
+export { NavBarBody } from "./src/organisms/navigation/header/NavBarBody";
+export { NavBarButton } from "./src/organisms/navigation/header/NavBarButton";
