@@ -45,3 +45,7 @@ export { NavBarRight } from "./src/organisms/navigation/header/NavBarRight";
 export { NavBarLeft } from "./src/organisms/navigation/header/NavBarLeft";
 export { NavBarBody } from "./src/organisms/navigation/header/NavBarBody";
 export { NavBarButton } from "./src/organisms/navigation/header/NavBarButton";
+
+// Footer Navigation
+export { TabBar } from "./src/organisms/navigation/footer/TabBar";
+export { TabItem } from "./src/organisms/navigation/footer/TabItem";
