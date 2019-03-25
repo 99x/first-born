@@ -8,7 +8,7 @@ import { Text } from "./Text";
 
 export class Button extends Component {
     render() {
-        const { title, color, rounded, outline, block, size, secondary, ...otherProps } = this.props;
+        const { title, color, rounded, outline, block, size, secondary, transparent, ...otherProps } = this.props;
 
         const buttonColor = secondary ? commonColors.secondary : color;
 
@@ -35,6 +35,10 @@ export class Button extends Component {
             iconColor = commonColors.white;
         }
 
+        if (transparent) {
+            buttonStyle.push(styles.transparent);
+        }
+
         const children = React.Children.map(this.props.children, child => child && child.type === Text ?
             React.cloneElement(child, { style: textStyle, ...child.props }) : child && child.type === Icon ?
                 React.cloneElement(child, { color: iconColor, size: iconSize, ...child.props }) :
@@ -54,6 +58,7 @@ Button.propTypes = {
     block: PropTypes.bool,
     title: PropTypes.string,
     color: PropTypes.string,
+    transparent: PropTypes.bool,
     size: PropTypes.oneOf(["small", "default", "large"]),
     ...TouchableOpacity.propTypes
 }
@@ -87,5 +92,14 @@ const styles = StyleSheet.create({
         width: "100%",
         justifyContent: "center",
         alignItems: "center",
+    },
+    transparent: {
+        borderWidth: 0,
+        backgroundColor: "transparent",
+        borderRadius: 0,
+        shadowOffset: { width: 0, height: 0 },
+        shadowOpacity: 0,
+        shadowRadius: 0,
+        elevation: 0,
     }
 })
