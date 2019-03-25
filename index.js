@@ -49,3 +49,8 @@ export { NavBarButton } from "./src/organisms/navigation/header/NavBarButton";
 // Footer Navigation
 export { TabBar } from "./src/organisms/navigation/footer/TabBar";
 export { TabItem } from "./src/organisms/navigation/footer/TabItem";
+
+// Pill Navigation
+export { PillView } from "./src/organisms/navigation/pills/PillView";
+export { PillBar } from "./src/organisms/navigation/pills/PillBar";
+export { PillItem } from "./src/organisms/navigation/pills/PillItem";
