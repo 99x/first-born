@@ -95,7 +95,7 @@ export class NavBar extends Component {
                 backgroundColor: statusBarColor
             }}>
                 <StatusBar
-                    backgroundColor={shadeColor(statusBarColor, 20)}
+                    backgroundColor={shadeColor(statusBarColor, 30)}
                     barStyle={"light-content"}
                     translucent={transparent ? true : translucent}
                 />
