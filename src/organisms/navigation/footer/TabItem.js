@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Platform, StyleSheet, TouchableOpacity } from "react-native";
+import { Platform, StyleSheet, TouchableOpacity, Image } from "react-native";
 import PropTypes from "prop-types";
 
 import { Text } from "../../../atoms/Text";
@@ -37,8 +37,8 @@ export class TabItem extends Component {
 
             newChildren = React.Children.map(children, child => child && child.type === Text ?
                 React.cloneElement(child, { ...child.props, size: "footnote", color }) : child && child.type === Icon ?
-                    React.cloneElement(child, { ...child.props, size: 28, color }) :
-                    child);
+                    React.cloneElement(child, { ...child.props, size: 28, color }) : child && child.type === Image ?
+                        React.cloneElement(child, { style: { width: 28, height: 28, opacity: active ? 1 : 0.8 }, ...child.props }) : null);
 
         }
 

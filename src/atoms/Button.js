@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { TouchableOpacity, StyleSheet, Platform } from "react-native";
+import { TouchableOpacity, StyleSheet, Platform, Image } from "react-native";
 import PropTypes from "prop-types";
 import { Icon } from "./Icon";
 import { getFontSize, getButtonPadding, getRoundRadius, getIconSize } from "../variables/buttonSizeVariables";
@@ -41,8 +41,8 @@ export class Button extends Component {
 
         const children = React.Children.map(this.props.children, child => child && child.type === Text ?
             React.cloneElement(child, { style: textStyle, ...child.props }) : child && child.type === Icon ?
-                React.cloneElement(child, { color: iconColor, size: iconSize, ...child.props }) :
-                child);
+                React.cloneElement(child, { color: iconColor, size: iconSize, ...child.props }) : child && child.type === Image ?
+                    React.cloneElement(child, { style: { width: 25, height: 25 }, ...child.props }) : null);
 
         return (
             <TouchableOpacity ref={(c) => this._root = c} style={buttonStyle} {...otherProps}>

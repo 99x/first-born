@@ -20,6 +20,5 @@ export class ListView extends Component {
 }
 
 ListView.propTypes = {
-    ...FlatList.propTypes,
-    ...ListItem.propTypes
+    ...FlatList.propTypes
 }

@@ -28,8 +28,7 @@ export class CardList extends Component {
 }
 
 CardList.propTypes = {
-    ...FlatList.propTypes,
-    ...CardList.propTypes
+    ...FlatList.propTypes
 }
 
 CardList.defaultProps = {

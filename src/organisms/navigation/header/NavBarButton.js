@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Platform, StyleSheet, TouchableOpacity } from "react-native";
+import { Platform, Image, TouchableOpacity } from "react-native";
 import PropTypes from "prop-types";
 import { Button } from "../../../atoms/Button";
 import { Icon } from "../../../atoms/Icon";
@@ -16,8 +16,8 @@ export class NavBarButton extends Component {
 
             newChildren = React.Children.map(children, child => child && child.type === Text ?
                 React.cloneElement(child, { size: "p", ...child.props }) : child && child.type === Icon ?
-                    React.cloneElement(child, { size: 25, ...child.props }) :
-                    child);
+                    React.cloneElement(child, { size: 25, ...child.props }) : child && child.type === Image ?
+                        React.cloneElement(child, { style: { width: 25, height: 25 }, ...child.props }) : null);
 
         } else if (type) {
 
