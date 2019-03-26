@@ -1,5 +1,5 @@
 # firstBorn
-![](https://github.com/99xt/firstBorn/blob/master/firstBorn-logo.png)
+![firstBorn Logo](https://github.com/99xt/firstBorn/blob/master/firstBorn-logo.png)
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes
@@ -141,7 +141,7 @@ You can use any [TextInput property](http://facebook.github.io/react-native/docs
 | **`animationType`**  | Type of entry/exit animation for DatePicker modal. iOS only. | `'fade'`       |
 | **`locale`**  | Locale of DatePicker. iOS only. | _None_      |
 | **`androidMode`**  | Type DatePicker mode. Android only. |_None_      |
-| **`color`** | Color of the `TextInput` `onFocus`.                              |_primary_     |
+| **`color`** | Color of the `TextInput` when in focus.                              |_primary_     |
 
 #### Input
 
@@ -153,7 +153,7 @@ You can use any [TextInput property](http://facebook.github.io/react-native/docs
 | Prop        | Description                                                                       | Default     |
 | ----------- | --------------------------------------------------------------------------------- | ----------- |
 | **`isValid`**  | User defined validation function, that returns true for valid text             | _None_       |
-| **`color`** | Color of the `TextInput` `onFocus`.                              | _primary_     |
+| **`color`** | Color of the `TextInput` when in focus.                              | _primary_     |
 
 #### Picker
 
@@ -174,7 +174,7 @@ You can use any [Picker property](http://facebook.github.io/react-native/docs/pi
 | **`modalTransparent`**  | If DatePicker modal is transparent. iOS only. | _true_      |
 | **`animationType`**  | Type of entry/exit animation for DatePicker modal. iOS only. | `'fade'`       |
 | **`mode`**  | Type picker mode ('dialog', 'dropdown'). Android only. |`'dropdown'`     |
-| **`color`** | Color of the `TextInput` `onFocus`.                              |_primary_     |
+| **`color`** | Color of the `TextInput` when in focus.                              |_primary_     |
 
 #### TextArea
 
@@ -187,7 +187,7 @@ You can use any [TextInput property](http://facebook.github.io/react-native/docs
 
 | Prop        | Description                                                                       | Default     |
 | ----------- | --------------------------------------------------------------------------------- | ----------- |
-| **`color`** | Color of the `TextInput` `onFocus`.                                               | _primary_ |
+| **`color`** | Color of the `TextInput` when in focus.                                               | _primary_   |
  
 ### Molecules
 
@@ -324,8 +324,15 @@ This molecule makes use of the `Text` and `Icon` Atoms
 
 ###### Multiple actions
 
-```html
-<FloatingButton actions={this.actions} />
+```js
+
+actions = [
+    { text: 'Accessibility', image: require("./assets/images/accessibility.png"), name: 'bt_accessibility', position: 2, onPress: () => this.handleAccessibility() },
+    { text: 'Location', icon: "pin", name: 'bt_room', position: 1, onPress: () => this.handleLocation() },
+    { text: 'Video', icon: "videocam", name: 'bt_videocam', position: 3, onPress: () => this.handleVideo() }
+];
+
+<FloatingButton actions={actions} />
 ```
 The props for the main `FloatingButton` are;
 
@@ -395,6 +402,182 @@ You can use any [TouchableOpacity property](https://facebook.github.io/react-nat
 | **`backgroundColor`** | Background color of Card.    | _white_      |
 
 ### Organisms
+
+#### Form
+
+```js
+formElements = [
+    { label: "Full Name", type: "text", onChangeText: (value) => this.handleTextChange(value), placeholder: "John Doe" },
+    { label: "Email", type: "text", onChangeText: (value) => this.handleTextChange(value), placeholder: "john.doe@gmail.com", isValid: (value) => this.checkInputValidity(value) },
+    { label: "Type", type: "picker", onValueChange: (value) => this.handleValueChange(value), pickerData: this.pickerData },
+    { label: "Date", type: "date", onDateChange: (value) => this.handleDateChange(value) },
+    { label: "Address", type: "textarea", onChangeText: (value) => this.handleTextChange(value) },
+];
+
+<Form formElements={formElements} />
+```
+The `Form` Component iterates through the `formElements` array, to render the fields according to the type of input specified in each object. 
+The form object only has one extra prop;
+
+| Prop        | Description                                                                       | Default     |
+| ----------- | --------------------------------------------------------------------------------- | ----------- |
+| **`color`** | Color of all form elements when in focus.                                         | _primary_   |
+
+But each type of input has corresponding proptypes to the molecules named below;
+
+| Type         | Molecule Component |
+| ------------ | ------------------ |
+| `'text'`     |  [FormInput](#forminput)       |
+| `'textarea'` |  [FormTextArea](#formtextarea)    |
+| `'date'`     |  [FormDatePicker](#formdatepicker)  |
+| `'picker'`   |  [FormPicker](#formpicker)      |
+
+#### ListView
+A vertical list of ListItem molecules
+
+```js
+listData = [
+    { title: "Heading 1", description: "Description 1", image: require("./assets/images/scenery.jpg") },
+    { title: "Heading 2", description: "Description 2", image: require("./assets/images/scenery.jpg") },
+    { title: "Heading 3", description: "Description 3", image: require("./assets/images/scenery.jpg") }
+];
+
+<ListView data={listData} />
+```
+
+You can use any [FlatList property](http://facebook.github.io/react-native/docs/flatlist.html).
+
+The data to be sent to the ListView needs to contain the same fields as the props of [ListItem](#listitem) component.
+
+#### CardList
+A vertical/horizontal List of Card molecules.
+
+```js
+listData = [
+    { title: "Heading 1", description: "Description 1", image: require("./assets/images/scenery.jpg") },
+    { title: "Heading 2", description: "Description 2", image: require("./assets/images/scenery.jpg") },
+    { title: "Heading 3", description: "Description 3", image: require("./assets/images/scenery.jpg") }
+];
+
+<CardList data={listData} />
+```
+
+You can use any [FlatList property](http://facebook.github.io/react-native/docs/flatlist.html).
+
+The data to be sent to the CardList needs to contain the same fields as the props of [Card](#card) component.
+
+#### NavBar
+The Navigation Header makes use of the `Text` and `Icon` atom.
+
+```js
+<NavBar>
+    <NavBarLeft>
+        <NavBarButton type="drawer" />
+    </NavBarLeft>
+    <NavBarBody>
+        <Text>Title</Text>
+    </NavBarBody>
+    <NavBarRight>
+        <NavBarButton onPress={this.handleFavourites} >
+            <Icon name="heart" />
+        </NavBarButton>
+    </NavBarRight>
+</NavBar>
+```
+
+`NavBar` is the main container for the header. It makes use of the [View property](https://facebook.github.io/react-native/docs/view.html) and the following:
+
+| Prop        | Description                                                                       | Default     |
+| ----------- | --------------------------------------------------------------------------------- | ----------- |
+| **`transparent`**  | If status bar above header is transparent         | _None_      |
+| **`statusBarColor`**  | Background color of the `NavBar`. Android only.         | _primary_ for Android, `'#F8F8F8'` for iOS      |
+
+`NavBarBody` is a container that displays its children in the center of the header. It only accepts the title of the page within a Text tag. `NavBarLeft` displays its children on the left while, `NavBarRight` is displays its children on the right side of the header. 
+**All headers must contain these three tags, to render uniformly.**
+
+`NavBarButton` is the button element to be used within the `NavBar`. It will only accept the atoms `Text`, `Icon` and a `react-native Image`. It contains the same property as a [TouchableOpacity](https://facebook.github.io/react-native/docs/touchableopacity.html). It also comes with an inbuilt type for common features, which are `'drawer'`, `'back'` and `'search'`.
+
+| Prop        | Description                                                                       | Default     |
+| ----------- | --------------------------------------------------------------------------------- | ----------- |
+| **`type`**  | Built in UI implementation of common `NavBar` button (drawer, back, search)         | _None_      |
+
+#### TabBar
+The Navigation Footer makes use of the `Text` and `Icon` atom.
+
+```js
+<TabBar>
+    <TabItem active>
+        <Icon name="heart" />
+        <Text>Favorites</Text>
+    </TabItem>
+    <TabItem>
+        <Icon name="add" />
+        <Text>Add New</Text>
+    </TabItem>
+    <TabItem>
+        <Icon name="camera" />
+        <Text>Camera</Text>
+    </TabItem>
+    <TabItem>
+        <Icon name="settings" />
+        <Text>Settings</Text>
+    </TabItem>
+</TabBar>
+```
+
+`TabBar` is the main container for the footer navigation. It makes use of the [View property](https://facebook.github.io/react-native/docs/view.html) and the following:
+
+| Prop        | Description                                                                       | Default     |
+| ----------- | --------------------------------------------------------------------------------- | ----------- |
+| **`color`** | Background color of the `TabBar`. Android only.    | _primary_ for Android, `'#F8F8F8'` for iOS   |
+
+`TabItem` is the button element to be used within the `TabBar`. It will only accept the atoms `Text`, `Icon` and a `react-native Image`. It contains the same property as a [TouchableOpacity](https://facebook.github.io/react-native/docs/touchableopacity.html). In addition, it contains the following properties as well;
+
+| Prop        | Description                                                                       | Default     |
+| ----------- | --------------------------------------------------------------------------------- | ----------- |
+| **`activeColor`**  | Text and Icon color of active tab.  | _white_ for Android, `'#0a60ff'` for iOS   |
+| **`inactiveColor`**  | Text and Icon color of inactive tab. | `'rgba(209, 216, 224, 0.8)'` for Android, `'#8e8e93'` for iOS   |
+| **`active`** | If current `TabItem` is active.   | _false_     |
+
+
+#### PillBar
+The Pill Navigation Bar.
+
+```js
+pillScenes = [
+    { scene: <Home /> },
+    { scene: <CardList data={listData} /> },
+    { scene: <ListView data={listData} /> },
+    { scene: <View style={styles.innerContainer}><Form formElements={formElements} /></View> },
+];
+
+pillHeaders = [
+    { title: 'Home', icon: "home" },
+    { title: 'Card List', icon: "card" },
+    { title: 'List View', icon: "list" },
+    { title: 'Form', icon: "help" }
+];
+
+<PillView pillHeaders={pillHeaders} pillScenes={pillScenes} />
+```
+
+The index of the pillHeader object, will be used to query the corresponding pillScene, during transition.
+
+`PillBar` is the main container for the pill navigation. It makes use of the [View property](https://facebook.github.io/react-native/docs/view.html) and the following:
+
+| Prop        | Description                                                                       | Default     |
+| ----------- | --------------------------------------------------------------------------------- | ----------- |
+| **`color`** | Active color of the PillBar. Android only.       | _primary_ for Android, `'#0a60ff'` for iOS   |
+
+This property `color`, will be passed down to child element `PillItem` as the `activeColor` prop mentioned below
+
+`PillItem` is the button element to be used within the `PillBar`. It will only accept the atoms `Text`, `Icon` and a `react-native Image`. It contains the same property as a [TouchableOpacity](https://facebook.github.io/react-native/docs/touchableopacity.html). In addition, it contains the following properties as well;
+
+| Prop        | Description                                                                       | Default     |
+| ----------- | --------------------------------------------------------------------------------- | ----------- |
+| **`activeColor`**  | Text and Icon color of active tab.  | _white_ for Android, `'#0a60ff'` for iOS   |
+| **`inactiveColor`**  | Text and Icon color of inactive tab. Android only.| `'#adadad'`  |
+| **`active`** | If current `PillItem` is active.   | _false_     |
 
 ## Contributing
 Please read [CONTRIBUTING.md](https://github.com/99xt/firstBorn/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
