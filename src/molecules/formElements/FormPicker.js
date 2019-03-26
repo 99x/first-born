@@ -26,6 +26,7 @@ export class FormPicker extends Component {
 
 FormPicker.propTypes = {
     label: PropTypes.string.isRequired,
+    date: PropTypes.array,
     ...Picker.propTypes
 }
 

@@ -60,10 +60,10 @@ export class NavBar extends Component {
                     <View onLayout={e => this.layoutChange(e.nativeEvent.layout)} style={{
                         height: this.calculateHeight(orientation, deviceVariables.Inset),
                         paddingTop: this.calculatePadder(orientation, deviceVariables.Inset),
-                        backgroundColor: "#f8f8f8"
+                        backgroundColor: statusBarColor
                     }}>
                         <StatusBar
-                            backgroundColor={shadeColor("#f8f8f8", 0.2)}
+                            backgroundColor={shadeColor(statusBarColor, 0.2)}
                             barStyle={"dark-content"}
                             translucent={transparent ? true : translucent}
                         />
@@ -78,10 +78,10 @@ export class NavBar extends Component {
                 <View onLayout={e => this.layoutChange(e.nativeEvent.layout)} style={{
                     height: this.calculateHeight(orientation, deviceVariables.Inset),
                     paddingTop: paddingTop,
-                    backgroundColor: "#f8f8f8"
+                    backgroundColor: statusBarColor
                 }}>
                     <StatusBar
-                        backgroundColor={shadeColor("#f8f8f8", 0.2)}
+                        backgroundColor={shadeColor(statusBarColor, 0.2)}
                         barStyle={"dark-content"}
                         translucent={transparent ? true : translucent}
                     />
@@ -115,6 +115,7 @@ export class NavBar extends Component {
 
 NavBar.propTypes = {
     transparent: PropTypes.bool,
+    statusBarColor: PropTypes.string,
     ...View.propTypes
 };
 

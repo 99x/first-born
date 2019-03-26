@@ -47,6 +47,7 @@ export class PillItem extends Component {
 PillItem.propTypes = {
     activeColor: PropTypes.string,
     inactiveColor: PropTypes.string,
+    active: PropTypes.bool,
     ...TouchableOpacity.propTypes
 }
 

@@ -70,7 +70,8 @@ ListItem.propTypes = {
 
 ListItem.defaultProps = {
     backgroundColor: commonColors.white,
-    secondary: false
+    secondary: false,
+    block: false
 }
 
 const styles = StyleSheet.create({

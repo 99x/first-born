@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, Platform, Picker, View, Modal } from "react-native";
 import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import Ionicon from "react-native-vector-icons/Ionicons";
 import { commonColors } from "../utils/color";
 import { Text } from "./Text";
@@ -90,6 +91,11 @@ PickerAE.Item = createReactClass({
 });
 
 PickerAE.propTypes = {
+    placeholder: PropTypes.string,
+    color: PropTypes.string,
+    animationType: PropTypes.string,
+    modalTransparent: PropTypes.bool,
+    mode: PropTypes.string,
     ...Picker.propTypes
 }
 

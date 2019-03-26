@@ -15,7 +15,7 @@ export class CardList extends Component {
                 renderItem={({ item }) => {
                     return (
                         <View style={horizontal ? { marginRight: margin } : { marginBottom: margin }}>
-                            <Card image={item.image} title={item.title} description={item.description} backgroundColor={backgroundColor} style={horizontal ? { width: deviceVariables.width - 40 } : { width: deviceVariables.width - 10 }} {...otherProps} />
+                            <Card {...item} backgroundColor={backgroundColor} style={horizontal ? { width: deviceVariables.width - 40 } : { width: deviceVariables.width - 10 }} {...otherProps} />
                         </View>
                     )
                 }}

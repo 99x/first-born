@@ -8,7 +8,7 @@ import { Text } from "./Text";
 
 export class Button extends Component {
     render() {
-        const { title, color, rounded, outline, block, size, secondary, transparent, ...otherProps } = this.props;
+        const { color, rounded, outline, block, size, secondary, transparent, ...otherProps } = this.props;
 
         const buttonColor = secondary ? commonColors.secondary : color;
 
@@ -56,7 +56,6 @@ Button.propTypes = {
     rounded: PropTypes.bool,
     outline: PropTypes.bool,
     block: PropTypes.bool,
-    title: PropTypes.string,
     color: PropTypes.string,
     transparent: PropTypes.bool,
     size: PropTypes.oneOf(["small", "default", "large"]),
@@ -65,7 +64,11 @@ Button.propTypes = {
 
 Button.defaultProps = {
     color: commonColors.primary,
-    size: "default"
+    size: "default",
+    rounded: false,
+    outline: false,
+    block: false,
+    transparent: false
 }
 
 const styles = StyleSheet.create({

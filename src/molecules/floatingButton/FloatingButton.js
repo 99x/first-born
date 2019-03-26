@@ -132,16 +132,6 @@ export class FloatingButton extends Component {
     return <Icon name={iconName ? iconName : !this.state.active ? "add" : "close"} size={30} color={commonColors.white} />;
   };
 
-  handlePressItem = (itemName) => {
-    const { onPressItem } = this.props;
-
-    if (onPressItem) {
-      onPressItem(itemName);
-    }
-
-    this.reset();
-  };
-
   reset = () => {
     Animated.spring(this.animation, { toValue: 0 }).start();
     Animated.spring(this.actionsAnimation, { toValue: 0 }).start();
@@ -157,7 +147,6 @@ export class FloatingButton extends Component {
   animateButton = () => {
     const {
       dismissKeyboardOnPress,
-      onPressMain,
       onPress
     } = this.props;
     const { active } = this.state;
@@ -168,12 +157,7 @@ export class FloatingButton extends Component {
 
     if (onPress) {
       onPress();
-
       return;
-    }
-
-    if (onPressMain) {
-      onPressMain(!active);
     }
 
     if (!active) {
@@ -253,7 +237,7 @@ export class FloatingButton extends Component {
   }
 
   renderActions() {
-    const { actions, actionsPaddingTopBottom } = this.props;
+    const { actions, actionsPaddingTopBottom, tabs } = this.props;
     const { distanceToEdge } = this.state;
 
     const position = Platform.OS === "android" ? "right" : "center";
@@ -303,6 +287,7 @@ export class FloatingButton extends Component {
                 position={position}
                 active={active}
                 onPress={action.onPress}
+                tabs={tabs}
               />
             );
           })
@@ -394,14 +379,14 @@ FloatingButton.propTypes = {
   iconWidth: PropTypes.number,
   listenKeyboard: PropTypes.bool,
   dismissKeyboardOnPress: PropTypes.bool,
-  onPressItem: PropTypes.func,
-  onPressMain: PropTypes.func,
+  onPress: PropTypes.func,
   onClose: PropTypes.func,
   onOpen: PropTypes.func,
   onPressBackdrop: PropTypes.func,
   onStateChange: PropTypes.func,
   image: PropTypes.any,
-  tabs: PropTypes.bool
+  tabs: PropTypes.bool,
+  iconName: PropTypes.string
 };
 
 FloatingButton.defaultProps = {

@@ -39,7 +39,8 @@ Card.propTypes = {
 }
 
 Card.defaultProps = {
-    backgroundColor: commonColors.white
+    backgroundColor: commonColors.white,
+    block: false
 }
 
 const styles = StyleSheet.create({

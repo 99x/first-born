@@ -80,7 +80,8 @@ class FloatingButtonItem extends Component {
             position,
             distanceToEdge,
             paddingTopBottom,
-            margin
+            margin,
+            tabs
         } = this.props;
         const Touchable = getTouchableComponent(false);
 
@@ -97,7 +98,11 @@ class FloatingButtonItem extends Component {
         if (position === 'right') {
             components.push(this.renderText());
             components.push(this.renderButton());
-            distanceToEdgeActionContainer.paddingRight = distanceToEdge + margin;
+            if (tabs) {
+                distanceToEdgeActionContainer.paddingRight = 20 + margin;
+            } else {
+                distanceToEdgeActionContainer.paddingRight = distanceToEdge + margin;
+            }
         } else {
             components.push(this.renderButton());
         }
@@ -138,7 +143,8 @@ FloatingButtonItem.propTypes = {
     distanceToEdge: PropTypes.number,
     paddingTopBottom: PropTypes.number, // modified by parent property "actionsPaddingTopBottom"
     onPress: PropTypes.func,
-    margin: PropTypes.number
+    margin: PropTypes.number,
+    image: PropTypes.any
 };
 
 FloatingButtonItem.defaultProps = {

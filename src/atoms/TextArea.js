@@ -58,9 +58,8 @@ export class TextArea extends Component {
 }
 
 TextArea.propTypes = {
-    placeholder: PropTypes.string,
     color: PropTypes.string,
-    onChangeText: PropTypes.func
+    ...TextInput.propTypes
 }
 
 TextArea.defaultProps = {
