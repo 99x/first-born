@@ -41,8 +41,8 @@ export class Button extends Component {
 
         const children = React.Children.map(this.props.children, child => child && child.type === Text ?
             React.cloneElement(child, { style: textStyle, ...child.props }) : child && child.type === Icon ?
-                React.cloneElement(child, { size: iconSize, ...child.props, color: iconColor }) : child && child.type === Image ?
-                    React.cloneElement(child, { style: { width: 25, height: 25 }, ...child.props }) : null);
+                React.cloneElement(child, { size: iconSize, ...child.props, color: iconColor, style: { paddingRight: 5 } }) : child && child.type === Image ?
+                    React.cloneElement(child, { style: { width: 25, height: 25, paddingRight: 5 }, ...child.props }) : null);
 
         return (
             <TouchableOpacity ref={(c) => this._root = c} style={buttonStyle} {...otherProps}>
@@ -90,11 +90,12 @@ const styles = StyleSheet.create({
         }),
         margin: 10,
         shadowColor: "#000",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
     },
     blockButton: {
         width: "100%",
-        justifyContent: "center",
-        alignItems: "center",
     },
     transparent: {
         borderWidth: 0,
