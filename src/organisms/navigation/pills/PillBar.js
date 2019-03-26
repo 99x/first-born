@@ -15,7 +15,6 @@ export class PillBar extends Component {
         return (
             <View style={Platform.OS === "android" ? styles.container : [styles.container, { borderColor: color, borderRadius: 15, borderWidth: 1.5 }]}>
                 {pillHeaders && pillHeaders.map((pill, index) => {
-                    console.log(`${index} === ${activePill}`, index === activePill)
                     return (
                         <PillItem activeColor={color} onPress={() => onPillChange(index)} active={index === activePill} {...otherProps}>
                             {this.getIcon(pill)}
@@ -52,7 +51,9 @@ PillBar.defaultProps = {
 const styles = StyleSheet.create({
     container: {
         flexDirection: "row",
-        marginTop: 30,
-        marginBottom: 5
+        marginTop: 35,
+        marginBottom: 5,
+        marginHorizontal: Platform.OS === "android" ? 0 : 20,
+        overflow: "hidden"
     }
 })

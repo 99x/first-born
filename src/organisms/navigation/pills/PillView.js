@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, ScrollView } from "react-native";
 import PropTypes from "prop-types";
 
 import { PillBar } from "./PillBar";
@@ -15,8 +15,6 @@ export class PillView extends Component {
     }
 
     handlePillChange = (activePill) => {
-        console.log("activePill", activePill);
-
         this.setState({ activePill: activePill });
     }
 
@@ -26,7 +24,9 @@ export class PillView extends Component {
         return (
             <View style={styles.container}>
                 <PillBar pillHeaders={pillHeaders} color={color} onPillChange={this.handlePillChange} activePill={this.state.activePill} />
-                {this.renderScene()}
+                <ScrollView>
+                    {this.renderScene()}
+                </ScrollView>
             </View>
         )
     }
