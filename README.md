@@ -1,5 +1,4 @@
 ![](https://github.com/99xt/firstBorn/blob/master/firstBorn-logo.png)
-# firstBorn
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes
