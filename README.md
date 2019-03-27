@@ -62,7 +62,7 @@ import { Button } from "firstBorn";
 <Text>Hello</Text>
 ```
 
-![Android Text](images/atoms/textAndroid.PNG "Android Text") ![iOS Text](images/atoms/textIos.PNG "iOS Text")
+![Android Text](images/atoms/textAndroid.PNG "Android Text") ![iOS Text](images/atoms/textIos.png "iOS Text")
 
 You can use any [Text property](http://facebook.github.io/react-native/docs/text.html) and the following:
 
@@ -95,7 +95,7 @@ The Ionicons component from `react-native-vector-icons` is used.
 <Icon name='heart'>
 ```
 
-![Android Icon](images/atoms/iconAndroid.PNG "Android Icon") ![iOS Icon](images/atoms/iconIos.PNG "iOS Icon")
+![Android Icon](images/atoms/iconAndroid.PNG "Android Icon") ![iOS Icon](images/atoms/iconIos.png "iOS Icon")
 
 You can use any [Text property](http://facebook.github.io/react-native/docs/text.html) and the following:
 
@@ -115,7 +115,7 @@ Only accepts `Text` and `Icon` atoms and `react-native Image` .
 </Button>
 ```
 
-![Android Button](images/atoms/buttonAndroid.PNG "Android Button") ![iOS Button](images/atoms/buttonIos.PNG "iOS Button")
+![Android Button](images/atoms/buttonAndroid.PNG "Android Button") ![iOS Button](images/atoms/buttonIos.png "iOS Button")
 
 You can use any [TouchableOpacity property](https://facebook.github.io/react-native/docs/touchableopacity.html) and the following:
 
@@ -136,7 +136,7 @@ Renders a `Text`, that displays a date picker modal when the `onPress` method is
 <DatePicker onDateChange={this.handleDateChange} />
 ```
 
-![Android Date Picker](images/atoms/datePickerAndroid.PNG "Android Date Picker") ![iOS Date Picker](images/atoms/datePickerIos.PNG "iOS Date Picker")
+![Android Date Picker](images/atoms/datePickerAndroid.PNG "Android Date Picker") ![iOS Date Picker](images/atoms/datePickerIos.png "iOS Date Picker")
 
 You can use any [TextInput property](http://facebook.github.io/react-native/docs/textinput.html) and the following:
 
@@ -160,7 +160,7 @@ You can use any [TextInput property](http://facebook.github.io/react-native/docs
 <Input onChangeText={this.handleTextChange} placeholder="Name" />
 ```
 
-![Android Input](images/atoms/inputAndroid.PNG "Android Input") ![iOS Input](images/atoms/inputIos.PNG "iOS Input")
+![Android Input](images/atoms/inputAndroid.PNG "Android Input") ![iOS Input](images/atoms/inputIos.png "iOS Input")
 
 You can use any [TextInput property](http://facebook.github.io/react-native/docs/textinput.html) and the following:
 
@@ -181,7 +181,7 @@ In iOS, renders a `Text`, that displays a picker modal when the `onPress` method
 </Picker>
 ```
 
-![Android Picker](images/atoms/pickerAndroid.PNG "Android Picker") ![iOS Picker](images/atoms/pickerIos.PNG "iOS Picker")
+![Android Picker](images/atoms/pickerAndroid.PNG "Android Picker") ![iOS Picker](images/atoms/pickerIos.png "iOS Picker")
 
 You can use any [Picker property](http://facebook.github.io/react-native/docs/picker.html) and the following:
 
@@ -201,7 +201,7 @@ Renders a `TextInput`, that increases in height with the height of the text ente
 <TextArea onChangeText={this.handleTextChange} placeholder="Description" />
 ```
 
-![Android TextArea](images/atoms/textareaAndroid.PNG "Android TextArea") ![iOS TextArea](images/atoms/textareaIos.PNG "iOS TextArea")
+![Android TextArea](images/atoms/textareaAndroid.PNG "Android TextArea") ![iOS TextArea](images/atoms/textareaIos.png "iOS TextArea")
 
 You can use any [TextInput property](http://facebook.github.io/react-native/docs/textinput.html) and the following:
 
@@ -221,7 +221,7 @@ Uses the Atom `DatePicker`.
 <FormDatePicker onDateChange={this.handleDateChange} label="Date" />
 ```
 
-![Android Form Date Picker](images/molecules/formDatePickerAndroid.PNG "Android Form Date Picker") ![iOS Form Date Picker](images/molecules/formDatePickerIos.PNG "iOS Form Date Picker")
+![Android Form Date Picker](images/molecules/formDatePickerAndroid.PNG "Android Form Date Picker") ![iOS Form Date Picker](images/molecules/formDatePickerIos.png "iOS Form Date Picker")
 
 Additional Props;
 
@@ -237,7 +237,7 @@ Uses the Atom `Input`.
 <FormInput onChangeText={this.handleTextChange} label="Name" />
 ```
 
-![Android Form Input](images/molecules/formInputAndroid.PNG "Android Form Input") ![iOS Form Input](images/molecules/formInputIos.PNG "iOS Form Input")
+![Android Form Input](images/molecules/formInputAndroid.PNG "Android Form Input") ![iOS Form Input](images/molecules/formInputIos.png "iOS Form Input")
 
 Additional Props;
 
@@ -270,7 +270,7 @@ Uses the Atom `TextArea`.
 <FormTextArea onChangeText={this.handleTextChange} label="Description" />
 ```
 
-![Android Form TextArea](images/molecules/formTextAreaAndroid.PNG "Android Form TextArea") ![iOS Form TextArea](images/molecules/formTextAreaIos.PNG "iOS Form TextArea")
+![Android Form TextArea](images/molecules/formTextAreaAndroid.PNG "Android Form TextArea") ![iOS Form TextArea](images/molecules/formTextAreaIos.png "iOS Form TextArea")
 
 Additional Props;
 
@@ -307,7 +307,7 @@ handleShowNotification = () => {
 }
 ```
 
-![Android Notification](images/molecules/notificationAndroid.PNG "Android Notification") ![iOS Notification](images/molecules/notificationIos.PNG "iOS Notification")
+![Android Notification](images/molecules/notificationAndroid.PNG "Android Notification") ![iOS Notification](images/molecules/notificationIos.png "iOS Notification")
 
 The data that can be passed to the notification are;
 
@@ -332,7 +332,7 @@ A List Item that displays a title (required), description and image. This molecu
 </ListItem>
 ```
 
-![Android ListItem](images/molecules/listItemAndroid.PNG "Android ListItem") ![iOS ListItem](images/molecules/listItemIos.PNG "iOS ListItem")
+![Android ListItem](images/molecules/listItemAndroid.PNG "Android ListItem") ![iOS ListItem](images/molecules/listItemIos.png "iOS ListItem")
 
 You can use any [TouchableOpacity property](https://facebook.github.io/react-native/docs/touchableopacity.html) and the following:
 
@@ -368,9 +368,9 @@ actions = [
 <FloatingButton actions={actions} />
 ```
 
-![Android FAB](images/molecules/fabAndroid.PNG "Android FAB") ![iOS FAB](images/molecules/fabIos.PNG "iOS FAB") 
+![Android FAB](images/molecules/fabAndroid.PNG "Android FAB") ![iOS FAB](images/molecules/fabIos.png "iOS FAB") 
 
-![Android FAB Expanded](images/molecules/fabExpandedAndroid.PNG "Android FAB Expanded") ![iOS FAB Expanded](images/molecules/fabExpandedIos.PNG "iOS FAB Expanded")
+![Android FAB Expanded](images/molecules/fabExpandedAndroid.PNG "Android FAB Expanded") ![iOS FAB Expanded](images/molecules/fabExpandedIos.png "iOS FAB Expanded")
 
 The props for the main `FloatingButton` are;
 
@@ -429,7 +429,7 @@ A Card that displays a title (required), description and image.
 <Card title="Heading" description="Description" image={require("../assets/images/scenery.jpg")} />
 ```
 
-![Android Card](images/molecules/cardAndroid.PNG "Android Card") ![iOS Card](images/molecules/cardIos.PNG "iOS Card")
+![Android Card](images/molecules/cardAndroid.PNG "Android Card") ![iOS Card](images/molecules/cardIos.png "iOS Card")
 
 You can use any [TouchableOpacity property](https://facebook.github.io/react-native/docs/touchableopacity.html) and the following:
 
@@ -457,7 +457,7 @@ formElements = [
 <Form formElements={formElements} />
 ```
 
-![Android Form](images/organisms/formAndroid.PNG "Android Form") ![iOS Form](images/organisms/formIos.PNG "iOS Form")
+![Android Form](images/organisms/formAndroid.PNG "Android Form") ![iOS Form](images/organisms/formIos.png "iOS Form")
 
 The `Form` Component iterates through the `formElements` array, to render the fields according to the type of input specified in each object. 
 The form object only has one extra prop;
@@ -488,7 +488,7 @@ listData = [
 <ListView data={listData} />
 ```
 
-![Android ListView](images/organisms/listViewAndroid.PNG "Android ListView") ![iOS ListView](images/organisms/listViewIos.PNG "iOS ListView")
+![Android ListView](images/organisms/listViewAndroid.PNG "Android ListView") ![iOS ListView](images/organisms/listViewIos.png "iOS ListView")
 
 You can use any [FlatList property](http://facebook.github.io/react-native/docs/flatlist.html).
 
@@ -507,7 +507,7 @@ listData = [
 <CardList data={listData} />
 ```
 
-![Android CardList](images/organisms/cardListAndroid.PNG "Android CardList") ![iOS CardList](images/organisms/cardListIos.PNG "iOS CardList")
+![Android CardList](images/organisms/cardListAndroid.PNG "Android CardList") ![iOS CardList](images/organisms/cardListIos.png "iOS CardList")
 
 You can use any [FlatList property](http://facebook.github.io/react-native/docs/flatlist.html).
 
@@ -532,7 +532,7 @@ The Navigation Header makes use of the `Text` and `Icon` atom.
 </NavBar>
 ```
 
-![Android Nav Bar](images/organisms/navBarAndroid.PNG "Android Nav Bar") ![iOS Nav Bar](images/organisms/navBarIos.PNG "iOS Nav Bar")
+![Android Nav Bar](images/organisms/navBarAndroid.PNG "Android Nav Bar") ![iOS Nav Bar](images/organisms/navBarIos.png "iOS Nav Bar")
 
 `NavBar` is the main container for the header. It makes use of the [View property](https://facebook.github.io/react-native/docs/view.html) and the following:
 
@@ -574,7 +574,7 @@ The Navigation Footer makes use of the `Text` and `Icon` atom.
 </TabBar>
 ```
 
-![Android Tab Bar](images/organisms/tabBarAndroid.PNG "Android Tab Bar") ![iOS Tab Bar](images/organisms/tabBarIos.PNG "iOS Tab Bar")
+![Android Tab Bar](images/organisms/tabBarAndroid.PNG "Android Tab Bar") ![iOS Tab Bar](images/organisms/tabBarIos.png "iOS Tab Bar")
 
 `TabBar` is the main container for the footer navigation. It makes use of the [View property](https://facebook.github.io/react-native/docs/view.html) and the following:
 
@@ -613,7 +613,7 @@ pillHeaders = [
 ```
 
 
-![Android Pill Bar](images/organisms/pillBarAndroid.PNG "Android Pill Bar") ![iOS Pill Bar](images/organisms/pillBarIos.PNG "iOS Pill Bar")
+![Android Pill Bar](images/organisms/pillBarAndroid.PNG "Android Pill Bar") ![iOS Pill Bar](images/organisms/pillBarIos.png "iOS Pill Bar")
 
 The index of the pillHeader object, will be used to query the corresponding pillScene, during transition.
 
