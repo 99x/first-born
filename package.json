@@ -1,5 +1,5 @@
 {
-  "name": "react-native-atom-elements",
+  "name": "firstBorn",
   "version": "1.0.0",
   "description": "React Native UI Framework",
   "main": "index.js",
@@ -24,6 +24,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/samsam-026/react-native-atom-elements.git"
+    "url": "git+ssh://git@github.com/99xt/firstBorn.git"
   }
 }
