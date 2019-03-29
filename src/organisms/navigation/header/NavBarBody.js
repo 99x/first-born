@@ -9,7 +9,9 @@ export class NavBarBody extends Component {
 
         const { style, children, color, ...otherProps } = this.props;
 
-        const newChildren = React.Children.map(children, child => child && child.type === Text ? React.cloneElement(child, { ...child.props, size: "h6", bold: true, color }) : null);
+        const newChildren = React.Children.map(children, child => child && child.type === Text ?
+            React.cloneElement(child, { ...child.props, style: { ...child.props.style }, size: "h6", bold: true, color }) :
+            null);
 
         return (
             <View style={styles.container} {...otherProps} >

@@ -7,11 +7,17 @@ import { getFontSize } from "../variables/textSizeVariables";
 class TextAE extends Component {
 
     render() {
-        const { color, size, bold, children, ...otherProps } = this.props;
+        const { color, size, bold, children, style, align, ...otherProps } = this.props;
 
         const textBold = !bold ? "normal" : "bold";
 
-        const textStyle = { color: color, fontSize: getFontSize(size), fontWeight: textBold };
+        let textStyle;
+
+        if (style) {
+            textStyle = { color: color, fontSize: getFontSize(size), textAlign: align, fontWeight: textBold, ...style };
+        } else {
+            textStyle = { color: color, fontSize: getFontSize(size), textAlign: align, fontWeight: textBold, marginVertical: 5 };
+        }
 
         return (
             <Text
@@ -29,13 +35,15 @@ TextAE.propTypes = {
     bold: PropTypes.bool,
     color: PropTypes.string,
     size: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "h6", "p", "callout", "sub_heading", "footnote", "caption_big", "caption_small"]),
+    align: PropTypes.string,
     ...Text.propTypes
 };
 
 TextAE.defaultProps = {
     size: "p",
     bold: false,
-    color: commonColors.black
+    color: commonColors.black,
+    align: "left"
 };
 
 export { TextAE as Text };

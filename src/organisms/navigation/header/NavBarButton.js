@@ -15,9 +15,9 @@ export class NavBarButton extends Component {
         if (children) {
 
             newChildren = React.Children.map(children, child => child && child.type === Text ?
-                React.cloneElement(child, { size: "p", ...child.props }) : child && child.type === Icon ?
-                    React.cloneElement(child, { size: 25, ...child.props }) : child && child.type === Image ?
-                        React.cloneElement(child, { style: { width: 25, height: 25 }, ...child.props }) : null);
+                React.cloneElement(child, { ...child.props, size: "p" }) : child && child.type === Icon ?
+                    React.cloneElement(child, { ...child.props, size: 25, }) : child && child.type === Image ?
+                        React.cloneElement(child, { ...child.props, style: { width: 25, height: 25 } }) : null);
 
         } else if (type) {
 

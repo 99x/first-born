@@ -8,25 +8,8 @@ import { Icon } from "../../../atoms/Icon";
 
 export class TabItem extends Component {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            active: props.active ? true : false
-        }
-    }
-
-    handleOnPress = () => {
-        const { onPress } = this.props;
-        this.setState({ active: true });
-        if (onPress) {
-            onPress();
-        }
-    }
-
     render() {
-        const { label, children, activeColor, inactiveColor, ...otherProps } = this.props;
-        const { active } = this.state;
+        const { label, children, activeColor, inactiveColor, active, ...otherProps } = this.props;
 
         let newChildren = [];
 
@@ -35,14 +18,14 @@ export class TabItem extends Component {
         if (children) {
 
             newChildren = React.Children.map(children, child => child && child.type === Text ?
-                React.cloneElement(child, { ...child.props, size: "footnote", color }) : child && child.type === Icon ?
-                    React.cloneElement(child, { ...child.props, size: 28, color }) : child && child.type === Image ?
-                        React.cloneElement(child, { style: { width: 28, height: 28, opacity: active ? 1 : 0.8 }, ...child.props }) : null);
+                React.cloneElement(child, { ...child.props, size: "footnote", color, style: { ...child.props.style } }) : child && child.type === Icon ?
+                    React.cloneElement(child, { ...child.props, size: 28, color, style: { ...child.props.style } }) : child && child.type === Image ?
+                        React.cloneElement(child, { style: { ...child.props.style, width: 28, height: 28, opacity: active ? 1 : 0.8 }, ...child.props }) : null);
 
         }
 
         return (
-            <TouchableOpacity style={styles.container} {...otherProps} onPress={this.handleOnPress}>
+            <TouchableOpacity style={styles.container} {...otherProps}>
                 {newChildren && newChildren}
             </TouchableOpacity>
         )

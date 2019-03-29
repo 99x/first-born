@@ -8,9 +8,13 @@ import { Text } from "./Text";
 
 export class Button extends Component {
     render() {
-        const { color, rounded, outline, block, size, secondary, transparent, ...otherProps } = this.props;
+        const { color, rounded, outline, block, size, secondary, transparent, circle, ...otherProps } = this.props;
 
         const buttonColor = secondary ? commonColors.secondary : color;
+
+        const buttonPadding = getButtonPadding(size);
+        const fontSize = getFontSize(size);
+        const radiusSize = getRoundRadius(size);
 
         let buttonStyle = [styles.defaultButton];
         let iconSize = getIconSize(size);
@@ -22,16 +26,21 @@ export class Button extends Component {
         }
 
         if (rounded) {
-            buttonStyle.push({ paddingHorizontal: getButtonPadding(size) + (getButtonPadding(size) / 3), borderRadius: getRoundRadius(size) });
+            buttonStyle.push({ paddingHorizontal: buttonPadding + (buttonPadding / 3), borderRadius: radiusSize });
+        }
+
+        if (circle) {
+            buttonStyle.push({ width: (radiusSize + buttonPadding) * 2, height: (radiusSize + buttonPadding) * 2, borderRadius: radiusSize + buttonPadding, padding: buttonPadding / 2 });
+            iconSize += buttonPadding / 2;
         }
 
         if (outline) {
-            textStyle = { color: buttonColor, fontSize: getFontSize(size) };
-            buttonStyle.push({ borderColor: buttonColor, borderWidth: 1, padding: getButtonPadding(size) });
+            textStyle = { color: buttonColor, fontSize: fontSize, margin: 0 };
+            buttonStyle.push({ borderColor: buttonColor, borderWidth: 1, padding: buttonPadding });
             iconColor = buttonColor;
         } else {
-            textStyle = { color: commonColors.white, fontSize: getFontSize(size) };
-            buttonStyle.push({ backgroundColor: buttonColor, padding: getButtonPadding(size) });
+            textStyle = { color: commonColors.white, fontSize: fontSize, margin: 0 };
+            buttonStyle.push({ backgroundColor: buttonColor, padding: buttonPadding });
             iconColor = commonColors.white;
         }
 
@@ -40,9 +49,9 @@ export class Button extends Component {
         }
 
         const children = React.Children.map(this.props.children, child => child && child.type === Text ?
-            React.cloneElement(child, { style: textStyle, ...child.props }) : child && child.type === Icon ?
-                React.cloneElement(child, { size: iconSize, ...child.props, color: iconColor, style: { paddingRight: 5 } }) : child && child.type === Image ?
-                    React.cloneElement(child, { style: { width: 25, height: 25, paddingRight: 5 }, ...child.props }) : null);
+            React.cloneElement(child, { ...child.props, style: { ...textStyle, ...child.props.style } }) : child && child.type === Icon ?
+                React.cloneElement(child, { ...child.props, size: iconSize, color: iconColor, style: { ...child.props.style, paddingRight: 5 } }) : child && child.type === Image ?
+                    React.cloneElement(child, { ...child.props, style: { ...child.props.style, width: 25, height: 25, paddingRight: 5 }, }) : null);
 
         return (
             <TouchableOpacity ref={(c) => this._root = c} style={buttonStyle} {...otherProps}>
@@ -58,6 +67,7 @@ Button.propTypes = {
     block: PropTypes.bool,
     color: PropTypes.string,
     transparent: PropTypes.bool,
+    circle: PropTypes.bool,
     size: PropTypes.oneOf(["small", "default", "large"]),
     ...TouchableOpacity.propTypes
 }
@@ -68,7 +78,8 @@ Button.defaultProps = {
     rounded: false,
     outline: false,
     block: false,
-    transparent: false
+    transparent: false,
+    circle: false
 }
 
 const styles = StyleSheet.create({
