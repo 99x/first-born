@@ -12,7 +12,7 @@ class PickerAE extends Component {
         super(props);
         this.state = {
             focused: false,
-            chosenValue: !props.placeholder && props.selectedValue ? props.selectedValue : undefined
+chosenValue: !props.placeholder && props.selectedValue ? props.selectedValue : undefined
         }
     }
 
