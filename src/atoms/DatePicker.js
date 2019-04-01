@@ -40,7 +40,7 @@ export class DatePicker extends Component {
                 <View style={focused ? [styles.datePickerIos, { borderColor: color, borderWidth: 2 }] : styles.datePickerIos} >
                     <Text
                         ref={(c) => this._root = c}
-                        style={!chosenDate ? styles.input : [styles.input, { color: commonColors.black }]}
+                        style={!chosenDate ? styles.input : styles.inputValue}
                         onPress={() => this.openIosDatePicker()}
                     >
                         {chosenDate ? this.formatChosenDate(chosenDate) : placeholder}
