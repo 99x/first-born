@@ -15,19 +15,17 @@ The following modules need to be added as a dev dependency as well.
 
 ### Installing
 
-After installing all dependencies in your app, move into the `node_modules` folder.
+To install firstBorn run the following command in the terminal;
 ```
-cd node_modules
+npm install --save first-born
 ```
-Clone the firstBorn repository into the root of `node_modules`.
+You will additionally require to install the following modules as well.
 ```
-git clone https://github.com/99xt/firstBorn.git
+npm install --save create-react-class react-native-vector-icons
 ```
-Update the `package.json` to contain the following line inside `dependencies`.
-```
-"firstBorn": "file:/node_modules/firstBorn"
-```
-No additonal steps are required to configure it seperately for each platform (Android/iOS).
+Follow [this guide](https://github.com/oblador/react-native-vector-icons#installation) to configure `react-native-vector-icons` for your project. 
+
+No other steps are required to configure `firstBorn` seperately for each platform (Android/iOS).
 
 ## Usage
 
