@@ -29,7 +29,7 @@ export class DatePicker extends Component {
                         style={!chosenDate ? styles.input : styles.inputValue}
                         onPress={() => this.openAndroidDatePicker()}
                     >
-{chosenDate ? this.formatChosenDate(chosenDate) : placeholder}
+    {chosenDate ? this.formatChosenDate(chosenDate) : placeholder}
                     </Text>
                     <Icon name="calendar" onPress={() => this.openAndroidDatePicker()} style={styles.icon} color={focused ? color : commonColors.inputGrey} size={20} />
                 </View >
