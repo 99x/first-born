@@ -1,5 +1,5 @@
 {
-    "name": "first-born",
+    "name": "@99xt/first-born",
     "version": "1.0.0",
     "description": "React Native UI Framework",
     "main": "index.js",
@@ -51,5 +51,9 @@
         "hooks": {
             "pre-commit": "npm run precommit"
         }
-    }
+    },
+    "bugs": {
+        "url": "https://github.com/99xt/firstBorn/issues"
+    },
+    "homepage": "https://github.com/99xt/firstBorn#readme"
 }
