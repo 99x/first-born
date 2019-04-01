@@ -1,0 +1,551 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders TabBar with icons 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "borderTopColor": "rgba(33, 33, 33, 0.5)",
+        "borderTopWidth": 1,
+        "flexDirection": "row",
+      },
+      Object {
+        "backgroundColor": "#f8f8f8",
+      },
+    ]
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "opacity": 1,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "#0a60ff",
+            "fontSize": 28,
+          },
+          Object {},
+          Object {
+            "fontFamily": "Ionicons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "opacity": 1,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "#8e8e93",
+            "fontSize": 28,
+          },
+          Object {},
+          Object {
+            "fontFamily": "Ionicons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "opacity": 1,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "#8e8e93",
+            "fontSize": 28,
+          },
+          Object {},
+          Object {
+            "fontFamily": "Ionicons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "opacity": 1,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "#8e8e93",
+            "fontSize": 28,
+          },
+          Object {},
+          Object {
+            "fontFamily": "Ionicons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`renders TabBar with tab titles 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "borderTopColor": "rgba(33, 33, 33, 0.5)",
+        "borderTopWidth": 1,
+        "flexDirection": "row",
+      },
+      Object {
+        "backgroundColor": "#f8f8f8",
+      },
+    ]
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "opacity": 1,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#0a60ff",
+          "fontSize": 13,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        }
+      }
+    >
+      ONE
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "opacity": 1,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#8e8e93",
+          "fontSize": 13,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        }
+      }
+    >
+      TWO
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "opacity": 1,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#8e8e93",
+          "fontSize": 13,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        }
+      }
+    >
+      THREE
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "opacity": 1,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#8e8e93",
+          "fontSize": 13,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        }
+      }
+    >
+      FOUR
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`renders TabBar with tab titles and icons 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "borderTopColor": "rgba(33, 33, 33, 0.5)",
+        "borderTopWidth": 1,
+        "flexDirection": "row",
+      },
+      Object {
+        "backgroundColor": "#f8f8f8",
+      },
+    ]
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "opacity": 1,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "#0a60ff",
+            "fontSize": 28,
+          },
+          Object {},
+          Object {
+            "fontFamily": "Ionicons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#0a60ff",
+          "fontSize": 13,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        }
+      }
+    >
+      ONE
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "opacity": 1,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "#8e8e93",
+            "fontSize": 28,
+          },
+          Object {},
+          Object {
+            "fontFamily": "Ionicons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#8e8e93",
+          "fontSize": 13,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        }
+      }
+    >
+      TWO
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "opacity": 1,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "#8e8e93",
+            "fontSize": 28,
+          },
+          Object {},
+          Object {
+            "fontFamily": "Ionicons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#8e8e93",
+          "fontSize": 13,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        }
+      }
+    >
+      THREE
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "opacity": 1,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "#8e8e93",
+            "fontSize": 28,
+          },
+          Object {},
+          Object {
+            "fontFamily": "Ionicons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#8e8e93",
+          "fontSize": 13,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        }
+      }
+    >
+      FOUR
+    </Text>
+  </View>
+</View>
+`;

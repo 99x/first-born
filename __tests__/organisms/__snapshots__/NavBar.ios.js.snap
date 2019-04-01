@@ -1,0 +1,568 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders NavBar with back button 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#f8f8f8",
+      "height": 84,
+      "paddingTop": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "borderColor": "#0a60ff",
+            "borderRadius": 0,
+            "borderWidth": 0,
+            "elevation": 0,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "margin": 10,
+            "opacity": 1,
+            "padding": 10,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 0,
+              "width": 0,
+            },
+            "shadowOpacity": 0,
+            "shadowRadius": 0,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#0a60ff",
+                "fontSize": 20,
+              },
+              Object {
+                "paddingRight": 5,
+              },
+              Object {
+                "fontFamily": "Ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#0a60ff",
+              "fontSize": 16,
+              "fontWeight": "normal",
+              "margin": 0,
+              "textAlign": "left",
+            }
+          }
+        >
+          Back
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 3,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#000",
+            "fontSize": 17,
+            "fontWeight": "bold",
+            "textAlign": "left",
+          }
+        }
+      >
+        Title
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`renders NavBar with custom button 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#f8f8f8",
+      "height": 84,
+      "paddingTop": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 3,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#000",
+            "fontSize": 17,
+            "fontWeight": "bold",
+            "textAlign": "left",
+          }
+        }
+      >
+        Title
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "borderColor": "#0a60ff",
+            "borderRadius": 0,
+            "borderWidth": 0,
+            "elevation": 0,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "margin": 10,
+            "opacity": 1,
+            "padding": 10,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 0,
+              "width": 0,
+            },
+            "shadowOpacity": 0,
+            "shadowRadius": 0,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#0a60ff",
+                "fontSize": 20,
+              },
+              Object {
+                "paddingRight": 5,
+              },
+              Object {
+                "fontFamily": "Ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`renders NavBar with drawer button 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#f8f8f8",
+      "height": 84,
+      "paddingTop": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "borderColor": "#0a60ff",
+            "borderRadius": 0,
+            "borderWidth": 0,
+            "elevation": 0,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "margin": 10,
+            "opacity": 1,
+            "padding": 10,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 0,
+              "width": 0,
+            },
+            "shadowOpacity": 0,
+            "shadowRadius": 0,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#0a60ff",
+                "fontSize": 20,
+              },
+              Object {
+                "paddingRight": 5,
+              },
+              Object {
+                "fontFamily": "Ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 3,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#000",
+            "fontSize": 17,
+            "fontWeight": "bold",
+            "textAlign": "left",
+          }
+        }
+      >
+        Title
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`renders NavBar with search button 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#f8f8f8",
+      "height": 84,
+      "paddingTop": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "borderColor": "#0a60ff",
+            "borderRadius": 0,
+            "borderWidth": 0,
+            "elevation": 0,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "margin": 10,
+            "opacity": 1,
+            "padding": 10,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 0,
+              "width": 0,
+            },
+            "shadowOpacity": 0,
+            "shadowRadius": 0,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#0a60ff",
+                "fontSize": 20,
+              },
+              Object {
+                "paddingRight": 5,
+              },
+              Object {
+                "fontFamily": "Ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 3,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#000",
+            "fontSize": 17,
+            "fontWeight": "bold",
+            "textAlign": "left",
+          }
+        }
+      >
+        Title
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`renders NavBar with title 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#f8f8f8",
+      "height": 84,
+      "paddingTop": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 3,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#000",
+            "fontSize": 17,
+            "fontWeight": "bold",
+            "textAlign": "left",
+          }
+        }
+      >
+        Title
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>
+</View>
+`;

@@ -1,0 +1,481 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders FormPicker with placeholder 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "rgba(33, 33, 33, 0.87)",
+        "fontSize": 15,
+        "fontWeight": "normal",
+        "marginVertical": 5,
+        "textAlign": "left",
+      }
+    }
+  >
+    Number
+  </Text>
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "rgba(33, 33, 33, 0.5)",
+          "borderRadius": 15,
+          "borderWidth": 0.9,
+          "flexDirection": "row",
+          "height": 45,
+          "justifyContent": "center",
+          "marginVertical": 10,
+          "paddingLeft": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        onPress={[Function]}
+        style={
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "flex": 1,
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          }
+        }
+      >
+        placeholder
+      </Text>
+      <Text
+        allowFontScaling={false}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "rgba(33, 33, 33, 0.5)",
+              "fontSize": 24,
+            },
+            Object {
+              "paddingRight": 15,
+            },
+            Object {
+              "fontFamily": "Ionicons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <Modal
+      animationType="fade"
+      hardwareAccelerated={false}
+      onRequestClose={[Function]}
+      supportedOrientations={
+        Array [
+          "portrait",
+          "landscape",
+        ]
+      }
+      transparent={true}
+      visible={false}
+    >
+      <Text
+        onPress={[Function]}
+        style={
+          Object {
+            "color": "#000",
+            "flex": 1,
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "backgroundColor": "#FFF",
+            "flex": 1,
+          }
+        }
+      >
+        <RCTPicker
+          items={
+            Array [
+              Object {
+                "label": "1",
+                "textColor": undefined,
+                "value": "1",
+              },
+              Object {
+                "label": "2",
+                "textColor": undefined,
+                "value": "2",
+              },
+              Object {
+                "label": "3",
+                "textColor": undefined,
+                "value": "3",
+              },
+            ]
+          }
+          onChange={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          selectedIndex={0}
+          style={
+            Array [
+              Object {
+                "height": 216,
+              },
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <Text
+        onPress={[Function]}
+        style={
+          Object {
+            "color": "#000",
+            "flex": 1,
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          }
+        }
+      />
+    </Modal>
+  </View>
+</View>
+`;
+
+exports[`renders colored FormPicker 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "rgba(33, 33, 33, 0.87)",
+        "fontSize": 15,
+        "fontWeight": "normal",
+        "marginVertical": 5,
+        "textAlign": "left",
+      }
+    }
+  >
+    Number
+  </Text>
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "rgba(33, 33, 33, 0.5)",
+          "borderRadius": 15,
+          "borderWidth": 0.9,
+          "flexDirection": "row",
+          "height": 45,
+          "justifyContent": "center",
+          "marginVertical": 10,
+          "paddingLeft": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        onPress={[Function]}
+        style={
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "flex": 1,
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          }
+        }
+      >
+        Select Option
+      </Text>
+      <Text
+        allowFontScaling={false}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "rgba(33, 33, 33, 0.5)",
+              "fontSize": 24,
+            },
+            Object {
+              "paddingRight": 15,
+            },
+            Object {
+              "fontFamily": "Ionicons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <Modal
+      animationType="fade"
+      hardwareAccelerated={false}
+      onRequestClose={[Function]}
+      supportedOrientations={
+        Array [
+          "portrait",
+          "landscape",
+        ]
+      }
+      transparent={true}
+      visible={false}
+    >
+      <Text
+        onPress={[Function]}
+        style={
+          Object {
+            "color": "#000",
+            "flex": 1,
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "backgroundColor": "#FFF",
+            "flex": 1,
+          }
+        }
+      >
+        <RCTPicker
+          items={
+            Array [
+              Object {
+                "label": "1",
+                "textColor": undefined,
+                "value": "1",
+              },
+              Object {
+                "label": "2",
+                "textColor": undefined,
+                "value": "2",
+              },
+              Object {
+                "label": "3",
+                "textColor": undefined,
+                "value": "3",
+              },
+            ]
+          }
+          onChange={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          selectedIndex={0}
+          style={
+            Array [
+              Object {
+                "height": 216,
+              },
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <Text
+        onPress={[Function]}
+        style={
+          Object {
+            "color": "#000",
+            "flex": 1,
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          }
+        }
+      />
+    </Modal>
+  </View>
+</View>
+`;
+
+exports[`renders regular FormPicker 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "rgba(33, 33, 33, 0.87)",
+        "fontSize": 15,
+        "fontWeight": "normal",
+        "marginVertical": 5,
+        "textAlign": "left",
+      }
+    }
+  >
+    Number
+  </Text>
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "rgba(33, 33, 33, 0.5)",
+          "borderRadius": 15,
+          "borderWidth": 0.9,
+          "flexDirection": "row",
+          "height": 45,
+          "justifyContent": "center",
+          "marginVertical": 10,
+          "paddingLeft": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        onPress={[Function]}
+        style={
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "flex": 1,
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          }
+        }
+      >
+        Select Option
+      </Text>
+      <Text
+        allowFontScaling={false}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "rgba(33, 33, 33, 0.5)",
+              "fontSize": 24,
+            },
+            Object {
+              "paddingRight": 15,
+            },
+            Object {
+              "fontFamily": "Ionicons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <Modal
+      animationType="fade"
+      hardwareAccelerated={false}
+      onRequestClose={[Function]}
+      supportedOrientations={
+        Array [
+          "portrait",
+          "landscape",
+        ]
+      }
+      transparent={true}
+      visible={false}
+    >
+      <Text
+        onPress={[Function]}
+        style={
+          Object {
+            "color": "#000",
+            "flex": 1,
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "backgroundColor": "#FFF",
+            "flex": 1,
+          }
+        }
+      >
+        <RCTPicker
+          items={
+            Array [
+              Object {
+                "label": "1",
+                "textColor": undefined,
+                "value": "1",
+              },
+              Object {
+                "label": "2",
+                "textColor": undefined,
+                "value": "2",
+              },
+              Object {
+                "label": "3",
+                "textColor": undefined,
+                "value": "3",
+              },
+            ]
+          }
+          onChange={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          selectedIndex={0}
+          style={
+            Array [
+              Object {
+                "height": 216,
+              },
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <Text
+        onPress={[Function]}
+        style={
+          Object {
+            "color": "#000",
+            "flex": 1,
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          }
+        }
+      />
+    </Modal>
+  </View>
+</View>
+`;

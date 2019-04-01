@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders TextArea with placeholder 1`] = `
+<View
+  style={
+    Object {
+      "borderColor": "rgba(33, 33, 33, 0.5)",
+      "borderRadius": 15,
+      "borderWidth": 0.9,
+      "marginVertical": 10,
+      "paddingHorizontal": 10,
+      "paddingTop": 5,
+      "width": "100%",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    multiline={true}
+    onBlur={[Function]}
+    onContentSizeChange={[Function]}
+    onFocus={[Function]}
+    placeholder="placeholder"
+    style={
+      Object {
+        "height": 100,
+        "width": "100%",
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+</View>
+`;
+
+exports[`renders colored TextArea 1`] = `
+<View
+  style={
+    Object {
+      "borderColor": "rgba(33, 33, 33, 0.5)",
+      "borderRadius": 15,
+      "borderWidth": 0.9,
+      "marginVertical": 10,
+      "paddingHorizontal": 10,
+      "paddingTop": 5,
+      "width": "100%",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    multiline={true}
+    onBlur={[Function]}
+    onContentSizeChange={[Function]}
+    onFocus={[Function]}
+    style={
+      Object {
+        "height": 100,
+        "width": "100%",
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+</View>
+`;
+
+exports[`renders regular TextArea 1`] = `
+<View
+  style={
+    Object {
+      "borderColor": "rgba(33, 33, 33, 0.5)",
+      "borderRadius": 15,
+      "borderWidth": 0.9,
+      "marginVertical": 10,
+      "paddingHorizontal": 10,
+      "paddingTop": 5,
+      "width": "100%",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    multiline={true}
+    onBlur={[Function]}
+    onContentSizeChange={[Function]}
+    onFocus={[Function]}
+    style={
+      Object {
+        "height": 100,
+        "width": "100%",
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+</View>
+`;

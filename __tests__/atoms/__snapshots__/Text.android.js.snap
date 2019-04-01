@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders callout text 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#000",
+      "fontSize": 16,
+      "fontWeight": "normal",
+      "marginVertical": 5,
+      "textAlign": "left",
+    }
+  }
+>
+  Hello
+</Text>
+`;
+
+exports[`renders caption_big text 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#000",
+      "fontSize": 12,
+      "fontWeight": "normal",
+      "marginVertical": 5,
+      "textAlign": "left",
+    }
+  }
+>
+  Hello
+</Text>
+`;
+
+exports[`renders caption_small text 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#000",
+      "fontSize": 11,
+      "fontWeight": "normal",
+      "marginVertical": 5,
+      "textAlign": "left",
+    }
+  }
+>
+  Hello
+</Text>
+`;
+
+exports[`renders footnote text 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#000",
+      "fontSize": 13,
+      "fontWeight": "normal",
+      "marginVertical": 5,
+      "textAlign": "left",
+    }
+  }
+>
+  Hello
+</Text>
+`;
+
+exports[`renders h1 text 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#000",
+      "fontSize": 34,
+      "fontWeight": "normal",
+      "marginVertical": 5,
+      "textAlign": "left",
+    }
+  }
+>
+  Hello
+</Text>
+`;
+
+exports[`renders h2 text 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#000",
+      "fontSize": 28,
+      "fontWeight": "normal",
+      "marginVertical": 5,
+      "textAlign": "left",
+    }
+  }
+>
+  Hello
+</Text>
+`;
+
+exports[`renders h3 text 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#000",
+      "fontSize": 24,
+      "fontWeight": "normal",
+      "marginVertical": 5,
+      "textAlign": "left",
+    }
+  }
+>
+  Hello
+</Text>
+`;
+
+exports[`renders h4 text 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "marginVertical": 5,
+      "textAlign": "left",
+    }
+  }
+>
+  Hello
+</Text>
+`;
+
+exports[`renders h5 text 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#000",
+      "fontSize": 20,
+      "fontWeight": "normal",
+      "marginVertical": 5,
+      "textAlign": "left",
+    }
+  }
+>
+  Hello
+</Text>
+`;
+
+exports[`renders h6 text 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#000",
+      "fontSize": 17,
+      "fontWeight": "normal",
+      "marginVertical": 5,
+      "textAlign": "left",
+    }
+  }
+>
+  Hello
+</Text>
+`;
+
+exports[`renders regular text 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#000",
+      "fontSize": 16,
+      "fontWeight": "normal",
+      "marginVertical": 5,
+      "textAlign": "left",
+    }
+  }
+>
+  Hello
+</Text>
+`;
+
+exports[`renders sub_heading text 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#000",
+      "fontSize": 15,
+      "fontWeight": "normal",
+      "marginVertical": 5,
+      "textAlign": "left",
+    }
+  }
+>
+  Hello
+</Text>
+`;

@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders FormTextArea with placeholder 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "rgba(33, 33, 33, 0.87)",
+        "fontSize": 15,
+        "fontWeight": "normal",
+        "marginVertical": 5,
+        "textAlign": "left",
+      }
+    }
+  >
+    Address
+  </Text>
+  <View
+    style={
+      Object {
+        "borderColor": "rgba(33, 33, 33, 0.5)",
+        "borderRadius": 10,
+        "borderWidth": 0.9,
+        "marginVertical": 10,
+        "paddingHorizontal": 5,
+        "width": "100%",
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      multiline={true}
+      onBlur={[Function]}
+      onContentSizeChange={[Function]}
+      onFocus={[Function]}
+      placeholder="placeholder"
+      style={
+        Object {
+          "height": 100,
+          "textAlignVertical": "top",
+          "width": "100%",
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
+</View>
+`;
+
+exports[`renders colored FormTextArea 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "rgba(33, 33, 33, 0.87)",
+        "fontSize": 15,
+        "fontWeight": "normal",
+        "marginVertical": 5,
+        "textAlign": "left",
+      }
+    }
+  >
+    Address
+  </Text>
+  <View
+    style={
+      Object {
+        "borderColor": "rgba(33, 33, 33, 0.5)",
+        "borderRadius": 10,
+        "borderWidth": 0.9,
+        "marginVertical": 10,
+        "paddingHorizontal": 5,
+        "width": "100%",
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      multiline={true}
+      onBlur={[Function]}
+      onContentSizeChange={[Function]}
+      onFocus={[Function]}
+      style={
+        Object {
+          "height": 100,
+          "textAlignVertical": "top",
+          "width": "100%",
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
+</View>
+`;
+
+exports[`renders regular FormTextArea 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "rgba(33, 33, 33, 0.87)",
+        "fontSize": 15,
+        "fontWeight": "normal",
+        "marginVertical": 5,
+        "textAlign": "left",
+      }
+    }
+  >
+    Address
+  </Text>
+  <View
+    style={
+      Object {
+        "borderColor": "rgba(33, 33, 33, 0.5)",
+        "borderRadius": 10,
+        "borderWidth": 0.9,
+        "marginVertical": 10,
+        "paddingHorizontal": 5,
+        "width": "100%",
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      multiline={true}
+      onBlur={[Function]}
+      onContentSizeChange={[Function]}
+      onFocus={[Function]}
+      style={
+        Object {
+          "height": 100,
+          "textAlignVertical": "top",
+          "width": "100%",
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
+</View>
+`;

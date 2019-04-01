@@ -1,0 +1,934 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a form with all input types 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "marginTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 15,
+            "fontWeight": "normal",
+            "marginVertical": 5,
+            "textAlign": "left",
+          }
+        }
+      >
+        Full Name
+      </Text>
+      <View
+        style={
+          Object {
+            "borderColor": "rgba(33, 33, 33, 0.5)",
+            "borderRadius": 15,
+            "borderWidth": 0.9,
+            "height": 45,
+            "marginVertical": 10,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          onFocus={[Function]}
+          onSubmitEditing={[Function]}
+          placeholder="John Doe"
+          placeholderTextColor="rgba(33, 33, 33, 0.5)"
+          style={
+            Object {
+              "height": "100%",
+              "textAlignVertical": "bottom",
+              "width": "100%",
+            }
+          }
+          underlineColorAndroid="transparent"
+        />
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 15,
+            "fontWeight": "normal",
+            "marginVertical": 5,
+            "textAlign": "left",
+          }
+        }
+      >
+        Type
+      </Text>
+      <View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderColor": "rgba(33, 33, 33, 0.5)",
+              "borderRadius": 15,
+              "borderWidth": 0.9,
+              "flexDirection": "row",
+              "height": 45,
+              "justifyContent": "center",
+              "marginVertical": 10,
+              "paddingLeft": 10,
+              "width": "100%",
+            }
+          }
+        >
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "rgba(33, 33, 33, 0.5)",
+                "flex": 1,
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "textAlign": "left",
+              }
+            }
+          >
+            Select Option
+          </Text>
+          <Text
+            allowFontScaling={false}
+            onPress={[Function]}
+            style={
+              Array [
+                Object {
+                  "color": "rgba(33, 33, 33, 0.5)",
+                  "fontSize": 24,
+                },
+                Object {
+                  "paddingRight": 15,
+                },
+                Object {
+                  "fontFamily": "Ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Modal
+          animationType="fade"
+          hardwareAccelerated={false}
+          onRequestClose={[Function]}
+          supportedOrientations={
+            Array [
+              "portrait",
+              "landscape",
+            ]
+          }
+          transparent={true}
+          visible={false}
+        >
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "#000",
+                "flex": 1,
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "textAlign": "left",
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "backgroundColor": "#FFF",
+                "flex": 1,
+              }
+            }
+          >
+            <RCTPicker
+              items={
+                Array [
+                  Object {
+                    "label": "1",
+                    "textColor": undefined,
+                    "value": "1",
+                  },
+                  Object {
+                    "label": "2",
+                    "textColor": undefined,
+                    "value": "2",
+                  },
+                  Object {
+                    "label": "3",
+                    "textColor": undefined,
+                    "value": "3",
+                  },
+                ]
+              }
+              onChange={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              selectedIndex={0}
+              style={
+                Array [
+                  Object {
+                    "height": 216,
+                  },
+                  undefined,
+                ]
+              }
+            />
+          </View>
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "#000",
+                "flex": 1,
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "textAlign": "left",
+              }
+            }
+          />
+        </Modal>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 15,
+            "fontWeight": "normal",
+            "marginVertical": 5,
+            "textAlign": "left",
+          }
+        }
+      >
+        Date
+      </Text>
+      <View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderColor": "rgba(33, 33, 33, 0.5)",
+              "borderRadius": 15,
+              "borderWidth": 0.9,
+              "flexDirection": "row",
+              "height": 45,
+              "justifyContent": "center",
+              "marginVertical": 10,
+              "paddingLeft": 10,
+              "width": "100%",
+            }
+          }
+        >
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "rgba(33, 33, 33, 0.5)",
+                "flex": 1,
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "textAlign": "left",
+              }
+            }
+          >
+            Select Date
+          </Text>
+          <Text
+            allowFontScaling={false}
+            onPress={[Function]}
+            style={
+              Array [
+                Object {
+                  "color": "rgba(33, 33, 33, 0.5)",
+                  "fontSize": 20,
+                },
+                Object {
+                  "paddingRight": 15,
+                },
+                Object {
+                  "fontFamily": "Ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Modal
+          animationType="fade"
+          hardwareAccelerated={false}
+          onRequestClose={[Function]}
+          supportedOrientations={
+            Array [
+              "portrait",
+              "landscape",
+            ]
+          }
+          transparent={true}
+          visible={false}
+        >
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "#000",
+                "flex": 1,
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "textAlign": "left",
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "backgroundColor": "#FFF",
+                "flex": 1,
+              }
+            }
+          >
+            <RCTDatePicker
+              date={1554104240475}
+              mode="date"
+              onChange={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "height": 216,
+                }
+              }
+            />
+          </View>
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "#000",
+                "flex": 1,
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "textAlign": "left",
+              }
+            }
+          />
+        </Modal>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 15,
+            "fontWeight": "normal",
+            "marginVertical": 5,
+            "textAlign": "left",
+          }
+        }
+      >
+        Address
+      </Text>
+      <View
+        style={
+          Object {
+            "borderColor": "rgba(33, 33, 33, 0.5)",
+            "borderRadius": 15,
+            "borderWidth": 0.9,
+            "marginVertical": 10,
+            "paddingHorizontal": 10,
+            "paddingTop": 5,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          multiline={true}
+          onBlur={[Function]}
+          onContentSizeChange={[Function]}
+          onFocus={[Function]}
+          style={
+            Object {
+              "height": 100,
+              "width": "100%",
+            }
+          }
+          underlineColorAndroid="transparent"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`renders a form with input types text 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "marginTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 15,
+            "fontWeight": "normal",
+            "marginVertical": 5,
+            "textAlign": "left",
+          }
+        }
+      >
+        Full Name
+      </Text>
+      <View
+        style={
+          Object {
+            "borderColor": "rgba(33, 33, 33, 0.5)",
+            "borderRadius": 15,
+            "borderWidth": 0.9,
+            "height": 45,
+            "marginVertical": 10,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          onFocus={[Function]}
+          onSubmitEditing={[Function]}
+          placeholder="John Doe"
+          placeholderTextColor="rgba(33, 33, 33, 0.5)"
+          style={
+            Object {
+              "height": "100%",
+              "textAlignVertical": "bottom",
+              "width": "100%",
+            }
+          }
+          underlineColorAndroid="transparent"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`renders a form with input types, text and textarea 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "marginTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 15,
+            "fontWeight": "normal",
+            "marginVertical": 5,
+            "textAlign": "left",
+          }
+        }
+      >
+        Full Name
+      </Text>
+      <View
+        style={
+          Object {
+            "borderColor": "rgba(33, 33, 33, 0.5)",
+            "borderRadius": 15,
+            "borderWidth": 0.9,
+            "height": 45,
+            "marginVertical": 10,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          onFocus={[Function]}
+          onSubmitEditing={[Function]}
+          placeholder="John Doe"
+          placeholderTextColor="rgba(33, 33, 33, 0.5)"
+          style={
+            Object {
+              "height": "100%",
+              "textAlignVertical": "bottom",
+              "width": "100%",
+            }
+          }
+          underlineColorAndroid="transparent"
+        />
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 15,
+            "fontWeight": "normal",
+            "marginVertical": 5,
+            "textAlign": "left",
+          }
+        }
+      >
+        Address
+      </Text>
+      <View
+        style={
+          Object {
+            "borderColor": "rgba(33, 33, 33, 0.5)",
+            "borderRadius": 15,
+            "borderWidth": 0.9,
+            "marginVertical": 10,
+            "paddingHorizontal": 10,
+            "paddingTop": 5,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          multiline={true}
+          onBlur={[Function]}
+          onContentSizeChange={[Function]}
+          onFocus={[Function]}
+          style={
+            Object {
+              "height": 100,
+              "width": "100%",
+            }
+          }
+          underlineColorAndroid="transparent"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`renders a form with input types, text, textarea and picker 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "marginTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 15,
+            "fontWeight": "normal",
+            "marginVertical": 5,
+            "textAlign": "left",
+          }
+        }
+      >
+        Full Name
+      </Text>
+      <View
+        style={
+          Object {
+            "borderColor": "rgba(33, 33, 33, 0.5)",
+            "borderRadius": 15,
+            "borderWidth": 0.9,
+            "height": 45,
+            "marginVertical": 10,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          onFocus={[Function]}
+          onSubmitEditing={[Function]}
+          placeholder="John Doe"
+          placeholderTextColor="rgba(33, 33, 33, 0.5)"
+          style={
+            Object {
+              "height": "100%",
+              "textAlignVertical": "bottom",
+              "width": "100%",
+            }
+          }
+          underlineColorAndroid="transparent"
+        />
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 15,
+            "fontWeight": "normal",
+            "marginVertical": 5,
+            "textAlign": "left",
+          }
+        }
+      >
+        Type
+      </Text>
+      <View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderColor": "rgba(33, 33, 33, 0.5)",
+              "borderRadius": 15,
+              "borderWidth": 0.9,
+              "flexDirection": "row",
+              "height": 45,
+              "justifyContent": "center",
+              "marginVertical": 10,
+              "paddingLeft": 10,
+              "width": "100%",
+            }
+          }
+        >
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "rgba(33, 33, 33, 0.5)",
+                "flex": 1,
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "textAlign": "left",
+              }
+            }
+          >
+            Select Option
+          </Text>
+          <Text
+            allowFontScaling={false}
+            onPress={[Function]}
+            style={
+              Array [
+                Object {
+                  "color": "rgba(33, 33, 33, 0.5)",
+                  "fontSize": 24,
+                },
+                Object {
+                  "paddingRight": 15,
+                },
+                Object {
+                  "fontFamily": "Ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Modal
+          animationType="fade"
+          hardwareAccelerated={false}
+          onRequestClose={[Function]}
+          supportedOrientations={
+            Array [
+              "portrait",
+              "landscape",
+            ]
+          }
+          transparent={true}
+          visible={false}
+        >
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "#000",
+                "flex": 1,
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "textAlign": "left",
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "backgroundColor": "#FFF",
+                "flex": 1,
+              }
+            }
+          >
+            <RCTPicker
+              items={
+                Array [
+                  Object {
+                    "label": "1",
+                    "textColor": undefined,
+                    "value": "1",
+                  },
+                  Object {
+                    "label": "2",
+                    "textColor": undefined,
+                    "value": "2",
+                  },
+                  Object {
+                    "label": "3",
+                    "textColor": undefined,
+                    "value": "3",
+                  },
+                ]
+              }
+              onChange={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              selectedIndex={0}
+              style={
+                Array [
+                  Object {
+                    "height": 216,
+                  },
+                  undefined,
+                ]
+              }
+            />
+          </View>
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "#000",
+                "flex": 1,
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "textAlign": "left",
+              }
+            }
+          />
+        </Modal>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 15,
+            "fontWeight": "normal",
+            "marginVertical": 5,
+            "textAlign": "left",
+          }
+        }
+      >
+        Address
+      </Text>
+      <View
+        style={
+          Object {
+            "borderColor": "rgba(33, 33, 33, 0.5)",
+            "borderRadius": 15,
+            "borderWidth": 0.9,
+            "marginVertical": 10,
+            "paddingHorizontal": 10,
+            "paddingTop": 5,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          multiline={true}
+          onBlur={[Function]}
+          onContentSizeChange={[Function]}
+          onFocus={[Function]}
+          style={
+            Object {
+              "height": 100,
+              "width": "100%",
+            }
+          }
+          underlineColorAndroid="transparent"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;

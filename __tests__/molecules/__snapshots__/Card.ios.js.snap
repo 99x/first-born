@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders card with heading 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#FFF",
+      "borderRadius": 10,
+      "margin": 5,
+      "opacity": 1,
+      "overflow": "hidden",
+      "shadowColor": "#000",
+      "shadowOffset": Object {
+        "height": 5,
+        "width": 5,
+      },
+      "shadowOpacity": 0.75,
+      "shadowRadius": 5,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "column",
+        "justifyContent": "flex-start",
+        "padding": 20,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgba(33, 33, 33, 0.87)",
+          "fontSize": 17,
+          "fontWeight": "bold",
+          "marginVertical": 5,
+          "textAlign": "left",
+        }
+      }
+    >
+      Heading
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`renders card with heading and title 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#FFF",
+      "borderRadius": 10,
+      "margin": 5,
+      "opacity": 1,
+      "overflow": "hidden",
+      "shadowColor": "#000",
+      "shadowOffset": Object {
+        "height": 5,
+        "width": 5,
+      },
+      "shadowOpacity": 0.75,
+      "shadowRadius": 5,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "column",
+        "justifyContent": "flex-start",
+        "padding": 20,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgba(33, 33, 33, 0.87)",
+          "fontSize": 17,
+          "fontWeight": "bold",
+          "marginVertical": 5,
+          "textAlign": "left",
+        }
+      }
+    >
+      Heading
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "rgba(33, 33, 33, 0.4)",
+          "fontSize": 15,
+          "fontWeight": "normal",
+          "marginVertical": 5,
+          "textAlign": "left",
+        }
+      }
+    >
+      description
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`renders colored card with heading and title 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#FFF",
+      "borderRadius": 10,
+      "margin": 5,
+      "opacity": 1,
+      "overflow": "hidden",
+      "shadowColor": "#000",
+      "shadowOffset": Object {
+        "height": 5,
+        "width": 5,
+      },
+      "shadowOpacity": 0.75,
+      "shadowRadius": 5,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "column",
+        "justifyContent": "flex-start",
+        "padding": 20,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgba(33, 33, 33, 0.87)",
+          "fontSize": 17,
+          "fontWeight": "bold",
+          "marginVertical": 5,
+          "textAlign": "left",
+        }
+      }
+    >
+      Heading
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "rgba(33, 33, 33, 0.4)",
+          "fontSize": 15,
+          "fontWeight": "normal",
+          "marginVertical": 5,
+          "textAlign": "left",
+        }
+      }
+    >
+      description
+    </Text>
+  </View>
+</View>
+`;

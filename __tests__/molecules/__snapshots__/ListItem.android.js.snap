@@ -1,0 +1,333 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders colored list item with heading and title 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#FFF",
+        "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+        "borderBottomWidth": 0.5,
+        "borderTopColor": "rgba(33, 33, 33, 0.4)",
+        "borderTopWidth": 0.5,
+        "flex": 1,
+        "flexDirection": "row",
+        "opacity": 1,
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "flex": 3,
+          "flexDirection": "column",
+          "padding": 15,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 17,
+            "fontWeight": "bold",
+            "marginVertical": 5,
+            "textAlign": "left",
+          }
+        }
+      >
+        Heading
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "rgba(33, 33, 33, 0.4)",
+            "fontSize": 15,
+            "fontWeight": "normal",
+            "marginVertical": 5,
+            "textAlign": "left",
+          }
+        }
+      >
+        description
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`renders expandable list item with heading and title 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#FFF",
+        "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+        "borderBottomWidth": 0.5,
+        "borderTopColor": "rgba(33, 33, 33, 0.4)",
+        "borderTopWidth": 0.5,
+        "flex": 1,
+        "flexDirection": "row",
+        "opacity": 1,
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "flex": 3,
+          "flexDirection": "column",
+          "padding": 15,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 17,
+            "fontWeight": "bold",
+            "marginVertical": 5,
+            "textAlign": "left",
+          }
+        }
+      >
+        Heading
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "rgba(33, 33, 33, 0.4)",
+            "fontSize": 15,
+            "fontWeight": "normal",
+            "marginVertical": 5,
+            "textAlign": "left",
+          }
+        }
+      >
+        description
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "rgba(33, 33, 33, 0.5)",
+              "fontSize": 20,
+            },
+            undefined,
+            Object {
+              "fontFamily": "Ionicons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`renders list item with heading 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#FFF",
+        "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+        "borderBottomWidth": 0.5,
+        "borderTopColor": "rgba(33, 33, 33, 0.4)",
+        "borderTopWidth": 0.5,
+        "flex": 1,
+        "flexDirection": "row",
+        "opacity": 1,
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "flex": 3,
+          "flexDirection": "column",
+          "padding": 15,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 17,
+            "fontWeight": "bold",
+            "marginVertical": 5,
+            "textAlign": "left",
+          }
+        }
+      >
+        Heading
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`renders list item with heading and title 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#FFF",
+        "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+        "borderBottomWidth": 0.5,
+        "borderTopColor": "rgba(33, 33, 33, 0.4)",
+        "borderTopWidth": 0.5,
+        "flex": 1,
+        "flexDirection": "row",
+        "opacity": 1,
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "flex": 3,
+          "flexDirection": "column",
+          "padding": 15,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 17,
+            "fontWeight": "bold",
+            "marginVertical": 5,
+            "textAlign": "left",
+          }
+        }
+      >
+        Heading
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "rgba(33, 33, 33, 0.4)",
+            "fontSize": 15,
+            "fontWeight": "normal",
+            "marginVertical": 5,
+            "textAlign": "left",
+          }
+        }
+      >
+        description
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>
+</View>
+`;

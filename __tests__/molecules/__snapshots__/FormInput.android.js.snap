@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders FormInput with placeholder 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "rgba(33, 33, 33, 0.87)",
+        "fontSize": 15,
+        "fontWeight": "normal",
+        "marginVertical": 5,
+        "textAlign": "left",
+      }
+    }
+  >
+    Name
+  </Text>
+  <View
+    style={
+      Object {
+        "borderColor": "rgba(33, 33, 33, 0.5)",
+        "borderRadius": 10,
+        "borderWidth": 0.9,
+        "height": 45,
+        "marginVertical": 10,
+        "paddingHorizontal": 5,
+        "width": "100%",
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      onSubmitEditing={[Function]}
+      placeholder="placeholder"
+      placeholderTextColor="rgba(33, 33, 33, 0.5)"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
+</View>
+`;
+
+exports[`renders colored FormInput 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "rgba(33, 33, 33, 0.87)",
+        "fontSize": 15,
+        "fontWeight": "normal",
+        "marginVertical": 5,
+        "textAlign": "left",
+      }
+    }
+  >
+    Name
+  </Text>
+  <View
+    style={
+      Object {
+        "borderColor": "rgba(33, 33, 33, 0.5)",
+        "borderRadius": 10,
+        "borderWidth": 0.9,
+        "height": 45,
+        "marginVertical": 10,
+        "paddingHorizontal": 5,
+        "width": "100%",
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      onSubmitEditing={[Function]}
+      placeholderTextColor="rgba(33, 33, 33, 0.5)"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
+</View>
+`;
+
+exports[`renders regular FormInput 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "rgba(33, 33, 33, 0.87)",
+        "fontSize": 15,
+        "fontWeight": "normal",
+        "marginVertical": 5,
+        "textAlign": "left",
+      }
+    }
+  >
+    Name
+  </Text>
+  <View
+    style={
+      Object {
+        "borderColor": "rgba(33, 33, 33, 0.5)",
+        "borderRadius": 10,
+        "borderWidth": 0.9,
+        "height": 45,
+        "marginVertical": 10,
+        "paddingHorizontal": 5,
+        "width": "100%",
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      onSubmitEditing={[Function]}
+      placeholderTextColor="rgba(33, 33, 33, 0.5)"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
+</View>
+`;
