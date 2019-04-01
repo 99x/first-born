@@ -24,13 +24,13 @@ export class PillItem extends Component {
 
             newChildren = React.Children.map(children, child => child && child.type === Text ?
                 React.cloneElement(child, { ...child.props, color, size: "footnote" }) : child && child.type === Icon ?
-                    React.cloneElement(child, { ...child.props, size: 15, color, style: { marginRight: 5 } }) : child && child.type === Image ?
-                        React.cloneElement(child, { ...child.props, style: { width: 15, height: 15, marginRight: 5 } }) : null);
+                    React.cloneElement(child, { ...child.props, size: 15, color, style: { marginRight: 5, ...child.props.style } }) : child && child.type === Image ?
+                        React.cloneElement(child, { ...child.props, style: { width: 15, height: 15, marginRight: 5, ...child.props.style } }) : null);
 
         }
 
         if (Platform.OS === "android") {
-            return (
+return (
                 <TouchableOpacity style={[styles.containerAndroid, { borderBottomColor: color }]} {...otherProps}>
                     {newChildren && newChildren}
                 </TouchableOpacity>
