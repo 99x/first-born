@@ -1,5 +1,5 @@
-# firstBorn
-![firstBorn Logo](https://user-images.githubusercontent.com/24349997/55307073-f5018300-5473-11e9-8f34-7d41680783fe.png)
+# first-born
+![first-born Logo](https://user-images.githubusercontent.com/24349997/55307073-f5018300-5473-11e9-8f34-7d41680783fe.png)
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes
@@ -15,7 +15,7 @@ The following modules need to be added as a dev dependency as well.
 
 ### Installing
 
-To install firstBorn run the following command in the terminal;
+To install first-born run the following command in the terminal;
 ```
 npm install --save first-born
 ```
@@ -25,14 +25,36 @@ npm install --save create-react-class react-native-vector-icons
 ```
 Follow [this guide](https://github.com/oblador/react-native-vector-icons#installation) to configure `react-native-vector-icons` for your project. 
 
-No other steps are required to configure `firstBorn` seperately for each platform (Android/iOS).
+No other steps are required to configure `first-born` seperately for each platform (Android/iOS).
+
+## Development Testing
+
+To test the repo, first clone it;
+```
+git clone https://github.com/99xt/first-born.git
+```
+
+Move into the folder;
+```
+cd first-born
+```
+
+Install dependencies;
+```
+npm install
+```
+
+And run the test script;
+```
+npm run test
+```
 
 ## Usage
 
 Import components like this;
 
 ```js
-import { Button } from "firstBorn";
+import { Button } from "first-born";
 ```
 
 ### Utils
@@ -712,7 +734,7 @@ This property `color`, will be passed down to child element `PillItem` as the `a
 | **`active`**        | If current `PillItem` is active.                   | _false_                                  |
 
 ## Contributing
-Please read [CONTRIBUTING.md](https://github.com/99xt/firstBorn/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/99xt/first-born/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
@@ -723,8 +745,8 @@ We use [SemVer](http://semver.org/) for versioning.
 * **Sameeha Rahman** - *Initial work* - [samsam-026](https://github.com/samsam-026)
 * **Muditha Batagoda** - *Initial Design* - [mudithabatagoda](https://github.com/mudithabatagoda)
 
-See also the list of [contributors](https://github.com/99xt/firstBorn/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/99xt/first-born/graphs/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/99xt/firstBorn/blob/master/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/99xt/first-born/blob/master/LICENSE) file for details
