@@ -38,6 +38,12 @@ class FloatingButtonItem extends Component {
             textContainerStyle
         } = this.props;
 
+        const textItemStyle = {
+            ...styles.text,
+            color: textColor,
+            ...textStyle
+        };
+
         if (text) {
             return (
                 <View
@@ -55,10 +61,7 @@ class FloatingButtonItem extends Component {
                         textContainerStyle
                     ]}
                 >
-                    <Text
-                        style={[styles.text, { color: textColor }, textStyle]}
-                        {...textProps}
-                    >
+                    <Text {...textProps} style={textItemStyle}>
                         {text}
                     </Text>
                 </View>

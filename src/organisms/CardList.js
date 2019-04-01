@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { FlatList, View, Platform } from "react-native";
+import PropTypes from "prop-types";
 import { Card } from "../molecules/cards/Card";
 import { deviceVariables } from "../variables/deviceVariables";
 
@@ -48,6 +49,7 @@ export class CardList extends Component {
 }
 
 CardList.propTypes = {
+    backgroundColor: PropTypes.string,
     ...FlatList.propTypes
 };
 
