@@ -1,5 +1,5 @@
 # firstBorn
-![firstBorn Logo](https://github.com/99xt/firstBorn/blob/master/firstBorn-logo.png)
+![firstBorn Logo](https://user-images.githubusercontent.com/24349997/55307073-f5018300-5473-11e9-8f34-7d41680783fe.png)
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes
@@ -61,8 +61,11 @@ import { Button } from "firstBorn";
 ```html
 <Text>Hello</Text>
 ```
+##### Android 
+![Android Text](https://user-images.githubusercontent.com/24349997/55306378-ab179d80-5471-11e9-94dc-53328e7061d5.PNG "Android Text") 
 
-![Android Text](images/atoms/textAndroid.PNG "Android Text") ![iOS Text](images/atoms/textIos.png "iOS Text")
+##### iOS
+![iOS Text](https://user-images.githubusercontent.com/24349997/55306381-abb03400-5471-11e9-98bd-934208893883.png "iOS Text")
 
 You can use any [Text property](http://facebook.github.io/react-native/docs/text.html) and the following:
 
@@ -94,8 +97,11 @@ The Ionicons component from `react-native-vector-icons` is used.
 ```html
 <Icon name='heart'>
 ```
+##### Android
+![Android Icon](https://user-images.githubusercontent.com/24349997/55306382-ace16100-5471-11e9-96fb-bca1ff545b03.PNG "Android Icon") 
 
-![Android Icon](images/atoms/iconAndroid.PNG "Android Icon") ![iOS Icon](images/atoms/iconIos.png "iOS Icon")
+##### iOS
+![iOS Icon](https://user-images.githubusercontent.com/24349997/55306384-aeab2480-5471-11e9-9129-0e1650e60c60.png "iOS Icon")
 
 You can use any [Text property](http://facebook.github.io/react-native/docs/text.html) and the following:
 
@@ -115,7 +121,11 @@ Only accepts `Text` and `Icon` atoms and `react-native Image` .
 </Button>
 ```
 
-![Android Button](images/atoms/buttonAndroid.PNG "Android Button") ![iOS Button](images/atoms/buttonIos.png "iOS Button")
+##### Android
+![Android Button](https://user-images.githubusercontent.com/24349997/55306156-c3d38380-5470-11e9-9663-88f991e1a857.PNG "Android Button") 
+
+##### iOS
+![iOS Button](https://user-images.githubusercontent.com/24349997/55306333-7f94b300-5471-11e9-9f3c-3a068a7f7f72.png "iOS Button")
 
 You can use any [TouchableOpacity property](https://facebook.github.io/react-native/docs/touchableopacity.html) and the following:
 
@@ -136,7 +146,11 @@ Renders a `Text`, that displays a date picker modal when the `onPress` method is
 <DatePicker onDateChange={this.handleDateChange} />
 ```
 
-![Android Date Picker](images/atoms/datePickerAndroid.PNG "Android Date Picker") ![iOS Date Picker](images/atoms/datePickerIos.png "iOS Date Picker")
+##### Android
+![Android Date Picker](https://user-images.githubusercontent.com/24349997/55306512-2e38f380-5472-11e9-8e1a-323ce50250b7.PNG "Android Date Picker") 
+
+##### iOS
+![iOS Date Picker](https://user-images.githubusercontent.com/24349997/55306515-2f6a2080-5472-11e9-95e9-42f49b9fb01a.png "iOS Date Picker")
 
 You can use any [TextInput property](http://facebook.github.io/react-native/docs/textinput.html) and the following:
 
@@ -160,7 +174,11 @@ You can use any [TextInput property](http://facebook.github.io/react-native/docs
 <Input onChangeText={this.handleTextChange} placeholder="Name" />
 ```
 
-![Android Input](images/atoms/inputAndroid.PNG "Android Input") ![iOS Input](images/atoms/inputIos.png "iOS Input")
+##### Android
+![Android Input](https://user-images.githubusercontent.com/24349997/55306524-3729c500-5472-11e9-84e0-6c84edfcaa78.PNG "Android Input") 
+
+##### iOS
+![iOS Input](https://user-images.githubusercontent.com/24349997/55306526-38f38880-5472-11e9-9057-a0f87ce1b93d.png "iOS Input")
 
 You can use any [TextInput property](http://facebook.github.io/react-native/docs/textinput.html) and the following:
 
@@ -181,7 +199,11 @@ In iOS, renders a `Text`, that displays a picker modal when the `onPress` method
 </Picker>
 ```
 
-![Android Picker](images/atoms/pickerAndroid.PNG "Android Picker") ![iOS Picker](images/atoms/pickerIos.png "iOS Picker")
+##### Android
+![Android Picker](https://user-images.githubusercontent.com/24349997/55306530-3bee7900-5472-11e9-95c0-1df0967f0946.PNG "Android Picker") 
+
+##### iOS
+![iOS Picker](https://user-images.githubusercontent.com/24349997/55306531-3c870f80-5472-11e9-91e1-127eceb96764.png "iOS Picker")
 
 You can use any [Picker property](http://facebook.github.io/react-native/docs/picker.html) and the following:
 
@@ -201,7 +223,11 @@ Renders a `TextInput`, that increases in height with the height of the text ente
 <TextArea onChangeText={this.handleTextChange} placeholder="Description" />
 ```
 
-![Android TextArea](images/atoms/textareaAndroid.PNG "Android TextArea") ![iOS TextArea](images/atoms/textareaIos.png "iOS TextArea")
+##### Android
+![Android TextArea](https://user-images.githubusercontent.com/24349997/55306535-3e50d300-5472-11e9-9e48-5f07e08b7e76.PNG "Android TextArea") 
+
+##### iOS
+![iOS TextArea](https://user-images.githubusercontent.com/24349997/55306538-3f820000-5472-11e9-883d-12256652fb17.png "iOS TextArea")
 
 You can use any [TextInput property](http://facebook.github.io/react-native/docs/textinput.html) and the following:
 
@@ -221,7 +247,11 @@ Uses the Atom `DatePicker`.
 <FormDatePicker onDateChange={this.handleDateChange} label="Date" />
 ```
 
-![Android Form Date Picker](images/molecules/formDatePickerAndroid.PNG "Android Form Date Picker") ![iOS Form Date Picker](images/molecules/formDatePickerIos.png "iOS Form Date Picker")
+##### Android
+![Android Form Date Picker](https://user-images.githubusercontent.com/24349997/55306633-8243d800-5472-11e9-8e7c-c40a0b064bfd.PNG "Android Form Date Picker") 
+
+##### iOS
+![iOS Form Date Picker](https://user-images.githubusercontent.com/24349997/55306635-82dc6e80-5472-11e9-96db-cf3ed146c5ad.png "iOS Form Date Picker")
 
 Additional Props;
 
@@ -237,7 +267,11 @@ Uses the Atom `Input`.
 <FormInput onChangeText={this.handleTextChange} label="Name" />
 ```
 
-![Android Form Input](images/molecules/formInputAndroid.PNG "Android Form Input") ![iOS Form Input](images/molecules/formInputIos.png "iOS Form Input")
+##### Android
+![Android Form Input](https://user-images.githubusercontent.com/24349997/55306636-82dc6e80-5472-11e9-9ab2-6ced79bd2825.PNG "Android Form Input") 
+
+##### iOS
+![iOS Form Input](https://user-images.githubusercontent.com/24349997/55306637-82dc6e80-5472-11e9-999e-55f8517b8736.png "iOS Form Input")
 
 Additional Props;
 
@@ -253,7 +287,11 @@ Uses the Atom `Picker`.
 <FormPicker onValueChange={this.handleValueChange} selectedValue={pickerValue} label="Number" data={pickerData} />
 ```
 
-![Android Form Picker](images/molecules/formPickerAndroid.PNG "Android Form Picker") ![iOS Form Picker](images/molecules/formPickerAndroid.PNG "iOS Form Picker")
+##### Android
+![Android Form Picker](https://user-images.githubusercontent.com/24349997/55306638-82dc6e80-5472-11e9-8aa9-781de9941d82.PNG "Android Form Picker") 
+
+##### iOS
+![iOS Form Picker](https://user-images.githubusercontent.com/24349997/55306639-83750500-5472-11e9-9604-2304727f0bcd.png "iOS Form Picker")
 
 Additional Props;
 
@@ -270,7 +308,11 @@ Uses the Atom `TextArea`.
 <FormTextArea onChangeText={this.handleTextChange} label="Description" />
 ```
 
-![Android Form TextArea](images/molecules/formTextAreaAndroid.PNG "Android Form TextArea") ![iOS Form TextArea](images/molecules/formTextAreaIos.png "iOS Form TextArea")
+##### Android
+![Android Form TextArea](https://user-images.githubusercontent.com/24349997/55306640-83750500-5472-11e9-9846-28a245f22504.PNG "Android Form TextArea") 
+
+##### iOS
+![iOS Form TextArea](https://user-images.githubusercontent.com/24349997/55306641-83750500-5472-11e9-8aa2-db66455f1c85.png "iOS Form TextArea")
 
 Additional Props;
 
@@ -307,7 +349,11 @@ handleShowNotification = () => {
 }
 ```
 
-![Android Notification](images/molecules/notificationAndroid.PNG "Android Notification") ![iOS Notification](images/molecules/notificationIos.png "iOS Notification")
+##### Android
+![Android Notification](https://user-images.githubusercontent.com/24349997/55306644-840d9b80-5472-11e9-803f-63f11c6df951.PNG "Android Notification")
+
+##### iOS
+ ![iOS Notification](https://user-images.githubusercontent.com/24349997/55306624-8112ab00-5472-11e9-9b71-ab06b5f6cbf0.png "iOS Notification")
 
 The data that can be passed to the notification are;
 
@@ -332,7 +378,11 @@ A List Item that displays a title (required), description and image. This molecu
 </ListItem>
 ```
 
-![Android ListItem](images/molecules/listItemAndroid.PNG "Android ListItem") ![iOS ListItem](images/molecules/listItemIos.png "iOS ListItem")
+##### Android
+![Android ListItem](https://user-images.githubusercontent.com/24349997/55306642-840d9b80-5472-11e9-8ca9-b8c8d5294102.PNG "Android ListItem") 
+
+##### iOS
+![iOS ListItem](https://user-images.githubusercontent.com/24349997/55306643-840d9b80-5472-11e9-9478-0d33fe6d22e8.png "iOS ListItem")
 
 You can use any [TouchableOpacity property](https://facebook.github.io/react-native/docs/touchableopacity.html) and the following:
 
@@ -368,9 +418,11 @@ actions = [
 <FloatingButton actions={actions} />
 ```
 
-![Android FAB](images/molecules/fabAndroid.PNG "Android FAB") ![iOS FAB](images/molecules/fabIos.png "iOS FAB") 
+##### Android
+![Android FAB](https://user-images.githubusercontent.com/24349997/55306629-81ab4180-5472-11e9-860e-3693bcd3d8f8.PNG "Android FAB") ![Android FAB Expanded](https://user-images.githubusercontent.com/24349997/55306630-81ab4180-5472-11e9-9948-dc4223961298.PNG "Android FAB Expanded")
 
-![Android FAB Expanded](images/molecules/fabExpandedAndroid.PNG "Android FAB Expanded") ![iOS FAB Expanded](images/molecules/fabExpandedIos.png "iOS FAB Expanded")
+##### iOS
+![iOS FAB](https://user-images.githubusercontent.com/24349997/55306632-8243d800-5472-11e9-94b9-a4b0c17842fc.png "iOS FAB") ![iOS FAB Expanded](https://user-images.githubusercontent.com/24349997/55306631-8243d800-5472-11e9-9315-ad5d91d913f0.png "iOS FAB Expanded")
 
 The props for the main `FloatingButton` are;
 
@@ -429,7 +481,11 @@ A Card that displays a title (required), description and image.
 <Card title="Heading" description="Description" image={require("../assets/images/scenery.jpg")} />
 ```
 
-![Android Card](images/molecules/cardAndroid.PNG "Android Card") ![iOS Card](images/molecules/cardIos.png "iOS Card")
+##### Android
+![Android Card](https://user-images.githubusercontent.com/24349997/55306626-8112ab00-5472-11e9-8fad-5aaa7b981ffa.PNG "Android Card") 
+
+##### iOS
+![iOS Card](https://user-images.githubusercontent.com/24349997/55306628-81ab4180-5472-11e9-8ec7-16f185bb82b2.png "iOS Card")
 
 You can use any [TouchableOpacity property](https://facebook.github.io/react-native/docs/touchableopacity.html) and the following:
 
@@ -457,7 +513,11 @@ formElements = [
 <Form formElements={formElements} />
 ```
 
-![Android Form](images/organisms/formAndroid.PNG "Android Form") ![iOS Form](images/organisms/formIos.png "iOS Form")
+##### Android
+![Android Form](https://user-images.githubusercontent.com/24349997/55306877-5d039980-5473-11e9-93f2-850d9ac47ddd.PNG "Android Form") 
+
+##### iOS
+![iOS Form](https://user-images.githubusercontent.com/24349997/55306878-5d039980-5473-11e9-9ec6-6db8356ff79e.png "iOS Form")
 
 The `Form` Component iterates through the `formElements` array, to render the fields according to the type of input specified in each object. 
 The form object only has one extra prop;
@@ -488,7 +548,11 @@ listData = [
 <ListView data={listData} />
 ```
 
-![Android ListView](images/organisms/listViewAndroid.PNG "Android ListView") ![iOS ListView](images/organisms/listViewIos.png "iOS ListView")
+##### Android
+![Android ListView](https://user-images.githubusercontent.com/24349997/55306879-5d039980-5473-11e9-821e-c23d21244299.PNG "Android ListView") 
+
+##### iOS
+![iOS ListView](https://user-images.githubusercontent.com/24349997/55306880-5d9c3000-5473-11e9-8701-0cfdef3200b8.png "iOS ListView")
 
 You can use any [FlatList property](http://facebook.github.io/react-native/docs/flatlist.html).
 
@@ -507,7 +571,11 @@ listData = [
 <CardList data={listData} />
 ```
 
-![Android CardList](images/organisms/cardListAndroid.PNG "Android CardList") ![iOS CardList](images/organisms/cardListIos.png "iOS CardList")
+##### Android
+![Android CardList](https://user-images.githubusercontent.com/24349997/55306875-5c6b0300-5473-11e9-826b-78fd3a8bb7b2.PNG "Android CardList") 
+
+##### iOS
+![iOS CardList](https://user-images.githubusercontent.com/24349997/55306876-5c6b0300-5473-11e9-86c0-8c2fb2f64e90.png "iOS CardList")
 
 You can use any [FlatList property](http://facebook.github.io/react-native/docs/flatlist.html).
 
@@ -532,7 +600,11 @@ The Navigation Header makes use of the `Text` and `Icon` atom.
 </NavBar>
 ```
 
-![Android Nav Bar](images/organisms/navBarAndroid.PNG "Android Nav Bar") ![iOS Nav Bar](images/organisms/navBarIos.png "iOS Nav Bar")
+##### Android
+![Android Nav Bar](https://user-images.githubusercontent.com/24349997/55306881-5d9c3000-5473-11e9-8162-2e60751f4ca9.PNG "Android Nav Bar") 
+
+##### iOS
+![iOS Nav Bar](https://user-images.githubusercontent.com/24349997/55306883-5e34c680-5473-11e9-905e-17f074c14930.png "iOS Nav Bar")
 
 `NavBar` is the main container for the header. It makes use of the [View property](https://facebook.github.io/react-native/docs/view.html) and the following:
 
@@ -574,7 +646,11 @@ The Navigation Footer makes use of the `Text` and `Icon` atom.
 </TabBar>
 ```
 
-![Android Tab Bar](images/organisms/tabBarAndroid.PNG "Android Tab Bar") ![iOS Tab Bar](images/organisms/tabBarIos.png "iOS Tab Bar")
+##### Android
+![Android Tab Bar](https://user-images.githubusercontent.com/24349997/55306888-5ecd5d00-5473-11e9-8737-8b01377343b8.PNG "Android Tab Bar") 
+
+##### iOS
+![iOS Tab Bar](https://user-images.githubusercontent.com/24349997/55306874-5c6b0300-5473-11e9-9cdc-9048e69df1bc.png "iOS Tab Bar")
 
 `TabBar` is the main container for the footer navigation. It makes use of the [View property](https://facebook.github.io/react-native/docs/view.html) and the following:
 
@@ -613,7 +689,11 @@ pillHeaders = [
 ```
 
 
-![Android Pill Bar](images/organisms/pillBarAndroid.PNG "Android Pill Bar") ![iOS Pill Bar](images/organisms/pillBarIos.png "iOS Pill Bar")
+##### Android
+![Android Pill Bar](https://user-images.githubusercontent.com/24349997/55306884-5e34c680-5473-11e9-90a8-5a6138c534e4.PNG "Android Pill Bar") 
+
+##### iOS
+![iOS Pill Bar](https://user-images.githubusercontent.com/24349997/55306886-5e34c680-5473-11e9-8ad4-05f85ddcef65.png "iOS Pill Bar")
 
 The index of the pillHeader object, will be used to query the corresponding pillScene, during transition.
 
