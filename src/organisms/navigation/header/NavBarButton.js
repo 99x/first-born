@@ -6,21 +6,25 @@ import { Icon } from "../../../atoms/Icon";
 import { Text } from "../../../atoms/Text";
 
 export class NavBarButton extends Component {
-
     render() {
         const { type, children, ...otherProps } = this.props;
 
-        let newChildren = []
+        let newChildren = [];
 
         if (children) {
-
-            newChildren = React.Children.map(children, child => child && child.type === Text ?
-                React.cloneElement(child, { ...child.props, size: "p" }) : child && child.type === Icon ?
-                    React.cloneElement(child, { ...child.props, size: 25, }) : child && child.type === Image ?
-                        React.cloneElement(child, { ...child.props, style: { width: 25, height: 25 } }) : null);
-
+            newChildren = React.Children.map(children, child =>
+                child && child.type === Text
+                    ? React.cloneElement(child, { ...child.props, size: "p" })
+                    : child && child.type === Icon
+                    ? React.cloneElement(child, { ...child.props, size: 25 })
+                    : child && child.type === Image
+                    ? React.cloneElement(child, {
+                          ...child.props,
+                          style: { width: 25, height: 25 }
+                      })
+                    : null
+            );
         } else if (type) {
-
             switch (type) {
                 case "back":
                     newChildren.push(<Icon name="arrow-back" size={25} />);
@@ -36,7 +40,6 @@ export class NavBarButton extends Component {
             if (Platform.OS === "ios" && type === "back") {
                 newChildren.push(<Text>Back</Text>);
             }
-
         }
 
         if (Platform.OS === "android") {
@@ -58,8 +61,8 @@ export class NavBarButton extends Component {
 NavBarButton.propTypes = {
     type: PropTypes.oneOf(["back", "search", "drawer"]),
     ...TouchableOpacity.propTypes
-}
+};
 
 NavBarButton.defaultProps = {
     type: undefined
-}
+};

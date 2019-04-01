@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { View, StyleSheet, TouchableOpacity, Image, Platform } from "react-native";
+import {
+    View,
+    StyleSheet,
+    TouchableOpacity,
+    Image,
+    Platform
+} from "react-native";
 import PropTypes from "prop-types";
 
 import { Text } from "../../atoms/Text";
@@ -7,25 +13,46 @@ import { commonColors } from "../../utils/color";
 import { deviceVariables } from "../../variables/deviceVariables";
 
 export class Card extends Component {
-
     render() {
-        const { title, description, image, onPress, block, backgroundColor, style, ...otherProps } = this.props;
+        const {
+            title,
+            description,
+            image,
+            onPress,
+            block,
+            backgroundColor,
+            style,
+            ...otherProps
+        } = this.props;
 
-        let cardStyle = block ? [styles.containerBlock, { backgroundColor }] : [styles.container, { backgroundColor }];
+        let cardStyle = block
+            ? [styles.containerBlock, { backgroundColor }]
+            : [styles.container, { backgroundColor }];
 
         if (style) {
             cardStyle.push(style);
         }
 
         return (
-            <TouchableOpacity style={cardStyle} disabled={!onPress} onPress={onPress} {...otherProps}>
+            <TouchableOpacity
+                style={cardStyle}
+                disabled={!onPress}
+                onPress={onPress}
+                {...otherProps}
+            >
                 {image && <Image source={image} style={styles.image} />}
                 <View style={styles.textContainer}>
-                    <Text size="h6" color={commonColors.darkGrey} bold >{title}</Text>
-                    {description && <Text size="sub_heading" color={commonColors.lightGrey}>{description}</Text>}
+                    <Text size="h6" color={commonColors.darkGrey} bold>
+                        {title}
+                    </Text>
+                    {description && (
+                        <Text size="sub_heading" color={commonColors.lightGrey}>
+                            {description}
+                        </Text>
+                    )}
                 </View>
             </TouchableOpacity>
-        )
+        );
     }
 }
 
@@ -36,12 +63,12 @@ Card.propTypes = {
     block: PropTypes.bool,
     backgroundColor: PropTypes.string,
     ...TouchableOpacity.propTypes
-}
+};
 
 Card.defaultProps = {
     backgroundColor: commonColors.white,
     block: false
-}
+};
 
 const styles = StyleSheet.create({
     container: {
@@ -49,14 +76,14 @@ const styles = StyleSheet.create({
         ...Platform.select({
             android: {
                 borderRadius: 3,
-                elevation: 3,
+                elevation: 3
             },
             ios: {
                 borderRadius: 10,
                 shadowOpacity: 0.75,
                 shadowRadius: 5,
                 shadowColor: commonColors.black,
-                shadowOffset: { height: 5, width: 5 },
+                shadowOffset: { height: 5, width: 5 }
             }
         }),
         overflow: "hidden",
@@ -73,13 +100,13 @@ const styles = StyleSheet.create({
     },
     textContainer: {
         padding: 20,
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
+        flexDirection: "column",
+        justifyContent: "flex-start"
     },
     image: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
         ...Platform.select({
             android: {
                 height: 150,
@@ -91,6 +118,6 @@ const styles = StyleSheet.create({
                 borderTopLeftRadius: 10,
                 borderTopRightRadius: 10
             }
-        }),
+        })
     }
-})
+});

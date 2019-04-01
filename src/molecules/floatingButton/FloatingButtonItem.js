@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { StyleSheet, View, Animated, Image } from 'react-native';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { StyleSheet, View, Animated, Image } from "react-native";
 import { Icon } from "../../atoms/Icon";
 import { Text } from "../../atoms/Text";
 
-import { getTouchableComponent } from '../../utils/touchable';
+import { getTouchableComponent } from "../../utils/touchable";
 import { commonColors } from "../../utils/color";
 
 class FloatingButtonItem extends Component {
@@ -15,7 +15,9 @@ class FloatingButtonItem extends Component {
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.active !== this.props.active) {
-            Animated.spring(this.animation, { toValue: nextProps.active ? 1 : 0 }).start();
+            Animated.spring(this.animation, {
+                toValue: nextProps.active ? 1 : 0
+            }).start();
         }
     }
 
@@ -25,7 +27,16 @@ class FloatingButtonItem extends Component {
     };
 
     renderText() {
-        const { text, position, textElevation, textBackground, textColor, textStyle, textProps, textContainerStyle } = this.props;
+        const {
+            text,
+            position,
+            textElevation,
+            textBackground,
+            textColor,
+            textStyle,
+            textProps,
+            textContainerStyle
+        } = this.props;
 
         if (text) {
             return (
@@ -38,7 +49,7 @@ class FloatingButtonItem extends Component {
                             backgroundColor: textBackground,
                             elevation: textElevation,
                             shadowOffset: {
-                                height: textElevation,
+                                height: textElevation
                             }
                         },
                         textContainerStyle
@@ -62,14 +73,20 @@ class FloatingButtonItem extends Component {
 
         if (image) {
             return (
-                <View key="button" style={[styles.button, { backgroundColor: color }]}>
+                <View
+                    key="button"
+                    style={[styles.button, { backgroundColor: color }]}
+                >
                     <Image source={image} style={styles.imageStyle} />
                 </View>
             );
         }
 
         return (
-            <View key="button" style={[styles.button, { backgroundColor: color }]}>
+            <View
+                key="button"
+                style={[styles.button, { backgroundColor: color }]}
+            >
                 <Icon name={icon} size={25} color={commonColors.white} />
             </View>
         );
@@ -95,20 +112,25 @@ class FloatingButtonItem extends Component {
         const components = [];
         const distanceToEdgeActionContainer = {};
 
-        if (position === 'right') {
+        if (position === "right") {
             components.push(this.renderText());
             components.push(this.renderButton());
             if (tabs) {
                 distanceToEdgeActionContainer.paddingRight = 20 + margin;
             } else {
-                distanceToEdgeActionContainer.paddingRight = distanceToEdge + margin;
+                distanceToEdgeActionContainer.paddingRight =
+                    distanceToEdge + margin;
             }
         } else {
             components.push(this.renderButton());
         }
 
         return (
-            <Touchable activeOpacity={0.4} style={styles.container} onPress={this.handleOnPress}>
+            <Touchable
+                activeOpacity={0.4}
+                style={styles.container}
+                onPress={this.handleOnPress}
+            >
                 <Animated.View
                     style={[
                         styles.actionContainer,
@@ -138,7 +160,7 @@ FloatingButtonItem.propTypes = {
     // not on doc
     textElevation: PropTypes.number,
     // not modified by user
-    position: PropTypes.oneOf(['left', 'right', 'center']),
+    position: PropTypes.oneOf(["left", "right", "center"]),
     active: PropTypes.bool,
     distanceToEdge: PropTypes.number,
     paddingTopBottom: PropTypes.number, // modified by parent property "actionsPaddingTopBottom"
@@ -161,12 +183,12 @@ const styles = StyleSheet.create({
     container: {
         elevation: 0,
         flex: 1,
-        flexDirection: 'column'
+        flexDirection: "column"
     },
     actionContainer: {
         elevation: 0,
         flex: 1,
-        flexDirection: 'row',
+        flexDirection: "row",
         paddingLeft: 0,
         paddingRight: 0,
         paddingBottom: 8,
@@ -201,8 +223,8 @@ const styles = StyleSheet.create({
         lineHeight: 20
     },
     button: {
-        alignItems: 'center',
-        justifyContent: 'center',
+        alignItems: "center",
+        justifyContent: "center",
         borderRadius: 20,
         shadowOpacity: 0.35,
         shadowOffset: {

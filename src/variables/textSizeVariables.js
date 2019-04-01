@@ -31,7 +31,7 @@ const fontSizes = {
             caption_big: 12,
             caption_small: 11
         }
-    }),
+    })
 };
 
 export function getFontSize(size) {

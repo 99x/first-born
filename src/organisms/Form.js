@@ -10,7 +10,6 @@ import { FormPicker } from "../molecules/formElements/FormPicker";
 import { FormTextArea } from "../molecules/formElements/FormTextArea";
 
 export class Form extends Component {
-
     render() {
         const { color, formElements, ...otherProps } = this.props;
 
@@ -26,7 +25,7 @@ export class Form extends Component {
                     );
                 })}
             </View>
-        )
+        );
     }
 
     renderElements(element, color) {
@@ -35,33 +34,26 @@ export class Form extends Component {
 
         switch (type) {
             case "text":
-                return (
-                    <FormInput {...otherProps} />
-                );
+                return <FormInput {...otherProps} />;
             case "textarea":
-                return (
-                    <FormTextArea {...otherProps} />
-                );
+                return <FormTextArea {...otherProps} />;
             case "date":
-                return (
-                    <FormDatePicker {...otherProps} />
-                );
+                return <FormDatePicker {...otherProps} />;
             case "picker":
                 return (
                     <FormPicker {...otherProps}>
-                        {pickerData.map((dataElement, key) =>
+                        {pickerData.map((dataElement, key) => (
                             <Picker.Item {...dataElement} key={key} />
-                        )}
+                        ))}
                     </FormPicker>
                 );
         }
     }
-
 }
 
 Form.propTypes = {
     color: PropTypes.string
-}
+};
 
 const styles = StyleSheet.create({
     container: {
@@ -71,4 +63,4 @@ const styles = StyleSheet.create({
     formElementContainer: {
         marginTop: 10
     }
-})
+});

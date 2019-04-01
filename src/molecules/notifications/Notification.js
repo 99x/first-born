@@ -1,27 +1,27 @@
-"use strict"
+"use strict";
 
-import { StyleSheet, View, Animated, Dimensions, Image } from 'react-native';
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { StyleSheet, View, Animated, Dimensions, Image } from "react-native";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { Icon } from "../../atoms/Icon";
 import { Text } from "../../atoms/Text";
 
 import { commonColors } from "../../utils/color";
 
-const { width, height } = Dimensions.get('window');
+const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
     notificationContainer: {
         height: height * 0.05,
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'row',
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "row",
         width,
-        position: 'absolute',
+        position: "absolute",
         top: 0
     },
     notificationText: {
-        fontWeight: 'bold',
+        fontWeight: "bold",
         color: commonColors.white
     },
     iconStyle: {
@@ -34,9 +34,8 @@ const styles = StyleSheet.create({
 });
 
 export class Notification extends Component {
-
     constructor(props) {
-        super(props)
+        super(props);
 
         this.animatedValue = new Animated.Value(0);
         this.notifyAlertHiddenCallback = null;
@@ -56,19 +55,22 @@ export class Notification extends Component {
 
     getStateByProps(props) {
         return {
-            color: props.color || '#007bff',
+            color: props.color || "#007bff",
             icon: props.icon || "alert",
             image: props.image || undefined,
             message: props.message,
             duration: props.duration || 3000,
-            shouldHideAfterDelay: (props.shouldHideAfterDelay == undefined) ? true : props.shouldHideAfterDelay,
+            shouldHideAfterDelay:
+                props.shouldHideAfterDelay == undefined
+                    ? true
+                    : props.shouldHideAfterDelay,
             durationToShow: props.durationToShow || 350,
             durationToHide: props.durationToHide || 350
         };
     }
 
     showMessageBarAlert() {
-        if (this.alertShown || (this.state.message === null)) {
+        if (this.alertShown || this.state.message === null) {
             return;
         }
 
@@ -107,7 +109,15 @@ export class Notification extends Component {
 
     render() {
         return (
-            <Animated.View style={[styles.notificationContainer, { opacity: this.animatedValue, backgroundColor: this.state.color }]}>
+            <Animated.View
+                style={[
+                    styles.notificationContainer,
+                    {
+                        opacity: this.animatedValue,
+                        backgroundColor: this.state.color
+                    }
+                ]}
+            >
                 {this.renderIcon()}
                 {this.renderMessage()}
             </Animated.View>
@@ -121,13 +131,13 @@ export class Notification extends Component {
                 <View style={styles.iconStyle}>
                     <Image source={image} style={styles.imageStyle} />
                 </View>
-            )
+            );
         }
         return (
             <View style={styles.iconStyle}>
                 <Icon name={icon} />
             </View>
-        )
+        );
     }
 
     renderMessage() {
@@ -150,9 +160,9 @@ Notification.propTypes = {
     shouldHideAfterDelay: PropTypes.bool,
     durationToShow: PropTypes.number,
     durationToHide: PropTypes.number
-}
+};
 
 Notification.defaultProps = {
     color: commonColors.white,
     image: undefined
-}
+};
