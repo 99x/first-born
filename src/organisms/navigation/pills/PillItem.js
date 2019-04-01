@@ -6,9 +6,15 @@ import { Icon } from "../../../atoms/Icon";
 import { commonColors } from "../../../utils/color";
 
 export class PillItem extends Component {
-
     render() {
-        const { label, activeColor, inactiveColor, children, active, ...otherProps } = this.props;
+        const {
+            label,
+            activeColor,
+            inactiveColor,
+            children,
+            active,
+            ...otherProps
+        } = this.props;
 
         let color;
 
@@ -21,26 +27,58 @@ export class PillItem extends Component {
         let newChildren;
 
         if (children) {
-
-            newChildren = React.Children.map(children, child => child && child.type === Text ?
-                React.cloneElement(child, { ...child.props, color, size: "footnote" }) : child && child.type === Icon ?
-                    React.cloneElement(child, { ...child.props, size: 15, color, style: { marginRight: 5, ...child.props.style } }) : child && child.type === Image ?
-                        React.cloneElement(child, { ...child.props, style: { width: 15, height: 15, marginRight: 5, ...child.props.style } }) : null);
-
+            newChildren = React.Children.map(children, child =>
+                child && child.type === Text
+                    ? React.cloneElement(child, {
+                          ...child.props,
+                          color,
+                          size: "footnote"
+                      })
+                    : child && child.type === Icon
+                    ? React.cloneElement(child, {
+                          ...child.props,
+                          size: 15,
+                          color,
+                          style: { ...child.props.style, marginRight: 5 }
+                      })
+                    : child && child.type === Image
+                    ? React.cloneElement(child, {
+                          ...child.props,
+                          style: {
+                              ...child.props.style,
+                              width: 15,
+                              height: 15,
+                              marginRight: 5
+                          }
+                      })
+                    : null
+            );
         }
 
         if (Platform.OS === "android") {
-return (
-                <TouchableOpacity style={[styles.containerAndroid, { borderBottomColor: color }]} {...otherProps}>
+            return (
+                <TouchableOpacity
+                    style={[
+                        styles.containerAndroid,
+                        { borderBottomColor: color }
+                    ]}
+                    {...otherProps}
+                >
                     {newChildren && newChildren}
                 </TouchableOpacity>
-            )
+            );
         }
         return (
-            <TouchableOpacity style={[styles.containerIos, { backgroundColor: active ? activeColor : "transparent" }]} {...otherProps}>
+            <TouchableOpacity
+                style={[
+                    styles.containerIos,
+                    { backgroundColor: active ? activeColor : "transparent" }
+                ]}
+                {...otherProps}
+            >
                 {newChildren && newChildren}
             </TouchableOpacity>
-        )
+        );
     }
 }
 
@@ -49,13 +87,13 @@ PillItem.propTypes = {
     inactiveColor: PropTypes.string,
     active: PropTypes.bool,
     ...TouchableOpacity.propTypes
-}
+};
 
 PillItem.defaultProps = {
     activeColor: Platform.OS === "android" ? commonColors.primary : "#0a60ff",
     inactiveColor: "#adadad",
     active: false
-}
+};
 
 const styles = StyleSheet.create({
     containerAndroid: {
@@ -74,4 +112,4 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         paddingVertical: 5
     }
-})
+});
