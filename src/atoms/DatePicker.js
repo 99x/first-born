@@ -26,10 +26,10 @@ export class DatePicker extends Component {
                 <View style={focused ? [styles.datePickerAndroid, { borderColor: color, borderWidth: 2 }] : styles.datePickerAndroid}>
                     <Text
                         ref={(c) => this._root = c}
-                        style={!chosenDate ? styles.input : [styles.input, { color: commonColors.black }]}
+                        style={!chosenDate ? styles.input : styles.inputValue}
                         onPress={() => this.openAndroidDatePicker()}
                     >
-                        {chosenDate ? this.formatChosenDate(chosenDate) : placeholder}
+{chosenDate ? this.formatChosenDate(chosenDate) : placeholder}
                     </Text>
                     <Icon name="calendar" onPress={() => this.openAndroidDatePicker()} style={styles.icon} color={focused ? color : commonColors.inputGrey} size={20} />
                 </View >
@@ -176,5 +176,9 @@ const styles = StyleSheet.create({
     input: {
         flex: 1,
         color: commonColors.inputGrey
+    },
+    inputValue: {
+        flex: 1,
+        color: commonColors.black
     }
 })
