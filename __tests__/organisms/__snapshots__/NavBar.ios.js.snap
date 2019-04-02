@@ -85,13 +85,19 @@ exports[`renders NavBar with back button 1`] = `
         </Text>
         <Text
           style={
-            Object {
-              "color": "#0a60ff",
-              "fontSize": 16,
-              "fontWeight": "normal",
-              "margin": 0,
-              "textAlign": "left",
-            }
+            Array [
+              Object {
+                "color": "#000",
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "textAlign": "left",
+              },
+              Object {
+                "color": "#0a60ff",
+                "fontSize": 16,
+                "margin": 0,
+              },
+            ]
           }
         >
           Back
@@ -110,12 +116,15 @@ exports[`renders NavBar with back button 1`] = `
     >
       <Text
         style={
-          Object {
-            "color": "#000",
-            "fontSize": 17,
-            "fontWeight": "bold",
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "#000",
+              "fontSize": 17,
+              "fontWeight": "bold",
+              "textAlign": "left",
+            },
+            Object {},
+          ]
         }
       >
         Title
@@ -176,12 +185,15 @@ exports[`renders NavBar with custom button 1`] = `
     >
       <Text
         style={
-          Object {
-            "color": "#000",
-            "fontSize": 17,
-            "fontWeight": "bold",
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "#000",
+              "fontSize": 17,
+              "fontWeight": "bold",
+              "textAlign": "left",
+            },
+            Object {},
+          ]
         }
       >
         Title
@@ -354,12 +366,15 @@ exports[`renders NavBar with drawer button 1`] = `
     >
       <Text
         style={
-          Object {
-            "color": "#000",
-            "fontSize": 17,
-            "fontWeight": "bold",
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "#000",
+              "fontSize": 17,
+              "fontWeight": "bold",
+              "textAlign": "left",
+            },
+            Object {},
+          ]
         }
       >
         Title
@@ -476,12 +491,15 @@ exports[`renders NavBar with search button 1`] = `
     >
       <Text
         style={
-          Object {
-            "color": "#000",
-            "fontSize": 17,
-            "fontWeight": "bold",
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "#000",
+              "fontSize": 17,
+              "fontWeight": "bold",
+              "textAlign": "left",
+            },
+            Object {},
+          ]
         }
       >
         Title
@@ -542,12 +560,15 @@ exports[`renders NavBar with title 1`] = `
     >
       <Text
         style={
-          Object {
-            "color": "#000",
-            "fontSize": 17,
-            "fontWeight": "bold",
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "#000",
+              "fontSize": 17,
+              "fontWeight": "bold",
+              "textAlign": "left",
+            },
+            Object {},
+          ]
         }
       >
         Title

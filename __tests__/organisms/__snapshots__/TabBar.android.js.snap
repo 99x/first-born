@@ -214,12 +214,15 @@ exports[`renders TabBar with tab titles 1`] = `
   >
     <Text
       style={
-        Object {
-          "color": "#FFF",
-          "fontSize": 13,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#FFF",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {},
+        ]
       }
     >
       ONE
@@ -246,12 +249,15 @@ exports[`renders TabBar with tab titles 1`] = `
   >
     <Text
       style={
-        Object {
-          "color": "rgba(209, 216, 224, 0.8)",
-          "fontSize": 13,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "rgba(209, 216, 224, 0.8)",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {},
+        ]
       }
     >
       TWO
@@ -278,12 +284,15 @@ exports[`renders TabBar with tab titles 1`] = `
   >
     <Text
       style={
-        Object {
-          "color": "rgba(209, 216, 224, 0.8)",
-          "fontSize": 13,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "rgba(209, 216, 224, 0.8)",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {},
+        ]
       }
     >
       THREE
@@ -310,12 +319,15 @@ exports[`renders TabBar with tab titles 1`] = `
   >
     <Text
       style={
-        Object {
-          "color": "rgba(209, 216, 224, 0.8)",
-          "fontSize": 13,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "rgba(209, 216, 224, 0.8)",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {},
+        ]
       }
     >
       FOUR
@@ -380,12 +392,15 @@ exports[`renders TabBar with tab titles and icons 1`] = `
     </Text>
     <Text
       style={
-        Object {
-          "color": "#FFF",
-          "fontSize": 13,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#FFF",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {},
+        ]
       }
     >
       ONE
@@ -432,12 +447,15 @@ exports[`renders TabBar with tab titles and icons 1`] = `
     </Text>
     <Text
       style={
-        Object {
-          "color": "rgba(209, 216, 224, 0.8)",
-          "fontSize": 13,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "rgba(209, 216, 224, 0.8)",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {},
+        ]
       }
     >
       TWO
@@ -484,12 +502,15 @@ exports[`renders TabBar with tab titles and icons 1`] = `
     </Text>
     <Text
       style={
-        Object {
-          "color": "rgba(209, 216, 224, 0.8)",
-          "fontSize": 13,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "rgba(209, 216, 224, 0.8)",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {},
+        ]
       }
     >
       THREE
@@ -536,12 +557,15 @@ exports[`renders TabBar with tab titles and icons 1`] = `
     </Text>
     <Text
       style={
-        Object {
-          "color": "rgba(209, 216, 224, 0.8)",
-          "fontSize": 13,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "rgba(209, 216, 224, 0.8)",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {},
+        ]
       }
     >
       FOUR

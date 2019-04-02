@@ -10,13 +10,14 @@ exports[`renders FormDatePicker with placeholder 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "rgba(33, 33, 33, 0.87)",
-        "fontSize": 15,
-        "fontWeight": "normal",
-        "marginVertical": 5,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "rgba(33, 33, 33, 0.87)",
+          "fontSize": 15,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+      ]
     }
   >
     Date of Birth
@@ -40,13 +41,18 @@ exports[`renders FormDatePicker with placeholder 1`] = `
     <Text
       onPress={[Function]}
       style={
-        Object {
-          "color": "rgba(33, 33, 33, 0.5)",
-          "flex": 1,
-          "fontSize": 16,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "flex": 1,
+          },
+        ]
       }
     >
       placeholder
@@ -88,13 +94,14 @@ exports[`renders colored FormDatePicker 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "rgba(33, 33, 33, 0.87)",
-        "fontSize": 15,
-        "fontWeight": "normal",
-        "marginVertical": 5,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "rgba(33, 33, 33, 0.87)",
+          "fontSize": 15,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+      ]
     }
   >
     Date of Birth
@@ -118,13 +125,18 @@ exports[`renders colored FormDatePicker 1`] = `
     <Text
       onPress={[Function]}
       style={
-        Object {
-          "color": "rgba(33, 33, 33, 0.5)",
-          "flex": 1,
-          "fontSize": 16,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "flex": 1,
+          },
+        ]
       }
     >
       Select Date
@@ -166,13 +178,14 @@ exports[`renders regular FormDatePicker 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "rgba(33, 33, 33, 0.87)",
-        "fontSize": 15,
-        "fontWeight": "normal",
-        "marginVertical": 5,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "rgba(33, 33, 33, 0.87)",
+          "fontSize": 15,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+      ]
     }
   >
     Date of Birth
@@ -196,13 +209,18 @@ exports[`renders regular FormDatePicker 1`] = `
     <Text
       onPress={[Function]}
       style={
-        Object {
-          "color": "rgba(33, 33, 33, 0.5)",
-          "flex": 1,
-          "fontSize": 16,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "flex": 1,
+          },
+        ]
       }
     >
       Select Date

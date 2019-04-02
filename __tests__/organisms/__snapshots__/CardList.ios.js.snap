@@ -33,6 +33,7 @@ exports[`renders a colored list of cards with heading and title 1`] = `
   onScroll={[Function]}
   onScrollBeginDrag={[Function]}
   onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
   renderItem={[Function]}
   scrollEventThrottle={50}
   stickyHeaderIndices={Array []}
@@ -91,26 +92,28 @@ exports[`renders a colored list of cards with heading and title 1`] = `
           >
             <Text
               style={
-                Object {
-                  "color": "rgba(33, 33, 33, 0.87)",
-                  "fontSize": 17,
-                  "fontWeight": "bold",
-                  "marginVertical": 5,
-                  "textAlign": "left",
-                }
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.87)",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                    "textAlign": "left",
+                  },
+                ]
               }
             >
               Heading 1
             </Text>
             <Text
               style={
-                Object {
-                  "color": "rgba(33, 33, 33, 0.4)",
-                  "fontSize": 15,
-                  "fontWeight": "normal",
-                  "marginVertical": 5,
-                  "textAlign": "left",
-                }
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.4)",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                    "textAlign": "left",
+                  },
+                ]
               }
             >
               Description 1
@@ -168,26 +171,28 @@ exports[`renders a colored list of cards with heading and title 1`] = `
           >
             <Text
               style={
-                Object {
-                  "color": "rgba(33, 33, 33, 0.87)",
-                  "fontSize": 17,
-                  "fontWeight": "bold",
-                  "marginVertical": 5,
-                  "textAlign": "left",
-                }
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.87)",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                    "textAlign": "left",
+                  },
+                ]
               }
             >
               Heading 2
             </Text>
             <Text
               style={
-                Object {
-                  "color": "rgba(33, 33, 33, 0.4)",
-                  "fontSize": 15,
-                  "fontWeight": "normal",
-                  "marginVertical": 5,
-                  "textAlign": "left",
-                }
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.4)",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                    "textAlign": "left",
+                  },
+                ]
               }
             >
               Description 2
@@ -245,26 +250,28 @@ exports[`renders a colored list of cards with heading and title 1`] = `
           >
             <Text
               style={
-                Object {
-                  "color": "rgba(33, 33, 33, 0.87)",
-                  "fontSize": 17,
-                  "fontWeight": "bold",
-                  "marginVertical": 5,
-                  "textAlign": "left",
-                }
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.87)",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                    "textAlign": "left",
+                  },
+                ]
               }
             >
               Heading 3
             </Text>
             <Text
               style={
-                Object {
-                  "color": "rgba(33, 33, 33, 0.4)",
-                  "fontSize": 15,
-                  "fontWeight": "normal",
-                  "marginVertical": 5,
-                  "textAlign": "left",
-                }
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.4)",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                    "textAlign": "left",
+                  },
+                ]
               }
             >
               Description 3
@@ -310,6 +317,7 @@ exports[`renders a horizontal list of cards with heading and title 1`] = `
   onScroll={[Function]}
   onScrollBeginDrag={[Function]}
   onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
   renderItem={[Function]}
   scrollEventThrottle={50}
   stickyHeaderIndices={Array []}
@@ -379,26 +387,28 @@ exports[`renders a horizontal list of cards with heading and title 1`] = `
           >
             <Text
               style={
-                Object {
-                  "color": "rgba(33, 33, 33, 0.87)",
-                  "fontSize": 17,
-                  "fontWeight": "bold",
-                  "marginVertical": 5,
-                  "textAlign": "left",
-                }
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.87)",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                    "textAlign": "left",
+                  },
+                ]
               }
             >
               Heading 1
             </Text>
             <Text
               style={
-                Object {
-                  "color": "rgba(33, 33, 33, 0.4)",
-                  "fontSize": 15,
-                  "fontWeight": "normal",
-                  "marginVertical": 5,
-                  "textAlign": "left",
-                }
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.4)",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                    "textAlign": "left",
+                  },
+                ]
               }
             >
               Description 1
@@ -463,26 +473,28 @@ exports[`renders a horizontal list of cards with heading and title 1`] = `
           >
             <Text
               style={
-                Object {
-                  "color": "rgba(33, 33, 33, 0.87)",
-                  "fontSize": 17,
-                  "fontWeight": "bold",
-                  "marginVertical": 5,
-                  "textAlign": "left",
-                }
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.87)",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                    "textAlign": "left",
+                  },
+                ]
               }
             >
               Heading 2
             </Text>
             <Text
               style={
-                Object {
-                  "color": "rgba(33, 33, 33, 0.4)",
-                  "fontSize": 15,
-                  "fontWeight": "normal",
-                  "marginVertical": 5,
-                  "textAlign": "left",
-                }
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.4)",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                    "textAlign": "left",
+                  },
+                ]
               }
             >
               Description 2
@@ -547,26 +559,28 @@ exports[`renders a horizontal list of cards with heading and title 1`] = `
           >
             <Text
               style={
-                Object {
-                  "color": "rgba(33, 33, 33, 0.87)",
-                  "fontSize": 17,
-                  "fontWeight": "bold",
-                  "marginVertical": 5,
-                  "textAlign": "left",
-                }
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.87)",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                    "textAlign": "left",
+                  },
+                ]
               }
             >
               Heading 3
             </Text>
             <Text
               style={
-                Object {
-                  "color": "rgba(33, 33, 33, 0.4)",
-                  "fontSize": 15,
-                  "fontWeight": "normal",
-                  "marginVertical": 5,
-                  "textAlign": "left",
-                }
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.4)",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                    "textAlign": "left",
+                  },
+                ]
               }
             >
               Description 3
@@ -609,6 +623,7 @@ exports[`renders a list of cards with heading 1`] = `
   onScroll={[Function]}
   onScrollBeginDrag={[Function]}
   onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
   renderItem={[Function]}
   scrollEventThrottle={50}
   stickyHeaderIndices={Array []}
@@ -667,13 +682,14 @@ exports[`renders a list of cards with heading 1`] = `
           >
             <Text
               style={
-                Object {
-                  "color": "rgba(33, 33, 33, 0.87)",
-                  "fontSize": 17,
-                  "fontWeight": "bold",
-                  "marginVertical": 5,
-                  "textAlign": "left",
-                }
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.87)",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                    "textAlign": "left",
+                  },
+                ]
               }
             >
               Heading 1
@@ -731,13 +747,14 @@ exports[`renders a list of cards with heading 1`] = `
           >
             <Text
               style={
-                Object {
-                  "color": "rgba(33, 33, 33, 0.87)",
-                  "fontSize": 17,
-                  "fontWeight": "bold",
-                  "marginVertical": 5,
-                  "textAlign": "left",
-                }
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.87)",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                    "textAlign": "left",
+                  },
+                ]
               }
             >
               Heading 2
@@ -795,13 +812,14 @@ exports[`renders a list of cards with heading 1`] = `
           >
             <Text
               style={
-                Object {
-                  "color": "rgba(33, 33, 33, 0.87)",
-                  "fontSize": 17,
-                  "fontWeight": "bold",
-                  "marginVertical": 5,
-                  "textAlign": "left",
-                }
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.87)",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                    "textAlign": "left",
+                  },
+                ]
               }
             >
               Heading 3
@@ -847,6 +865,7 @@ exports[`renders a list of cards with heading and title 1`] = `
   onScroll={[Function]}
   onScrollBeginDrag={[Function]}
   onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
   renderItem={[Function]}
   scrollEventThrottle={50}
   stickyHeaderIndices={Array []}
@@ -905,26 +924,28 @@ exports[`renders a list of cards with heading and title 1`] = `
           >
             <Text
               style={
-                Object {
-                  "color": "rgba(33, 33, 33, 0.87)",
-                  "fontSize": 17,
-                  "fontWeight": "bold",
-                  "marginVertical": 5,
-                  "textAlign": "left",
-                }
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.87)",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                    "textAlign": "left",
+                  },
+                ]
               }
             >
               Heading 1
             </Text>
             <Text
               style={
-                Object {
-                  "color": "rgba(33, 33, 33, 0.4)",
-                  "fontSize": 15,
-                  "fontWeight": "normal",
-                  "marginVertical": 5,
-                  "textAlign": "left",
-                }
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.4)",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                    "textAlign": "left",
+                  },
+                ]
               }
             >
               Description 1
@@ -982,26 +1003,28 @@ exports[`renders a list of cards with heading and title 1`] = `
           >
             <Text
               style={
-                Object {
-                  "color": "rgba(33, 33, 33, 0.87)",
-                  "fontSize": 17,
-                  "fontWeight": "bold",
-                  "marginVertical": 5,
-                  "textAlign": "left",
-                }
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.87)",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                    "textAlign": "left",
+                  },
+                ]
               }
             >
               Heading 2
             </Text>
             <Text
               style={
-                Object {
-                  "color": "rgba(33, 33, 33, 0.4)",
-                  "fontSize": 15,
-                  "fontWeight": "normal",
-                  "marginVertical": 5,
-                  "textAlign": "left",
-                }
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.4)",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                    "textAlign": "left",
+                  },
+                ]
               }
             >
               Description 2
@@ -1059,26 +1082,28 @@ exports[`renders a list of cards with heading and title 1`] = `
           >
             <Text
               style={
-                Object {
-                  "color": "rgba(33, 33, 33, 0.87)",
-                  "fontSize": 17,
-                  "fontWeight": "bold",
-                  "marginVertical": 5,
-                  "textAlign": "left",
-                }
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.87)",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                    "textAlign": "left",
+                  },
+                ]
               }
             >
               Heading 3
             </Text>
             <Text
               style={
-                Object {
-                  "color": "rgba(33, 33, 33, 0.4)",
-                  "fontSize": 15,
-                  "fontWeight": "normal",
-                  "marginVertical": 5,
-                  "textAlign": "left",
-                }
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.4)",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                    "textAlign": "left",
+                  },
+                ]
               }
             >
               Description 3

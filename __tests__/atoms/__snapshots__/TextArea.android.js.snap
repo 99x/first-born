@@ -20,6 +20,7 @@ exports[`renders TextArea with placeholder 1`] = `
     onContentSizeChange={[Function]}
     onFocus={[Function]}
     placeholder="placeholder"
+    rejectResponderTermination={true}
     style={
       Object {
         "height": 100,
@@ -51,6 +52,7 @@ exports[`renders colored TextArea 1`] = `
     onBlur={[Function]}
     onContentSizeChange={[Function]}
     onFocus={[Function]}
+    rejectResponderTermination={true}
     style={
       Object {
         "height": 100,
@@ -82,6 +84,7 @@ exports[`renders regular TextArea 1`] = `
     onBlur={[Function]}
     onContentSizeChange={[Function]}
     onFocus={[Function]}
+    rejectResponderTermination={true}
     style={
       Object {
         "height": 100,

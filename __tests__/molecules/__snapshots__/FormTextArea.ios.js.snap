@@ -10,13 +10,14 @@ exports[`renders FormTextArea with placeholder 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "rgba(33, 33, 33, 0.87)",
-        "fontSize": 15,
-        "fontWeight": "normal",
-        "marginVertical": 5,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "rgba(33, 33, 33, 0.87)",
+          "fontSize": 15,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+      ]
     }
   >
     Address
@@ -41,6 +42,7 @@ exports[`renders FormTextArea with placeholder 1`] = `
       onContentSizeChange={[Function]}
       onFocus={[Function]}
       placeholder="placeholder"
+      rejectResponderTermination={true}
       style={
         Object {
           "height": 100,
@@ -63,13 +65,14 @@ exports[`renders colored FormTextArea 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "rgba(33, 33, 33, 0.87)",
-        "fontSize": 15,
-        "fontWeight": "normal",
-        "marginVertical": 5,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "rgba(33, 33, 33, 0.87)",
+          "fontSize": 15,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+      ]
     }
   >
     Address
@@ -93,6 +96,7 @@ exports[`renders colored FormTextArea 1`] = `
       onBlur={[Function]}
       onContentSizeChange={[Function]}
       onFocus={[Function]}
+      rejectResponderTermination={true}
       style={
         Object {
           "height": 100,
@@ -115,13 +119,14 @@ exports[`renders regular FormTextArea 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "rgba(33, 33, 33, 0.87)",
-        "fontSize": 15,
-        "fontWeight": "normal",
-        "marginVertical": 5,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "rgba(33, 33, 33, 0.87)",
+          "fontSize": 15,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+      ]
     }
   >
     Address
@@ -145,6 +150,7 @@ exports[`renders regular FormTextArea 1`] = `
       onBlur={[Function]}
       onContentSizeChange={[Function]}
       onFocus={[Function]}
+      rejectResponderTermination={true}
       style={
         Object {
           "height": 100,

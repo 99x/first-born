@@ -10,13 +10,14 @@ exports[`renders FormPicker with placeholder 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "rgba(33, 33, 33, 0.87)",
-        "fontSize": 15,
-        "fontWeight": "normal",
-        "marginVertical": 5,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "rgba(33, 33, 33, 0.87)",
+          "fontSize": 15,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+      ]
     }
   >
     Number
@@ -69,13 +70,14 @@ exports[`renders colored FormPicker 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "rgba(33, 33, 33, 0.87)",
-        "fontSize": 15,
-        "fontWeight": "normal",
-        "marginVertical": 5,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "rgba(33, 33, 33, 0.87)",
+          "fontSize": 15,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+      ]
     }
   >
     Number
@@ -128,13 +130,14 @@ exports[`renders regular FormPicker 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "rgba(33, 33, 33, 0.87)",
-        "fontSize": 15,
-        "fontWeight": "normal",
-        "marginVertical": 5,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "rgba(33, 33, 33, 0.87)",
+          "fontSize": 15,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+      ]
     }
   >
     Number

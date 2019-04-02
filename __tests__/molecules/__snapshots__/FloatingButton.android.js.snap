@@ -177,13 +177,19 @@ exports[`renders regular FloatingButton with multiple actions 1`] = `
         >
           <Text
             style={
-              Object {
-                "color": "rgba(33, 33, 33, 0.87)",
-                "fontSize": 14,
-                "fontWeight": "normal",
-                "lineHeight": 20,
-                "textAlign": "left",
-              }
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+                Object {
+                  "color": "rgba(33, 33, 33, 0.87)",
+                  "fontSize": 14,
+                  "lineHeight": 20,
+                },
+              ]
             }
           >
             Location
@@ -303,13 +309,19 @@ exports[`renders regular FloatingButton with multiple actions 1`] = `
         >
           <Text
             style={
-              Object {
-                "color": "rgba(33, 33, 33, 0.87)",
-                "fontSize": 14,
-                "fontWeight": "normal",
-                "lineHeight": 20,
-                "textAlign": "left",
-              }
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+                Object {
+                  "color": "rgba(33, 33, 33, 0.87)",
+                  "fontSize": 14,
+                  "lineHeight": 20,
+                },
+              ]
             }
           >
             Accessibility
@@ -429,13 +441,19 @@ exports[`renders regular FloatingButton with multiple actions 1`] = `
         >
           <Text
             style={
-              Object {
-                "color": "rgba(33, 33, 33, 0.87)",
-                "fontSize": 14,
-                "fontWeight": "normal",
-                "lineHeight": 20,
-                "textAlign": "left",
-              }
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+                Object {
+                  "color": "rgba(33, 33, 33, 0.87)",
+                  "fontSize": 14,
+                  "lineHeight": 20,
+                },
+              ]
             }
           >
             Video

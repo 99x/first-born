@@ -164,13 +164,14 @@ exports[`renders PillView with icons 1`] = `
       <View>
         <Text
           style={
-            Object {
-              "color": "#000",
-              "fontSize": 16,
-              "fontWeight": "normal",
-              "marginVertical": 5,
-              "textAlign": "left",
-            }
+            Array [
+              Object {
+                "color": "#000",
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "textAlign": "left",
+              },
+            ]
           }
         >
           View 1
@@ -230,13 +231,14 @@ exports[`renders PillView with titles 1`] = `
     >
       <Text
         style={
-          Object {
-            "color": "#FFF",
-            "fontSize": 13,
-            "fontWeight": "normal",
-            "marginVertical": 5,
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "#FFF",
+              "fontSize": 13,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+          ]
         }
       >
         View 1
@@ -265,13 +267,14 @@ exports[`renders PillView with titles 1`] = `
     >
       <Text
         style={
-          Object {
-            "color": "#0a60ff",
-            "fontSize": 13,
-            "fontWeight": "normal",
-            "marginVertical": 5,
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "#0a60ff",
+              "fontSize": 13,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+          ]
         }
       >
         View 2
@@ -300,13 +303,14 @@ exports[`renders PillView with titles 1`] = `
     >
       <Text
         style={
-          Object {
-            "color": "#0a60ff",
-            "fontSize": 13,
-            "fontWeight": "normal",
-            "marginVertical": 5,
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "#0a60ff",
+              "fontSize": 13,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+          ]
         }
       >
         View 3
@@ -318,13 +322,14 @@ exports[`renders PillView with titles 1`] = `
       <View>
         <Text
           style={
-            Object {
-              "color": "#000",
-              "fontSize": 16,
-              "fontWeight": "normal",
-              "marginVertical": 5,
-              "textAlign": "left",
-            }
+            Array [
+              Object {
+                "color": "#000",
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "textAlign": "left",
+              },
+            ]
           }
         >
           View 1
@@ -406,13 +411,14 @@ exports[`renders PillView with titles and icons 1`] = `
       </Text>
       <Text
         style={
-          Object {
-            "color": "#FFF",
-            "fontSize": 13,
-            "fontWeight": "normal",
-            "marginVertical": 5,
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "#FFF",
+              "fontSize": 13,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+          ]
         }
       >
         View 1
@@ -463,13 +469,14 @@ exports[`renders PillView with titles and icons 1`] = `
       </Text>
       <Text
         style={
-          Object {
-            "color": "#0a60ff",
-            "fontSize": 13,
-            "fontWeight": "normal",
-            "marginVertical": 5,
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "#0a60ff",
+              "fontSize": 13,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+          ]
         }
       >
         View 2
@@ -520,13 +527,14 @@ exports[`renders PillView with titles and icons 1`] = `
       </Text>
       <Text
         style={
-          Object {
-            "color": "#0a60ff",
-            "fontSize": 13,
-            "fontWeight": "normal",
-            "marginVertical": 5,
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "#0a60ff",
+              "fontSize": 13,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+          ]
         }
       >
         View 3
@@ -538,13 +546,14 @@ exports[`renders PillView with titles and icons 1`] = `
       <View>
         <Text
           style={
-            Object {
-              "color": "#000",
-              "fontSize": 16,
-              "fontWeight": "normal",
-              "marginVertical": 5,
-              "textAlign": "left",
-            }
+            Array [
+              Object {
+                "color": "#000",
+                "fontSize": 16,
+                "fontWeight": "normal",
+                "textAlign": "left",
+              },
+            ]
           }
         >
           View 1

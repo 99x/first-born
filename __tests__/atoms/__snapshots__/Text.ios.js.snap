@@ -3,13 +3,14 @@
 exports[`renders callout text 1`] = `
 <Text
   style={
-    Object {
-      "color": "#000",
-      "fontSize": 16,
-      "fontWeight": "normal",
-      "marginVertical": 5,
-      "textAlign": "left",
-    }
+    Array [
+      Object {
+        "color": "#000",
+        "fontSize": 16,
+        "fontWeight": "normal",
+        "textAlign": "left",
+      },
+    ]
   }
 >
   Hello
@@ -19,13 +20,14 @@ exports[`renders callout text 1`] = `
 exports[`renders caption_big text 1`] = `
 <Text
   style={
-    Object {
-      "color": "#000",
-      "fontSize": 12,
-      "fontWeight": "normal",
-      "marginVertical": 5,
-      "textAlign": "left",
-    }
+    Array [
+      Object {
+        "color": "#000",
+        "fontSize": 12,
+        "fontWeight": "normal",
+        "textAlign": "left",
+      },
+    ]
   }
 >
   Hello
@@ -35,13 +37,14 @@ exports[`renders caption_big text 1`] = `
 exports[`renders caption_small text 1`] = `
 <Text
   style={
-    Object {
-      "color": "#000",
-      "fontSize": 11,
-      "fontWeight": "normal",
-      "marginVertical": 5,
-      "textAlign": "left",
-    }
+    Array [
+      Object {
+        "color": "#000",
+        "fontSize": 11,
+        "fontWeight": "normal",
+        "textAlign": "left",
+      },
+    ]
   }
 >
   Hello
@@ -51,13 +54,14 @@ exports[`renders caption_small text 1`] = `
 exports[`renders footnote text 1`] = `
 <Text
   style={
-    Object {
-      "color": "#000",
-      "fontSize": 13,
-      "fontWeight": "normal",
-      "marginVertical": 5,
-      "textAlign": "left",
-    }
+    Array [
+      Object {
+        "color": "#000",
+        "fontSize": 13,
+        "fontWeight": "normal",
+        "textAlign": "left",
+      },
+    ]
   }
 >
   Hello
@@ -67,13 +71,14 @@ exports[`renders footnote text 1`] = `
 exports[`renders h1 text 1`] = `
 <Text
   style={
-    Object {
-      "color": "#000",
-      "fontSize": 34,
-      "fontWeight": "normal",
-      "marginVertical": 5,
-      "textAlign": "left",
-    }
+    Array [
+      Object {
+        "color": "#000",
+        "fontSize": 34,
+        "fontWeight": "normal",
+        "textAlign": "left",
+      },
+    ]
   }
 >
   Hello
@@ -83,13 +88,14 @@ exports[`renders h1 text 1`] = `
 exports[`renders h2 text 1`] = `
 <Text
   style={
-    Object {
-      "color": "#000",
-      "fontSize": 28,
-      "fontWeight": "normal",
-      "marginVertical": 5,
-      "textAlign": "left",
-    }
+    Array [
+      Object {
+        "color": "#000",
+        "fontSize": 28,
+        "fontWeight": "normal",
+        "textAlign": "left",
+      },
+    ]
   }
 >
   Hello
@@ -99,13 +105,14 @@ exports[`renders h2 text 1`] = `
 exports[`renders h3 text 1`] = `
 <Text
   style={
-    Object {
-      "color": "#000",
-      "fontSize": 24,
-      "fontWeight": "normal",
-      "marginVertical": 5,
-      "textAlign": "left",
-    }
+    Array [
+      Object {
+        "color": "#000",
+        "fontSize": 24,
+        "fontWeight": "normal",
+        "textAlign": "left",
+      },
+    ]
   }
 >
   Hello
@@ -115,13 +122,14 @@ exports[`renders h3 text 1`] = `
 exports[`renders h4 text 1`] = `
 <Text
   style={
-    Object {
-      "color": "#000",
-      "fontSize": 22,
-      "fontWeight": "normal",
-      "marginVertical": 5,
-      "textAlign": "left",
-    }
+    Array [
+      Object {
+        "color": "#000",
+        "fontSize": 22,
+        "fontWeight": "normal",
+        "textAlign": "left",
+      },
+    ]
   }
 >
   Hello
@@ -131,13 +139,14 @@ exports[`renders h4 text 1`] = `
 exports[`renders h5 text 1`] = `
 <Text
   style={
-    Object {
-      "color": "#000",
-      "fontSize": 20,
-      "fontWeight": "normal",
-      "marginVertical": 5,
-      "textAlign": "left",
-    }
+    Array [
+      Object {
+        "color": "#000",
+        "fontSize": 20,
+        "fontWeight": "normal",
+        "textAlign": "left",
+      },
+    ]
   }
 >
   Hello
@@ -147,13 +156,14 @@ exports[`renders h5 text 1`] = `
 exports[`renders h6 text 1`] = `
 <Text
   style={
-    Object {
-      "color": "#000",
-      "fontSize": 17,
-      "fontWeight": "normal",
-      "marginVertical": 5,
-      "textAlign": "left",
-    }
+    Array [
+      Object {
+        "color": "#000",
+        "fontSize": 17,
+        "fontWeight": "normal",
+        "textAlign": "left",
+      },
+    ]
   }
 >
   Hello
@@ -163,13 +173,14 @@ exports[`renders h6 text 1`] = `
 exports[`renders regular text 1`] = `
 <Text
   style={
-    Object {
-      "color": "#000",
-      "fontSize": 16,
-      "fontWeight": "normal",
-      "marginVertical": 5,
-      "textAlign": "left",
-    }
+    Array [
+      Object {
+        "color": "#000",
+        "fontSize": 16,
+        "fontWeight": "normal",
+        "textAlign": "left",
+      },
+    ]
   }
 >
   Hello
@@ -179,13 +190,14 @@ exports[`renders regular text 1`] = `
 exports[`renders sub_heading text 1`] = `
 <Text
   style={
-    Object {
-      "color": "#000",
-      "fontSize": 15,
-      "fontWeight": "normal",
-      "marginVertical": 5,
-      "textAlign": "left",
-    }
+    Array [
+      Object {
+        "color": "#000",
+        "fontSize": 15,
+        "fontWeight": "normal",
+        "textAlign": "left",
+      },
+    ]
   }
 >
   Hello

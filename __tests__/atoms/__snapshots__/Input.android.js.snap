@@ -22,6 +22,7 @@ exports[`renders Input with placeholder 1`] = `
     onSubmitEditing={[Function]}
     placeholder="placeholder"
     placeholderTextColor="rgba(33, 33, 33, 0.5)"
+    rejectResponderTermination={true}
     style={
       Object {
         "width": "100%",
@@ -53,6 +54,7 @@ exports[`renders colored Input 1`] = `
     onFocus={[Function]}
     onSubmitEditing={[Function]}
     placeholderTextColor="rgba(33, 33, 33, 0.5)"
+    rejectResponderTermination={true}
     style={
       Object {
         "width": "100%",
@@ -84,6 +86,7 @@ exports[`renders regular Input 1`] = `
     onFocus={[Function]}
     onSubmitEditing={[Function]}
     placeholderTextColor="rgba(33, 33, 33, 0.5)"
+    rejectResponderTermination={true}
     style={
       Object {
         "width": "100%",

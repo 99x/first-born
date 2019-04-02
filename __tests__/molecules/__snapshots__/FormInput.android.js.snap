@@ -10,13 +10,14 @@ exports[`renders FormInput with placeholder 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "rgba(33, 33, 33, 0.87)",
-        "fontSize": 15,
-        "fontWeight": "normal",
-        "marginVertical": 5,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "rgba(33, 33, 33, 0.87)",
+          "fontSize": 15,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+      ]
     }
   >
     Name
@@ -42,6 +43,7 @@ exports[`renders FormInput with placeholder 1`] = `
       onSubmitEditing={[Function]}
       placeholder="placeholder"
       placeholderTextColor="rgba(33, 33, 33, 0.5)"
+      rejectResponderTermination={true}
       style={
         Object {
           "width": "100%",
@@ -63,13 +65,14 @@ exports[`renders colored FormInput 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "rgba(33, 33, 33, 0.87)",
-        "fontSize": 15,
-        "fontWeight": "normal",
-        "marginVertical": 5,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "rgba(33, 33, 33, 0.87)",
+          "fontSize": 15,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+      ]
     }
   >
     Name
@@ -94,6 +97,7 @@ exports[`renders colored FormInput 1`] = `
       onFocus={[Function]}
       onSubmitEditing={[Function]}
       placeholderTextColor="rgba(33, 33, 33, 0.5)"
+      rejectResponderTermination={true}
       style={
         Object {
           "width": "100%",
@@ -115,13 +119,14 @@ exports[`renders regular FormInput 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "rgba(33, 33, 33, 0.87)",
-        "fontSize": 15,
-        "fontWeight": "normal",
-        "marginVertical": 5,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "rgba(33, 33, 33, 0.87)",
+          "fontSize": 15,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+      ]
     }
   >
     Name
@@ -146,6 +151,7 @@ exports[`renders regular FormInput 1`] = `
       onFocus={[Function]}
       onSubmitEditing={[Function]}
       placeholderTextColor="rgba(33, 33, 33, 0.5)"
+      rejectResponderTermination={true}
       style={
         Object {
           "width": "100%",

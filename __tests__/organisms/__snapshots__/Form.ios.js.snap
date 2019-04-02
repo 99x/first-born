@@ -25,13 +25,14 @@ exports[`renders a form with all input types 1`] = `
     >
       <Text
         style={
-          Object {
-            "color": "rgba(33, 33, 33, 0.87)",
-            "fontSize": 15,
-            "fontWeight": "normal",
-            "marginVertical": 5,
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "rgba(33, 33, 33, 0.87)",
+              "fontSize": 15,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+          ]
         }
       >
         Full Name
@@ -57,6 +58,7 @@ exports[`renders a form with all input types 1`] = `
           onSubmitEditing={[Function]}
           placeholder="John Doe"
           placeholderTextColor="rgba(33, 33, 33, 0.5)"
+          rejectResponderTermination={true}
           style={
             Object {
               "height": "100%",
@@ -85,13 +87,14 @@ exports[`renders a form with all input types 1`] = `
     >
       <Text
         style={
-          Object {
-            "color": "rgba(33, 33, 33, 0.87)",
-            "fontSize": 15,
-            "fontWeight": "normal",
-            "marginVertical": 5,
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "rgba(33, 33, 33, 0.87)",
+              "fontSize": 15,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+          ]
         }
       >
         Type
@@ -116,13 +119,18 @@ exports[`renders a form with all input types 1`] = `
           <Text
             onPress={[Function]}
             style={
-              Object {
-                "color": "rgba(33, 33, 33, 0.5)",
-                "flex": 1,
-                "fontSize": 16,
-                "fontWeight": "normal",
-                "textAlign": "left",
-              }
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+                Object {
+                  "color": "rgba(33, 33, 33, 0.5)",
+                  "flex": 1,
+                },
+              ]
             }
           >
             Select Option
@@ -167,13 +175,17 @@ exports[`renders a form with all input types 1`] = `
           <Text
             onPress={[Function]}
             style={
-              Object {
-                "color": "#000",
-                "flex": 1,
-                "fontSize": 16,
-                "fontWeight": "normal",
-                "textAlign": "left",
-              }
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+                Object {
+                  "flex": 1,
+                },
+              ]
             }
           />
           <View
@@ -221,13 +233,17 @@ exports[`renders a form with all input types 1`] = `
           <Text
             onPress={[Function]}
             style={
-              Object {
-                "color": "#000",
-                "flex": 1,
-                "fontSize": 16,
-                "fontWeight": "normal",
-                "textAlign": "left",
-              }
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+                Object {
+                  "flex": 1,
+                },
+              ]
             }
           />
         </Modal>
@@ -250,13 +266,14 @@ exports[`renders a form with all input types 1`] = `
     >
       <Text
         style={
-          Object {
-            "color": "rgba(33, 33, 33, 0.87)",
-            "fontSize": 15,
-            "fontWeight": "normal",
-            "marginVertical": 5,
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "rgba(33, 33, 33, 0.87)",
+              "fontSize": 15,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+          ]
         }
       >
         Date
@@ -281,13 +298,18 @@ exports[`renders a form with all input types 1`] = `
           <Text
             onPress={[Function]}
             style={
-              Object {
-                "color": "rgba(33, 33, 33, 0.5)",
-                "flex": 1,
-                "fontSize": 16,
-                "fontWeight": "normal",
-                "textAlign": "left",
-              }
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+                Object {
+                  "color": "rgba(33, 33, 33, 0.5)",
+                  "flex": 1,
+                },
+              ]
             }
           >
             Select Date
@@ -332,13 +354,17 @@ exports[`renders a form with all input types 1`] = `
           <Text
             onPress={[Function]}
             style={
-              Object {
-                "color": "#000",
-                "flex": 1,
-                "fontSize": 16,
-                "fontWeight": "normal",
-                "textAlign": "left",
-              }
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+                Object {
+                  "flex": 1,
+                },
+              ]
             }
           />
           <View
@@ -365,13 +391,17 @@ exports[`renders a form with all input types 1`] = `
           <Text
             onPress={[Function]}
             style={
-              Object {
-                "color": "#000",
-                "flex": 1,
-                "fontSize": 16,
-                "fontWeight": "normal",
-                "textAlign": "left",
-              }
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+                Object {
+                  "flex": 1,
+                },
+              ]
             }
           />
         </Modal>
@@ -394,13 +424,14 @@ exports[`renders a form with all input types 1`] = `
     >
       <Text
         style={
-          Object {
-            "color": "rgba(33, 33, 33, 0.87)",
-            "fontSize": 15,
-            "fontWeight": "normal",
-            "marginVertical": 5,
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "rgba(33, 33, 33, 0.87)",
+              "fontSize": 15,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+          ]
         }
       >
         Address
@@ -424,6 +455,7 @@ exports[`renders a form with all input types 1`] = `
           onBlur={[Function]}
           onContentSizeChange={[Function]}
           onFocus={[Function]}
+          rejectResponderTermination={true}
           style={
             Object {
               "height": 100,
@@ -463,13 +495,14 @@ exports[`renders a form with input types text 1`] = `
     >
       <Text
         style={
-          Object {
-            "color": "rgba(33, 33, 33, 0.87)",
-            "fontSize": 15,
-            "fontWeight": "normal",
-            "marginVertical": 5,
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "rgba(33, 33, 33, 0.87)",
+              "fontSize": 15,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+          ]
         }
       >
         Full Name
@@ -495,6 +528,7 @@ exports[`renders a form with input types text 1`] = `
           onSubmitEditing={[Function]}
           placeholder="John Doe"
           placeholderTextColor="rgba(33, 33, 33, 0.5)"
+          rejectResponderTermination={true}
           style={
             Object {
               "height": "100%",
@@ -535,13 +569,14 @@ exports[`renders a form with input types, text and textarea 1`] = `
     >
       <Text
         style={
-          Object {
-            "color": "rgba(33, 33, 33, 0.87)",
-            "fontSize": 15,
-            "fontWeight": "normal",
-            "marginVertical": 5,
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "rgba(33, 33, 33, 0.87)",
+              "fontSize": 15,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+          ]
         }
       >
         Full Name
@@ -567,6 +602,7 @@ exports[`renders a form with input types, text and textarea 1`] = `
           onSubmitEditing={[Function]}
           placeholder="John Doe"
           placeholderTextColor="rgba(33, 33, 33, 0.5)"
+          rejectResponderTermination={true}
           style={
             Object {
               "height": "100%",
@@ -595,13 +631,14 @@ exports[`renders a form with input types, text and textarea 1`] = `
     >
       <Text
         style={
-          Object {
-            "color": "rgba(33, 33, 33, 0.87)",
-            "fontSize": 15,
-            "fontWeight": "normal",
-            "marginVertical": 5,
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "rgba(33, 33, 33, 0.87)",
+              "fontSize": 15,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+          ]
         }
       >
         Address
@@ -625,6 +662,7 @@ exports[`renders a form with input types, text and textarea 1`] = `
           onBlur={[Function]}
           onContentSizeChange={[Function]}
           onFocus={[Function]}
+          rejectResponderTermination={true}
           style={
             Object {
               "height": 100,
@@ -664,13 +702,14 @@ exports[`renders a form with input types, text, textarea and picker 1`] = `
     >
       <Text
         style={
-          Object {
-            "color": "rgba(33, 33, 33, 0.87)",
-            "fontSize": 15,
-            "fontWeight": "normal",
-            "marginVertical": 5,
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "rgba(33, 33, 33, 0.87)",
+              "fontSize": 15,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+          ]
         }
       >
         Full Name
@@ -696,6 +735,7 @@ exports[`renders a form with input types, text, textarea and picker 1`] = `
           onSubmitEditing={[Function]}
           placeholder="John Doe"
           placeholderTextColor="rgba(33, 33, 33, 0.5)"
+          rejectResponderTermination={true}
           style={
             Object {
               "height": "100%",
@@ -724,13 +764,14 @@ exports[`renders a form with input types, text, textarea and picker 1`] = `
     >
       <Text
         style={
-          Object {
-            "color": "rgba(33, 33, 33, 0.87)",
-            "fontSize": 15,
-            "fontWeight": "normal",
-            "marginVertical": 5,
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "rgba(33, 33, 33, 0.87)",
+              "fontSize": 15,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+          ]
         }
       >
         Type
@@ -755,13 +796,18 @@ exports[`renders a form with input types, text, textarea and picker 1`] = `
           <Text
             onPress={[Function]}
             style={
-              Object {
-                "color": "rgba(33, 33, 33, 0.5)",
-                "flex": 1,
-                "fontSize": 16,
-                "fontWeight": "normal",
-                "textAlign": "left",
-              }
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+                Object {
+                  "color": "rgba(33, 33, 33, 0.5)",
+                  "flex": 1,
+                },
+              ]
             }
           >
             Select Option
@@ -806,13 +852,17 @@ exports[`renders a form with input types, text, textarea and picker 1`] = `
           <Text
             onPress={[Function]}
             style={
-              Object {
-                "color": "#000",
-                "flex": 1,
-                "fontSize": 16,
-                "fontWeight": "normal",
-                "textAlign": "left",
-              }
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+                Object {
+                  "flex": 1,
+                },
+              ]
             }
           />
           <View
@@ -860,13 +910,17 @@ exports[`renders a form with input types, text, textarea and picker 1`] = `
           <Text
             onPress={[Function]}
             style={
-              Object {
-                "color": "#000",
-                "flex": 1,
-                "fontSize": 16,
-                "fontWeight": "normal",
-                "textAlign": "left",
-              }
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+                Object {
+                  "flex": 1,
+                },
+              ]
             }
           />
         </Modal>
@@ -889,13 +943,14 @@ exports[`renders a form with input types, text, textarea and picker 1`] = `
     >
       <Text
         style={
-          Object {
-            "color": "rgba(33, 33, 33, 0.87)",
-            "fontSize": 15,
-            "fontWeight": "normal",
-            "marginVertical": 5,
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "rgba(33, 33, 33, 0.87)",
+              "fontSize": 15,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+          ]
         }
       >
         Address
@@ -919,6 +974,7 @@ exports[`renders a form with input types, text, textarea and picker 1`] = `
           onBlur={[Function]}
           onContentSizeChange={[Function]}
           onFocus={[Function]}
+          rejectResponderTermination={true}
           style={
             Object {
               "height": 100,

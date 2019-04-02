@@ -39,13 +39,14 @@ exports[`renders card with heading 1`] = `
   >
     <Text
       style={
-        Object {
-          "color": "rgba(33, 33, 33, 0.87)",
-          "fontSize": 17,
-          "fontWeight": "bold",
-          "marginVertical": 5,
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 17,
+            "fontWeight": "bold",
+            "textAlign": "left",
+          },
+        ]
       }
     >
       Heading
@@ -93,26 +94,28 @@ exports[`renders card with heading and title 1`] = `
   >
     <Text
       style={
-        Object {
-          "color": "rgba(33, 33, 33, 0.87)",
-          "fontSize": 17,
-          "fontWeight": "bold",
-          "marginVertical": 5,
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 17,
+            "fontWeight": "bold",
+            "textAlign": "left",
+          },
+        ]
       }
     >
       Heading
     </Text>
     <Text
       style={
-        Object {
-          "color": "rgba(33, 33, 33, 0.4)",
-          "fontSize": 15,
-          "fontWeight": "normal",
-          "marginVertical": 5,
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.4)",
+            "fontSize": 15,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+        ]
       }
     >
       description
@@ -160,26 +163,28 @@ exports[`renders colored card with heading and title 1`] = `
   >
     <Text
       style={
-        Object {
-          "color": "rgba(33, 33, 33, 0.87)",
-          "fontSize": 17,
-          "fontWeight": "bold",
-          "marginVertical": 5,
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 17,
+            "fontWeight": "bold",
+            "textAlign": "left",
+          },
+        ]
       }
     >
       Heading
     </Text>
     <Text
       style={
-        Object {
-          "color": "rgba(33, 33, 33, 0.4)",
-          "fontSize": 15,
-          "fontWeight": "normal",
-          "marginVertical": 5,
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.4)",
+            "fontSize": 15,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+        ]
       }
     >
       description

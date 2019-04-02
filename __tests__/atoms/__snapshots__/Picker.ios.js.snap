@@ -21,13 +21,18 @@ exports[`renders Picker with placeholder 1`] = `
     <Text
       onPress={[Function]}
       style={
-        Object {
-          "color": "rgba(33, 33, 33, 0.5)",
-          "flex": 1,
-          "fontSize": 16,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "flex": 1,
+          },
+        ]
       }
     >
       placeholder
@@ -72,13 +77,17 @@ exports[`renders Picker with placeholder 1`] = `
     <Text
       onPress={[Function]}
       style={
-        Object {
-          "color": "#000",
-          "flex": 1,
-          "fontSize": 16,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
       }
     />
     <View
@@ -126,13 +135,17 @@ exports[`renders Picker with placeholder 1`] = `
     <Text
       onPress={[Function]}
       style={
-        Object {
-          "color": "#000",
-          "flex": 1,
-          "fontSize": 16,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
       }
     />
   </Modal>
@@ -160,13 +173,18 @@ exports[`renders colored Picker 1`] = `
     <Text
       onPress={[Function]}
       style={
-        Object {
-          "color": "rgba(33, 33, 33, 0.5)",
-          "flex": 1,
-          "fontSize": 16,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "flex": 1,
+          },
+        ]
       }
     >
       Select Option
@@ -211,13 +229,17 @@ exports[`renders colored Picker 1`] = `
     <Text
       onPress={[Function]}
       style={
-        Object {
-          "color": "#000",
-          "flex": 1,
-          "fontSize": 16,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
       }
     />
     <View
@@ -265,13 +287,17 @@ exports[`renders colored Picker 1`] = `
     <Text
       onPress={[Function]}
       style={
-        Object {
-          "color": "#000",
-          "flex": 1,
-          "fontSize": 16,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
       }
     />
   </Modal>
@@ -299,13 +325,18 @@ exports[`renders regular Picker 1`] = `
     <Text
       onPress={[Function]}
       style={
-        Object {
-          "color": "rgba(33, 33, 33, 0.5)",
-          "flex": 1,
-          "fontSize": 16,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "flex": 1,
+          },
+        ]
       }
     >
       Select Option
@@ -350,13 +381,17 @@ exports[`renders regular Picker 1`] = `
     <Text
       onPress={[Function]}
       style={
-        Object {
-          "color": "#000",
-          "flex": 1,
-          "fontSize": 16,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
       }
     />
     <View
@@ -404,13 +439,17 @@ exports[`renders regular Picker 1`] = `
     <Text
       onPress={[Function]}
       style={
-        Object {
-          "color": "#000",
-          "flex": 1,
-          "fontSize": 16,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
       }
     />
   </Modal>

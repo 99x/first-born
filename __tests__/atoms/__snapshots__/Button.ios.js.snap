@@ -33,13 +33,19 @@ exports[`renders block button 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "#FFF",
-        "fontSize": 16,
-        "fontWeight": "normal",
-        "margin": 0,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "#000",
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+        Object {
+          "color": "#FFF",
+          "fontSize": 16,
+          "margin": 0,
+        },
+      ]
     }
   >
     Click Me
@@ -101,13 +107,19 @@ exports[`renders icon button 1`] = `
   </Text>
   <Text
     style={
-      Object {
-        "color": "#FFF",
-        "fontSize": 16,
-        "fontWeight": "normal",
-        "margin": 0,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "#000",
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+        Object {
+          "color": "#FFF",
+          "fontSize": 16,
+          "margin": 0,
+        },
+      ]
     }
   >
     Click Me
@@ -147,13 +159,19 @@ exports[`renders large button 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "#FFF",
-        "fontSize": 20.8,
-        "fontWeight": "normal",
-        "margin": 0,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "#000",
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+        Object {
+          "color": "#FFF",
+          "fontSize": 20.8,
+          "margin": 0,
+        },
+      ]
     }
   >
     Click Me
@@ -194,13 +212,19 @@ exports[`renders outline button 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "#486c86",
-        "fontSize": 16,
-        "fontWeight": "normal",
-        "margin": 0,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "#000",
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+        Object {
+          "color": "#486c86",
+          "fontSize": 16,
+          "margin": 0,
+        },
+      ]
     }
   >
     Click Me
@@ -240,13 +264,19 @@ exports[`renders regular button 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "#FFF",
-        "fontSize": 16,
-        "fontWeight": "normal",
-        "margin": 0,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "#000",
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+        Object {
+          "color": "#FFF",
+          "fontSize": 16,
+          "margin": 0,
+        },
+      ]
     }
   >
     Click Me
@@ -287,13 +317,19 @@ exports[`renders rounded button 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "#FFF",
-        "fontSize": 16,
-        "fontWeight": "normal",
-        "margin": 0,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "#000",
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+        Object {
+          "color": "#FFF",
+          "fontSize": 16,
+          "margin": 0,
+        },
+      ]
     }
   >
     Click Me
@@ -333,13 +369,19 @@ exports[`renders small button 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "#FFF",
-        "fontSize": 12.8,
-        "fontWeight": "normal",
-        "margin": 0,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "#000",
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+        Object {
+          "color": "#FFF",
+          "fontSize": 12.8,
+          "margin": 0,
+        },
+      ]
     }
   >
     Click Me
@@ -381,13 +423,19 @@ exports[`renders transparent button 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "#FFF",
-        "fontSize": 16,
-        "fontWeight": "normal",
-        "margin": 0,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "#000",
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+        Object {
+          "color": "#FFF",
+          "fontSize": 16,
+          "margin": 0,
+        },
+      ]
     }
   >
     Click Me

@@ -214,12 +214,15 @@ exports[`renders TabBar with tab titles 1`] = `
   >
     <Text
       style={
-        Object {
-          "color": "#0a60ff",
-          "fontSize": 13,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#0a60ff",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {},
+        ]
       }
     >
       ONE
@@ -246,12 +249,15 @@ exports[`renders TabBar with tab titles 1`] = `
   >
     <Text
       style={
-        Object {
-          "color": "#8e8e93",
-          "fontSize": 13,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#8e8e93",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {},
+        ]
       }
     >
       TWO
@@ -278,12 +284,15 @@ exports[`renders TabBar with tab titles 1`] = `
   >
     <Text
       style={
-        Object {
-          "color": "#8e8e93",
-          "fontSize": 13,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#8e8e93",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {},
+        ]
       }
     >
       THREE
@@ -310,12 +319,15 @@ exports[`renders TabBar with tab titles 1`] = `
   >
     <Text
       style={
-        Object {
-          "color": "#8e8e93",
-          "fontSize": 13,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#8e8e93",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {},
+        ]
       }
     >
       FOUR
@@ -380,12 +392,15 @@ exports[`renders TabBar with tab titles and icons 1`] = `
     </Text>
     <Text
       style={
-        Object {
-          "color": "#0a60ff",
-          "fontSize": 13,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#0a60ff",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {},
+        ]
       }
     >
       ONE
@@ -432,12 +447,15 @@ exports[`renders TabBar with tab titles and icons 1`] = `
     </Text>
     <Text
       style={
-        Object {
-          "color": "#8e8e93",
-          "fontSize": 13,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#8e8e93",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {},
+        ]
       }
     >
       TWO
@@ -484,12 +502,15 @@ exports[`renders TabBar with tab titles and icons 1`] = `
     </Text>
     <Text
       style={
-        Object {
-          "color": "#8e8e93",
-          "fontSize": 13,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#8e8e93",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {},
+        ]
       }
     >
       THREE
@@ -536,12 +557,15 @@ exports[`renders TabBar with tab titles and icons 1`] = `
     </Text>
     <Text
       style={
-        Object {
-          "color": "#8e8e93",
-          "fontSize": 13,
-          "fontWeight": "normal",
-          "textAlign": "left",
-        }
+        Array [
+          Object {
+            "color": "#8e8e93",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {},
+        ]
       }
     >
       FOUR

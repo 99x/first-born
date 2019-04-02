@@ -10,13 +10,14 @@ exports[`renders FormPicker with placeholder 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "rgba(33, 33, 33, 0.87)",
-        "fontSize": 15,
-        "fontWeight": "normal",
-        "marginVertical": 5,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "rgba(33, 33, 33, 0.87)",
+          "fontSize": 15,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+      ]
     }
   >
     Number
@@ -41,13 +42,18 @@ exports[`renders FormPicker with placeholder 1`] = `
       <Text
         onPress={[Function]}
         style={
-          Object {
-            "color": "rgba(33, 33, 33, 0.5)",
-            "flex": 1,
-            "fontSize": 16,
-            "fontWeight": "normal",
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "#000",
+              "fontSize": 16,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+            Object {
+              "color": "rgba(33, 33, 33, 0.5)",
+              "flex": 1,
+            },
+          ]
         }
       >
         placeholder
@@ -92,13 +98,17 @@ exports[`renders FormPicker with placeholder 1`] = `
       <Text
         onPress={[Function]}
         style={
-          Object {
-            "color": "#000",
-            "flex": 1,
-            "fontSize": 16,
-            "fontWeight": "normal",
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "#000",
+              "fontSize": 16,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+            Object {
+              "flex": 1,
+            },
+          ]
         }
       />
       <View
@@ -146,13 +156,17 @@ exports[`renders FormPicker with placeholder 1`] = `
       <Text
         onPress={[Function]}
         style={
-          Object {
-            "color": "#000",
-            "flex": 1,
-            "fontSize": 16,
-            "fontWeight": "normal",
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "#000",
+              "fontSize": 16,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+            Object {
+              "flex": 1,
+            },
+          ]
         }
       />
     </Modal>
@@ -170,13 +184,14 @@ exports[`renders colored FormPicker 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "rgba(33, 33, 33, 0.87)",
-        "fontSize": 15,
-        "fontWeight": "normal",
-        "marginVertical": 5,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "rgba(33, 33, 33, 0.87)",
+          "fontSize": 15,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+      ]
     }
   >
     Number
@@ -201,13 +216,18 @@ exports[`renders colored FormPicker 1`] = `
       <Text
         onPress={[Function]}
         style={
-          Object {
-            "color": "rgba(33, 33, 33, 0.5)",
-            "flex": 1,
-            "fontSize": 16,
-            "fontWeight": "normal",
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "#000",
+              "fontSize": 16,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+            Object {
+              "color": "rgba(33, 33, 33, 0.5)",
+              "flex": 1,
+            },
+          ]
         }
       >
         Select Option
@@ -252,13 +272,17 @@ exports[`renders colored FormPicker 1`] = `
       <Text
         onPress={[Function]}
         style={
-          Object {
-            "color": "#000",
-            "flex": 1,
-            "fontSize": 16,
-            "fontWeight": "normal",
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "#000",
+              "fontSize": 16,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+            Object {
+              "flex": 1,
+            },
+          ]
         }
       />
       <View
@@ -306,13 +330,17 @@ exports[`renders colored FormPicker 1`] = `
       <Text
         onPress={[Function]}
         style={
-          Object {
-            "color": "#000",
-            "flex": 1,
-            "fontSize": 16,
-            "fontWeight": "normal",
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "#000",
+              "fontSize": 16,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+            Object {
+              "flex": 1,
+            },
+          ]
         }
       />
     </Modal>
@@ -330,13 +358,14 @@ exports[`renders regular FormPicker 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "rgba(33, 33, 33, 0.87)",
-        "fontSize": 15,
-        "fontWeight": "normal",
-        "marginVertical": 5,
-        "textAlign": "left",
-      }
+      Array [
+        Object {
+          "color": "rgba(33, 33, 33, 0.87)",
+          "fontSize": 15,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+      ]
     }
   >
     Number
@@ -361,13 +390,18 @@ exports[`renders regular FormPicker 1`] = `
       <Text
         onPress={[Function]}
         style={
-          Object {
-            "color": "rgba(33, 33, 33, 0.5)",
-            "flex": 1,
-            "fontSize": 16,
-            "fontWeight": "normal",
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "#000",
+              "fontSize": 16,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+            Object {
+              "color": "rgba(33, 33, 33, 0.5)",
+              "flex": 1,
+            },
+          ]
         }
       >
         Select Option
@@ -412,13 +446,17 @@ exports[`renders regular FormPicker 1`] = `
       <Text
         onPress={[Function]}
         style={
-          Object {
-            "color": "#000",
-            "flex": 1,
-            "fontSize": 16,
-            "fontWeight": "normal",
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "#000",
+              "fontSize": 16,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+            Object {
+              "flex": 1,
+            },
+          ]
         }
       />
       <View
@@ -466,13 +504,17 @@ exports[`renders regular FormPicker 1`] = `
       <Text
         onPress={[Function]}
         style={
-          Object {
-            "color": "#000",
-            "flex": 1,
-            "fontSize": 16,
-            "fontWeight": "normal",
-            "textAlign": "left",
-          }
+          Array [
+            Object {
+              "color": "#000",
+              "fontSize": 16,
+              "fontWeight": "normal",
+              "textAlign": "left",
+            },
+            Object {
+              "flex": 1,
+            },
+          ]
         }
       />
     </Modal>
