@@ -13,29 +13,26 @@ class TextAE extends Component {
             children,
             style,
             align,
+            margin,
             ...otherProps
         } = this.props;
 
         const textBold = !bold ? "normal" : "bold";
 
-        let textStyle;
+        let textStyle = [
+            {
+                color: color,
+                fontSize: getFontSize(size),
+                textAlign: align,
+                fontWeight: textBold
+            }
+        ];
 
         if (style) {
-            textStyle = {
-                color: color,
-                fontSize: getFontSize(size),
-                textAlign: align,
-                fontWeight: textBold,
-                ...style
-            };
-        } else {
-            textStyle = {
-                color: color,
-                fontSize: getFontSize(size),
-                textAlign: align,
-                fontWeight: textBold,
-                marginVertical: 5
-            };
+            textStyle.push(style);
+        }
+        if (margin) {
+            textStyle.push({ marginVertical: 5 });
         }
 
         return (
@@ -64,6 +61,7 @@ TextAE.propTypes = {
         "caption_small"
     ]),
     align: PropTypes.string,
+    margin: PropTypes.bool,
     ...Text.propTypes
 };
 
@@ -71,7 +69,8 @@ TextAE.defaultProps = {
     size: "p",
     bold: false,
     color: commonColors.black,
-    align: "left"
+    align: "left",
+    margin: false
 };
 
 export { TextAE as Text };
