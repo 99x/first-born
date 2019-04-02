@@ -9,13 +9,19 @@ export class Input extends Component {
         super(props);
         this.state = {
             focused: false,
-            error: false
+            error: false,
+            text: ""
         };
     }
 
     handleTextChange = text => {
         const { isValid, onChangeText } = this.props;
-        onChangeText(text);
+        this.setState({ text: text });
+
+        if (onChangeText) {
+            onChangeText(text);
+        }
+
         if (isValid) {
             this.setState({ error: !isValid(text) });
         }
