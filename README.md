@@ -89,11 +89,13 @@ import { Button } from "first-born";
 
 You can use any [Text property](http://facebook.github.io/react-native/docs/text.html) and the following:
 
-| Prop        | Description                                                                       | Default |
-|-------------|-----------------------------------------------------------------------------------|---------|
-| **`size`**  | Size of the text, picked from predefined sizes, according to underlying platform. | `'p'`   |
-| **`bold`**  | If text is bold or not.                                                           | _false_ |
-| **`color`** | Color of the text.                                                                | _black_ |
+| Prop         | Description                                                                       | Default  |
+|--------------|-----------------------------------------------------------------------------------|----------|
+| **`size`**   | Size of the text, picked from predefined sizes, according to underlying platform. | `'p'`    |
+| **`bold`**   | If text is bold or not.                                                           | _false_  |
+| **`color`**  | Color of the text.                                                                | _black_  |
+| **`margin`** | If the text requires a margin or not.                                             | _false_  |
+| **`align`**  | Alignment of text ('left', 'right', 'center')                                     | `'left'` |
 
 | Size          | Android | iOS |
 |---------------|---------|-----|
@@ -232,7 +234,7 @@ You can use any [Picker property](http://facebook.github.io/react-native/docs/pi
 | **`placeholder`**      | Display this string if value not selected yet. iOS only.     | `'Select Option'` |
 | **`modalTransparent`** | If DatePicker modal is transparent. iOS only.                | _true_            |
 | **`animationType`**    | Type of entry/exit animation for DatePicker modal. iOS only. | `'fade'`          |
-| **`mode`**             | Type picker mode ('dialog', 'dropdown'). Android only.       | `'dropdown'`      |
+| **`mode`**             | Type of picker mode ('dialog', 'dropdown'). Android only.    | `'dropdown'`      |
 | **`color`**            | Color of the `TextInput` when in focus.                      | _primary_         |
 
 #### TextArea
