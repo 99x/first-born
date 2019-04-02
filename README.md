@@ -54,7 +54,7 @@ npm run test
 Import components like this;
 
 ```js
-import { Button } from "first-born";
+import { Button } from "@99xt/first-born";
 ```
 
 ### Utils
