@@ -17,7 +17,7 @@ The following modules need to be added as a dev dependency as well.
 
 To install first-born run the following command in the terminal;
 ```
-npm install --save first-born
+npm install --save @99xt/first-born
 ```
 You will additionally require to install the following modules as well.
 ```
