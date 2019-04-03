@@ -25,7 +25,7 @@ npm install --save create-react-class react-native-vector-icons
 ```
 Follow [this guide](https://github.com/oblador/react-native-vector-icons#installation) to configure `react-native-vector-icons` for your project. 
 
-No other steps are required to configure `first-born` seperately for each platform (Android/iOS).
+No other steps are required to configure `first-born` separately for each platform (Android/iOS).
 
 ## Development Testing
 
