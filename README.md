@@ -149,6 +149,9 @@ Only accepts `Text` and `Icon` atoms and `react-native Image` .
 ##### Android
 ![Android Badge](https://user-images.githubusercontent.com/24349997/55612807-b71f9a00-57a6-11e9-9f1e-bbc6bb4e2f75.png "Android Badge") 
 
+##### iOS
+![iOS Badge](https://user-images.githubusercontent.com/4241926/55614817-7d04c700-57ab-11e9-91ec-1122dd7a35b6.png "iOS Badge") 
+
 You can use any [View property](https://facebook.github.io/react-native/docs/view.html) and the following:
 
 | Prop          | Description                                                                | Default     |
