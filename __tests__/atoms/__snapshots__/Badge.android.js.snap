@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders colored badge 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "margin": 5,
+        "paddingHorizontal": 10,
+        "paddingVertical": 5,
+      },
+      Object {
+        "backgroundColor": "red",
+        "borderRadius": 15,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+          "fontSize": 13,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+        Object {
+          "color": "#FFF",
+        },
+      ]
+    }
+  >
+    +1
+  </Text>
+</View>
+`;
+
+exports[`renders icon badge 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "margin": 5,
+        "paddingHorizontal": 10,
+        "paddingVertical": 5,
+      },
+      Object {
+        "backgroundColor": "#486c86",
+        "borderRadius": 15,
+      },
+    ]
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": "#FFF",
+          "fontSize": 15,
+        },
+        undefined,
+        Object {
+          "fontFamily": "Ionicons",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    
+  </Text>
+</View>
+`;
+
+exports[`renders regular badge 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "margin": 5,
+        "paddingHorizontal": 10,
+        "paddingVertical": 5,
+      },
+      Object {
+        "backgroundColor": "#486c86",
+        "borderRadius": 15,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+          "fontSize": 13,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+        Object {
+          "color": "#FFF",
+        },
+      ]
+    }
+  >
+    +1
+  </Text>
+</View>
+`;

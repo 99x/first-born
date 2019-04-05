@@ -1,4 +1,5 @@
 // Atoms
+export { Badge } from "./src/atoms/Badge";
 export { Button } from "./src/atoms/Button";
 export { Input } from "./src/atoms/Input";
 export { TextArea } from "./src/atoms/TextArea";
