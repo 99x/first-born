@@ -145,11 +145,12 @@ export class DatePicker extends Component {
 
     async openAndroidTimePicker() {
         try {
+            this.setState({ focused: true });
             const pickedTime = await TimePickerAndroid.open({
                 is24Hour: this.props.is24Hour,
                 mode: "default"
             });
-            
+
             const { action, hour, minute } = pickedTime;
 
             if (action !== TimePickerAndroid.dismissedAction) {
