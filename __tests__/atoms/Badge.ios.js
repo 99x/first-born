@@ -1,7 +1,7 @@
 import "react-native";
 import React from "react";
 import renderer from "react-test-renderer";
-import { Badge } from "firstBorn/src/atoms/Badge";
+import { Badge } from "../../src/atoms/Badge";
 import { Text } from "../../src/atoms/Text";
 import { Icon } from "../../src/atoms/Icon";
 

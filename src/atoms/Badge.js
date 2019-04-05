@@ -7,48 +7,47 @@ import { Text } from "./Text";
 
 export class Badge extends Component {
     render() {
-        const {
-            color,
-            children,
-            ...otherProps
-        } = this.props;
+        const { color, children, ...otherProps } = this.props;
 
         const badgeColor = color;
 
-        let badgeStyle = [styles.defaultBadge, {
-            borderRadius: 15,
-            backgroundColor: badgeColor
-        }];
+        let badgeStyle = [
+            styles.defaultBadge,
+            {
+                borderRadius: 15,
+                backgroundColor: badgeColor
+            }
+        ];
 
         let textStyle = {
             color: commonColors.white
         };
 
-        let iconColor = commonColors.white;;
+        let iconColor = commonColors.white;
 
         const newChildren = React.Children.map(children, child =>
             child && child.type === Text
                 ? React.cloneElement(child, {
-                    ...child.props,
-                    style: { ...child.props.style, ...textStyle },
-                    size: "footnote"
-                })
+                      ...child.props,
+                      style: { ...child.props.style, ...textStyle },
+                      size: "footnote"
+                  })
                 : child && child.type === Icon
-                    ? React.cloneElement(child, {
-                        ...child.props,
-                        color: iconColor,
-                        size: 15
-                    })
-                    : child && child.type === Image
-                        ? React.cloneElement(child, {
-                            ...child.props,
-                            style: {
-                                ...child.props.style,
-                                width: 15,
-                                height: 15
-                            }
-                        })
-                        : null
+                ? React.cloneElement(child, {
+                      ...child.props,
+                      color: iconColor,
+                      size: 15
+                  })
+                : child && child.type === Image
+                ? React.cloneElement(child, {
+                      ...child.props,
+                      style: {
+                          ...child.props.style,
+                          width: 15,
+                          height: 15
+                      }
+                  })
+                : null
         );
 
         return (
@@ -69,7 +68,7 @@ Badge.propTypes = {
 };
 
 Badge.defaultProps = {
-    color: commonColors.primary,
+    color: commonColors.primary
 };
 
 const styles = StyleSheet.create({
@@ -80,5 +79,5 @@ const styles = StyleSheet.create({
         alignItems: "center",
         paddingHorizontal: 10,
         paddingVertical: 5
-    },
+    }
 });
