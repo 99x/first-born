@@ -6,7 +6,8 @@ import {
     Modal,
     Platform,
     DatePickerIOS,
-    DatePickerAndroid
+    DatePickerAndroid,
+    TimePickerAndroid
 } from "react-native";
 import PropTypes from "prop-types";
 import { Icon } from "./Icon";
@@ -35,7 +36,8 @@ export class DatePicker extends Component {
             minimumDate,
             maximumDate,
             locale,
-            timeZoneOffsetInMinutes
+            timeZoneOffsetInMinutes,
+            mode
         } = this.props;
 
         const { focused, chosenDate, defaultDate } = this.state;
@@ -46,16 +48,16 @@ export class DatePicker extends Component {
                     style={
                         focused
                             ? [
-                                  styles.datePickerAndroid,
-                                  { borderColor: color, borderWidth: 2 }
-                              ]
+                                styles.datePickerAndroid,
+                                { borderColor: color, borderWidth: 2 }
+                            ]
                             : styles.datePickerAndroid
                     }
                 >
                     <Text
                         ref={c => (this._root = c)}
                         style={!chosenDate ? styles.input : styles.inputValue}
-                        onPress={() => this.openAndroidDatePicker()}
+                        onPress={() => mode === "date" ? this.openAndroidDatePicker() : this.openAndroidTimePicker()}
                     >
                         {chosenDate
                             ? this.formatChosenDate(chosenDate)
@@ -63,7 +65,7 @@ export class DatePicker extends Component {
                     </Text>
                     <Icon
                         name="calendar"
-                        onPress={() => this.openAndroidDatePicker()}
+                        onPress={() => mode === "date" ? this.openAndroidDatePicker() : this.openAndroidTimePicker()}
                         style={styles.icon}
                         color={focused ? color : commonColors.inputGrey}
                         size={20}
@@ -77,9 +79,9 @@ export class DatePicker extends Component {
                     style={
                         focused
                             ? [
-                                  styles.datePickerIos,
-                                  { borderColor: color, borderWidth: 2 }
-                              ]
+                                styles.datePickerIos,
+                                { borderColor: color, borderWidth: 2 }
+                            ]
                             : styles.datePickerIos
                     }
                 >
@@ -105,7 +107,7 @@ export class DatePicker extends Component {
                     animationType={animationType}
                     transparent={modalTransparent}
                     visible={focused}
-                    onRequestClose={() => {}}
+                    onRequestClose={() => { }}
                 >
                     <Text
                         onPress={() => this.setState({ focused: false })}
@@ -116,7 +118,7 @@ export class DatePicker extends Component {
                         onDateChange={this.setDate.bind(this)}
                         minimumDate={minimumDate}
                         maximumDate={maximumDate}
-                        mode="date"
+                        mode={mode}
                         locale={locale}
                         timeZoneOffsetInMinutes={timeZoneOffsetInMinutes}
                         style={{ flex: 1, backgroundColor: commonColors.white }}
@@ -141,6 +143,27 @@ export class DatePicker extends Component {
         this.setState({ focused: true });
     }
 
+    async openAndroidTimePicker() {
+        try {
+            const pickedTime = await TimePickerAndroid.open({
+                is24Hour: this.props.is24Hour,
+                mode: "default"
+            });
+            
+            const { action, hour, minute } = pickedTime;
+
+            if (action !== TimePickerAndroid.dismissedAction) {
+                const currentDate = new Date();
+                const selectedDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDay(), hour, minute);
+                this.setDate(selectedDate);
+            }
+            this.setState({ focused: false });
+        } catch ({ code, message }) {
+            console.warn('Cannot open time picker', message);
+            this.setState({ focused: false });
+        }
+    }
+
     async openAndroidDatePicker() {
         try {
             this.setState({ focused: true });
@@ -150,7 +173,7 @@ export class DatePicker extends Component {
                     : this.state.defaultDate,
                 minDate: this.props.minimumDate,
                 maxDate: this.props.maximumDate,
-                mode: this.props.androidMode
+                mode: "default"
             });
 
             const { action, year, month, day } = pickedDate;
@@ -167,12 +190,19 @@ export class DatePicker extends Component {
     }
 
     formatChosenDate(date) {
+
         if (this.props.formatChosenDate) {
             return this.props.formatChosenDate(date);
         }
-        return [date.getDate(), date.getMonth() + 1, date.getFullYear()].join(
-            "/"
-        );
+        if (this.props.mode === "date") {
+            return [date.getDate(), date.getMonth() + 1, date.getFullYear()].join(
+                "/"
+            );
+        } else {
+            return [date.getHours(), date.getMinutes()].join(
+                ":"
+            );
+        }
     }
 }
 
@@ -184,9 +214,10 @@ DatePicker.propTypes = {
     minimumDate: PropTypes.object,
     maximumDate: PropTypes.object,
     locale: PropTypes.string,
+    is24Hour: PropTypes.bool,
     modalTransparent: PropTypes.bool,
-    androidMode: PropTypes.string,
     animationType: PropTypes.string,
+    mode: PropTypes.oneOf(["date", "time"]),
     ...TextInput.propTypes
 };
 
@@ -194,7 +225,9 @@ DatePicker.defaultProps = {
     modalTransparent: true,
     color: commonColors.primary,
     animationType: "fade",
-    placeholder: "Select Date"
+    placeholder: "Select Date",
+    mode: "date",
+    is24Hour: true
 };
 
 const styles = StyleSheet.create({

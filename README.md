@@ -187,8 +187,9 @@ You can use any [TextInput property](http://facebook.github.io/react-native/docs
 | **`modalTransparent`** | If DatePicker modal is transparent. iOS only.                | _true_          |
 | **`animationType`**    | Type of entry/exit animation for DatePicker modal. iOS only. | `'fade'`        |
 | **`locale`**           | Locale of DatePicker. iOS only.                              | _None_          |
-| **`androidMode`**      | Type DatePicker mode. Android only.                          | _None_          |
+| **`mode`**             | Type of picker ('date', 'time').                             | `'date'`        |
 | **`color`**            | Color of the `TextInput` when in focus.                      | _primary_       |
+| **`is24Hour`**         | If DatePicker with mode 'time' has 24 hour time format.      | _true_          |
 
 #### Input
 
