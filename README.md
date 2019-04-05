@@ -133,6 +133,28 @@ You can use any [Text property](http://facebook.github.io/react-native/docs/text
 | **`name`**  | Similar to the name attribute in `react-native-vector-icons`, but does not require the prefix `md` or `ios`. | _None_  |
 | **`color`** | Color of the icon.                                                                                           | _white_ |
 
+#### Badge
+
+Only accepts `Text` and `Icon` atoms and `react-native Image` .
+
+```html
+<Badge>
+    <Text>+1</Text>
+</Badge>
+<Badge color="red">
+    <Icon name="heart" />
+</Badge>
+```
+
+##### Android
+![Android Badge](https://user-images.githubusercontent.com/24349997/55612807-b71f9a00-57a6-11e9-9f1e-bbc6bb4e2f75.png "Android Badge") 
+
+You can use any [View property](https://facebook.github.io/react-native/docs/view.html) and the following:
+
+| Prop          | Description                                                                | Default     |
+|---------------|----------------------------------------------------------------------------|-------------|
+| **`color`**   | Color of the button.                                                       | _primary_   |
+
 #### Button
 
 Only accepts `Text` and `Icon` atoms and `react-native Image` .
