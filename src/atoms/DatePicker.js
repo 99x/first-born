@@ -48,16 +48,20 @@ export class DatePicker extends Component {
                     style={
                         focused
                             ? [
-                                styles.datePickerAndroid,
-                                { borderColor: color, borderWidth: 2 }
-                            ]
+                                  styles.datePickerAndroid,
+                                  { borderColor: color, borderWidth: 2 }
+                              ]
                             : styles.datePickerAndroid
                     }
                 >
                     <Text
                         ref={c => (this._root = c)}
                         style={!chosenDate ? styles.input : styles.inputValue}
-                        onPress={() => mode === "date" ? this.openAndroidDatePicker() : this.openAndroidTimePicker()}
+                        onPress={() =>
+                            mode === "date"
+                                ? this.openAndroidDatePicker()
+                                : this.openAndroidTimePicker()
+                        }
                     >
                         {chosenDate
                             ? this.formatChosenDate(chosenDate)
@@ -65,7 +69,11 @@ export class DatePicker extends Component {
                     </Text>
                     <Icon
                         name="calendar"
-                        onPress={() => mode === "date" ? this.openAndroidDatePicker() : this.openAndroidTimePicker()}
+                        onPress={() =>
+                            mode === "date"
+                                ? this.openAndroidDatePicker()
+                                : this.openAndroidTimePicker()
+                        }
                         style={styles.icon}
                         color={focused ? color : commonColors.inputGrey}
                         size={20}
@@ -79,9 +87,9 @@ export class DatePicker extends Component {
                     style={
                         focused
                             ? [
-                                styles.datePickerIos,
-                                { borderColor: color, borderWidth: 2 }
-                            ]
+                                  styles.datePickerIos,
+                                  { borderColor: color, borderWidth: 2 }
+                              ]
                             : styles.datePickerIos
                     }
                 >
@@ -107,7 +115,7 @@ export class DatePicker extends Component {
                     animationType={animationType}
                     transparent={modalTransparent}
                     visible={focused}
-                    onRequestClose={() => { }}
+                    onRequestClose={() => {}}
                 >
                     <Text
                         onPress={() => this.setState({ focused: false })}
@@ -155,12 +163,18 @@ export class DatePicker extends Component {
 
             if (action !== TimePickerAndroid.dismissedAction) {
                 const currentDate = new Date();
-                const selectedDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDay(), hour, minute);
+                const selectedDate = new Date(
+                    currentDate.getFullYear(),
+                    currentDate.getMonth(),
+                    currentDate.getDay(),
+                    hour,
+                    minute
+                );
                 this.setDate(selectedDate);
             }
             this.setState({ focused: false });
         } catch ({ code, message }) {
-            console.warn('Cannot open time picker', message);
+            console.warn("Cannot open time picker", message);
             this.setState({ focused: false });
         }
     }
@@ -191,18 +205,17 @@ export class DatePicker extends Component {
     }
 
     formatChosenDate(date) {
-
         if (this.props.formatChosenDate) {
             return this.props.formatChosenDate(date);
         }
         if (this.props.mode === "date") {
-            return [date.getDate(), date.getMonth() + 1, date.getFullYear()].join(
-                "/"
-            );
+            return [
+                date.getDate(),
+                date.getMonth() + 1,
+                date.getFullYear()
+            ].join("/");
         } else {
-            return [date.getHours(), date.getMinutes()].join(
-                ":"
-            );
+            return [date.getHours(), date.getMinutes()].join(":");
         }
     }
 }

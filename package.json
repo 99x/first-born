@@ -6,7 +6,7 @@
     "scripts": {
         "test": "jest",
         "pretty": "prettier --write --tab-width 4 \"src/**/*.{js,jsx,json}\"",
-        "precommit": "lint-staged"
+        "precommit": "lint-staged && npm run test"
     },
     "keywords": [
         "React",
@@ -19,7 +19,7 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+ssh://git@github.com/99xt/firstBorn.git"
+        "url": "git+ssh://git@github.com/99xt/first-born.git"
     },
     "devDependencies": {
         "@babel/plugin-proposal-class-properties": "^7.4.0",
@@ -41,7 +41,7 @@
     },
     "lint-staged": {
         "*.{js,jsx,json}": [
-            "npm run pretty && npm run text",
+            "npm run pretty",
             "git add"
         ]
     },
@@ -51,7 +51,7 @@
         }
     },
     "bugs": {
-        "url": "https://github.com/99xt/firstBorn/issues"
+        "url": "https://github.com/99xt/first-born/issues"
     },
-    "homepage": "https://github.com/99xt/firstBorn#readme"
+    "homepage": "https://github.com/99xt/first-born#readme"
 }
