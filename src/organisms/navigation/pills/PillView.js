@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, StyleSheet, ScrollView } from "react-native";
+import { View, StyleSheet, ScrollView, Animated } from "react-native";
 import PropTypes from "prop-types";
 
 import { PillBar } from "./PillBar";
@@ -9,13 +9,26 @@ export class PillView extends Component {
         super(props);
 
         this.state = {
-            activePill: 0
+            activePill: 0,
         };
+
+        this.fadeAnim = new Animated.Value(1);
+    }
+
+    animate() {
+        this.fadeAnim = new Animated.Value(0);
+        Animated.timing(this.fadeAnim, {
+            toValue: 1,
+            duration: 250,
+            useNativeDriver: true,
+        }).start()
     }
 
     handlePillChange = activePill => {
         this.setState({ activePill: activePill });
+        this.animate();
     };
+
 
     render() {
         const { pillHeaders, color, ...otherProps } = this.props;
@@ -28,7 +41,11 @@ export class PillView extends Component {
                     onPillChange={this.handlePillChange}
                     activePill={this.state.activePill}
                 />
-                <ScrollView>{this.renderScene()}</ScrollView>
+                <ScrollView>
+                    <Animated.View style={{ opacity: this.fadeAnim }}>
+                        {this.renderScene()}
+                    </Animated.View>
+                </ScrollView>
             </View>
         );
     }
