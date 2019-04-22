@@ -161,21 +161,29 @@ exports[`renders PillView with icons 1`] = `
   </View>
   <RCTScrollView>
     <View>
-      <View>
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#000",
-                "fontSize": 16,
-                "fontWeight": "normal",
-                "textAlign": "left",
-              },
-            ]
+      <View
+        style={
+          Object {
+            "opacity": 1,
           }
-        >
-          View 1
-        </Text>
+        }
+      >
+        <View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            View 1
+          </Text>
+        </View>
       </View>
     </View>
   </RCTScrollView>
@@ -319,21 +327,29 @@ exports[`renders PillView with titles 1`] = `
   </View>
   <RCTScrollView>
     <View>
-      <View>
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#000",
-                "fontSize": 16,
-                "fontWeight": "normal",
-                "textAlign": "left",
-              },
-            ]
+      <View
+        style={
+          Object {
+            "opacity": 1,
           }
-        >
-          View 1
-        </Text>
+        }
+      >
+        <View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            View 1
+          </Text>
+        </View>
       </View>
     </View>
   </RCTScrollView>
@@ -543,21 +559,29 @@ exports[`renders PillView with titles and icons 1`] = `
   </View>
   <RCTScrollView>
     <View>
-      <View>
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#000",
-                "fontSize": 16,
-                "fontWeight": "normal",
-                "textAlign": "left",
-              },
-            ]
+      <View
+        style={
+          Object {
+            "opacity": 1,
           }
-        >
-          View 1
-        </Text>
+        }
+      >
+        <View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 16,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            View 1
+          </Text>
+        </View>
       </View>
     </View>
   </RCTScrollView>
