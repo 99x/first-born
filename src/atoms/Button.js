@@ -22,6 +22,7 @@ export class Button extends Component {
             secondary,
             transparent,
             circle,
+            style,
             ...otherProps
         } = this.props;
 
@@ -85,33 +86,33 @@ export class Button extends Component {
         const children = React.Children.map(this.props.children, child =>
             child && child.type === Text
                 ? React.cloneElement(child, {
-                      ...child.props,
-                      style: { ...textStyle, ...child.props.style }
-                  })
+                    ...child.props,
+                    style: { ...textStyle, ...child.props.style }
+                })
                 : child && child.type === Icon
-                ? React.cloneElement(child, {
-                      ...child.props,
-                      size: iconSize,
-                      color: iconColor,
-                      style: { ...child.props.style, paddingRight: 5 }
-                  })
-                : child && child.type === Image
-                ? React.cloneElement(child, {
-                      ...child.props,
-                      style: {
-                          ...child.props.style,
-                          width: 25,
-                          height: 25,
-                          paddingRight: 5
-                      }
-                  })
-                : null
+                    ? React.cloneElement(child, {
+                        ...child.props,
+                        size: iconSize,
+                        color: iconColor,
+                        style: { ...child.props.style, paddingRight: 5 }
+                    })
+                    : child && child.type === Image
+                        ? React.cloneElement(child, {
+                            ...child.props,
+                            style: {
+                                ...child.props.style,
+                                width: 25,
+                                height: 25,
+                                paddingRight: 5
+                            }
+                        })
+                        : null
         );
 
         return (
             <TouchableOpacity
                 ref={c => (this._root = c)}
-                style={buttonStyle}
+                style={[buttonStyle, style]}
                 {...otherProps}
             >
                 {children}
