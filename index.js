@@ -25,9 +25,13 @@ export { ListItem } from "./src/molecules/listItem/ListItem"
 export { FloatingButton } from "./src/molecules/floatingButton/FloatingButton";
 
 // Notification molecules
-import NotificationManager from "./src/molecules/notifications/NotificationManager";
+import NotificationManager from "./src/molecules/notifications/simple/NotificationManager";
 export { NotificationManager as NotificationBarManager };
-export { Notification } from "./src/molecules/notifications/Notification";
+export { Notification } from "./src/molecules/notifications/simple/Notification";
+
+import SnackBarManager from "./src/molecules/notifications/snackbar/SnackBarManager";
+export { SnackBarManager as SnackManager };
+export { SnackBar } from "./src/molecules/notifications/snackbar/SnackBar";
 
 // Organisms
 
