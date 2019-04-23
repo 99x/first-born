@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "jest",
-        "pretty": "prettier --write --tab-width 4 \"src/**/*.{js,jsx,json}\"",
+        "pretty": "prettier --write --tab-width 4 \"**/*.{js,jsx,json}\"",
         "precommit": "lint-staged && npm run test"
     },
     "keywords": [
