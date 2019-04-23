@@ -18,6 +18,9 @@ export { FormDatePicker } from "./src/molecules/formElements/FormDatePicker";
 // Card molecule
 export { Card } from "./src/molecules/cards/Card";
 
+// Accordion molecule
+export { AccordionElement } from "./src/molecules/cards/AccordionElement";
+
 // List molecule
 export { ListItem } from "./src/molecules/listItem/ListItem";
 
@@ -30,6 +33,9 @@ export { NotificationManager as NotificationBarManager };
 export { Notification } from "./src/molecules/notifications/Notification";
 
 // Organisms
+
+// Accordion organism
+export { Accordion } from "./src/organisms/Accordion";
 
 // CardList organism
 export { CardList } from "./src/organisms/CardList";
