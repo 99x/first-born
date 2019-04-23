@@ -1,6 +1,13 @@
 "use strict";
 
-import { StyleSheet, View, Animated, Dimensions, Image, Platform } from "react-native";
+import {
+    StyleSheet,
+    View,
+    Animated,
+    Dimensions,
+    Image,
+    Platform
+} from "react-native";
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Text } from "../../../atoms/Text";
@@ -28,15 +35,15 @@ const styles = StyleSheet.create({
     },
     notificationText: {
         color: commonColors.white,
-        flex: 3,
+        flex: 3
     },
     buttonContainer: {
         flex: 1,
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: "center"
     },
     buttonContainerIos: {
-        borderLeftColor: '#616161',
+        borderLeftColor: "#616161",
         borderLeftWidth: 0.9
     }
 });
@@ -74,7 +81,7 @@ export class SnackBar extends Component {
             durationToHide: props.durationToHide || 350,
             onClickDismiss: props.onClickDismiss || true,
             action: this.getActionProps(props.action),
-            position: props.position || 'bottom'
+            position: props.position || "bottom"
         };
     }
 
@@ -84,24 +91,24 @@ export class SnackBar extends Component {
                 title: action.title,
                 onPress: () => this.handleButtonClick(action.onPress),
                 color: action.color
-            }
+            };
         }
         return {
-            title: 'Close'.toUpperCase(),
+            title: "Close".toUpperCase(),
             onPress: () => this.hideMessageBarAlert(),
             color: commonColors.error
-        }
+        };
     }
 
-    handleButtonClick = (action) => {
+    handleButtonClick = action => {
         if (action) {
             action();
         }
 
         if (this.state.onClickDismiss) {
-            this.hideMessageBarAlert()
+            this.hideMessageBarAlert();
         }
-    }
+    };
 
     showMessageBarAlert() {
         if (this.alertShown || this.state.message === null) {
@@ -145,12 +152,15 @@ export class SnackBar extends Component {
         let containerStyle = styles.notificationContainer;
         let buttonContainerStyle = [styles.buttonContainer];
 
-        if (Platform.OS === 'ios') {
-            containerStyle = { ...containerStyle, ...styles.notificationContainerIos };
+        if (Platform.OS === "ios") {
+            containerStyle = {
+                ...containerStyle,
+                ...styles.notificationContainerIos
+            };
             buttonContainerStyle.push(styles.buttonContainerIos);
         }
 
-        if (this.state.position === 'bottom') {
+        if (this.state.position === "bottom") {
             containerStyle = { ...containerStyle, bottom: 0 };
         } else {
             containerStyle = { ...containerStyle, top: 0 };
@@ -167,9 +177,7 @@ export class SnackBar extends Component {
                 ]}
             >
                 {this.renderMessage()}
-                <View style={buttonContainerStyle}>
-                    {this.renderButton()}
-                </View>
+                <View style={buttonContainerStyle}>{this.renderButton()}</View>
             </Animated.View>
         );
     }
@@ -188,8 +196,13 @@ export class SnackBar extends Component {
         if (this.state.action) {
             const { title, ...otherActionProps } = this.state.action;
             return (
-                <Button outline transparent style={{ margin: 0 }} {...otherActionProps} >
-                    <Text style={{ textTransform: 'uppercase' }}>{title}</Text>
+                <Button
+                    outline
+                    transparent
+                    style={{ margin: 0 }}
+                    {...otherActionProps}
+                >
+                    <Text style={{ textTransform: "uppercase" }}>{title}</Text>
                 </Button>
             );
         }
@@ -212,5 +225,5 @@ SnackBar.propTypes = {
 };
 
 SnackBar.defaultProps = {
-    backgroundColor: commonColors.white,
+    backgroundColor: commonColors.white
 };
