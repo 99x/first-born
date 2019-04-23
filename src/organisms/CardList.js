@@ -18,28 +18,40 @@ export class CardList extends Component {
             <FlatList
                 style={horizontal ? { marginTop: 5 } : {}}
                 keyExtractor={this.keyExtractor}
-                renderItem={renderItem ? renderItem : ({ item }) => {
-                    return (
-                        <View
-                            style={
-                                horizontal
-                                    ? { marginRight: margin }
-                                    : { marginBottom: margin }
-                            }
-                        >
-                            <Card
-                                {...item}
-                                backgroundColor={backgroundColor}
-                                style={
-                                    horizontal
-                                        ? { width: deviceVariables.width - 40 }
-                                        : { width: deviceVariables.width - 10 }
-                                }
-                                {...otherProps}
-                            />
-                        </View>
-                    );
-                }}
+                renderItem={
+                    renderItem
+                        ? renderItem
+                        : ({ item }) => {
+                              return (
+                                  <View
+                                      style={
+                                          horizontal
+                                              ? { marginRight: margin }
+                                              : { marginBottom: margin }
+                                      }
+                                  >
+                                      <Card
+                                          {...item}
+                                          backgroundColor={backgroundColor}
+                                          style={
+                                              horizontal
+                                                  ? {
+                                                        width:
+                                                            deviceVariables.width -
+                                                            40
+                                                    }
+                                                  : {
+                                                        width:
+                                                            deviceVariables.width -
+                                                            10
+                                                    }
+                                          }
+                                          {...otherProps}
+                                      />
+                                  </View>
+                              );
+                          }
+                }
                 horizontal={horizontal ? true : false}
                 {...otherProps}
             />

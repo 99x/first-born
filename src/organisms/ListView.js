@@ -5,21 +5,31 @@ import { ListItem } from "../molecules/listItem/ListItem";
 
 export class ListView extends Component {
     render() {
-        const { backgroundColor, horizontal, renderItem, secondary, ...otherProps } = this.props;
+        const {
+            backgroundColor,
+            horizontal,
+            renderItem,
+            secondary,
+            ...otherProps
+        } = this.props;
 
         return (
             <FlatList
                 style={{ width: "100%" }}
                 keyExtractor={this.keyExtractor}
-                renderItem={renderItem ? renderItem : ({ item }) => {
-                    return (
-                        <ListItem
-                            {...item}
-                            backgroundColor={backgroundColor}
-                            secondary={secondary}
-                        />
-                    );
-                }}
+                renderItem={
+                    renderItem
+                        ? renderItem
+                        : ({ item }) => {
+                              return (
+                                  <ListItem
+                                      {...item}
+                                      backgroundColor={backgroundColor}
+                                      secondary={secondary}
+                                  />
+                              );
+                          }
+                }
                 {...otherProps}
             />
         );
