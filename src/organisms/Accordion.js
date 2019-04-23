@@ -5,11 +5,7 @@ import { AccordionElement } from "../molecules/cards/AccordionElement";
 
 export class Accordion extends Component {
     render() {
-        const {
-            horizontal,
-            renderItem,
-            ...otherProps
-        } = this.props;
+        const { horizontal, renderItem, ...otherProps } = this.props;
 
         return (
             <FlatList
@@ -18,14 +14,14 @@ export class Accordion extends Component {
                     renderItem
                         ? renderItem
                         : ({ item }) => {
-                            return (
-                                <AccordionElement
-                                    {...item}
-                                    isList
-                                    {...otherProps}
-                                />
-                            );
-                        }
+                              return (
+                                  <AccordionElement
+                                      {...item}
+                                      isList
+                                      {...otherProps}
+                                  />
+                              );
+                          }
                 }
                 {...otherProps}
             />

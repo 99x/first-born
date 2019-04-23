@@ -13,12 +13,11 @@ import { Icon } from "../../atoms/Icon";
 import { commonColors } from "../../utils/color";
 
 export class AccordionElement extends Component {
-
     constructor(props) {
         super(props);
         this.state = {
             expanded: props.expanded
-        }
+        };
         this.fadeAnim = new Animated.Value(0);
     }
 
@@ -27,14 +26,14 @@ export class AccordionElement extends Component {
         Animated.timing(this.fadeAnim, {
             toValue: 1,
             duration: 250,
-            useNativeDriver: true,
+            useNativeDriver: true
         }).start();
     }
 
     handleShowHide = () => {
         this.setState({ expanded: !this.state.expanded });
         this.animate();
-    }
+    };
 
     render() {
         const {
@@ -52,9 +51,18 @@ export class AccordionElement extends Component {
 
         const { expanded } = this.state;
 
-        let cardStyle = [styles.container, { borderColor: headerColor, borderWidth: 1 }];
-        const headerStyle = [styles.titleContainer, { backgroundColor: headerColor }];
-        const bodyStyle = { ...styles.bodyContainer, backgroundColor: bodyColor };
+        let cardStyle = [
+            styles.container,
+            { borderColor: headerColor, borderWidth: 1 }
+        ];
+        const headerStyle = [
+            styles.titleContainer,
+            { backgroundColor: headerColor }
+        ];
+        const bodyStyle = {
+            ...styles.bodyContainer,
+            backgroundColor: bodyColor
+        };
 
         if (!isList) {
             cardStyle.push({ borderRadius: 5 });
@@ -66,17 +74,29 @@ export class AccordionElement extends Component {
 
         return (
             <View style={cardStyle}>
-                <TouchableOpacity onPress={this.handleShowHide} style={headerStyle} {...otherProps}>
-                    <Text color={commonColors.darkGrey} bold style={{ flex: 1 }}>
+                <TouchableOpacity
+                    onPress={this.handleShowHide}
+                    style={headerStyle}
+                    {...otherProps}
+                >
+                    <Text
+                        color={commonColors.darkGrey}
+                        bold
+                        style={{ flex: 1 }}
+                    >
                         {title}
                     </Text>
                     {this.renderIcon()}
                 </TouchableOpacity>
-                {expanded &&
-                    <Animated.View style={[bodyStyle, { opacity: this.fadeAnim }]}>
-                        <Text size="footnote" color={commonColors.darkGrey}>{description}</Text>
+                {expanded && (
+                    <Animated.View
+                        style={[bodyStyle, { opacity: this.fadeAnim }]}
+                    >
+                        <Text size="footnote" color={commonColors.darkGrey}>
+                            {description}
+                        </Text>
                     </Animated.View>
-                }
+                )}
             </View>
         );
     }
@@ -84,11 +104,13 @@ export class AccordionElement extends Component {
     renderIcon() {
         const { expandedIcon, icon } = this.props;
         const { expanded } = this.state;
-        return <Icon
-            name={expanded ? expandedIcon : icon}
-            size={20}
-            color={commonColors.inputGrey}
-        />
+        return (
+            <Icon
+                name={expanded ? expandedIcon : icon}
+                size={20}
+                color={commonColors.inputGrey}
+            />
+        );
     }
 }
 
@@ -124,7 +146,7 @@ const styles = StyleSheet.create({
         paddingVertical: 5,
         paddingHorizontal: 10,
         flexDirection: "row",
-        alignItems: 'center',
+        alignItems: "center",
         justifyContent: "center",
         overflow: "hidden"
     },
