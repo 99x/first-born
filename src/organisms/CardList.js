@@ -10,6 +10,7 @@ export class CardList extends Component {
             backgroundColor,
             horizontal,
             margin,
+            renderItem,
             ...otherProps
         } = this.props;
 
@@ -17,7 +18,7 @@ export class CardList extends Component {
             <FlatList
                 style={horizontal ? { marginTop: 5 } : {}}
                 keyExtractor={this.keyExtractor}
-                renderItem={({ item }) => {
+                renderItem={renderItem ? renderItem : ({ item }) => {
                     return (
                         <View
                             style={
