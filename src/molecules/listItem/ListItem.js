@@ -40,13 +40,13 @@ export class ListItem extends Component {
                 : null
         );
 
-        const cardBackColor = secondary
+        const listItemBackColor = secondary
             ? commonColors.secondaryBackground
             : backgroundColor;
 
-        const cardStyle = block
-            ? [styles.containerBlock, { backgroundColor: cardBackColor }]
-            : [styles.container, { backgroundColor: cardBackColor }];
+        const listItemStyle = block
+            ? [styles.containerBlock, { backgroundColor: listItemBackColor }]
+            : [styles.container, { backgroundColor: listItemBackColor }];
 
         const onListItemTap = children
             ? this.expandListItem
@@ -57,7 +57,7 @@ export class ListItem extends Component {
         return (
             <View style={{ width: "100%" }}>
                 <TouchableOpacity
-                    style={cardStyle}
+                    style={listItemStyle}
                     disabled={!onListItemTap}
                     onPress={onListItemTap}
                     {...otherProps}

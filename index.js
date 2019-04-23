@@ -19,7 +19,7 @@ export { FormDatePicker } from "./src/molecules/formElements/FormDatePicker";
 export { Card } from "./src/molecules/cards/Card";
 
 // List molecule
-export { ListItem } from "./src/molecules/listItem/ListItem"
+export { ListItem } from "./src/molecules/listItem/ListItem";
 
 // Floating Button molecules
 export { FloatingButton } from "./src/molecules/floatingButton/FloatingButton";

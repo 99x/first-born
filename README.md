@@ -154,9 +154,9 @@ Only accepts `Text` and `Icon` atoms and `react-native Image` .
 
 You can use any [View property](https://facebook.github.io/react-native/docs/view.html) and the following:
 
-| Prop          | Description                                                                | Default     |
-|---------------|----------------------------------------------------------------------------|-------------|
-| **`color`**   | Color of the button.                                                       | _primary_   |
+| Prop        | Description          | Default   |
+|-------------|----------------------|-----------|
+| **`color`** | Color of the button. | _primary_ |
 
 #### Button
 
@@ -596,6 +596,16 @@ listData = [
 <ListView data={listData} />
 ```
 
+You can also pass a custom `renderItem` method to the `ListView`, to render `ListItems` with other `TouchableOpacity` props, like `onPress`;
+
+```js
+handleListItemClick = (title, description) => {
+    Alert.alert(title, description);
+}
+
+<ListView data={listData} renderItem={({item}) => <ListItem {...item} onPress={() => handleListItemClick(item.title, item.description)} />} />
+```
+
 ##### Android
 ![Android ListView](https://user-images.githubusercontent.com/24349997/55306879-5d039980-5473-11e9-821e-c23d21244299.PNG "Android ListView") 
 
@@ -617,6 +627,16 @@ listData = [
 ];
 
 <CardList data={listData} />
+```
+
+You can also pass a custom `renderItem` method to the `CardList`, to render `Cards` with other `TouchableOpacity` props, like `onPress`;
+
+```js
+handleListItemClick = (title, description) => {
+    Alert.alert(title, description);
+}
+
+<CardList data={listData} renderItem={({item}) => <Card {...item} onPress={() => handleListItemClick(item.title, item.description)} />} />
 ```
 
 ##### Android
