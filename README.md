@@ -436,7 +436,7 @@ You can use any [TouchableOpacity property](https://facebook.github.io/react-nat
 
 | Prop                  | Description                                    | Default |
 |-----------------------|------------------------------------------------|---------|
-| **`title`**           | Description of List Item. **(Required)**       | _None_  |
+| **`title`**           | Title of List Item. **(Required)**             | _None_  |
 | **`description`**     | Description of List Item.                      | _None_  |
 | **`image`**           | Image to display in List Item.                 | _None_  |
 | **`block`**           | If the List Item has full width of the device. | _false_ |
@@ -539,11 +539,31 @@ You can use any [TouchableOpacity property](https://facebook.github.io/react-nat
 
 | Prop                  | Description                               | Default |
 |-----------------------|-------------------------------------------|---------|
-| **`title`**           | Description of Card. **(Required)**       | _None_  |
+| **`title`**           | Title of Card. **(Required)**             | _None_  |
 | **`description`**     | Description of Card.                      | _None_  |
 | **`image`**           | Image to display in Card.                 | _None_  |
 | **`block`**           | If the Card has full width of the device. | _false_ |
 | **`backgroundColor`** | Background color of Card.                 | _white_ |
+
+#### AccordionElement
+
+A Card that displays a title with a collabsible description.
+
+```html
+<AccordionElement title="Heading" description="Description" />
+```
+
+You can use any [TouchableOpacity property](https://facebook.github.io/react-native/docs/touchableopacity.html) and the following:
+
+| Prop               | Description                                     | Default                                                |
+|--------------------|-------------------------------------------------|--------------------------------------------------------|
+| **`title`**        | Title of AccordionElement. **(Required)**       | _None_                                                 |
+| **`description`**  | Description of AccordionElement. **(Required)** | _None_                                                 |
+| **`isList`**       | If the AccordionElement is part of a list.      | _false_                                                |
+| **`headerColor`**  | Header color of AccordionElement.               | _lightGrey_                                            |
+| **`bodyColor`**    | Body color of AccordionElement.                 | _white_                                                |
+| **`icon`**         | Icon on header when element is collapsed.       | `'arrow-dropup'` for Android, `'arrow-up'` for iOS     |
+| **`expandedIcon`** | Icon on header when element is expanded.        | `'arrow-dropdown'` for Android, `'arrow-down'` for iOS |
 
 ### Organisms
 
@@ -648,6 +668,40 @@ handleListItemClick = (title, description) => {
 You can use any [FlatList property](http://facebook.github.io/react-native/docs/flatlist.html).
 
 The data to be sent to the CardList needs to contain the same fields as the props of [Card](#card) component.
+
+#### Accordion
+A vertical list AccordionElement molecules.
+
+```js
+listData = [
+    { title: "Heading 1", description: "Description 1" },
+    { title: "Heading 2", description: "Description 2" },
+    { title: "Heading 3", description: "Description 3" }
+];
+
+<Accordion data={listData} />
+```
+
+You can also pass a custom `renderItem` method to the `Accordion`, to render `AccordionElements` with other `TouchableOpacity` props, like `onPress`;
+
+```js
+handleListItemClick = (title, description) => {
+    Alert.alert(title, description);
+}
+
+<Accordion data={listData} renderItem={({item}) => <AccordionElement {...item} onPress={() => handleListItemClick(item.title, item.description)} isList />} />
+```
+
+You can use any [FlatList property](http://facebook.github.io/react-native/docs/flatlist.html) and the following.
+
+| Prop               | Description                               | Default                                                |
+|--------------------|-------------------------------------------|--------------------------------------------------------|
+| **`headerColor`**  | Header color of AccordionElement.         | _lightGrey_                                            |
+| **`bodyColor`**    | Body color of AccordionElement.           | _white_                                                |
+| **`icon`**         | Icon on header when element is collapsed. | `'arrow-dropup'` for Android, `'arrow-up'` for iOS     |
+| **`expandedIcon`** | Icon on header when element is expanded.  | `'arrow-dropdown'` for Android, `'arrow-down'` for iOS |
+
+The data to be sent to the Accordion needs to contain the same fields as the props of [AccordionElement](#accordionelement) component.
 
 #### NavBar
 The Navigation Header makes use of the `Text` and `Icon` atom.
