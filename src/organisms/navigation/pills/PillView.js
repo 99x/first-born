@@ -9,7 +9,7 @@ export class PillView extends Component {
         super(props);
 
         this.state = {
-            activePill: 0,
+            activePill: 0
         };
 
         this.fadeAnim = new Animated.Value(1);
@@ -20,15 +20,14 @@ export class PillView extends Component {
         Animated.timing(this.fadeAnim, {
             toValue: 1,
             duration: 250,
-            useNativeDriver: true,
-        }).start()
+            useNativeDriver: true
+        }).start();
     }
 
     handlePillChange = activePill => {
         this.setState({ activePill: activePill });
         this.animate();
     };
-
 
     render() {
         const { pillHeaders, color, ...otherProps } = this.props;

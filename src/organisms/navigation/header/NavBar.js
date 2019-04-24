@@ -54,6 +54,7 @@ export class NavBar extends Component {
     render() {
         const {
             statusBarColor,
+            statusBarContent,
             transparent,
             translucent,
             children,
@@ -83,7 +84,7 @@ export class NavBar extends Component {
                     >
                         <StatusBar
                             backgroundColor={shadeColor(statusBarColor, 0.2)}
-                            barStyle={"dark-content"}
+                            barStyle={statusBarContent}
                             translucent={transparent ? true : translucent}
                         />
 
@@ -111,7 +112,7 @@ export class NavBar extends Component {
                 >
                     <StatusBar
                         backgroundColor={shadeColor(statusBarColor, 0.2)}
-                        barStyle={"dark-content"}
+                        barStyle={statusBarContent}
                         translucent={transparent ? true : translucent}
                     />
 
@@ -137,7 +138,7 @@ export class NavBar extends Component {
             >
                 <StatusBar
                     backgroundColor={shadeColor(statusBarColor, 30)}
-                    barStyle={"light-content"}
+                    barStyle={statusBarContent}
                     translucent={transparent ? true : translucent}
                 />
 
@@ -152,6 +153,7 @@ export class NavBar extends Component {
 NavBar.propTypes = {
     transparent: PropTypes.bool,
     statusBarColor: PropTypes.string,
+    statusBarContent: PropTypes.oneOf("light-content", "dark-content"),
     ...View.propTypes
 };
 
@@ -160,6 +162,8 @@ NavBar.defaultProps = {
         Platform.OS === "android" ? commonColors.primary : "#f8f8f8",
     toolbarHeight: Platform.OS === "android" ? 56 : 64,
     paddingTop: Platform.OS === "android" ? 0 : 20,
+    statusBarContent:
+        Platform.OS === "android" ? "light-content" : "dark-content",
     style: {
         flex: 1,
         flexDirection: "row"

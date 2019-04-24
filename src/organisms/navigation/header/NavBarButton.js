@@ -4,10 +4,11 @@ import PropTypes from "prop-types";
 import { Button } from "../../../atoms/Button";
 import { Icon } from "../../../atoms/Icon";
 import { Text } from "../../../atoms/Text";
+import { commonColors } from "../../../utils/color";
 
 export class NavBarButton extends Component {
     render() {
-        const { type, children, ...otherProps } = this.props;
+        const { type, children, color, ...otherProps } = this.props;
 
         let newChildren = [];
 
@@ -42,27 +43,21 @@ export class NavBarButton extends Component {
             }
         }
 
-        if (Platform.OS === "android") {
-            return (
-                <Button {...otherProps} transparent>
-                    {newChildren && newChildren}
-                </Button>
-            );
-        } else {
-            return (
-                <Button {...otherProps} color="#0a60ff" outline transparent>
-                    {newChildren && newChildren}
-                </Button>
-            );
-        }
+        return (
+            <Button {...otherProps} outline transparent>
+                {newChildren && newChildren}
+            </Button>
+        );
     }
 }
 
 NavBarButton.propTypes = {
+    color: PropTypes.string,
     type: PropTypes.oneOf(["back", "search", "drawer"]),
     ...TouchableOpacity.propTypes
 };
 
 NavBarButton.defaultProps = {
-    type: undefined
+    type: undefined,
+    color: Platform.OS === "android" ? commonColors.white : "#0a60ff"
 };

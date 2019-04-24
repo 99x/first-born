@@ -6,13 +6,23 @@ import { isIphoneX } from "../../../utils/platform";
 
 export class TabBar extends Component {
     render() {
-        const { color, children, ...otherProps } = this.props;
+        const { color, activeColor, inactiveColor, ...otherProps } = this.props;
 
         let tabBarStyle = [styles.container, { backgroundColor: color }];
 
         if (isIphoneX()) {
             tabBarStyle.push({ paddingBottom: 15 });
         }
+
+        const children = React.Children.map(this.props.children, child =>
+            child
+                ? React.cloneElement(child, {
+                      ...child.props,
+                      activeColor,
+                      inactiveColor
+                  })
+                : null
+        );
 
         return (
             <View style={tabBarStyle} {...otherProps}>
@@ -24,6 +34,8 @@ export class TabBar extends Component {
 
 TabBar.propTypes = {
     color: PropTypes.string,
+    activeColor: PropTypes.string,
+    inactiveColor: PropTypes.string,
     ...View.propTypes
 };
 
