@@ -42,7 +42,7 @@ exports[`renders NavBar with back button 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "transparent",
-            "borderColor": "#0a60ff",
+            "borderColor": "#486c86",
             "borderRadius": 0,
             "borderWidth": 0,
             "elevation": 0,
@@ -66,7 +66,7 @@ exports[`renders NavBar with back button 1`] = `
           style={
             Array [
               Object {
-                "color": "#0a60ff",
+                "color": "#486c86",
                 "fontSize": 20,
               },
               Object {
@@ -93,7 +93,7 @@ exports[`renders NavBar with back button 1`] = `
                 "textAlign": "left",
               },
               Object {
-                "color": "#0a60ff",
+                "color": "#486c86",
                 "fontSize": 16,
                 "margin": 0,
               },
@@ -222,7 +222,7 @@ exports[`renders NavBar with custom button 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "transparent",
-            "borderColor": "#0a60ff",
+            "borderColor": "#486c86",
             "borderRadius": 0,
             "borderWidth": 0,
             "elevation": 0,
@@ -246,7 +246,7 @@ exports[`renders NavBar with custom button 1`] = `
           style={
             Array [
               Object {
-                "color": "#0a60ff",
+                "color": "#486c86",
                 "fontSize": 20,
               },
               Object {
@@ -311,7 +311,7 @@ exports[`renders NavBar with drawer button 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "transparent",
-            "borderColor": "#0a60ff",
+            "borderColor": "#486c86",
             "borderRadius": 0,
             "borderWidth": 0,
             "elevation": 0,
@@ -335,7 +335,7 @@ exports[`renders NavBar with drawer button 1`] = `
           style={
             Array [
               Object {
-                "color": "#0a60ff",
+                "color": "#486c86",
                 "fontSize": 20,
               },
               Object {
@@ -436,7 +436,7 @@ exports[`renders NavBar with search button 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "transparent",
-            "borderColor": "#0a60ff",
+            "borderColor": "#486c86",
             "borderRadius": 0,
             "borderWidth": 0,
             "elevation": 0,
@@ -460,7 +460,7 @@ exports[`renders NavBar with search button 1`] = `
           style={
             Array [
               Object {
-                "color": "#0a60ff",
+                "color": "#486c86",
                 "fontSize": 20,
               },
               Object {
