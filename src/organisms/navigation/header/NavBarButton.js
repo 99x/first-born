@@ -8,7 +8,7 @@ import { commonColors } from "../../../utils/color";
 
 export class NavBarButton extends Component {
     render() {
-        const { type, children, color, ...otherProps } = this.props;
+        const { type, children, ...otherProps } = this.props;
 
         let newChildren = [];
 
