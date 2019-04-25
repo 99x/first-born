@@ -66,6 +66,12 @@ export class NavBar extends Component {
         } = this.props;
         const { orientation } = this.state;
 
+        let navBarStyle = { ...style };
+
+        if (transparent) {
+            navBarStyle = { ...navBarStyle, ...shadowProperties };
+        }
+
         if (Platform.OS === "ios") {
             if (isIphoneX()) {
                 return (
@@ -92,9 +98,7 @@ export class NavBar extends Component {
                         <View
                             ref={c => (this._root = c)}
                             {...otherProps}
-                            style={
-                                transparent ? style : [style, shadowProperties]
-                            }
+                            style={navBarStyle}
                         >
                             {children && children}
                         </View>
@@ -122,7 +126,7 @@ export class NavBar extends Component {
                     <View
                         ref={c => (this._root = c)}
                         {...otherProps}
-                        style={transparent ? style : [style, shadowProperties]}
+                        style={navBarStyle}
                     >
                         {children && children}
                     </View>
@@ -148,7 +152,7 @@ export class NavBar extends Component {
                 <View
                     ref={c => (this._root = c)}
                     {...otherProps}
-                    style={transparent ? style : [style, shadowProperties]}
+                    style={navBarStyle}
                 >
                     {children && children}
                 </View>
@@ -178,8 +182,8 @@ NavBar.defaultProps = {
     shadowProperties: {
         elevation: 3,
         shadowColor: "#000",
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.2,
+        shadowOffset: { width: 0, height: 3 },
+        shadowOpacity: 0.4,
         shadowRadius: 1.2
     }
 };
