@@ -13,10 +13,22 @@ exports[`renders NavBar with back button 1`] = `
 >
   <View
     style={
-      Object {
-        "flex": 1,
-        "flexDirection": "row",
-      }
+      Array [
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+        },
+        Object {
+          "elevation": 3,
+          "shadowColor": "#000",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 0.2,
+          "shadowRadius": 1.2,
+        },
+      ]
     }
   >
     <View
@@ -157,10 +169,22 @@ exports[`renders NavBar with custom button 1`] = `
 >
   <View
     style={
-      Object {
-        "flex": 1,
-        "flexDirection": "row",
-      }
+      Array [
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+        },
+        Object {
+          "elevation": 3,
+          "shadowColor": "#000",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 0.2,
+          "shadowRadius": 1.2,
+        },
+      ]
     }
   >
     <View
@@ -282,10 +306,22 @@ exports[`renders NavBar with drawer button 1`] = `
 >
   <View
     style={
-      Object {
-        "flex": 1,
-        "flexDirection": "row",
-      }
+      Array [
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+        },
+        Object {
+          "elevation": 3,
+          "shadowColor": "#000",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 0.2,
+          "shadowRadius": 1.2,
+        },
+      ]
     }
   >
     <View
@@ -407,10 +443,22 @@ exports[`renders NavBar with search button 1`] = `
 >
   <View
     style={
-      Object {
-        "flex": 1,
-        "flexDirection": "row",
-      }
+      Array [
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+        },
+        Object {
+          "elevation": 3,
+          "shadowColor": "#000",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 0.2,
+          "shadowRadius": 1.2,
+        },
+      ]
     }
   >
     <View
@@ -532,10 +580,22 @@ exports[`renders NavBar with title 1`] = `
 >
   <View
     style={
-      Object {
-        "flex": 1,
-        "flexDirection": "row",
-      }
+      Array [
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+        },
+        Object {
+          "elevation": 3,
+          "shadowColor": "#000",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 0.2,
+          "shadowRadius": 1.2,
+        },
+      ]
     }
   >
     <View

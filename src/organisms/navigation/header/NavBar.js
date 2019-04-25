@@ -61,6 +61,7 @@ export class NavBar extends Component {
             toolbarHeight,
             paddingTop,
             style,
+            shadowProperties,
             ...otherProps
         } = this.props;
         const { orientation } = this.state;
@@ -91,7 +92,9 @@ export class NavBar extends Component {
                         <View
                             ref={c => (this._root = c)}
                             {...otherProps}
-                            style={style}
+                            style={
+                                transparent ? style : [style, shadowProperties]
+                            }
                         >
                             {children && children}
                         </View>
@@ -119,7 +122,7 @@ export class NavBar extends Component {
                     <View
                         ref={c => (this._root = c)}
                         {...otherProps}
-                        style={style}
+                        style={transparent ? style : [style, shadowProperties]}
                     >
                         {children && children}
                     </View>
@@ -142,7 +145,11 @@ export class NavBar extends Component {
                     translucent={transparent ? true : translucent}
                 />
 
-                <View ref={c => (this._root = c)} {...otherProps} style={style}>
+                <View
+                    ref={c => (this._root = c)}
+                    {...otherProps}
+                    style={transparent ? style : [style, shadowProperties]}
+                >
                     {children && children}
                 </View>
             </View>
@@ -167,5 +174,12 @@ NavBar.defaultProps = {
     style: {
         flex: 1,
         flexDirection: "row"
+    },
+    shadowProperties: {
+        elevation: 3,
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.2,
+        shadowRadius: 1.2
     }
 };
