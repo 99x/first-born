@@ -31,12 +31,20 @@ export class ThinListItem extends Component {
         const listItemStyle = [styles.container, { backgroundColor }];
 
         return (
-            <TouchableOpacity style={listItemStyle}
+            <TouchableOpacity
+                style={listItemStyle}
                 disabled={!onPress}
-                onPress={onPress} {...otherProps}>
+                onPress={onPress}
+                {...otherProps}
+            >
                 {image && rounded && (
                     <View style={styles.imageContainer}>
-                        <Thumbnail size="small" {...image} rounded style={{ marginLeft: 10 }} />
+                        <Thumbnail
+                            size="small"
+                            {...image}
+                            rounded
+                            style={{ marginLeft: 10 }}
+                        />
                     </View>
                 )}
                 {image && !rounded && (

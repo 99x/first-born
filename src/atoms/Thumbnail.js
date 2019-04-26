@@ -7,7 +7,7 @@ const sizes = {
     medium: 50,
     large: 75,
     exlarge: 150
-}
+};
 
 export class Thumbnail extends Component {
     render() {

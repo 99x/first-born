@@ -24,25 +24,25 @@ export class ListView extends Component {
                     renderItem
                         ? renderItem
                         : ({ item }) => {
-                            if (thin) {
-                                return (
-                                    <ThinListItem
-                                        {...item}
-                                        backgroundColor={backgroundColor}
-                                        secondary={secondary}
-                                        rounded={rounded}
-                                    />
-                                );
-                            }
-                            return (
-                                <ListItem
-                                    {...item}
-                                    backgroundColor={backgroundColor}
-                                    secondary={secondary}
-                                    rounded={rounded}
-                                />
-                            );
-                        }
+                              if (thin) {
+                                  return (
+                                      <ThinListItem
+                                          {...item}
+                                          backgroundColor={backgroundColor}
+                                          secondary={secondary}
+                                          rounded={rounded}
+                                      />
+                                  );
+                              }
+                              return (
+                                  <ListItem
+                                      {...item}
+                                      backgroundColor={backgroundColor}
+                                      secondary={secondary}
+                                      rounded={rounded}
+                                  />
+                              );
+                          }
                 }
                 {...otherProps}
             />
