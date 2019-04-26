@@ -164,7 +164,7 @@ export class NavBar extends Component {
 NavBar.propTypes = {
     transparent: PropTypes.bool,
     statusBarColor: PropTypes.string,
-    statusBarContent: PropTypes.oneOf("light-content", "dark-content"),
+    statusBarContent: PropTypes.oneOf(["light-content", "dark-content"]),
     ...View.propTypes
 };
 
