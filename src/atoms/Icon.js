@@ -3,7 +3,7 @@ import { Platform, TouchableOpacity } from "react-native";
 import Ionicon from "react-native-vector-icons/Ionicons";
 import PropTypes from "prop-types";
 import { commonColors } from "../utils/color";
-import getIconType from "first-born/src/utils/getIconType";
+import getIconType from "../utils/getIconType";
 
 export class Icon extends Component {
     render() {
@@ -11,7 +11,7 @@ export class Icon extends Component {
 
         const IconComponent = getIconType(type);
 
-        if (type === 'ionicon' && !name.includes("logo")) {
+        if (type === "ionicon" && !name.includes("logo")) {
             return (
                 <IconComponent
                     name={
@@ -21,9 +21,7 @@ export class Icon extends Component {
                 />
             );
         }
-        return (
-            <IconComponent name={name} {...otherProps} />
-        );
+        return <IconComponent name={name} {...otherProps} />;
     }
 }
 
@@ -31,12 +29,25 @@ Icon.propTypes = {
     name: PropTypes.string,
     size: PropTypes.number,
     color: PropTypes.string,
-    type: PropTypes.oneOf(['zocial', 'octicon', 'material', 'material-community', 'ionicon', 'foundation', 'evilicon', 'entypo', 'font-awesome', 'simple-line-icon', 'feather', 'antdesign']),
+    type: PropTypes.oneOf([
+        "zocial",
+        "octicon",
+        "material",
+        "material-community",
+        "ionicon",
+        "foundation",
+        "evilicon",
+        "entypo",
+        "font-awesome",
+        "simple-line-icon",
+        "feather",
+        "antdesign"
+    ]),
     ...TouchableOpacity.propTypes
 };
 
 Icon.defaultProps = {
     color: commonColors.white,
     size: 18,
-    type: 'ionicon'
+    type: "ionicon"
 };

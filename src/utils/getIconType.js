@@ -1,15 +1,15 @@
-import ZocialIcon from 'react-native-vector-icons/Zocial';
-import OcticonIcon from 'react-native-vector-icons/Octicons';
-import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
-import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
-import Ionicon from 'react-native-vector-icons/Ionicons';
-import FoundationIcon from 'react-native-vector-icons/Foundation';
-import EvilIcon from 'react-native-vector-icons/EvilIcons';
-import EntypoIcon from 'react-native-vector-icons/Entypo';
-import FAIcon from 'react-native-vector-icons/FontAwesome';
-import SimpleLineIcon from 'react-native-vector-icons/SimpleLineIcons';
-import FeatherIcon from 'react-native-vector-icons/Feather';
-import AntIcon from 'react-native-vector-icons/AntDesign';
+import ZocialIcon from "react-native-vector-icons/Zocial";
+import OcticonIcon from "react-native-vector-icons/Octicons";
+import MaterialIcon from "react-native-vector-icons/MaterialIcons";
+import MaterialCommunityIcon from "react-native-vector-icons/MaterialCommunityIcons";
+import Ionicon from "react-native-vector-icons/Ionicons";
+import FoundationIcon from "react-native-vector-icons/Foundation";
+import EvilIcon from "react-native-vector-icons/EvilIcons";
+import EntypoIcon from "react-native-vector-icons/Entypo";
+import FAIcon from "react-native-vector-icons/FontAwesome";
+import SimpleLineIcon from "react-native-vector-icons/SimpleLineIcons";
+import FeatherIcon from "react-native-vector-icons/Feather";
+import AntIcon from "react-native-vector-icons/AntDesign";
 
 const customIcons = {};
 
@@ -19,29 +19,29 @@ export const registerCustomIconType = (id, customIcon) => {
 
 export default type => {
     switch (type) {
-        case 'zocial':
+        case "zocial":
             return ZocialIcon;
-        case 'octicon':
+        case "octicon":
             return OcticonIcon;
-        case 'material':
+        case "material":
             return MaterialIcon;
-        case 'material-community':
+        case "material-community":
             return MaterialCommunityIcon;
-        case 'ionicon':
+        case "ionicon":
             return Ionicon;
-        case 'foundation':
+        case "foundation":
             return FoundationIcon;
-        case 'evilicon':
+        case "evilicon":
             return EvilIcon;
-        case 'entypo':
+        case "entypo":
             return EntypoIcon;
-        case 'font-awesome':
+        case "font-awesome":
             return FAIcon;
-        case 'simple-line-icon':
+        case "simple-line-icon":
             return SimpleLineIcon;
-        case 'feather':
+        case "feather":
             return FeatherIcon;
-        case 'antdesign':
+        case "antdesign":
             return AntIcon;
         default:
             if (Object.prototype.hasOwnProperty.call(customIcons, type)) {
