@@ -20,6 +20,8 @@ export { Card } from "./src/molecules/cards/Card";
 
 // List molecule
 export { ListItem } from "./src/molecules/listItem/ListItem";
+// Thin List molecule
+export { ThinListItem } from "./src/molecules/listItem/ThinListItem";
 
 // Floating Button molecules
 export { FloatingButton } from "./src/molecules/floatingButton/FloatingButton";

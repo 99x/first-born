@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { FlatList } from "react-native";
 import PropTypes from "prop-types";
 import { ListItem } from "../molecules/listItem/ListItem";
+import { ThinListItem } from "../molecules/listItem/ThinListItem";
 
 export class ListView extends Component {
     render() {
@@ -10,6 +11,7 @@ export class ListView extends Component {
             horizontal,
             renderItem,
             secondary,
+            thin,
             ...otherProps
         } = this.props;
 
@@ -21,14 +23,23 @@ export class ListView extends Component {
                     renderItem
                         ? renderItem
                         : ({ item }) => {
-                              return (
-                                  <ListItem
-                                      {...item}
-                                      backgroundColor={backgroundColor}
-                                      secondary={secondary}
-                                  />
-                              );
-                          }
+                            if (thin) {
+                                return (
+                                    <ThinListItem
+                                        {...item}
+                                        backgroundColor={backgroundColor}
+                                        secondary={secondary}
+                                    />
+                                );
+                            }
+                            return (
+                                <ListItem
+                                    {...item}
+                                    backgroundColor={backgroundColor}
+                                    secondary={secondary}
+                                />
+                            );
+                        }
                 }
                 {...otherProps}
             />
@@ -40,5 +51,10 @@ export class ListView extends Component {
 
 ListView.propTypes = {
     backgroundColor: PropTypes.string,
+    thin: PropTypes.bool,
     ...FlatList.propTypes
 };
+
+ListView.defaultProps = {
+    thin: false
+}
