@@ -117,7 +117,7 @@ You can use any [Text property](http://facebook.github.io/react-native/docs/text
 The All Icon components (all font styles) from `react-native-vector-icons` is used.
 
 ```html
-<Icon name='heart'>
+<Icon name='heart'/>
 ```
 ##### Android
 ![Android Icon](https://user-images.githubusercontent.com/24349997/55306382-ace16100-5471-11e9-96fb-bca1ff545b03.PNG "Android Icon") 
@@ -125,11 +125,11 @@ The All Icon components (all font styles) from `react-native-vector-icons` is us
 ##### iOS
 ![iOS Icon](https://user-images.githubusercontent.com/24349997/55306384-aeab2480-5471-11e9-9129-0e1650e60c60.png "iOS Icon")
 
-You can use any [Text property](http://facebook.github.io/react-native/docs/text.html) and the following:
+You can use any [TouchableOpacity property](http://facebook.github.io/react-native/docs/touchableopacity.html) and the following:
 
 | Prop        | Description                                                                                                                                                                                     | Default |
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
-| **`size`**  | Size of the icon.                                                                                                                                                                               | `'p'`   |
+| **`size`**  | Size of the icon.                                                                                                                                                                               | `18`    |
 | **`name`**  | Similar to the name attribute in `react-native-vector-icons`. Does not require the prefix `md` or `ios` for Ionicons.                                                                           | _None_  |
 | **`color`** | Color of the icon.                                                                                                                                                                              | _white_ |
 | **`type`**  | Type of the icon font style. ('zocial', 'octicon', 'material', 'material-community', 'ionicon', 'foundation', 'evilicon', 'entypo', 'font-awesome', 'simple-line-icon', 'feather', 'antdesign') | _white_ |
@@ -158,6 +158,22 @@ You can use any [View property](https://facebook.github.io/react-native/docs/vie
 | Prop        | Description          | Default   |
 |-------------|----------------------|-----------|
 | **`color`** | Color of the button. | _primary_ |
+
+#### Thumbnail
+
+An Image component that displays either a square or circular image.
+
+```html
+<Thumbnail source={require("path/to/image.png")}/>
+```
+
+You can use any [Image property](http://facebook.github.io/react-native/docs/image.html), [TouchableOpacity property](http://facebook.github.io/react-native/docs/touchableopacity.html) and the following:
+
+| Prop             | Description                                                    | Default    |
+|------------------|----------------------------------------------------------------|------------|
+| **`size`**       | Size of the image. ('small', 'medium', 'large', 'exlarge')     | `'medium'` |
+| **`customSize`** | Size of the image, if it does not fit the above defined sizes. | _None_     |
+| **`rounded`**    | If the image is to be a circle.                                | _false_    |
 
 #### Button
 
@@ -422,7 +438,7 @@ The data that can be passed to the notification are;
 A List Item that displays a title (required), description and image. This molecule makes use of the `Text` Atom.
 
 ```html
-<ListItem title="Heading" description="Description" image={{ source: require("../assets/images/scenery.jpg")}} >
+<ListItem title="Heading" description="Description" image={{ source: require("path/to/image.png")}} >
     <ListItem title="Heading" onPress={this.handleButtonClick} description="Description" /> //Nested List Item
 </ListItem>
 ```
@@ -443,13 +459,14 @@ You can use any [TouchableOpacity property](https://facebook.github.io/react-nat
 | **`block`**           | If the List Item has full width of the device.                                  | _false_ |
 | **`backgroundColor`** | Background color of List Item.                                                  | _white_ |
 | **`secondary`**       | If the List Item is nested inside another.                                      | _false_ |
+| **`rounded`**         | If the image displayed on the ListItem is rouned or not.                        | _false_ |
 
 #### ThinListItem
 
 A List Item that displays a title (required), description and image. This molecule makes use of the `Text` Atom. Similar to the above molecule but smaller with a few added features
 
 ```html
-<ThinListItem title="Heading" description="Description" image={{ source: require("../assets/images/scenery.jpg") }} />
+<ThinListItem title="Heading" description="Description" image={{ source: require("path/to/image.png") }} />
 ```
 
 You can use any [TouchableOpacity property](https://facebook.github.io/react-native/docs/touchableopacity.html) and the following:
@@ -462,6 +479,7 @@ You can use any [TouchableOpacity property](https://facebook.github.io/react-nat
 | **`icon`**            | Icon to display in List Item. You can use all `Icon` properties.                | _None_  |
 | **`arrow`**           | If the List Item has an arrow at the right of the item.                         | _false_ |
 | **`backgroundColor`** | Background color of List Item.                                                  | _white_ |
+| **`rounded`**         | If the image displayed on the ListItem is rouned or not.                        | _false_ |
 
 #### Floating Action Button
 
@@ -470,7 +488,7 @@ This molecule makes use of the `Text` and `Icon` Atoms.
 ###### One action
 
 ```html
-<FloatingButton onPress={this.handleAction} image={require("./assets/images/accessibility.png")} />
+<FloatingButton onPress={this.handleAction} image={require("path/to/image.png")} />
 ```
 
 ###### Multiple actions
@@ -478,7 +496,7 @@ This molecule makes use of the `Text` and `Icon` Atoms.
 ```js
 
 actions = [
-    { text: 'Accessibility', image: require("./assets/images/accessibility.png"), name: 'bt_accessibility', position: 2, onPress: () => this.handleAccessibility() },
+    { text: 'Accessibility', image: require("path/to/image.png"), name: 'bt_accessibility', position: 2, onPress: () => this.handleAccessibility() },
     { text: 'Location', icon: "pin", name: 'bt_room', position: 1, onPress: () => this.handleLocation() },
     { text: 'Video', icon: "videocam", name: 'bt_videocam', position: 3, onPress: () => this.handleVideo() }
 ];
@@ -546,7 +564,7 @@ The props for the nested `FloatingButtonItems`, which is being sent through the 
 A Card that displays a title (required), description and image.
 
 ```html
-<Card title="Heading" description="Description" image={{ source: require("../assets/images/scenery.jpg")}} />
+<Card title="Heading" description="Description" image={{ source: require("path/to/image.png")}} />
 ```
 
 ##### Android
@@ -608,9 +626,9 @@ A vertical list of ListItem molecules
 
 ```js
 listData = [
-    { title: "Heading 1", description: "Description 1", image: { source: require("./assets/images/scenery.jpg")} },
-    { title: "Heading 2", description: "Description 2", image: { source: require("./assets/images/scenery.jpg")} },
-    { title: "Heading 3", description: "Description 3", image: { source: require("./assets/images/scenery.jpg")} }
+    { title: "Heading 1", description: "Description 1", image: { source: require("path/to/image.png")} },
+    { title: "Heading 2", description: "Description 2", image: { source: require("path/to/image.png")} },
+    { title: "Heading 3", description: "Description 3", image: { source: require("path/to/image.png")} }
 ];
 
 <ListView data={listData} />
@@ -638,6 +656,7 @@ You can use any [FlatList property](http://facebook.github.io/react-native/docs/
 |-----------------------|----------------------------------------------------------|---------|
 | **`backgroundColor`** | Background color of all cards.                           | _white_ |
 | **`thin`**            | If the `'ThinListItem'` is the component to be rendered. | _false_ |
+| **`rounded`**         | If the image displayed on the ListItem is rouned or not. | _false_ |
 
 The data to be sent to the ListView needs to contain the same fields as the props of [ListItem](#listitem) component.
 
@@ -646,9 +665,9 @@ A vertical/horizontal List of Card molecules.
 
 ```js
 listData = [
-    { title: "Heading 1", description: "Description 1", image: { source: require("./assets/images/scenery.jpg")} },
-    { title: "Heading 2", description: "Description 2", image: { source: require("./assets/images/scenery.jpg")} },
-    { title: "Heading 3", description: "Description 3", image: { source: require("./assets/images/scenery.jpg")} }
+    { title: "Heading 1", description: "Description 1", image: { source: require("path/to/image.png")} },
+    { title: "Heading 2", description: "Description 2", image: { source: require("path/to/image.png")} },
+    { title: "Heading 3", description: "Description 3", image: { source: require("path/to/image.png")} }
 ];
 
 <CardList data={listData} />
