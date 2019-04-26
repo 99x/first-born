@@ -7,6 +7,7 @@ export { Picker } from "./src/atoms/Picker";
 export { DatePicker } from "./src/atoms/DatePicker";
 export { Text } from "./src/atoms/Text";
 export { Icon } from "./src/atoms/Icon";
+export { Thumbnail } from "./src/atoms/Thumbnail";
 
 // Molecules
 // Form molecules
