@@ -14,7 +14,6 @@ import { commonColors } from "../../utils/color";
 import { deviceVariables } from "../../variables/deviceVariables";
 
 export class ThinListItem extends Component {
-
     render() {
         const {
             title,
@@ -31,10 +30,7 @@ export class ThinListItem extends Component {
         const listItemStyle = [styles.container, { backgroundColor }];
 
         return (
-            <TouchableOpacity
-                style={listItemStyle}
-                {...otherProps}
-            >
+            <TouchableOpacity style={listItemStyle} {...otherProps}>
                 {image && (
                     <View style={styles.imageContainer}>
                         <Image style={styles.image} {...image} />
@@ -50,22 +46,27 @@ export class ThinListItem extends Component {
                         {title}
                     </Text>
                     {description && (
-                        <Text
-                            size="footnote"
-                            color={commonColors.lightGrey}
-                        >
+                        <Text size="footnote" color={commonColors.lightGrey}>
                             {description}
                         </Text>
                     )}
                 </View>
-                {arrow && <View style={styles.imageContainer}>
-                    <Icon
-                        type={Platform.OS === 'ios' ? 'ionicon' : 'material'}
-                        name={Platform.OS === 'ios' ? 'arrow-forward' : 'keyboard-arrow-right'}
-                        size={20}
-                        color={commonColors.inputGrey}
-                    />
-                </View>}
+                {arrow && (
+                    <View style={styles.imageContainer}>
+                        <Icon
+                            type={
+                                Platform.OS === "ios" ? "ionicon" : "material"
+                            }
+                            name={
+                                Platform.OS === "ios"
+                                    ? "arrow-forward"
+                                    : "keyboard-arrow-right"
+                            }
+                            size={20}
+                            color={commonColors.inputGrey}
+                        />
+                    </View>
+                )}
             </TouchableOpacity>
         );
     }

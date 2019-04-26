@@ -51,8 +51,8 @@ export class ListItem extends Component {
         const onListItemTap = children
             ? this.expandListItem
             : onPress
-                ? onPress
-                : undefined;
+            ? onPress
+            : undefined;
 
         return (
             <View style={{ width: "100%" }}>
@@ -89,8 +89,8 @@ export class ListItem extends Component {
                                             ? "arrow-up"
                                             : "arrow-dropup"
                                         : Platform.OS === "ios"
-                                            ? "arrow-down"
-                                            : "arrow-dropdown"
+                                        ? "arrow-down"
+                                        : "arrow-dropdown"
                                 }
                                 size={20}
                                 color={commonColors.inputGrey}

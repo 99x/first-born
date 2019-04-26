@@ -23,23 +23,23 @@ export class ListView extends Component {
                     renderItem
                         ? renderItem
                         : ({ item }) => {
-                            if (thin) {
-                                return (
-                                    <ThinListItem
-                                        {...item}
-                                        backgroundColor={backgroundColor}
-                                        secondary={secondary}
-                                    />
-                                );
-                            }
-                            return (
-                                <ListItem
-                                    {...item}
-                                    backgroundColor={backgroundColor}
-                                    secondary={secondary}
-                                />
-                            );
-                        }
+                              if (thin) {
+                                  return (
+                                      <ThinListItem
+                                          {...item}
+                                          backgroundColor={backgroundColor}
+                                          secondary={secondary}
+                                      />
+                                  );
+                              }
+                              return (
+                                  <ListItem
+                                      {...item}
+                                      backgroundColor={backgroundColor}
+                                      secondary={secondary}
+                                  />
+                              );
+                          }
                 }
                 {...otherProps}
             />
@@ -57,4 +57,4 @@ ListView.propTypes = {
 
 ListView.defaultProps = {
     thin: false
-}
+};
