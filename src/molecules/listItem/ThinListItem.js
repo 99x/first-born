@@ -20,9 +20,7 @@ export class ThinListItem extends Component {
             description,
             image,
             icon,
-            block,
             backgroundColor,
-            secondary,
             arrow,
             ...otherProps
         } = this.props;
