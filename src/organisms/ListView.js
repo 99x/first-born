@@ -12,6 +12,7 @@ export class ListView extends Component {
             renderItem,
             secondary,
             thin,
+            rounded,
             ...otherProps
         } = this.props;
 
@@ -23,23 +24,25 @@ export class ListView extends Component {
                     renderItem
                         ? renderItem
                         : ({ item }) => {
-                              if (thin) {
-                                  return (
-                                      <ThinListItem
-                                          {...item}
-                                          backgroundColor={backgroundColor}
-                                          secondary={secondary}
-                                      />
-                                  );
-                              }
-                              return (
-                                  <ListItem
-                                      {...item}
-                                      backgroundColor={backgroundColor}
-                                      secondary={secondary}
-                                  />
-                              );
-                          }
+                            if (thin) {
+                                return (
+                                    <ThinListItem
+                                        {...item}
+                                        backgroundColor={backgroundColor}
+                                        secondary={secondary}
+                                        rounded={rounded}
+                                    />
+                                );
+                            }
+                            return (
+                                <ListItem
+                                    {...item}
+                                    backgroundColor={backgroundColor}
+                                    secondary={secondary}
+                                    rounded={rounded}
+                                />
+                            );
+                        }
                 }
                 {...otherProps}
             />
@@ -52,9 +55,11 @@ export class ListView extends Component {
 ListView.propTypes = {
     backgroundColor: PropTypes.string,
     thin: PropTypes.bool,
+    rounded: PropTypes.bool,
     ...FlatList.propTypes
 };
 
 ListView.defaultProps = {
-    thin: false
+    thin: false,
+    rounded: true
 };

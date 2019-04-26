@@ -12,6 +12,7 @@ import { Text } from "../../atoms/Text";
 import { Icon } from "../../atoms/Icon";
 import { commonColors } from "../../utils/color";
 import { deviceVariables } from "../../variables/deviceVariables";
+import { Thumbnail } from "../../atoms/Thumbnail";
 
 export class ThinListItem extends Component {
     render() {
@@ -22,16 +23,25 @@ export class ThinListItem extends Component {
             icon,
             backgroundColor,
             arrow,
+            rounded,
+            onPress,
             ...otherProps
         } = this.props;
 
         const listItemStyle = [styles.container, { backgroundColor }];
 
         return (
-            <TouchableOpacity style={listItemStyle} {...otherProps}>
-                {image && (
+            <TouchableOpacity style={listItemStyle}
+                disabled={!onPress}
+                onPress={onPress} {...otherProps}>
+                {image && rounded && (
                     <View style={styles.imageContainer}>
-                        <Image style={styles.image} {...image} />
+                        <Thumbnail size="small" {...image} rounded style={{ marginLeft: 10 }} />
+                    </View>
+                )}
+                {image && !rounded && (
+                    <View style={styles.imageContainer}>
+                        <Thumbnail {...image} customSize={60} />
                     </View>
                 )}
                 {icon && (
@@ -60,7 +70,7 @@ export class ThinListItem extends Component {
                                     ? "arrow-forward"
                                     : "keyboard-arrow-right"
                             }
-                            size={20}
+                            size={25}
                             color={commonColors.inputGrey}
                         />
                     </View>
@@ -74,19 +84,21 @@ ThinListItem.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string,
     image: PropTypes.shape({
-        ...Image.propTypes
+        ...Thumbnail.propTypes
     }),
     icon: PropTypes.shape({
         ...Icon.propTypes
     }),
     backgroundColor: PropTypes.string,
     arrow: PropTypes.bool,
+    rounded: PropTypes.bool,
     ...TouchableOpacity.propTypes
 };
 
 ThinListItem.defaultProps = {
     backgroundColor: commonColors.white,
-    arrow: false
+    arrow: false,
+    rounded: true
 };
 
 const styles = StyleSheet.create({
@@ -98,7 +110,6 @@ const styles = StyleSheet.create({
         borderBottomWidth: 0.5,
         borderTopColor: commonColors.lightGrey,
         borderBottomColor: commonColors.lightGrey,
-        paddingLeft: 5,
         paddingRight: 10
     },
     textContainer: {
@@ -109,12 +120,8 @@ const styles = StyleSheet.create({
         alignItems: "flex-start"
     },
     imageContainer: {
+        flex: 1,
         justifyContent: "center",
         alignItems: "center"
-    },
-    image: {
-        height: 30,
-        width: 30,
-        borderRadius: 30 / 2
     }
 });

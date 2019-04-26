@@ -12,6 +12,7 @@ import { Text } from "../../atoms/Text";
 import { Icon } from "../../atoms/Icon";
 import { commonColors } from "../../utils/color";
 import { deviceVariables } from "../../variables/deviceVariables";
+import { Thumbnail } from "../../atoms/Thumbnail";
 
 export class ListItem extends Component {
     constructor(props) {
@@ -30,6 +31,7 @@ export class ListItem extends Component {
             block,
             backgroundColor,
             secondary,
+            rounded,
             ...otherProps
         } = this.props;
         const { expanded } = this.state;
@@ -51,8 +53,8 @@ export class ListItem extends Component {
         const onListItemTap = children
             ? this.expandListItem
             : onPress
-            ? onPress
-            : undefined;
+                ? onPress
+                : undefined;
 
         return (
             <View style={{ width: "100%" }}>
@@ -62,9 +64,14 @@ export class ListItem extends Component {
                     onPress={onListItemTap}
                     {...otherProps}
                 >
-                    {image && (
+                    {image && rounded && (
                         <View style={styles.imageContainer}>
-                            <Image style={styles.image} {...image} />
+                            <Thumbnail {...image} rounded style={{ marginLeft: 10 }} />
+                        </View>
+                    )}
+                    {image && !rounded && (
+                        <View style={styles.imageContainer}>
+                            <Thumbnail {...image} customSize={80} />
                         </View>
                     )}
                     <View style={styles.textContainer}>
@@ -89,8 +96,8 @@ export class ListItem extends Component {
                                             ? "arrow-up"
                                             : "arrow-dropup"
                                         : Platform.OS === "ios"
-                                        ? "arrow-down"
-                                        : "arrow-dropdown"
+                                            ? "arrow-down"
+                                            : "arrow-dropdown"
                                 }
                                 size={20}
                                 color={commonColors.inputGrey}
@@ -112,18 +119,20 @@ ListItem.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string,
     image: PropTypes.shape({
-        ...Image.propTypes
+        ...Thumbnail.propTypes
     }),
     block: PropTypes.bool,
     backgroundColor: PropTypes.string,
     secondary: PropTypes.bool,
+    rounded: PropTypes.bool,
     ...TouchableOpacity.propTypes
 };
 
 ListItem.defaultProps = {
     backgroundColor: commonColors.white,
     secondary: false,
-    block: false
+    block: false,
+    rounded: true
 };
 
 const styles = StyleSheet.create({
@@ -142,8 +151,7 @@ const styles = StyleSheet.create({
                 borderBottomColor: commonColors.lightGrey
             }
         }),
-
-        paddingHorizontal: 5
+        paddingRight: 5
     },
     containerBlock: {
         width: deviceVariables.width,
@@ -153,7 +161,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 0.5,
         borderTopColor: commonColors.lightGrey,
         borderBottomColor: commonColors.lightGrey,
-        paddingHorizontal: 15
+        paddingRight: 15
     },
     textContainer: {
         flex: 3,
@@ -165,10 +173,5 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center"
-    },
-    image: {
-        height: 50,
-        width: 50,
-        borderRadius: 50 / 2
     }
 });
