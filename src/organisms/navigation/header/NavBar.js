@@ -68,7 +68,7 @@ export class NavBar extends Component {
 
         let navBarStyle = { ...style };
 
-        if (transparent) {
+        if (!transparent) {
             navBarStyle = { ...navBarStyle, ...shadowProperties };
         }
 
