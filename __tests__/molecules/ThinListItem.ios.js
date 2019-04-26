@@ -21,10 +21,37 @@ it("renders thin list item with heading and title", () => {
     expect(tree).toMatchSnapshot();
 });
 
+it("renders thin list item with heading, title and image", () => {
+    const tree = renderer
+        .create(
+            <ThinListItem
+                title="Heading"
+                description="description"
+                image={{ source: require("../../firstBorn-logo.png") }}
+            />
+        )
+        .toJSON();
+    expect(tree).toMatchSnapshot();
+});
+
 it("renders thin list item with heading, title and arrow", () => {
     const tree = renderer
         .create(
             <ThinListItem title="Heading" description="description" arrow />
+        )
+        .toJSON();
+    expect(tree).toMatchSnapshot();
+});
+
+it("renders thin list item with heading, title, image and arrow", () => {
+    const tree = renderer
+        .create(
+            <ThinListItem
+                title="Heading"
+                description="description"
+                image={{ source: require("../../firstBorn-logo.png") }}
+                arrow
+            />
         )
         .toJSON();
     expect(tree).toMatchSnapshot();
