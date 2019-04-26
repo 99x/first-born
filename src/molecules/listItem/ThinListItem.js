@@ -60,7 +60,8 @@ export class ThinListItem extends Component {
                 </View>
                 {arrow && <View style={styles.imageContainer}>
                     <Icon
-                        name="arrow-forward"
+                        type={Platform.OS === 'ios' ? 'ionicon' : 'material'}
+                        name={Platform.OS === 'ios' ? 'arrow-forward' : 'keyboard-arrow-right'}
                         size={20}
                         color={commonColors.inputGrey}
                     />
