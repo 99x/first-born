@@ -20,7 +20,6 @@ exports[`renders colored thin list item with heading and title 1`] = `
       "flex": 1,
       "flexDirection": "row",
       "opacity": 1,
-      "paddingLeft": 5,
       "paddingRight": 10,
       "width": 750,
     }
@@ -89,7 +88,6 @@ exports[`renders thin list item with heading 1`] = `
       "flex": 1,
       "flexDirection": "row",
       "opacity": 1,
-      "paddingLeft": 5,
       "paddingRight": 10,
       "width": 750,
     }
@@ -144,7 +142,6 @@ exports[`renders thin list item with heading and title 1`] = `
       "flex": 1,
       "flexDirection": "row",
       "opacity": 1,
-      "paddingLeft": 5,
       "paddingRight": 10,
       "width": 750,
     }
@@ -213,7 +210,6 @@ exports[`renders thin list item with heading, title and arrow 1`] = `
       "flex": 1,
       "flexDirection": "row",
       "opacity": 1,
-      "paddingLeft": 5,
       "paddingRight": 10,
       "width": 750,
     }
@@ -263,6 +259,7 @@ exports[`renders thin list item with heading, title and arrow 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "flex": 1,
         "justifyContent": "center",
       }
     }
@@ -273,7 +270,7 @@ exports[`renders thin list item with heading, title and arrow 1`] = `
         Array [
           Object {
             "color": "rgba(33, 33, 33, 0.5)",
-            "fontSize": 20,
+            "fontSize": 25,
           },
           undefined,
           Object {

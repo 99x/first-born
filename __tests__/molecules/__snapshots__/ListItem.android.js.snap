@@ -27,7 +27,7 @@ exports[`renders colored list item with heading and title 1`] = `
         "flex": 1,
         "flexDirection": "row",
         "opacity": 1,
-        "paddingHorizontal": 5,
+        "paddingRight": 5,
       }
     }
   >
@@ -110,7 +110,7 @@ exports[`renders expandable list item with heading and title 1`] = `
         "flex": 1,
         "flexDirection": "row",
         "opacity": 1,
-        "paddingHorizontal": 5,
+        "paddingRight": 5,
       }
     }
   >
@@ -214,7 +214,7 @@ exports[`renders list item with heading 1`] = `
         "flex": 1,
         "flexDirection": "row",
         "opacity": 1,
-        "paddingHorizontal": 5,
+        "paddingRight": 5,
       }
     }
   >
@@ -283,7 +283,7 @@ exports[`renders list item with heading and title 1`] = `
         "flex": 1,
         "flexDirection": "row",
         "opacity": 1,
-        "paddingHorizontal": 5,
+        "paddingRight": 5,
       }
     }
   >

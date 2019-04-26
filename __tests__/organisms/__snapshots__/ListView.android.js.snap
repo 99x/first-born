@@ -77,7 +77,7 @@ exports[`renders a colored list of listItems with heading and title 1`] = `
               "flex": 1,
               "flexDirection": "row",
               "opacity": 1,
-              "paddingHorizontal": 5,
+              "paddingRight": 5,
             }
           }
         >
@@ -162,7 +162,7 @@ exports[`renders a colored list of listItems with heading and title 1`] = `
               "flex": 1,
               "flexDirection": "row",
               "opacity": 1,
-              "paddingHorizontal": 5,
+              "paddingRight": 5,
             }
           }
         >
@@ -247,7 +247,7 @@ exports[`renders a colored list of listItems with heading and title 1`] = `
               "flex": 1,
               "flexDirection": "row",
               "opacity": 1,
-              "paddingHorizontal": 5,
+              "paddingRight": 5,
             }
           }
         >
@@ -376,7 +376,6 @@ exports[`renders a colored list of thin listItems with heading and title 1`] = `
             "flex": 1,
             "flexDirection": "row",
             "opacity": 1,
-            "paddingLeft": 5,
             "paddingRight": 10,
             "width": 750,
           }
@@ -447,7 +446,6 @@ exports[`renders a colored list of thin listItems with heading and title 1`] = `
             "flex": 1,
             "flexDirection": "row",
             "opacity": 1,
-            "paddingLeft": 5,
             "paddingRight": 10,
             "width": 750,
           }
@@ -518,7 +516,6 @@ exports[`renders a colored list of thin listItems with heading and title 1`] = `
             "flex": 1,
             "flexDirection": "row",
             "opacity": 1,
-            "paddingLeft": 5,
             "paddingRight": 10,
             "width": 750,
           }
@@ -644,7 +641,7 @@ exports[`renders a list of listItems with heading 1`] = `
               "flex": 1,
               "flexDirection": "row",
               "opacity": 1,
-              "paddingHorizontal": 5,
+              "paddingRight": 5,
             }
           }
         >
@@ -715,7 +712,7 @@ exports[`renders a list of listItems with heading 1`] = `
               "flex": 1,
               "flexDirection": "row",
               "opacity": 1,
-              "paddingHorizontal": 5,
+              "paddingRight": 5,
             }
           }
         >
@@ -786,7 +783,7 @@ exports[`renders a list of listItems with heading 1`] = `
               "flex": 1,
               "flexDirection": "row",
               "opacity": 1,
-              "paddingHorizontal": 5,
+              "paddingRight": 5,
             }
           }
         >
@@ -908,7 +905,7 @@ exports[`renders a list of listItems with heading and title 1`] = `
               "flex": 1,
               "flexDirection": "row",
               "opacity": 1,
-              "paddingHorizontal": 5,
+              "paddingRight": 5,
             }
           }
         >
@@ -993,7 +990,7 @@ exports[`renders a list of listItems with heading and title 1`] = `
               "flex": 1,
               "flexDirection": "row",
               "opacity": 1,
-              "paddingHorizontal": 5,
+              "paddingRight": 5,
             }
           }
         >
@@ -1078,7 +1075,7 @@ exports[`renders a list of listItems with heading and title 1`] = `
               "flex": 1,
               "flexDirection": "row",
               "opacity": 1,
-              "paddingHorizontal": 5,
+              "paddingRight": 5,
             }
           }
         >
@@ -1214,7 +1211,7 @@ exports[`renders a list of listItems with heading and title by a user defined re
               "flex": 1,
               "flexDirection": "row",
               "opacity": 1,
-              "paddingHorizontal": 5,
+              "paddingRight": 5,
             }
           }
         >
@@ -1299,7 +1296,7 @@ exports[`renders a list of listItems with heading and title by a user defined re
               "flex": 1,
               "flexDirection": "row",
               "opacity": 1,
-              "paddingHorizontal": 5,
+              "paddingRight": 5,
             }
           }
         >
@@ -1384,7 +1381,7 @@ exports[`renders a list of listItems with heading and title by a user defined re
               "flex": 1,
               "flexDirection": "row",
               "opacity": 1,
-              "paddingHorizontal": 5,
+              "paddingRight": 5,
             }
           }
         >
