@@ -114,7 +114,7 @@ You can use any [Text property](http://facebook.github.io/react-native/docs/text
 
 #### Icon
 
-The Ionicons component from `react-native-vector-icons` is used.
+The All Icon components (all font styles) from `react-native-vector-icons` is used.
 
 ```html
 <Icon name='heart'>
@@ -127,11 +127,12 @@ The Ionicons component from `react-native-vector-icons` is used.
 
 You can use any [Text property](http://facebook.github.io/react-native/docs/text.html) and the following:
 
-| Prop        | Description                                                                                                  | Default |
-|-------------|--------------------------------------------------------------------------------------------------------------|---------|
-| **`size`**  | Size of the icon.                                                                                            | `'p'`   |
-| **`name`**  | Similar to the name attribute in `react-native-vector-icons`, but does not require the prefix `md` or `ios`. | _None_  |
-| **`color`** | Color of the icon.                                                                                           | _white_ |
+| Prop        | Description                                                                                                                                                                                     | Default |
+|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
+| **`size`**  | Size of the icon.                                                                                                                                                                               | `'p'`   |
+| **`name`**  | Similar to the name attribute in `react-native-vector-icons`. Does not require the prefix `md` or `ios` for Ionicons.                                                                           | _None_  |
+| **`color`** | Color of the icon.                                                                                                                                                                              | _white_ |
+| **`type`**  | Type of the icon font style. ('zocial', 'octicon', 'material', 'material-community', 'ionicon', 'foundation', 'evilicon', 'entypo', 'font-awesome', 'simple-line-icon', 'feather', 'antdesign') | _white_ |
 
 #### Badge
 
