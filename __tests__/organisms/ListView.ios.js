@@ -45,6 +45,19 @@ it("renders a colored list of listItems with heading and title", () => {
     expect(tree).toMatchSnapshot();
 });
 
+it("renders a colored list of thin listItems with heading and title", () => {
+    const listData = [
+        { title: "Heading 1", description: "Description 1" },
+        { title: "Heading 2", description: "Description 2" },
+        { title: "Heading 3", description: "Description 3" }
+    ];
+
+    const tree = renderer
+        .create(<ListView data={listData} backgroundColor="aliceblue" thin />)
+        .toJSON();
+    expect(tree).toMatchSnapshot();
+});
+
 it("renders a list of listItems with heading and title by a user defined renderItem method", () => {
     const listData = [
         { title: "Heading 1", description: "Description 1" },

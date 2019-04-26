@@ -417,12 +417,12 @@ The data that can be passed to the notification are;
 | **`icon`**                 | Icon to be displayed next to notification message              | `'alert'`   |
 | **`color`**                | Background color of the Notification body.                     | `'#007bff'` |
 
-#### List Item
+#### ListItem
 
 A List Item that displays a title (required), description and image. This molecule makes use of the `Text` Atom.
 
 ```html
-<ListItem title="Heading" description="Description" image={require("../assets/images/scenery.jpg")} >
+<ListItem title="Heading" description="Description" image={{ source: require("../assets/images/scenery.jpg")}} >
     <ListItem title="Heading" onPress={this.handleButtonClick} description="Description" /> //Nested List Item
 </ListItem>
 ```
@@ -435,14 +435,33 @@ A List Item that displays a title (required), description and image. This molecu
 
 You can use any [TouchableOpacity property](https://facebook.github.io/react-native/docs/touchableopacity.html) and the following:
 
-| Prop                  | Description                                    | Default |
-|-----------------------|------------------------------------------------|---------|
-| **`title`**           | Description of List Item. **(Required)**       | _None_  |
-| **`description`**     | Description of List Item.                      | _None_  |
-| **`image`**           | Image to display in List Item.                 | _None_  |
-| **`block`**           | If the List Item has full width of the device. | _false_ |
-| **`backgroundColor`** | Background color of List Item.                 | _white_ |
-| **`secondary`**       | If the List Item is nested inside another.     | _false_ |
+| Prop                  | Description                                                                     | Default |
+|-----------------------|---------------------------------------------------------------------------------|---------|
+| **`title`**           | Description of List Item. **(Required)**                                        | _None_  |
+| **`description`**     | Description of List Item.                                                       | _None_  |
+| **`image`**           | Image to display in List Item. You can use all `react-native Image` properties. | _None_  |
+| **`block`**           | If the List Item has full width of the device.                                  | _false_ |
+| **`backgroundColor`** | Background color of List Item.                                                  | _white_ |
+| **`secondary`**       | If the List Item is nested inside another.                                      | _false_ |
+
+#### ThinListItem
+
+A List Item that displays a title (required), description and image. This molecule makes use of the `Text` Atom. Similar to the above molecule but smaller with a few added features
+
+```html
+<ThinListItem title="Heading" description="Description" image={{ source: require("../assets/images/scenery.jpg") }} />
+```
+
+You can use any [TouchableOpacity property](https://facebook.github.io/react-native/docs/touchableopacity.html) and the following:
+
+| Prop                  | Description                                                                     | Default |
+|-----------------------|---------------------------------------------------------------------------------|---------|
+| **`title`**           | Description of List Item. **(Required)**                                        | _None_  |
+| **`description`**     | Description of List Item.                                                       | _None_  |
+| **`image`**           | Image to display in List Item. You can use all `react-native Image` properties. | _None_  |
+| **`icon`**            | Icon to display in List Item. You can use all `Icon` properties.                | _None_  |
+| **`arrow`**           | If the List Item has an arrow at the right of the item.                         | _false_ |
+| **`backgroundColor`** | Background color of List Item.                                                  | _white_ |
 
 #### Floating Action Button
 
@@ -527,7 +546,7 @@ The props for the nested `FloatingButtonItems`, which is being sent through the 
 A Card that displays a title (required), description and image.
 
 ```html
-<Card title="Heading" description="Description" image={require("../assets/images/scenery.jpg")} />
+<Card title="Heading" description="Description" image={{ source: require("../assets/images/scenery.jpg")}} />
 ```
 
 ##### Android
@@ -538,13 +557,13 @@ A Card that displays a title (required), description and image.
 
 You can use any [TouchableOpacity property](https://facebook.github.io/react-native/docs/touchableopacity.html) and the following:
 
-| Prop                  | Description                               | Default |
-|-----------------------|-------------------------------------------|---------|
-| **`title`**           | Description of Card. **(Required)**       | _None_  |
-| **`description`**     | Description of Card.                      | _None_  |
-| **`image`**           | Image to display in Card.                 | _None_  |
-| **`block`**           | If the Card has full width of the device. | _false_ |
-| **`backgroundColor`** | Background color of Card.                 | _white_ |
+| Prop                  | Description                                                                | Default |
+|-----------------------|----------------------------------------------------------------------------|---------|
+| **`title`**           | Description of Card. **(Required)**                                        | _None_  |
+| **`description`**     | Description of Card.                                                       | _None_  |
+| **`image`**           | Image to display in Card. You can use all `react-native Image` properties. | _None_  |
+| **`block`**           | If the Card has full width of the device.                                  | _false_ |
+| **`backgroundColor`** | Background color of Card.                                                  | _white_ |
 
 ### Organisms
 
@@ -589,9 +608,9 @@ A vertical list of ListItem molecules
 
 ```js
 listData = [
-    { title: "Heading 1", description: "Description 1", image: require("./assets/images/scenery.jpg") },
-    { title: "Heading 2", description: "Description 2", image: require("./assets/images/scenery.jpg") },
-    { title: "Heading 3", description: "Description 3", image: require("./assets/images/scenery.jpg") }
+    { title: "Heading 1", description: "Description 1", image: { source: require("./assets/images/scenery.jpg")} },
+    { title: "Heading 2", description: "Description 2", image: { source: require("./assets/images/scenery.jpg")} },
+    { title: "Heading 3", description: "Description 3", image: { source: require("./assets/images/scenery.jpg")} }
 ];
 
 <ListView data={listData} />
@@ -613,7 +632,12 @@ handleListItemClick = (title, description) => {
 ##### iOS
 ![iOS ListView](https://user-images.githubusercontent.com/24349997/55306880-5d9c3000-5473-11e9-8701-0cfdef3200b8.png "iOS ListView")
 
-You can use any [FlatList property](http://facebook.github.io/react-native/docs/flatlist.html).
+You can use any [FlatList property](http://facebook.github.io/react-native/docs/flatlist.html) and the following:
+
+| Prop                  | Description                                              | Default |
+|-----------------------|----------------------------------------------------------|---------|
+| **`backgroundColor`** | Background color of all cards.                           | _white_ |
+| **`thin`**            | If the `'ThinListItem'` is the component to be rendered. | _false_ |
 
 The data to be sent to the ListView needs to contain the same fields as the props of [ListItem](#listitem) component.
 
@@ -622,9 +646,9 @@ A vertical/horizontal List of Card molecules.
 
 ```js
 listData = [
-    { title: "Heading 1", description: "Description 1", image: require("./assets/images/scenery.jpg") },
-    { title: "Heading 2", description: "Description 2", image: require("./assets/images/scenery.jpg") },
-    { title: "Heading 3", description: "Description 3", image: require("./assets/images/scenery.jpg") }
+    { title: "Heading 1", description: "Description 1", image: { source: require("./assets/images/scenery.jpg")} },
+    { title: "Heading 2", description: "Description 2", image: { source: require("./assets/images/scenery.jpg")} },
+    { title: "Heading 3", description: "Description 3", image: { source: require("./assets/images/scenery.jpg")} }
 ];
 
 <CardList data={listData} />
@@ -646,7 +670,11 @@ handleListItemClick = (title, description) => {
 ##### iOS
 ![iOS CardList](https://user-images.githubusercontent.com/24349997/55306876-5c6b0300-5473-11e9-86c0-8c2fb2f64e90.png "iOS CardList")
 
-You can use any [FlatList property](http://facebook.github.io/react-native/docs/flatlist.html).
+You can use any [FlatList property](http://facebook.github.io/react-native/docs/flatlist.html) and the following:
+
+| Prop                  | Description                    | Default |
+|-----------------------|--------------------------------|---------|
+| **`backgroundColor`** | Background color of all cards. | _white_ |
 
 The data to be sent to the CardList needs to contain the same fields as the props of [Card](#card) component.
 
