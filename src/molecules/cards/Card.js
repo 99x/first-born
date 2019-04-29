@@ -40,7 +40,7 @@ export class Card extends Component {
                 onPress={onPress}
                 {...otherProps}
             >
-                {image && <Image source={image} style={styles.image} />}
+                {image && <Image style={styles.image} {...image} />}
                 <View style={styles.textContainer}>
                     <Text size="h6" color={commonColors.darkGrey} bold>
                         {title}
@@ -59,7 +59,9 @@ export class Card extends Component {
 Card.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string,
-    image: PropTypes.any,
+    image: PropTypes.shape({
+        ...Image.propTypes
+    }),
     block: PropTypes.bool,
     backgroundColor: PropTypes.string,
     ...TouchableOpacity.propTypes

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { View, StyleSheet, Platform } from "react-native";
+import PropTypes from "prop-types";
 import { Text } from "../../../atoms/Text";
 import { commonColors } from "../../../utils/color";
 
@@ -26,6 +27,11 @@ export class NavBarBody extends Component {
         );
     }
 }
+
+NavBarBody.propTypes = {
+    color: PropTypes.string,
+    ...View.propTypes
+};
 
 NavBarBody.defaultProps = {
     color: Platform.OS === "android" ? commonColors.white : commonColors.black

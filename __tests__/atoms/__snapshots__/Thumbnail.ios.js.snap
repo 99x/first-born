@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders extra large rounded thumbnail 1`] = `
+<Image
+  source={
+    Object {
+      "testUri": "../../../firstBorn-logo.png",
+    }
+  }
+  style={
+    Object {
+      "borderRadius": 75,
+      "height": 150,
+      "width": 150,
+    }
+  }
+/>
+`;
+
+exports[`renders extra large thumbnail 1`] = `
+<Image
+  source={
+    Object {
+      "testUri": "../../../firstBorn-logo.png",
+    }
+  }
+  style={
+    Object {
+      "height": 150,
+      "width": 150,
+    }
+  }
+/>
+`;
+
+exports[`renders large rounded thumbnail 1`] = `
+<Image
+  source={
+    Object {
+      "testUri": "../../../firstBorn-logo.png",
+    }
+  }
+  style={
+    Object {
+      "borderRadius": 37.5,
+      "height": 75,
+      "width": 75,
+    }
+  }
+/>
+`;
+
+exports[`renders large thumbnail 1`] = `
+<Image
+  source={
+    Object {
+      "testUri": "../../../firstBorn-logo.png",
+    }
+  }
+  style={
+    Object {
+      "height": 75,
+      "width": 75,
+    }
+  }
+/>
+`;
+
+exports[`renders medium rounded thumbnail 1`] = `
+<Image
+  source={
+    Object {
+      "testUri": "../../../firstBorn-logo.png",
+    }
+  }
+  style={
+    Object {
+      "borderRadius": 25,
+      "height": 50,
+      "width": 50,
+    }
+  }
+/>
+`;
+
+exports[`renders medium thumbnail 1`] = `
+<Image
+  source={
+    Object {
+      "testUri": "../../../firstBorn-logo.png",
+    }
+  }
+  style={
+    Object {
+      "height": 50,
+      "width": 50,
+    }
+  }
+/>
+`;
+
+exports[`renders small rounded thumbnail 1`] = `
+<Image
+  source={
+    Object {
+      "testUri": "../../../firstBorn-logo.png",
+    }
+  }
+  style={
+    Object {
+      "borderRadius": 17,
+      "height": 34,
+      "width": 34,
+    }
+  }
+/>
+`;
+
+exports[`renders small thumbnail 1`] = `
+<Image
+  source={
+    Object {
+      "testUri": "../../../firstBorn-logo.png",
+    }
+  }
+  style={
+    Object {
+      "height": 34,
+      "width": 34,
+    }
+  }
+/>
+`;

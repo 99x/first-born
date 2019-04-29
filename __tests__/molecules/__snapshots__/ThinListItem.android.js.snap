@@ -1,0 +1,503 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders colored thin list item with heading and title 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#FFF",
+      "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+      "borderBottomWidth": 0.5,
+      "borderTopColor": "rgba(33, 33, 33, 0.4)",
+      "borderTopWidth": 0.5,
+      "flex": 1,
+      "flexDirection": "row",
+      "opacity": 1,
+      "paddingRight": 10,
+      "width": 750,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flex": 4,
+        "flexDirection": "column",
+        "paddingHorizontal": 15,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "textAlign": "left",
+          },
+        ]
+      }
+    >
+      Heading
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.4)",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+        ]
+      }
+    >
+      description
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`renders thin list item with heading 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#FFF",
+      "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+      "borderBottomWidth": 0.5,
+      "borderTopColor": "rgba(33, 33, 33, 0.4)",
+      "borderTopWidth": 0.5,
+      "flex": 1,
+      "flexDirection": "row",
+      "opacity": 1,
+      "paddingRight": 10,
+      "width": 750,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flex": 4,
+        "flexDirection": "column",
+        "paddingHorizontal": 15,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "textAlign": "left",
+          },
+        ]
+      }
+    >
+      Heading
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`renders thin list item with heading and title 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#FFF",
+      "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+      "borderBottomWidth": 0.5,
+      "borderTopColor": "rgba(33, 33, 33, 0.4)",
+      "borderTopWidth": 0.5,
+      "flex": 1,
+      "flexDirection": "row",
+      "opacity": 1,
+      "paddingRight": 10,
+      "width": 750,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flex": 4,
+        "flexDirection": "column",
+        "paddingHorizontal": 15,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "textAlign": "left",
+          },
+        ]
+      }
+    >
+      Heading
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.4)",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+        ]
+      }
+    >
+      description
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`renders thin list item with heading, title and arrow 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#FFF",
+      "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+      "borderBottomWidth": 0.5,
+      "borderTopColor": "rgba(33, 33, 33, 0.4)",
+      "borderTopWidth": 0.5,
+      "flex": 1,
+      "flexDirection": "row",
+      "opacity": 1,
+      "paddingRight": 10,
+      "width": 750,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flex": 4,
+        "flexDirection": "column",
+        "paddingHorizontal": 15,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "textAlign": "left",
+          },
+        ]
+      }
+    >
+      Heading
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.4)",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+        ]
+      }
+    >
+      description
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "fontSize": 25,
+          },
+          undefined,
+          Object {
+            "fontFamily": "Material Icons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`renders thin list item with heading, title and image 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#FFF",
+      "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+      "borderBottomWidth": 0.5,
+      "borderTopColor": "rgba(33, 33, 33, 0.4)",
+      "borderTopWidth": 0.5,
+      "flex": 1,
+      "flexDirection": "row",
+      "opacity": 1,
+      "paddingRight": 10,
+      "width": 750,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../firstBorn-logo.png",
+        }
+      }
+      style={
+        Object {
+          "borderRadius": 17,
+          "height": 34,
+          "width": 34,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flex": 4,
+        "flexDirection": "column",
+        "paddingHorizontal": 15,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "textAlign": "left",
+          },
+        ]
+      }
+    >
+      Heading
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.4)",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+        ]
+      }
+    >
+      description
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`renders thin list item with heading, title, image and arrow 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#FFF",
+      "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+      "borderBottomWidth": 0.5,
+      "borderTopColor": "rgba(33, 33, 33, 0.4)",
+      "borderTopWidth": 0.5,
+      "flex": 1,
+      "flexDirection": "row",
+      "opacity": 1,
+      "paddingRight": 10,
+      "width": 750,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../firstBorn-logo.png",
+        }
+      }
+      style={
+        Object {
+          "borderRadius": 17,
+          "height": 34,
+          "width": 34,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flex": 4,
+        "flexDirection": "column",
+        "paddingHorizontal": 15,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.87)",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "textAlign": "left",
+          },
+        ]
+      }
+    >
+      Heading
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.4)",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+        ]
+      }
+    >
+      description
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "fontSize": 25,
+          },
+          undefined,
+          Object {
+            "fontFamily": "Material Icons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+</View>
+`;

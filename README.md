@@ -114,10 +114,10 @@ You can use any [Text property](http://facebook.github.io/react-native/docs/text
 
 #### Icon
 
-The Ionicons component from `react-native-vector-icons` is used.
+The All Icon components (all font styles) from `react-native-vector-icons` is used.
 
 ```html
-<Icon name='heart'>
+<Icon name='heart'/>
 ```
 ##### Android
 ![Android Icon](https://user-images.githubusercontent.com/24349997/55306382-ace16100-5471-11e9-96fb-bca1ff545b03.PNG "Android Icon") 
@@ -125,13 +125,14 @@ The Ionicons component from `react-native-vector-icons` is used.
 ##### iOS
 ![iOS Icon](https://user-images.githubusercontent.com/24349997/55306384-aeab2480-5471-11e9-9129-0e1650e60c60.png "iOS Icon")
 
-You can use any [Text property](http://facebook.github.io/react-native/docs/text.html) and the following:
+You can use any [TouchableOpacity property](http://facebook.github.io/react-native/docs/touchableopacity.html) and the following:
 
-| Prop        | Description                                                                                                  | Default |
-|-------------|--------------------------------------------------------------------------------------------------------------|---------|
-| **`size`**  | Size of the icon.                                                                                            | `'p'`   |
-| **`name`**  | Similar to the name attribute in `react-native-vector-icons`, but does not require the prefix `md` or `ios`. | _None_  |
-| **`color`** | Color of the icon.                                                                                           | _white_ |
+| Prop        | Description                                                                                                                                                                                     | Default |
+|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
+| **`size`**  | Size of the icon.                                                                                                                                                                               | `18`    |
+| **`name`**  | Similar to the name attribute in `react-native-vector-icons`. Does not require the prefix `md` or `ios` for Ionicons.                                                                           | _None_  |
+| **`color`** | Color of the icon.                                                                                                                                                                              | _white_ |
+| **`type`**  | Type of the icon font style. ('zocial', 'octicon', 'material', 'material-community', 'ionicon', 'foundation', 'evilicon', 'entypo', 'font-awesome', 'simple-line-icon', 'feather', 'antdesign') | _white_ |
 
 #### Badge
 
@@ -157,6 +158,22 @@ You can use any [View property](https://facebook.github.io/react-native/docs/vie
 | Prop        | Description          | Default   |
 |-------------|----------------------|-----------|
 | **`color`** | Color of the button. | _primary_ |
+
+#### Thumbnail
+
+An Image component that displays either a square or circular image.
+
+```html
+<Thumbnail source={require("path/to/image.png")}/>
+```
+
+You can use any [Image property](http://facebook.github.io/react-native/docs/image.html), [TouchableOpacity property](http://facebook.github.io/react-native/docs/touchableopacity.html) and the following:
+
+| Prop             | Description                                                    | Default    |
+|------------------|----------------------------------------------------------------|------------|
+| **`size`**       | Size of the image. ('small', 'medium', 'large', 'exlarge')     | `'medium'` |
+| **`customSize`** | Size of the image, if it does not fit the above defined sizes. | _None_     |
+| **`rounded`**    | If the image is to be a circle.                                | _false_    |
 
 #### Button
 
@@ -369,13 +386,13 @@ Additional Props;
 | **`label`** | Label to display name of input. **(Required)** | _None_  |
 
 
-#### Notifications
+#### Simple Notifications
 
 ```html
 <Notification ref={"alert"} />
 ```
 
-To use the Notification Component and pass data to it, you will need to register a Notification manager in `componentDidMount` and unreguster it in `componentWillUnmount`.
+To use the Notification Component and pass data to it, you will need to register a Notification manager in `componentDidMount` and unregister it in `componentWillUnmount`.
 
 ```js
 componentDidMount() {
@@ -408,7 +425,7 @@ The data that can be passed to the notification are;
 | Prop                       | Description                                                    | Default     |
 |----------------------------|----------------------------------------------------------------|-------------|
 | **`message`**              | Message to display. **(Required)**                             | _None_      |
-| **`shouldHideAfterDelay`** | If notification should hide after display or keep being shown. | _false_     |
+| **`shouldHideAfterDelay`** | If notification should hide after display or keep being shown. | _true_      |
 | **`durationToHide`**       | Animation duration for the notification to completely hide.    | `350`       |
 | **`durationToShow`**       | Animation duration for the notification to completely show.    | `350`       |
 | **`duration`**             | Duration of time to display the alert                          | `3000`      |
@@ -416,12 +433,68 @@ The data that can be passed to the notification are;
 | **`icon`**                 | Icon to be displayed next to notification message              | `'alert'`   |
 | **`color`**                | Background color of the Notification body.                     | `'#007bff'` |
 
-#### List Item
+#### SnackBars
+
+```html
+<SnackBar ref={"alert"} />
+```
+
+To use the SnackBar Component and pass data to it, you will need to register a SnackBar manager in `componentDidMount` and unregister it in `componentWillUnmount`.
+
+```js
+componentDidMount() {
+    SnackManager.registerMessageBar(this.refs.alert);
+}
+
+componentWillUnmount() {
+    SnackManager.unregisterMessageBar();
+}
+```
+
+To trigger the SnackBar display, you will need to run the SnackBar manager method `showAlert`.
+
+```js
+handleShowSnackBar = () => {
+    SnackManager.showAlert({
+        message: 'Your alert message goes here' // required
+    });
+}
+```
+
+##### Android
+![Android SnackBar](https://user-images.githubusercontent.com/24349997/56493489-de979600-650c-11e9-94c7-1b85c551b32d.png "Android SnackBar")
+
+##### iOS
+ ![iOS SnackBar](https://user-images.githubusercontent.com/24349997/56493776-d55af900-650d-11e9-8692-d2b632e4a768.png "iOS SnackBar")
+
+The data that can be passed to the SnackBar are;
+
+| Prop                       | Description                                                                    | Default     |
+|----------------------------|--------------------------------------------------------------------------------|-------------|
+| **`message`**              | Message to display. **(Required)**                                             | _None_      |
+| **`shouldHideAfterDelay`** | If SnackBar should hide after display or keep being shown.                     | _true_      |
+| **`durationToHide`**       | Animation duration for the SnackBar to completely hide.                        | `350`       |
+| **`durationToShow`**       | Animation duration for the SnackBar to completely show.                        | `350`       |
+| **`duration`**             | Duration of time to display the alert                                          | `3000`      |
+| **`backgroundColor`**      | Background color of the SnackBar body.                                         | `'#333333'` |
+| **`onClickDismiss`**       | If SnackBar should hide after clicking the action button.                      | _true_      |
+| **`position`**             | Position of SnackBar notification ('bottom', 'top').                           | `'bottom'`  |
+| **`action`**               | An object denoting the method to run when the snack alerts button is clicked . | see below   |
+
+The data to be passed to the action prop of a SnackBar;
+
+| Prop          | Description                               | Default                       |
+|---------------|-------------------------------------------|-------------------------------|
+| **`title`**   | Title of the button                       | `'Close'`                     |
+| **`onPress`** | Method to run when the button is clicked. | internal method to hide alert |
+| **`color`**   | Button's text color                       | _error_                       |
+
+#### ListItem
 
 A List Item that displays a title (required), description and image. This molecule makes use of the `Text` Atom.
 
 ```html
-<ListItem title="Heading" description="Description" image={require("../assets/images/scenery.jpg")} >
+<ListItem title="Heading" description="Description" image={{ source: require("path/to/image.png")}} >
     <ListItem title="Heading" onPress={this.handleButtonClick} description="Description" /> //Nested List Item
 </ListItem>
 ```
@@ -434,14 +507,35 @@ A List Item that displays a title (required), description and image. This molecu
 
 You can use any [TouchableOpacity property](https://facebook.github.io/react-native/docs/touchableopacity.html) and the following:
 
-| Prop                  | Description                                    | Default |
-|-----------------------|------------------------------------------------|---------|
-| **`title`**           | Title of List Item. **(Required)**             | _None_  |
-| **`description`**     | Description of List Item.                      | _None_  |
-| **`image`**           | Image to display in List Item.                 | _None_  |
-| **`block`**           | If the List Item has full width of the device. | _false_ |
-| **`backgroundColor`** | Background color of List Item.                 | _white_ |
-| **`secondary`**       | If the List Item is nested inside another.     | _false_ |
+| Prop                  | Description                                                                     | Default |
+|-----------------------|---------------------------------------------------------------------------------|---------|
+| **`title`**           | Description of List Item. **(Required)**                                        | _None_  |
+| **`description`**     | Description of List Item.                                                       | _None_  |
+| **`image`**           | Image to display in List Item. You can use all `react-native Image` properties. | _None_  |
+| **`block`**           | If the List Item has full width of the device.                                  | _false_ |
+| **`backgroundColor`** | Background color of List Item.                                                  | _white_ |
+| **`secondary`**       | If the List Item is nested inside another.                                      | _false_ |
+| **`rounded`**         | If the image displayed on the ListItem is rouned or not.                        | _false_ |
+
+#### ThinListItem
+
+A List Item that displays a title (required), description and image. This molecule makes use of the `Text` Atom. Similar to the above molecule but smaller with a few added features
+
+```html
+<ThinListItem title="Heading" description="Description" image={{ source: require("path/to/image.png") }} />
+```
+
+You can use any [TouchableOpacity property](https://facebook.github.io/react-native/docs/touchableopacity.html) and the following:
+
+| Prop                  | Description                                                                     | Default |
+|-----------------------|---------------------------------------------------------------------------------|---------|
+| **`title`**           | Description of List Item. **(Required)**                                        | _None_  |
+| **`description`**     | Description of List Item.                                                       | _None_  |
+| **`image`**           | Image to display in List Item. You can use all `react-native Image` properties. | _None_  |
+| **`icon`**            | Icon to display in List Item. You can use all `Icon` properties.                | _None_  |
+| **`arrow`**           | If the List Item has an arrow at the right of the item.                         | _false_ |
+| **`backgroundColor`** | Background color of List Item.                                                  | _white_ |
+| **`rounded`**         | If the image displayed on the ListItem is rouned or not.                        | _false_ |
 
 #### Floating Action Button
 
@@ -450,7 +544,7 @@ This molecule makes use of the `Text` and `Icon` Atoms.
 ###### One action
 
 ```html
-<FloatingButton onPress={this.handleAction} image={require("./assets/images/accessibility.png")} />
+<FloatingButton onPress={this.handleAction} image={require("path/to/image.png")} />
 ```
 
 ###### Multiple actions
@@ -458,7 +552,7 @@ This molecule makes use of the `Text` and `Icon` Atoms.
 ```js
 
 actions = [
-    { text: 'Accessibility', image: require("./assets/images/accessibility.png"), name: 'bt_accessibility', position: 2, onPress: () => this.handleAccessibility() },
+    { text: 'Accessibility', image: require("path/to/image.png"), name: 'bt_accessibility', position: 2, onPress: () => this.handleAccessibility() },
     { text: 'Location', icon: "pin", name: 'bt_room', position: 1, onPress: () => this.handleLocation() },
     { text: 'Video', icon: "videocam", name: 'bt_videocam', position: 3, onPress: () => this.handleVideo() }
 ];
@@ -526,7 +620,7 @@ The props for the nested `FloatingButtonItems`, which is being sent through the 
 A Card that displays a title (required), description and image.
 
 ```html
-<Card title="Heading" description="Description" image={require("../assets/images/scenery.jpg")} />
+<Card title="Heading" description="Description" image={{ source: require("path/to/image.png")}} />
 ```
 
 ##### Android
@@ -537,13 +631,13 @@ A Card that displays a title (required), description and image.
 
 You can use any [TouchableOpacity property](https://facebook.github.io/react-native/docs/touchableopacity.html) and the following:
 
-| Prop                  | Description                               | Default |
-|-----------------------|-------------------------------------------|---------|
-| **`title`**           | Title of Card. **(Required)**             | _None_  |
-| **`description`**     | Description of Card.                      | _None_  |
-| **`image`**           | Image to display in Card.                 | _None_  |
-| **`block`**           | If the Card has full width of the device. | _false_ |
-| **`backgroundColor`** | Background color of Card.                 | _white_ |
+| Prop                  | Description                                                                | Default |
+|-----------------------|----------------------------------------------------------------------------|---------|
+| **`title`**           | Description of Card. **(Required)**                                        | _None_  |
+| **`description`**     | Description of Card.                                                       | _None_  |
+| **`image`**           | Image to display in Card. You can use all `react-native Image` properties. | _None_  |
+| **`block`**           | If the Card has full width of the device.                                  | _false_ |
+| **`backgroundColor`** | Background color of Card.                                                  | _white_ |
 
 #### AccordionElement
 
@@ -608,9 +702,9 @@ A vertical list of ListItem molecules
 
 ```js
 listData = [
-    { title: "Heading 1", description: "Description 1", image: require("./assets/images/scenery.jpg") },
-    { title: "Heading 2", description: "Description 2", image: require("./assets/images/scenery.jpg") },
-    { title: "Heading 3", description: "Description 3", image: require("./assets/images/scenery.jpg") }
+    { title: "Heading 1", description: "Description 1", image: { source: require("path/to/image.png")} },
+    { title: "Heading 2", description: "Description 2", image: { source: require("path/to/image.png")} },
+    { title: "Heading 3", description: "Description 3", image: { source: require("path/to/image.png")} }
 ];
 
 <ListView data={listData} />
@@ -632,7 +726,13 @@ handleListItemClick = (title, description) => {
 ##### iOS
 ![iOS ListView](https://user-images.githubusercontent.com/24349997/55306880-5d9c3000-5473-11e9-8701-0cfdef3200b8.png "iOS ListView")
 
-You can use any [FlatList property](http://facebook.github.io/react-native/docs/flatlist.html).
+You can use any [FlatList property](http://facebook.github.io/react-native/docs/flatlist.html) and the following:
+
+| Prop                  | Description                                              | Default |
+|-----------------------|----------------------------------------------------------|---------|
+| **`backgroundColor`** | Background color of all cards.                           | _white_ |
+| **`thin`**            | If the `'ThinListItem'` is the component to be rendered. | _false_ |
+| **`rounded`**         | If the image displayed on the ListItem is rouned or not. | _false_ |
 
 The data to be sent to the ListView needs to contain the same fields as the props of [ListItem](#listitem) component.
 
@@ -641,9 +741,9 @@ A vertical/horizontal List of Card molecules.
 
 ```js
 listData = [
-    { title: "Heading 1", description: "Description 1", image: require("./assets/images/scenery.jpg") },
-    { title: "Heading 2", description: "Description 2", image: require("./assets/images/scenery.jpg") },
-    { title: "Heading 3", description: "Description 3", image: require("./assets/images/scenery.jpg") }
+    { title: "Heading 1", description: "Description 1", image: { source: require("path/to/image.png")} },
+    { title: "Heading 2", description: "Description 2", image: { source: require("path/to/image.png")} },
+    { title: "Heading 3", description: "Description 3", image: { source: require("path/to/image.png")} }
 ];
 
 <CardList data={listData} />
@@ -665,7 +765,11 @@ handleListItemClick = (title, description) => {
 ##### iOS
 ![iOS CardList](https://user-images.githubusercontent.com/24349997/55306876-5c6b0300-5473-11e9-86c0-8c2fb2f64e90.png "iOS CardList")
 
-You can use any [FlatList property](http://facebook.github.io/react-native/docs/flatlist.html).
+You can use any [FlatList property](http://facebook.github.io/react-native/docs/flatlist.html) and the following:
+
+| Prop                  | Description                    | Default |
+|-----------------------|--------------------------------|---------|
+| **`backgroundColor`** | Background color of all cards. | _white_ |
 
 The data to be sent to the CardList needs to contain the same fields as the props of [Card](#card) component.
 
@@ -730,19 +834,27 @@ The Navigation Header makes use of the `Text` and `Icon` atom.
 
 `NavBar` is the main container for the header. It makes use of the [View property](https://facebook.github.io/react-native/docs/view.html) and the following:
 
-| Prop                 | Description                                     | Default                                    |
-|----------------------|-------------------------------------------------|--------------------------------------------|
-| **`transparent`**    | If status bar above header is transparent       | _None_                                     |
-| **`statusBarColor`** | Background color of the `NavBar`. Android only. | _primary_ for Android, `'#F8F8F8'` for iOS |
+| Prop                 | Description                                                       | Default                                                 |
+|----------------------|-------------------------------------------------------------------|---------------------------------------------------------|
+| **`transparent`**    | If status bar above header is transparent                         | _None_                                                  |
+| **`statusBarColor`** | Background color of the `NavBar`.                                 | _primary_ for Android, `'#F8F8F8'` for iOS              |
+| **`statusBarColor`** | Content type of the `StatusBar`.('light-content', 'dark-content') | `'light-content'` for Android, `'dark-content'` for iOS |
 
-`NavBarBody` is a container that displays its children in the center of the header. It only accepts the title of the page within a Text tag. `NavBarLeft` displays its children on the left while, `NavBarRight` is displays its children on the right side of the header. 
+`NavBarBody` is a container that displays its children in the center of the header. It only accepts the title of the page within a Text tag. It makes use of the [View property](https://facebook.github.io/react-native/docs/view.html) and the following:
+
+| Prop        | Description               | Default                              |
+|-------------|---------------------------|--------------------------------------|
+| **`color`** | Color of the title`Text`. | _white_ for Android, _black_ for iOS |
+
+`NavBarLeft` displays its children on the left while, `NavBarRight` is displays its children on the right side of the header. 
 **All headers must contain these three tags, to render uniformly.**
 
 `NavBarButton` is the button element to be used within the `NavBar`. It will only accept the atoms `Text`, `Icon` and a `react-native Image`. It contains the same property as a [TouchableOpacity](https://facebook.github.io/react-native/docs/touchableopacity.html). It also comes with an inbuilt type for common features, which are `'drawer'`, `'back'` and `'search'`.
 
-| Prop       | Description                                                                 | Default |
-|------------|-----------------------------------------------------------------------------|---------|
-| **`type`** | Built in UI implementation of common `NavBar` button (drawer, back, search) | _None_  |
+| Prop        | Description                                                                 | Default                                  |
+|-------------|-----------------------------------------------------------------------------|------------------------------------------|
+| **`type`**  | Built in UI implementation of common `NavBar` button (drawer, back, search) | _None_                                   |
+| **`color`** | Text and Icon color of button.                                              | _white_ for Android, `'#0a60ff'` for iOS |
 
 #### TabBar
 The Navigation Footer makes use of the `Text` and `Icon` atom.
@@ -776,9 +888,11 @@ The Navigation Footer makes use of the `Text` and `Icon` atom.
 
 `TabBar` is the main container for the footer navigation. It makes use of the [View property](https://facebook.github.io/react-native/docs/view.html) and the following:
 
-| Prop        | Description                                     | Default                                    |
-|-------------|-------------------------------------------------|--------------------------------------------|
-| **`color`** | Background color of the `TabBar`. Android only. | _primary_ for Android, `'#F8F8F8'` for iOS |
+| Prop                | Description                          | Default                                                       |
+|---------------------|--------------------------------------|---------------------------------------------------------------|
+| **`color`**         | Background color of the `TabBar`.    | _primary_ for Android, `'#F8F8F8'` for iOS                    |
+| **`activeColor`**   | Text and Icon color of active tab.   | _white_ for Android, `'#0a60ff'` for iOS                      |
+| **`inactiveColor`** | Text and Icon color of inactive tab. | `'rgba(209, 216, 224, 0.8)'` for Android, `'#8e8e93'` for iOS |
 
 `TabItem` is the button element to be used within the `TabBar`. It will only accept the atoms `Text`, `Icon` and a `react-native Image`. It contains the same property as a [TouchableOpacity](https://facebook.github.io/react-native/docs/touchableopacity.html). In addition, it contains the following properties as well;
 

@@ -22,6 +22,7 @@ export class Button extends Component {
             secondary,
             transparent,
             circle,
+            style,
             ...otherProps
         } = this.props;
 
@@ -111,7 +112,7 @@ export class Button extends Component {
         return (
             <TouchableOpacity
                 ref={c => (this._root = c)}
-                style={buttonStyle}
+                style={[buttonStyle, style]}
                 {...otherProps}
             >
                 {children}
