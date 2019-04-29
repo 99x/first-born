@@ -1,37 +1,53 @@
-import { Platform } from "react-native";
 import React, { Component } from "react";
+import { Platform, TouchableOpacity } from "react-native";
 import Ionicon from "react-native-vector-icons/Ionicons";
 import PropTypes from "prop-types";
 import { commonColors } from "../utils/color";
+import getIconType from "../utils/getIconType";
 
 export class Icon extends Component {
     render() {
-        const { name, size, color, ...otherProps } = this.props;
+        const { name, type, ...otherProps } = this.props;
 
-        if (!name.includes("logo")) {
+        const IconComponent = getIconType(type);
+
+        if (type === "ionicon" && !name.includes("logo")) {
             return (
-                <Ionicon
+                <IconComponent
                     name={
                         Platform.OS === "android" ? "md-" + name : "ios-" + name
                     }
-                    size={size}
-                    color={color}
                     {...otherProps}
                 />
             );
         }
-        return (
-            <Ionicon name={name} size={size} color={color} {...otherProps} />
-        );
+        return <IconComponent name={name} {...otherProps} />;
     }
 }
 
 Icon.propTypes = {
-    ...Ionicon.propTypes,
-    name: PropTypes.string
+    name: PropTypes.string,
+    size: PropTypes.number,
+    color: PropTypes.string,
+    type: PropTypes.oneOf([
+        "zocial",
+        "octicon",
+        "material",
+        "material-community",
+        "ionicon",
+        "foundation",
+        "evilicon",
+        "entypo",
+        "font-awesome",
+        "simple-line-icon",
+        "feather",
+        "antdesign"
+    ]),
+    ...TouchableOpacity.propTypes
 };
 
 Icon.defaultProps = {
     color: commonColors.white,
-    size: 18
+    size: 18,
+    type: "ionicon"
 };

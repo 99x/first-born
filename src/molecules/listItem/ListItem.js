@@ -12,6 +12,7 @@ import { Text } from "../../atoms/Text";
 import { Icon } from "../../atoms/Icon";
 import { commonColors } from "../../utils/color";
 import { deviceVariables } from "../../variables/deviceVariables";
+import { Thumbnail } from "../../atoms/Thumbnail";
 
 export class ListItem extends Component {
     constructor(props) {
@@ -30,6 +31,7 @@ export class ListItem extends Component {
             block,
             backgroundColor,
             secondary,
+            rounded,
             ...otherProps
         } = this.props;
         const { expanded } = this.state;
@@ -40,13 +42,13 @@ export class ListItem extends Component {
                 : null
         );
 
-        const cardBackColor = secondary
+        const listItemBackColor = secondary
             ? commonColors.secondaryBackground
             : backgroundColor;
 
-        const cardStyle = block
-            ? [styles.containerBlock, { backgroundColor: cardBackColor }]
-            : [styles.container, { backgroundColor: cardBackColor }];
+        const listItemStyle = block
+            ? [styles.containerBlock, { backgroundColor: listItemBackColor }]
+            : [styles.container, { backgroundColor: listItemBackColor }];
 
         const onListItemTap = children
             ? this.expandListItem
@@ -57,14 +59,23 @@ export class ListItem extends Component {
         return (
             <View style={{ width: "100%" }}>
                 <TouchableOpacity
-                    style={cardStyle}
+                    style={listItemStyle}
                     disabled={!onListItemTap}
                     onPress={onListItemTap}
                     {...otherProps}
                 >
-                    {image && (
+                    {image && rounded && (
                         <View style={styles.imageContainer}>
-                            <Image source={image} style={styles.image} />
+                            <Thumbnail
+                                {...image}
+                                rounded
+                                style={{ marginLeft: 10 }}
+                            />
+                        </View>
+                    )}
+                    {image && !rounded && (
+                        <View style={styles.imageContainer}>
+                            <Thumbnail {...image} customSize={80} />
                         </View>
                     )}
                     <View style={styles.textContainer}>
@@ -111,17 +122,21 @@ export class ListItem extends Component {
 ListItem.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string,
-    image: PropTypes.any,
+    image: PropTypes.shape({
+        ...Thumbnail.propTypes
+    }),
     block: PropTypes.bool,
     backgroundColor: PropTypes.string,
     secondary: PropTypes.bool,
+    rounded: PropTypes.bool,
     ...TouchableOpacity.propTypes
 };
 
 ListItem.defaultProps = {
     backgroundColor: commonColors.white,
     secondary: false,
-    block: false
+    block: false,
+    rounded: true
 };
 
 const styles = StyleSheet.create({
@@ -140,8 +155,7 @@ const styles = StyleSheet.create({
                 borderBottomColor: commonColors.lightGrey
             }
         }),
-
-        paddingHorizontal: 5
+        paddingRight: 5
     },
     containerBlock: {
         width: deviceVariables.width,
@@ -151,7 +165,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 0.5,
         borderTopColor: commonColors.lightGrey,
         borderBottomColor: commonColors.lightGrey,
-        paddingHorizontal: 15
+        paddingRight: 15
     },
     textContainer: {
         flex: 3,
@@ -163,10 +177,5 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center"
-    },
-    image: {
-        height: 50,
-        width: 50,
-        borderRadius: 50 / 2
     }
 });
