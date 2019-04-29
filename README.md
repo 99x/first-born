@@ -386,13 +386,13 @@ Additional Props;
 | **`label`** | Label to display name of input. **(Required)** | _None_  |
 
 
-#### Notifications
+#### Simple Notifications
 
 ```html
 <Notification ref={"alert"} />
 ```
 
-To use the Notification Component and pass data to it, you will need to register a Notification manager in `componentDidMount` and unreguster it in `componentWillUnmount`.
+To use the Notification Component and pass data to it, you will need to register a Notification manager in `componentDidMount` and unregister it in `componentWillUnmount`.
 
 ```js
 componentDidMount() {
@@ -425,13 +425,69 @@ The data that can be passed to the notification are;
 | Prop                       | Description                                                    | Default     |
 |----------------------------|----------------------------------------------------------------|-------------|
 | **`message`**              | Message to display. **(Required)**                             | _None_      |
-| **`shouldHideAfterDelay`** | If notification should hide after display or keep being shown. | _false_     |
+| **`shouldHideAfterDelay`** | If notification should hide after display or keep being shown. | _true_      |
 | **`durationToHide`**       | Animation duration for the notification to completely hide.    | `350`       |
 | **`durationToShow`**       | Animation duration for the notification to completely show.    | `350`       |
 | **`duration`**             | Duration of time to display the alert                          | `3000`      |
 | **`image`**                | Image to be displayed next to notification message             | _None_      |
 | **`icon`**                 | Icon to be displayed next to notification message              | `'alert'`   |
 | **`color`**                | Background color of the Notification body.                     | `'#007bff'` |
+
+#### SnackBars
+
+```html
+<SnackBar ref={"alert"} />
+```
+
+To use the SnackBar Component and pass data to it, you will need to register a SnackBar manager in `componentDidMount` and unregister it in `componentWillUnmount`.
+
+```js
+componentDidMount() {
+    SnackManager.registerMessageBar(this.refs.alert);
+}
+
+componentWillUnmount() {
+    SnackManager.unregisterMessageBar();
+}
+```
+
+To trigger the SnackBar display, you will need to run the SnackBar manager method `showAlert`.
+
+```js
+handleShowSnackBar = () => {
+    SnackManager.showAlert({
+        message: 'Your alert message goes here' // required
+    });
+}
+```
+
+##### Android
+![Android SnackBar](https://user-images.githubusercontent.com/24349997/56493489-de979600-650c-11e9-94c7-1b85c551b32d.png "Android SnackBar")
+
+##### iOS
+ ![iOS SnackBar](https://user-images.githubusercontent.com/24349997/56493776-d55af900-650d-11e9-8692-d2b632e4a768.png "iOS SnackBar")
+
+The data that can be passed to the SnackBar are;
+
+| Prop                       | Description                                                                    | Default     |
+|----------------------------|--------------------------------------------------------------------------------|-------------|
+| **`message`**              | Message to display. **(Required)**                                             | _None_      |
+| **`shouldHideAfterDelay`** | If SnackBar should hide after display or keep being shown.                     | _true_      |
+| **`durationToHide`**       | Animation duration for the SnackBar to completely hide.                        | `350`       |
+| **`durationToShow`**       | Animation duration for the SnackBar to completely show.                        | `350`       |
+| **`duration`**             | Duration of time to display the alert                                          | `3000`      |
+| **`backgroundColor`**      | Background color of the SnackBar body.                                         | `'#333333'` |
+| **`onClickDismiss`**       | If SnackBar should hide after clicking the action button.                      | _true_      |
+| **`position`**             | Position of SnackBar notification ('bottom', 'top').                           | `'bottom'`  |
+| **`action`**               | An object denoting the method to run when the snack alerts button is clicked . | see below   |
+
+The data to be passed to the action prop of a SnackBar;
+
+| Prop          | Description                               | Default                       |
+|---------------|-------------------------------------------|-------------------------------|
+| **`title`**   | Title of the button                       | `'Close'`                     |
+| **`onPress`** | Method to run when the button is clicked. | internal method to hide alert |
+| **`color`**   | Button's text color                       | _error_                       |
 
 #### ListItem
 

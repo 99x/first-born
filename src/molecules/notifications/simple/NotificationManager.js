@@ -2,33 +2,12 @@ module.exports = {
     _currentMessageBarAlert: null,
     _messageAlerts: new Array(),
 
-    setCurrentMessageBarAlert(alert) {
-        console.warn(
-            "This method is deprecated, please use registerMessageBar instead."
-        );
-        this.registerMessageBar(alert);
-    },
-
-    removeCurrentMessageBarAlert() {
-        console.warn(
-            "This method is deprecated, please use registerMessageBar instead."
-        );
-        this.unregisterMessageBar();
-    },
-
     registerMessageBar(messageBar) {
         this._currentMessageBarAlert = messageBar;
     },
 
     unregisterMessageBar() {
         this._currentMessageBarAlert = null;
-    },
-
-    showCurrentAlert(newState = null) {
-        console.warn(
-            "This method is deprecated, please use showAlert instead."
-        );
-        this.showAlert(newState);
     },
 
     showAlert(newState = null) {
