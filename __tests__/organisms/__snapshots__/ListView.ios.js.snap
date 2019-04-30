@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders a colored list of cards with heading and title 1`] = `
+exports[`renders a colored list of listItems with heading and title 1`] = `
 <RCTScrollView
   data={
     Array [
@@ -39,7 +39,6 @@ exports[`renders a colored list of cards with heading and title 1`] = `
   stickyHeaderIndices={Array []}
   style={
     Object {
-      "marginTop": 5,
       "width": "100%",
     }
   }
@@ -78,7 +77,7 @@ exports[`renders a colored list of cards with heading and title 1`] = `
               "flex": 1,
               "flexDirection": "row",
               "opacity": 1,
-              "paddingHorizontal": 5,
+              "paddingRight": 5,
             }
           }
         >
@@ -163,7 +162,7 @@ exports[`renders a colored list of cards with heading and title 1`] = `
               "flex": 1,
               "flexDirection": "row",
               "opacity": 1,
-              "paddingHorizontal": 5,
+              "paddingRight": 5,
             }
           }
         >
@@ -248,7 +247,7 @@ exports[`renders a colored list of cards with heading and title 1`] = `
               "flex": 1,
               "flexDirection": "row",
               "opacity": 1,
-              "paddingHorizontal": 5,
+              "paddingRight": 5,
             }
           }
         >
@@ -307,7 +306,268 @@ exports[`renders a colored list of cards with heading and title 1`] = `
 </RCTScrollView>
 `;
 
-exports[`renders a list of cards with heading 1`] = `
+exports[`renders a colored list of thin listItems with heading and title 1`] = `
+<RCTScrollView
+  data={
+    Array [
+      Object {
+        "description": "Description 1",
+        "title": "Heading 1",
+      },
+      Object {
+        "description": "Description 2",
+        "title": "Heading 2",
+      },
+      Object {
+        "description": "Description 3",
+        "title": "Heading 3",
+      },
+    ]
+  }
+  disableVirtualization={false}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  numColumns={1}
+  onContentSizeChange={[Function]}
+  onEndReachedThreshold={2}
+  onLayout={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+  updateCellsBatchingPeriod={50}
+  viewabilityConfigCallbackPairs={Array []}
+  windowSize={21}
+>
+  <View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "aliceblue",
+            "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+            "borderBottomWidth": 0.5,
+            "borderTopColor": "rgba(33, 33, 33, 0.4)",
+            "borderTopWidth": 0.5,
+            "flex": 1,
+            "flexDirection": "row",
+            "opacity": 1,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "flex": 4,
+              "flexDirection": "column",
+              "paddingHorizontal": 15,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgba(33, 33, 33, 0.87)",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            Heading 1
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgba(33, 33, 33, 0.4)",
+                  "fontSize": 13,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            Description 1
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "aliceblue",
+            "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+            "borderBottomWidth": 0.5,
+            "borderTopColor": "rgba(33, 33, 33, 0.4)",
+            "borderTopWidth": 0.5,
+            "flex": 1,
+            "flexDirection": "row",
+            "opacity": 1,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "flex": 4,
+              "flexDirection": "column",
+              "paddingHorizontal": 15,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgba(33, 33, 33, 0.87)",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            Heading 2
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgba(33, 33, 33, 0.4)",
+                  "fontSize": 13,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            Description 2
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "aliceblue",
+            "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+            "borderBottomWidth": 0.5,
+            "borderTopColor": "rgba(33, 33, 33, 0.4)",
+            "borderTopWidth": 0.5,
+            "flex": 1,
+            "flexDirection": "row",
+            "opacity": 1,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "flex": 4,
+              "flexDirection": "column",
+              "paddingHorizontal": 15,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgba(33, 33, 33, 0.87)",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            Heading 3
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgba(33, 33, 33, 0.4)",
+                  "fontSize": 13,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            Description 3
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`renders a list of listItems with heading 1`] = `
 <RCTScrollView
   data={
     Array [
@@ -343,7 +603,6 @@ exports[`renders a list of cards with heading 1`] = `
   stickyHeaderIndices={Array []}
   style={
     Object {
-      "marginTop": 5,
       "width": "100%",
     }
   }
@@ -382,7 +641,7 @@ exports[`renders a list of cards with heading 1`] = `
               "flex": 1,
               "flexDirection": "row",
               "opacity": 1,
-              "paddingHorizontal": 5,
+              "paddingRight": 5,
             }
           }
         >
@@ -453,7 +712,7 @@ exports[`renders a list of cards with heading 1`] = `
               "flex": 1,
               "flexDirection": "row",
               "opacity": 1,
-              "paddingHorizontal": 5,
+              "paddingRight": 5,
             }
           }
         >
@@ -524,7 +783,7 @@ exports[`renders a list of cards with heading 1`] = `
               "flex": 1,
               "flexDirection": "row",
               "opacity": 1,
-              "paddingHorizontal": 5,
+              "paddingRight": 5,
             }
           }
         >
@@ -569,7 +828,7 @@ exports[`renders a list of cards with heading 1`] = `
 </RCTScrollView>
 `;
 
-exports[`renders a list of cards with heading and title 1`] = `
+exports[`renders a list of listItems with heading and title 1`] = `
 <RCTScrollView
   data={
     Array [
@@ -608,7 +867,6 @@ exports[`renders a list of cards with heading and title 1`] = `
   stickyHeaderIndices={Array []}
   style={
     Object {
-      "marginTop": 5,
       "width": "100%",
     }
   }
@@ -647,7 +905,7 @@ exports[`renders a list of cards with heading and title 1`] = `
               "flex": 1,
               "flexDirection": "row",
               "opacity": 1,
-              "paddingHorizontal": 5,
+              "paddingRight": 5,
             }
           }
         >
@@ -732,7 +990,7 @@ exports[`renders a list of cards with heading and title 1`] = `
               "flex": 1,
               "flexDirection": "row",
               "opacity": 1,
-              "paddingHorizontal": 5,
+              "paddingRight": 5,
             }
           }
         >
@@ -817,7 +1075,7 @@ exports[`renders a list of cards with heading and title 1`] = `
               "flex": 1,
               "flexDirection": "row",
               "opacity": 1,
-              "paddingHorizontal": 5,
+              "paddingRight": 5,
             }
           }
         >
@@ -869,6 +1127,1314 @@ exports[`renders a list of cards with heading and title 1`] = `
               }
             }
           />
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`renders a list of listItems with heading and title by a user defined renderItem method 1`] = `
+<RCTScrollView
+  data={
+    Array [
+      Object {
+        "description": "Description 1",
+        "title": "Heading 1",
+      },
+      Object {
+        "description": "Description 2",
+        "title": "Heading 2",
+      },
+      Object {
+        "description": "Description 3",
+        "title": "Heading 3",
+      },
+    ]
+  }
+  disableVirtualization={false}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  numColumns={1}
+  onContentSizeChange={[Function]}
+  onEndReachedThreshold={2}
+  onLayout={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+  updateCellsBatchingPeriod={50}
+  viewabilityConfigCallbackPairs={Array []}
+  windowSize={21}
+>
+  <View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#FFF",
+              "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+              "borderBottomWidth": 0.5,
+              "borderTopColor": "rgba(33, 33, 33, 0.4)",
+              "borderTopWidth": 0.5,
+              "flex": 1,
+              "flexDirection": "row",
+              "opacity": 1,
+              "paddingRight": 5,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "flex": 3,
+                "flexDirection": "column",
+                "padding": 15,
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.87)",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                    "textAlign": "left",
+                  },
+                ]
+              }
+            >
+              Heading 1
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.4)",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                    "textAlign": "left",
+                  },
+                ]
+              }
+            >
+              Description 1
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#FFF",
+              "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+              "borderBottomWidth": 0.5,
+              "borderTopColor": "rgba(33, 33, 33, 0.4)",
+              "borderTopWidth": 0.5,
+              "flex": 1,
+              "flexDirection": "row",
+              "opacity": 1,
+              "paddingRight": 5,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "flex": 3,
+                "flexDirection": "column",
+                "padding": 15,
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.87)",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                    "textAlign": "left",
+                  },
+                ]
+              }
+            >
+              Heading 2
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.4)",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                    "textAlign": "left",
+                  },
+                ]
+              }
+            >
+              Description 2
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#FFF",
+              "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+              "borderBottomWidth": 0.5,
+              "borderTopColor": "rgba(33, 33, 33, 0.4)",
+              "borderTopWidth": 0.5,
+              "flex": 1,
+              "flexDirection": "row",
+              "opacity": 1,
+              "paddingRight": 5,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "flex": 3,
+                "flexDirection": "column",
+                "padding": 15,
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.87)",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                    "textAlign": "left",
+                  },
+                ]
+              }
+            >
+              Heading 3
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.4)",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                    "textAlign": "left",
+                  },
+                ]
+              }
+            >
+              Description 3
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`renders a list of listItems with heading, title and image 1`] = `
+<RCTScrollView
+  data={
+    Array [
+      Object {
+        "description": "Description 1",
+        "image": Object {
+          "source": Object {
+            "testUri": "../../../firstBorn-logo.png",
+          },
+        },
+        "title": "Heading 1",
+      },
+      Object {
+        "description": "Description 2",
+        "image": Object {
+          "source": Object {
+            "testUri": "../../../firstBorn-logo.png",
+          },
+        },
+        "title": "Heading 2",
+      },
+      Object {
+        "description": "Description 3",
+        "image": Object {
+          "source": Object {
+            "testUri": "../../../firstBorn-logo.png",
+          },
+        },
+        "title": "Heading 3",
+      },
+    ]
+  }
+  disableVirtualization={false}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  numColumns={1}
+  onContentSizeChange={[Function]}
+  onEndReachedThreshold={2}
+  onLayout={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+  updateCellsBatchingPeriod={50}
+  viewabilityConfigCallbackPairs={Array []}
+  windowSize={21}
+>
+  <View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#FFF",
+              "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+              "borderBottomWidth": 0.5,
+              "borderTopColor": "rgba(33, 33, 33, 0.4)",
+              "borderTopWidth": 0.5,
+              "flex": 1,
+              "flexDirection": "row",
+              "opacity": 1,
+              "paddingRight": 5,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../firstBorn-logo.png",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 25,
+                  "height": 50,
+                  "width": 50,
+                }
+              }
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "flex": 3,
+                "flexDirection": "column",
+                "padding": 15,
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.87)",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                    "textAlign": "left",
+                  },
+                ]
+              }
+            >
+              Heading 1
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.4)",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                    "textAlign": "left",
+                  },
+                ]
+              }
+            >
+              Description 1
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#FFF",
+              "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+              "borderBottomWidth": 0.5,
+              "borderTopColor": "rgba(33, 33, 33, 0.4)",
+              "borderTopWidth": 0.5,
+              "flex": 1,
+              "flexDirection": "row",
+              "opacity": 1,
+              "paddingRight": 5,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../firstBorn-logo.png",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 25,
+                  "height": 50,
+                  "width": 50,
+                }
+              }
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "flex": 3,
+                "flexDirection": "column",
+                "padding": 15,
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.87)",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                    "textAlign": "left",
+                  },
+                ]
+              }
+            >
+              Heading 2
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.4)",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                    "textAlign": "left",
+                  },
+                ]
+              }
+            >
+              Description 2
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#FFF",
+              "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+              "borderBottomWidth": 0.5,
+              "borderTopColor": "rgba(33, 33, 33, 0.4)",
+              "borderTopWidth": 0.5,
+              "flex": 1,
+              "flexDirection": "row",
+              "opacity": 1,
+              "paddingRight": 5,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../firstBorn-logo.png",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 25,
+                  "height": 50,
+                  "width": 50,
+                }
+              }
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "flex": 3,
+                "flexDirection": "column",
+                "padding": 15,
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.87)",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                    "textAlign": "left",
+                  },
+                ]
+              }
+            >
+              Heading 3
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(33, 33, 33, 0.4)",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                    "textAlign": "left",
+                  },
+                ]
+              }
+            >
+              Description 3
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`renders a list of thin listItems with heading and title 1`] = `
+<RCTScrollView
+  data={
+    Array [
+      Object {
+        "description": "Description 1",
+        "title": "Heading 1",
+      },
+      Object {
+        "description": "Description 2",
+        "title": "Heading 2",
+      },
+      Object {
+        "description": "Description 3",
+        "title": "Heading 3",
+      },
+    ]
+  }
+  disableVirtualization={false}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  numColumns={1}
+  onContentSizeChange={[Function]}
+  onEndReachedThreshold={2}
+  onLayout={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+  updateCellsBatchingPeriod={50}
+  viewabilityConfigCallbackPairs={Array []}
+  windowSize={21}
+>
+  <View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#FFF",
+            "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+            "borderBottomWidth": 0.5,
+            "borderTopColor": "rgba(33, 33, 33, 0.4)",
+            "borderTopWidth": 0.5,
+            "flex": 1,
+            "flexDirection": "row",
+            "opacity": 1,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "flex": 4,
+              "flexDirection": "column",
+              "paddingHorizontal": 15,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgba(33, 33, 33, 0.87)",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            Heading 1
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgba(33, 33, 33, 0.4)",
+                  "fontSize": 13,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            Description 1
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#FFF",
+            "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+            "borderBottomWidth": 0.5,
+            "borderTopColor": "rgba(33, 33, 33, 0.4)",
+            "borderTopWidth": 0.5,
+            "flex": 1,
+            "flexDirection": "row",
+            "opacity": 1,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "flex": 4,
+              "flexDirection": "column",
+              "paddingHorizontal": 15,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgba(33, 33, 33, 0.87)",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            Heading 2
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgba(33, 33, 33, 0.4)",
+                  "fontSize": 13,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            Description 2
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#FFF",
+            "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+            "borderBottomWidth": 0.5,
+            "borderTopColor": "rgba(33, 33, 33, 0.4)",
+            "borderTopWidth": 0.5,
+            "flex": 1,
+            "flexDirection": "row",
+            "opacity": 1,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "flex": 4,
+              "flexDirection": "column",
+              "paddingHorizontal": 15,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgba(33, 33, 33, 0.87)",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            Heading 3
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgba(33, 33, 33, 0.4)",
+                  "fontSize": 13,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            Description 3
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`renders a list of thin listItems with heading, title and image 1`] = `
+<RCTScrollView
+  data={
+    Array [
+      Object {
+        "description": "Description 1",
+        "image": Object {
+          "source": Object {
+            "testUri": "../../../firstBorn-logo.png",
+          },
+        },
+        "title": "Heading 1",
+      },
+      Object {
+        "description": "Description 2",
+        "image": Object {
+          "source": Object {
+            "testUri": "../../../firstBorn-logo.png",
+          },
+        },
+        "title": "Heading 2",
+      },
+      Object {
+        "description": "Description 3",
+        "image": Object {
+          "source": Object {
+            "testUri": "../../../firstBorn-logo.png",
+          },
+        },
+        "title": "Heading 3",
+      },
+    ]
+  }
+  disableVirtualization={false}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  numColumns={1}
+  onContentSizeChange={[Function]}
+  onEndReachedThreshold={2}
+  onLayout={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+  updateCellsBatchingPeriod={50}
+  viewabilityConfigCallbackPairs={Array []}
+  windowSize={21}
+>
+  <View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#FFF",
+            "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+            "borderBottomWidth": 0.5,
+            "borderTopColor": "rgba(33, 33, 33, 0.4)",
+            "borderTopWidth": 0.5,
+            "flex": 1,
+            "flexDirection": "row",
+            "opacity": 1,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "testUri": "../../../firstBorn-logo.png",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 17,
+                "height": 34,
+                "width": 34,
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "flex": 4,
+              "flexDirection": "column",
+              "paddingHorizontal": 15,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgba(33, 33, 33, 0.87)",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            Heading 1
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgba(33, 33, 33, 0.4)",
+                  "fontSize": 13,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            Description 1
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#FFF",
+            "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+            "borderBottomWidth": 0.5,
+            "borderTopColor": "rgba(33, 33, 33, 0.4)",
+            "borderTopWidth": 0.5,
+            "flex": 1,
+            "flexDirection": "row",
+            "opacity": 1,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "testUri": "../../../firstBorn-logo.png",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 17,
+                "height": 34,
+                "width": 34,
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "flex": 4,
+              "flexDirection": "column",
+              "paddingHorizontal": 15,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgba(33, 33, 33, 0.87)",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            Heading 2
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgba(33, 33, 33, 0.4)",
+                  "fontSize": 13,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            Description 2
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#FFF",
+            "borderBottomColor": "rgba(33, 33, 33, 0.4)",
+            "borderBottomWidth": 0.5,
+            "borderTopColor": "rgba(33, 33, 33, 0.4)",
+            "borderTopWidth": 0.5,
+            "flex": 1,
+            "flexDirection": "row",
+            "opacity": 1,
+            "paddingRight": 10,
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "testUri": "../../../firstBorn-logo.png",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 17,
+                "height": 34,
+                "width": 34,
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "flex": 4,
+              "flexDirection": "column",
+              "paddingHorizontal": 15,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgba(33, 33, 33, 0.87)",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            Heading 3
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "rgba(33, 33, 33, 0.4)",
+                  "fontSize": 13,
+                  "fontWeight": "normal",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            Description 3
+          </Text>
         </View>
       </View>
     </View>

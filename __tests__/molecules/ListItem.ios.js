@@ -21,6 +21,19 @@ it("renders list item with heading and title", () => {
     expect(tree).toMatchSnapshot();
 });
 
+it("renders list item with heading, title and image", () => {
+    const tree = renderer
+        .create(
+            <ListItem
+                title="Heading"
+                description="description"
+                image={{ source: require("../../firstBorn-logo.png") }}
+            />
+        )
+        .toJSON();
+    expect(tree).toMatchSnapshot();
+});
+
 it("renders expandable list item with heading and title", () => {
     const tree = renderer
         .create(

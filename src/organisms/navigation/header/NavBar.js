@@ -54,15 +54,23 @@ export class NavBar extends Component {
     render() {
         const {
             statusBarColor,
+            statusBarContent,
             transparent,
             translucent,
             children,
             toolbarHeight,
             paddingTop,
             style,
+            shadowProperties,
             ...otherProps
         } = this.props;
         const { orientation } = this.state;
+
+        let navBarStyle = { ...style };
+
+        if (!transparent) {
+            navBarStyle = { ...navBarStyle, ...shadowProperties };
+        }
 
         if (Platform.OS === "ios") {
             if (isIphoneX()) {
@@ -83,14 +91,14 @@ export class NavBar extends Component {
                     >
                         <StatusBar
                             backgroundColor={shadeColor(statusBarColor, 0.2)}
-                            barStyle={"dark-content"}
+                            barStyle={statusBarContent}
                             translucent={transparent ? true : translucent}
                         />
 
                         <View
                             ref={c => (this._root = c)}
                             {...otherProps}
-                            style={style}
+                            style={navBarStyle}
                         >
                             {children && children}
                         </View>
@@ -111,14 +119,14 @@ export class NavBar extends Component {
                 >
                     <StatusBar
                         backgroundColor={shadeColor(statusBarColor, 0.2)}
-                        barStyle={"dark-content"}
+                        barStyle={statusBarContent}
                         translucent={transparent ? true : translucent}
                     />
 
                     <View
                         ref={c => (this._root = c)}
                         {...otherProps}
-                        style={style}
+                        style={navBarStyle}
                     >
                         {children && children}
                     </View>
@@ -137,11 +145,15 @@ export class NavBar extends Component {
             >
                 <StatusBar
                     backgroundColor={shadeColor(statusBarColor, 30)}
-                    barStyle={"light-content"}
+                    barStyle={statusBarContent}
                     translucent={transparent ? true : translucent}
                 />
 
-                <View ref={c => (this._root = c)} {...otherProps} style={style}>
+                <View
+                    ref={c => (this._root = c)}
+                    {...otherProps}
+                    style={navBarStyle}
+                >
                     {children && children}
                 </View>
             </View>
@@ -152,6 +164,7 @@ export class NavBar extends Component {
 NavBar.propTypes = {
     transparent: PropTypes.bool,
     statusBarColor: PropTypes.string,
+    statusBarContent: PropTypes.oneOf(["light-content", "dark-content"]),
     ...View.propTypes
 };
 
@@ -160,8 +173,17 @@ NavBar.defaultProps = {
         Platform.OS === "android" ? commonColors.primary : "#f8f8f8",
     toolbarHeight: Platform.OS === "android" ? 56 : 64,
     paddingTop: Platform.OS === "android" ? 0 : 20,
+    statusBarContent:
+        Platform.OS === "android" ? "light-content" : "dark-content",
     style: {
         flex: 1,
         flexDirection: "row"
+    },
+    shadowProperties: {
+        elevation: 3,
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 3 },
+        shadowOpacity: 0.4,
+        shadowRadius: 1.2
     }
 };

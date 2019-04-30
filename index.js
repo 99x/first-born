@@ -7,6 +7,7 @@ export { Picker } from "./src/atoms/Picker";
 export { DatePicker } from "./src/atoms/DatePicker";
 export { Text } from "./src/atoms/Text";
 export { Icon } from "./src/atoms/Icon";
+export { Thumbnail } from "./src/atoms/Thumbnail";
 
 // Molecules
 // Form molecules
@@ -19,15 +20,23 @@ export { FormDatePicker } from "./src/molecules/formElements/FormDatePicker";
 export { Card } from "./src/molecules/cards/Card";
 
 // List molecule
-export { ListItem } from "./src/molecules/listItem/ListItem"
+export { ListItem } from "./src/molecules/listItem/ListItem";
+// Thin List molecule
+export { ThinListItem } from "./src/molecules/listItem/ThinListItem";
 
 // Floating Button molecules
 export { FloatingButton } from "./src/molecules/floatingButton/FloatingButton";
 
 // Notification molecules
-import NotificationManager from "./src/molecules/notifications/NotificationManager";
+import NotificationManager from "./src/molecules/notifications/simple/NotificationManager";
 export { NotificationManager as NotificationBarManager };
-export { Notification } from "./src/molecules/notifications/Notification";
+export {
+    Notification
+} from "./src/molecules/notifications/simple/Notification";
+
+import SnackBarManager from "./src/molecules/notifications/snackbar/SnackBarManager";
+export { SnackBarManager as SnackManager };
+export { SnackBar } from "./src/molecules/notifications/snackbar/SnackBar";
 
 // Organisms
 
