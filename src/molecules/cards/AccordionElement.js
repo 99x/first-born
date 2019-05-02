@@ -81,7 +81,6 @@ export class AccordionElement extends Component {
                 >
                     <Text
                         color={commonColors.darkGrey}
-                        bold
                         style={{ flex: 1 }}
                     >
                         {title}
@@ -153,7 +152,7 @@ const styles = StyleSheet.create({
     bodyContainer: {
         flexDirection: "row",
         flex: 1,
-        padding: 20,
+        padding: 10,
         overflow: "hidden"
     }
 });
