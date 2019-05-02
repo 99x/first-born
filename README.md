@@ -167,13 +167,14 @@ An Image component that displays either a square or circular image.
 <Thumbnail source={require("path/to/image.png")}/>
 ```
 
-You can use any [Image property](http://facebook.github.io/react-native/docs/image.html), [TouchableOpacity property](http://facebook.github.io/react-native/docs/touchableopacity.html) and the following:
+You can use any [Image property](http://facebook.github.io/react-native/docs/image.html) and the following:
 
-| Prop             | Description                                                    | Default    |
-|------------------|----------------------------------------------------------------|------------|
-| **`size`**       | Size of the image. ('small', 'medium', 'large', 'exlarge')     | `'medium'` |
-| **`customSize`** | Size of the image, if it does not fit the above defined sizes. | _None_     |
-| **`rounded`**    | If the image is to be a circle.                                | _false_    |
+| Prop             | Description                                                                                 | Default    |
+|------------------|---------------------------------------------------------------------------------------------|------------|
+| **`size`**       | Size of the image. ('small', 'medium', 'large', 'exlarge')                                  | `'medium'` |
+| **`customSize`** | Size of the image, if it does not fit the above defined sizes.                              | _None_     |
+| **`rounded`**    | If the image is to be a circle.                                                             | _false_    |
+| **`onEdit`**     | Props to handle an image change of the thumbnail. You can use all `Button` atom properties. | _None_     |
 
 #### Button
 
