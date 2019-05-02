@@ -30,11 +30,15 @@ export class Thumbnail extends Component {
             return (
                 <View>
                     <Image {...otherProps} style={imageStyle} />
-                    {onEdit &&
+                    {onEdit && (
                         <Button {...onEdit} style={buttonStyle}>
-                            {onEdit.children ? onEdit.children : <Icon type="material" name="edit" />}
+                            {onEdit.children ? (
+                                onEdit.children
+                            ) : (
+                                <Icon type="material" name="edit" />
+                            )}
                         </Button>
-                    }
+                    )}
                 </View>
             );
         }
@@ -50,7 +54,7 @@ Thumbnail.propTypes = {
     onEdit: PropTypes.shape({
         ...Button.propTypes
     }),
-    ...Image.propTypes,
+    ...Image.propTypes
 };
 
 Thumbnail.defaultProps = {
