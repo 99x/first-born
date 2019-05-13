@@ -181,7 +181,7 @@ NavBar.defaultProps = {
     },
     shadowProperties: {
         elevation: 3,
-        shadowColor: "#000",
+        shadowColor: commonColors.black,
         shadowOffset: { width: 0, height: 3 },
         shadowOpacity: 0.4,
         shadowRadius: 1.2

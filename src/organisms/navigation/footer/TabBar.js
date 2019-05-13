@@ -6,27 +6,35 @@ import { isIphoneX } from "../../../utils/platform";
 
 export class TabBar extends Component {
     render() {
-        const { color, activeColor, inactiveColor, ...otherProps } = this.props;
+        const {
+            color,
+            activeColor,
+            inactiveColor,
+            children,
+            top,
+            ...otherProps
+        } = this.props;
 
         let tabBarStyle = [styles.container, { backgroundColor: color }];
 
-        if (isIphoneX()) {
+        if (isIphoneX() && !top) {
             tabBarStyle.push({ paddingBottom: 15 });
         }
 
-        const children = React.Children.map(this.props.children, child =>
+        const newChildren = React.Children.map(children, child =>
             child
                 ? React.cloneElement(child, {
                       ...child.props,
                       activeColor,
-                      inactiveColor
+                      inactiveColor,
+                      top
                   })
                 : null
         );
 
         return (
             <View style={tabBarStyle} {...otherProps}>
-                {children && children}
+                {newChildren && newChildren}
             </View>
         );
     }
@@ -36,11 +44,13 @@ TabBar.propTypes = {
     color: PropTypes.string,
     activeColor: PropTypes.string,
     inactiveColor: PropTypes.string,
+    top: PropTypes.bool,
     ...View.propTypes
 };
 
 TabBar.defaultProps = {
-    color: Platform.OS === "android" ? commonColors.primary : "#f8f8f8"
+    color: Platform.OS === "android" ? commonColors.primary : "#f8f8f8",
+    top: false
 };
 
 const styles = StyleSheet.create({
