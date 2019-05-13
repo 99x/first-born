@@ -835,11 +835,12 @@ The Navigation Footer makes use of the `Text` and `Icon` atom.
 
 `TabBar` is the main container for the footer navigation. It makes use of the [View property](https://facebook.github.io/react-native/docs/view.html) and the following:
 
-| Prop                | Description                          | Default                                                       |
-|---------------------|--------------------------------------|---------------------------------------------------------------|
-| **`color`**         | Background color of the `TabBar`.    | _primary_ for Android, `'#F8F8F8'` for iOS                    |
-| **`activeColor`**   | Text and Icon color of active tab.   | _white_ for Android, `'#0a60ff'` for iOS                      |
-| **`inactiveColor`** | Text and Icon color of inactive tab. | `'rgba(209, 216, 224, 0.8)'` for Android, `'#8e8e93'` for iOS |
+| Prop                | Description                                        | Default                                                       |
+|---------------------|----------------------------------------------------|---------------------------------------------------------------|
+| **`color`**         | Background color of the `TabBar`.                  | _primary_ for Android, `'#F8F8F8'` for iOS                    |
+| **`activeColor`**   | Text and Icon color of active tab.                 | _white_ for Android, `'#0a60ff'` for iOS                      |
+| **`inactiveColor`** | Text and Icon color of inactive tab.               | `'rgba(209, 216, 224, 0.8)'` for Android, `'#8e8e93'` for iOS |
+| **`top`**           | If the TabBar is on top of the page. Android only. | _false_                                                       |
 
 `TabItem` is the button element to be used within the `TabBar`. It will only accept the atoms `Text`, `Icon` and a `react-native Image`. It contains the same property as a [TouchableOpacity](https://facebook.github.io/react-native/docs/touchableopacity.html). In addition, it contains the following properties as well;
 

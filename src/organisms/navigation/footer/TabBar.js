@@ -3,11 +3,17 @@ import { View, StyleSheet, Platform } from "react-native";
 import PropTypes from "prop-types";
 import { commonColors } from "../../../utils/color";
 import { isIphoneX } from "../../../utils/platform";
-import { TabItem } from "first-born/src/organisms/navigation/footer/TabItem";
 
 export class TabBar extends Component {
     render() {
-        const { color, activeColor, inactiveColor, children, top, ...otherProps } = this.props;
+        const {
+            color,
+            activeColor,
+            inactiveColor,
+            children,
+            top,
+            ...otherProps
+        } = this.props;
 
         let tabBarStyle = [styles.container, { backgroundColor: color }];
 
@@ -18,11 +24,11 @@ export class TabBar extends Component {
         const newChildren = React.Children.map(children, child =>
             child
                 ? React.cloneElement(child, {
-                    ...child.props,
-                    activeColor,
-                    inactiveColor,
-                    top
-                })
+                      ...child.props,
+                      activeColor,
+                      inactiveColor,
+                      top
+                  })
                 : null
         );
 

@@ -24,43 +24,45 @@ export class TabItem extends Component {
 
         const color = active ? activeColor : inactiveColor;
 
-        let containerStyle = topPosition ? [styles.container, styles.containerTop] : styles.container;
+        let containerStyle = topPosition
+            ? [styles.container, styles.containerTop]
+            : styles.container;
 
         if (children) {
             newChildren = React.Children.map(children, child =>
                 child && child.type === Text
                     ? React.cloneElement(child, {
-                        ...child.props,
-                        size: topPosition ? "footnote" : "caption_big",
-                        color,
-                        style: {
-                            ...child.props.style,
-                            opacity: active ? 1 : 0.8
-                        }
-                    })
+                          ...child.props,
+                          size: topPosition ? "footnote" : "caption_big",
+                          color,
+                          style: {
+                              ...child.props.style,
+                              opacity: active ? 1 : 0.8
+                          }
+                      })
                     : child && child.type === Icon
-                        ? React.cloneElement(child, {
-                            ...child.props,
-                            size: topPosition ? 20 : 28,
-                            color,
-                            style: {
-                                ...child.props.style,
-                                opacity: active ? 1 : 0.8,
-                                marginRight: topPosition ? 5 : 0
-                            }
-                        })
-                        : child && child.type === Image
-                            ? React.cloneElement(child, {
-                                style: {
-                                    ...child.props.style,
-                                    width: topPosition ? 20 : 28,
-                                    height: topPosition ? 20 : 28,
-                                    opacity: active ? 1 : 0.8,
-                                    marginRight: topPosition ? 5 : 0
-                                },
-                                ...child.props
-                            })
-                            : null
+                    ? React.cloneElement(child, {
+                          ...child.props,
+                          size: topPosition ? 20 : 28,
+                          color,
+                          style: {
+                              ...child.props.style,
+                              opacity: active ? 1 : 0.8,
+                              marginRight: topPosition ? 5 : 0
+                          }
+                      })
+                    : child && child.type === Image
+                    ? React.cloneElement(child, {
+                          style: {
+                              ...child.props.style,
+                              width: topPosition ? 20 : 28,
+                              height: topPosition ? 20 : 28,
+                              opacity: active ? 1 : 0.8,
+                              marginRight: topPosition ? 5 : 0
+                          },
+                          ...child.props
+                      })
+                    : null
             );
         }
 

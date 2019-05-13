@@ -12,7 +12,7 @@ jest.mock("Platform", () => {
     return Platform;
 });
 
-it("renders TabBar with tab titles", () => {
+it("renders bottom TabBar with tab titles", () => {
     const tree = renderer
         .create(
             <TabBar>
@@ -34,7 +34,7 @@ it("renders TabBar with tab titles", () => {
     expect(tree).toMatchSnapshot();
 });
 
-it("renders TabBar with icons", () => {
+it("renders bottom TabBar with icons", () => {
     const tree = renderer
         .create(
             <TabBar>
@@ -56,10 +56,80 @@ it("renders TabBar with icons", () => {
     expect(tree).toMatchSnapshot();
 });
 
-it("renders TabBar with tab titles and icons", () => {
+it("renders bottom TabBar with tab titles and icons", () => {
     const tree = renderer
         .create(
             <TabBar>
+                <TabItem active>
+                    <Icon name="heart" />
+                    <Text>ONE</Text>
+                </TabItem>
+                <TabItem>
+                    <Icon name="star" />
+                    <Text>TWO</Text>
+                </TabItem>
+                <TabItem>
+                    <Icon name="square" />
+                    <Text>THREE</Text>
+                </TabItem>
+                <TabItem>
+                    <Icon name="egg" />
+                    <Text>FOUR</Text>
+                </TabItem>
+            </TabBar>
+        )
+        .toJSON();
+    expect(tree).toMatchSnapshot();
+});
+
+it("renders top TabBar with tab titles", () => {
+    const tree = renderer
+        .create(
+            <TabBar top>
+                <TabItem active>
+                    <Text>ONE</Text>
+                </TabItem>
+                <TabItem>
+                    <Text>TWO</Text>
+                </TabItem>
+                <TabItem>
+                    <Text>THREE</Text>
+                </TabItem>
+                <TabItem>
+                    <Text>FOUR</Text>
+                </TabItem>
+            </TabBar>
+        )
+        .toJSON();
+    expect(tree).toMatchSnapshot();
+});
+
+it("renders top TabBar with icons", () => {
+    const tree = renderer
+        .create(
+            <TabBar top>
+                <TabItem active>
+                    <Icon name="heart" />
+                </TabItem>
+                <TabItem>
+                    <Icon name="star" />
+                </TabItem>
+                <TabItem>
+                    <Icon name="square" />
+                </TabItem>
+                <TabItem>
+                    <Icon name="egg" />
+                </TabItem>
+            </TabBar>
+        )
+        .toJSON();
+    expect(tree).toMatchSnapshot();
+});
+
+it("renders top TabBar with tab titles and icons", () => {
+    const tree = renderer
+        .create(
+            <TabBar top>
                 <TabItem active>
                     <Icon name="heart" />
                     <Text>ONE</Text>
