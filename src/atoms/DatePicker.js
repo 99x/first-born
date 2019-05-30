@@ -19,6 +19,7 @@ export class DatePicker extends Component {
         super(props);
         this.state = {
             focused: false,
+            error: false,
             defaultDate: props.defaultDate ? props.defaultDate : new Date(),
             chosenDate:
                 !props.placeholder && props.defaultDate
@@ -37,79 +38,164 @@ export class DatePicker extends Component {
             maximumDate,
             locale,
             timeZoneOffsetInMinutes,
-            mode
+            mode,
+            noStyle,
+            rounded,
+            underline,
+            defaultStyle,
+            style,
+            activeStyle,
+            errorStyle,
+            errorMessage,
+            errorColor
         } = this.props;
 
-        const { focused, chosenDate, defaultDate } = this.state;
+        const { focused, chosenDate, defaultDate, error } = this.state;
+
+        let inputStyle = [styles.input];
+        let inputActiveStyle = [styles.input];
+        let inputErrorStyle = [styles.input];
+
+        if (noStyle) {
+            inputStyle.push(style);
+            inputActiveStyle.push(activeStyle);
+            inputErrorStyle.push(errorStyle);
+        } else if (underline) {
+            inputStyle.push(styles.underline);
+            inputActiveStyle.push({
+                borderBottomColor: color,
+                borderBottomWidth: 2
+            });
+            inputErrorStyle.push({
+                borderBottomColor: errorColor,
+                borderBottomWidth: 2
+            });
+        } else if (defaultStyle || rounded) {
+            if (Platform.OS === "android") {
+                inputStyle.push(styles.default, styles.defaultAndroid);
+                inputActiveStyle.push(styles.default, styles.defaultAndroid, {
+                    borderColor: color,
+                    borderWidth: 2
+                });
+                inputErrorStyle.push(styles.default, styles.defaultAndroid, {
+                    borderColor: errorColor,
+                    borderWidth: 2
+                });
+            } else {
+                inputStyle.push(styles.default, styles.defaultIos);
+                inputActiveStyle.push(styles.default, styles.defaultIos, {
+                    borderColor: color,
+                    borderWidth: 2
+                });
+                inputErrorStyle.push(styles.default, styles.defaultIos, {
+                    borderColor: errorColor,
+                    borderWidth: 2
+                });
+            }
+
+            if (rounded) {
+                inputStyle.push(styles.rounded);
+                inputActiveStyle.push(styles.rounded, {
+                    borderColor: color,
+                    borderWidth: 2
+                });
+                inputErrorStyle.push(styles.rounded, {
+                    borderColor: errorColor,
+                    borderWidth: 2
+                });
+            }
+        }
 
         if (Platform.OS === "android") {
             return (
-                <View
-                    style={
-                        focused
-                            ? [
-                                  styles.datePickerAndroid,
-                                  { borderColor: color, borderWidth: 2 }
-                              ]
-                            : styles.datePickerAndroid
-                    }
-                >
-                    <Text
-                        ref={c => (this._root = c)}
-                        style={!chosenDate ? styles.input : styles.inputValue}
-                        onPress={() =>
-                            mode === "date"
-                                ? this.openAndroidDatePicker()
-                                : this.openAndroidTimePicker()
+                <View style={styles.inputContainer}>
+                    <View
+                        style={
+                            error
+                                ? inputErrorStyle
+                                : focused
+                                ? inputActiveStyle
+                                : inputStyle
                         }
                     >
-                        {chosenDate
-                            ? this.formatChosenDate(chosenDate)
-                            : placeholder}
-                    </Text>
-                    <Icon
-                        name="calendar"
-                        onPress={() =>
-                            mode === "date"
-                                ? this.openAndroidDatePicker()
-                                : this.openAndroidTimePicker()
-                        }
-                        style={styles.icon}
-                        color={focused ? color : commonColors.inputGrey}
-                        size={20}
-                    />
+                        <Text
+                            ref={c => (this._root = c)}
+                            style={
+                                !chosenDate
+                                    ? styles.inputPlaceholder
+                                    : styles.inputValue
+                            }
+                            onPress={() =>
+                                mode === "date"
+                                    ? this.openAndroidDatePicker()
+                                    : this.openAndroidTimePicker()
+                            }
+                        >
+                            {chosenDate
+                                ? this.formatChosenDate(chosenDate)
+                                : placeholder}
+                        </Text>
+                        <View style={styles.iconContainer}>
+                            <Icon
+                                name="calendar"
+                                onPress={() =>
+                                    mode === "date"
+                                        ? this.openAndroidDatePicker()
+                                        : this.openAndroidTimePicker()
+                                }
+                                style={styles.icon}
+                                color={focused ? color : commonColors.inputGrey}
+                                size={20}
+                            />
+                        </View>
+                    </View>
+                    {error && errorMessage && (
+                        <Text size="caption_big" color={errorColor}>
+                            {errorMessage}
+                        </Text>
+                    )}
                 </View>
             );
         }
         return (
-            <View>
+            <View style={styles.inputContainer}>
                 <View
                     style={
-                        focused
-                            ? [
-                                  styles.datePickerIos,
-                                  { borderColor: color, borderWidth: 2 }
-                              ]
-                            : styles.datePickerIos
+                        error
+                            ? inputErrorStyle
+                            : focused
+                            ? inputActiveStyle
+                            : inputStyle
                     }
                 >
                     <Text
                         ref={c => (this._root = c)}
-                        style={!chosenDate ? styles.input : styles.inputValue}
+                        style={
+                            !chosenDate
+                                ? styles.inputPlaceholder
+                                : styles.inputValue
+                        }
                         onPress={() => this.openIosDatePicker()}
                     >
                         {chosenDate
                             ? this.formatChosenDate(chosenDate)
                             : placeholder}
                     </Text>
-                    <Icon
-                        onPress={() => this.openIosDatePicker()}
-                        name="calendar"
-                        style={styles.icon}
-                        color={focused ? color : commonColors.inputGrey}
-                        size={20}
-                    />
+                    <View style={styles.iconContainer}>
+                        <Icon
+                            onPress={() => this.openIosDatePicker()}
+                            name="calendar"
+                            color={focused ? color : commonColors.inputGrey}
+                            size={20}
+                            style={styles.icon}
+                        />
+                    </View>
                 </View>
+                {error && errorMessage && (
+                    <Text size="caption_big" color={errorColor}>
+                        {errorMessage}
+                    </Text>
+                )}
                 <Modal
                     supportedOrientations={["portrait", "landscape"]}
                     animationType={animationType}
@@ -141,9 +227,15 @@ export class DatePicker extends Component {
     }
 
     setDate(date) {
+        const { onDateChange, isValid } = this.props;
         this.setState({ chosenDate: new Date(date) });
-        if (this.props.onDateChange) {
-            this.props.onDateChange(date);
+
+        if (onDateChange) {
+            onDateChange(date);
+        }
+
+        if (isValid) {
+            this.setState({ error: !isValid(date) });
         }
     }
 
@@ -222,6 +314,8 @@ export class DatePicker extends Component {
 
 DatePicker.propTypes = {
     color: PropTypes.string,
+    isValid: PropTypes.func,
+    errorMessage: PropTypes.string,
     formatChosenDate: PropTypes.func,
     onDateChange: PropTypes.func,
     defaultDate: PropTypes.object,
@@ -232,6 +326,12 @@ DatePicker.propTypes = {
     modalTransparent: PropTypes.bool,
     animationType: PropTypes.string,
     mode: PropTypes.oneOf(["date", "time"]),
+    activeStyle: PropTypes.object,
+    errorStyle: PropTypes.object,
+    rounded: PropTypes.bool,
+    underline: PropTypes.bool,
+    defaultStyle: PropTypes.bool,
+    noStyle: PropTypes.bool,
     ...TextInput.propTypes
 };
 
@@ -241,43 +341,58 @@ DatePicker.defaultProps = {
     animationType: "fade",
     placeholder: "Select Date",
     mode: "date",
-    is24Hour: true
+    is24Hour: true,
+    errorColor: commonColors.error,
+    defaultStyle: true
 };
 
 const styles = StyleSheet.create({
-    datePickerAndroid: {
+    inputContainer: {
         width: "100%",
-        flexDirection: "row",
-        marginVertical: 10,
-        justifyContent: "center",
-        alignItems: "center",
-        height: 45,
-        paddingHorizontal: 10,
-        borderRadius: 10,
-        borderColor: commonColors.inputGrey,
-        borderWidth: 0.9
-    },
-    datePickerIos: {
-        width: "100%",
-        flexDirection: "row",
-        borderRadius: 15,
-        marginVertical: 10,
-        borderColor: commonColors.inputGrey,
-        borderWidth: 0.9,
-        justifyContent: "center",
-        alignItems: "center",
-        height: 45,
-        paddingLeft: 10
+        marginBottom: 5
     },
     icon: {
-        paddingRight: 15
+        marginRight: 5
     },
-    input: {
+    iconContainer: {
+        alignItems: "center",
+        justifyContent: "center"
+    },
+    inputPlaceholder: {
         flex: 1,
         color: commonColors.inputGrey
     },
     inputValue: {
         flex: 1,
         color: commonColors.black
+    },
+    input: {
+        marginTop: 10,
+        marginBottom: 5,
+        width: "100%",
+        height: 45,
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    default: {
+        borderColor: commonColors.inputGrey,
+        borderWidth: 0.9
+    },
+    defaultAndroid: {
+        paddingHorizontal: 5,
+        borderRadius: 10
+    },
+    defaultIos: {
+        paddingHorizontal: 10,
+        borderRadius: 15
+    },
+    underline: {
+        borderBottomColor: commonColors.inputGrey,
+        borderBottomWidth: 0.9
+    },
+    rounded: {
+        borderRadius: 45 / 2,
+        paddingHorizontal: 10
     }
 });

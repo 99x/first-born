@@ -25,37 +25,54 @@ exports[`renders FormPicker with placeholder 1`] = `
   <View
     style={
       Object {
-        "borderColor": "rgba(33, 33, 33, 0.5)",
-        "borderRadius": 10,
-        "borderWidth": 0.9,
-        "marginVertical": 10,
-        "paddingHorizontal": 5,
+        "marginBottom": 5,
         "width": "100%",
       }
     }
   >
-    <Picker
-      mode="dropdown"
-      onValueChange={[Function]}
+    <View
       style={
-        Object {
-          "height": 45,
-        }
+        Array [
+          Object {
+            "height": 45,
+            "marginBottom": 5,
+            "marginTop": 10,
+            "width": "100%",
+          },
+          Object {
+            "borderColor": "rgba(33, 33, 33, 0.5)",
+            "borderWidth": 0.9,
+          },
+          Object {
+            "borderRadius": 10,
+            "paddingHorizontal": 5,
+          },
+        ]
       }
     >
-      <Item
-        label="1"
-        value="1"
-      />
-      <Item
-        label="2"
-        value="2"
-      />
-      <Item
-        label="3"
-        value="3"
-      />
-    </Picker>
+      <Picker
+        mode="dropdown"
+        onValueChange={[Function]}
+        style={
+          Object {
+            "height": 45,
+          }
+        }
+      >
+        <Item
+          label="1"
+          value="1"
+        />
+        <Item
+          label="2"
+          value="2"
+        />
+        <Item
+          label="3"
+          value="3"
+        />
+      </Picker>
+    </View>
   </View>
 </View>
 `;
@@ -85,37 +102,54 @@ exports[`renders colored FormPicker 1`] = `
   <View
     style={
       Object {
-        "borderColor": "rgba(33, 33, 33, 0.5)",
-        "borderRadius": 10,
-        "borderWidth": 0.9,
-        "marginVertical": 10,
-        "paddingHorizontal": 5,
+        "marginBottom": 5,
         "width": "100%",
       }
     }
   >
-    <Picker
-      mode="dropdown"
-      onValueChange={[Function]}
+    <View
       style={
-        Object {
-          "height": 45,
-        }
+        Array [
+          Object {
+            "height": 45,
+            "marginBottom": 5,
+            "marginTop": 10,
+            "width": "100%",
+          },
+          Object {
+            "borderColor": "rgba(33, 33, 33, 0.5)",
+            "borderWidth": 0.9,
+          },
+          Object {
+            "borderRadius": 10,
+            "paddingHorizontal": 5,
+          },
+        ]
       }
     >
-      <Item
-        label="1"
-        value="1"
-      />
-      <Item
-        label="2"
-        value="2"
-      />
-      <Item
-        label="3"
-        value="3"
-      />
-    </Picker>
+      <Picker
+        mode="dropdown"
+        onValueChange={[Function]}
+        style={
+          Object {
+            "height": 45,
+          }
+        }
+      >
+        <Item
+          label="1"
+          value="1"
+        />
+        <Item
+          label="2"
+          value="2"
+        />
+        <Item
+          label="3"
+          value="3"
+        />
+      </Picker>
+    </View>
   </View>
 </View>
 `;
@@ -145,37 +179,54 @@ exports[`renders regular FormPicker 1`] = `
   <View
     style={
       Object {
-        "borderColor": "rgba(33, 33, 33, 0.5)",
-        "borderRadius": 10,
-        "borderWidth": 0.9,
-        "marginVertical": 10,
-        "paddingHorizontal": 5,
+        "marginBottom": 5,
         "width": "100%",
       }
     }
   >
-    <Picker
-      mode="dropdown"
-      onValueChange={[Function]}
+    <View
       style={
-        Object {
-          "height": 45,
-        }
+        Array [
+          Object {
+            "height": 45,
+            "marginBottom": 5,
+            "marginTop": 10,
+            "width": "100%",
+          },
+          Object {
+            "borderColor": "rgba(33, 33, 33, 0.5)",
+            "borderWidth": 0.9,
+          },
+          Object {
+            "borderRadius": 10,
+            "paddingHorizontal": 5,
+          },
+        ]
       }
     >
-      <Item
-        label="1"
-        value="1"
-      />
-      <Item
-        label="2"
-        value="2"
-      />
-      <Item
-        label="3"
-        value="3"
-      />
-    </Picker>
+      <Picker
+        mode="dropdown"
+        onValueChange={[Function]}
+        style={
+          Object {
+            "height": 45,
+          }
+        }
+      >
+        <Item
+          label="1"
+          value="1"
+        />
+        <Item
+          label="2"
+          value="2"
+        />
+        <Item
+          label="3"
+          value="3"
+        />
+      </Picker>
+    </View>
   </View>
 </View>
 `;

@@ -219,20 +219,28 @@ Renders a `Text`, that displays a date picker modal when the `onPress` method is
 
 You can use any [TextInput property](http://facebook.github.io/react-native/docs/textinput.html) and the following:
 
-| Prop                   | Description                                                  | Default         |
-|------------------------|--------------------------------------------------------------|-----------------|
-| **`placeholder`**      | Display this string if value not selected yet. iOS only.     | `'Select Date'` |
-| **`formatChosenDate`** | User defined function that returns a formatted date.         | _None_          |
-| **`onDateChange`**     | User defined function to run when selected date changes.     | _None_          |
-| **`defaultDate`**      | Initially picked date.                                       | _None_          |
-| **`minimumDate`**      | Minimum in date range.                                       | _None_          |
-| **`maximumDate`**      | Maximum in date range.                                       | _None_          |
-| **`modalTransparent`** | If DatePicker modal is transparent. iOS only.                | _true_          |
-| **`animationType`**    | Type of entry/exit animation for DatePicker modal. iOS only. | `'fade'`        |
-| **`locale`**           | Locale of DatePicker. iOS only.                              | _None_          |
-| **`mode`**             | Type of picker ('date', 'time').                             | `'date'`        |
-| **`color`**            | Color of the `TextInput` when in focus.                      | _primary_       |
-| **`is24Hour`**         | If DatePicker with mode 'time' has 24 hour time format.      | _true_          |
+| Prop                   | Description                                                         | Default         |
+|------------------------|---------------------------------------------------------------------|-----------------|
+| **`placeholder`**      | Display this string if value not selected yet. iOS only.            | `'Select Date'` |
+| **`formatChosenDate`** | User defined function that returns a formatted date.                | _None_          |
+| **`onDateChange`**     | User defined function to run when selected date changes.            | _None_          |
+| **`defaultDate`**      | Initially picked date.                                              | _None_          |
+| **`minimumDate`**      | Minimum in date range.                                              | _None_          |
+| **`maximumDate`**      | Maximum in date range.                                              | _None_          |
+| **`modalTransparent`** | If DatePicker modal is transparent. iOS only.                       | _true_          |
+| **`animationType`**    | Type of entry/exit animation for DatePicker modal. iOS only.        | `'fade'`        |
+| **`locale`**           | Locale of DatePicker. iOS only.                                     | _None_          |
+| **`mode`**             | Type of picker ('date', 'time').                                    | `'date'`        |
+| **`color`**            | Color of the `TextInput` when in focus.                             | _primary_       |
+| **`isValid`**          | User defined validation function, that returns true for valid input | _None_          |
+| **`errorMessage`**     | Error message to display below input, if validation fails           | _None_          |
+| **`rounded`**          | If DatePicker style is rounded edges.                               | _false_         |
+| **`underline`**        | If DatePicker style is an underline.                                | _false_         |
+| **`defaultStyle`**     | If DatePicker style is default as seen above.                       | _true_          |
+| **`noStyle`**          | If DatePicker has no framework defined style.                       | _false_         |
+| **`style`**            | Custom DatePicker inactive style. (Style object)                    | _None_          |
+| **`activeStyle`**      | Custom DatePicker active style. (Style object)                      | _None_          |
+| **`errorStyle`**       | Custom DatePicker error style. (Style object)                       | _None_          |
 
 #### Input
 
@@ -248,10 +256,18 @@ You can use any [TextInput property](http://facebook.github.io/react-native/docs
 
 You can use any [TextInput property](http://facebook.github.io/react-native/docs/textinput.html) and the following:
 
-| Prop          | Description                                                        | Default   |
-|---------------|--------------------------------------------------------------------|-----------|
-| **`isValid`** | User defined validation function, that returns true for valid text | _None_    |
-| **`color`**   | Color of the `TextInput` when in focus.                            | _primary_ |
+| Prop               | Description                                                        | Default   |
+|--------------------|--------------------------------------------------------------------|-----------|
+| **`color`**        | Color of the `TextInput` when in focus.                            | _primary_ |
+| **`isValid`**      | User defined validation function, that returns true for valid text | _None_    |
+| **`errorMessage`** | Error message to display below input, if validation fails          | _None_    |
+| **`rounded`**      | If Input style is rounded edges.                                   | _false_   |
+| **`underline`**    | If Input style is an underline.                                    | _false_   |
+| **`defaultStyle`** | If Input style is default as seen above.                           | _true_    |
+| **`noStyle`**      | If Input has no framework defined style.                           | _false_   |
+| **`style`**        | Custom Input inactive style. (Style object)                        | _None_    |
+| **`activeStyle`**  | Custom Input active style. (Style object)                          | _None_    |
+| **`errorStyle`**   | Custom  Input error style. (Style object)                          | _None_    |
 
 #### Picker
 
@@ -273,13 +289,22 @@ In iOS, renders a `Text`, that displays a picker modal when the `onPress` method
 
 You can use any [Picker property](http://facebook.github.io/react-native/docs/picker.html) and the following:
 
-| Prop                   | Description                                                  | Default           |
-|------------------------|--------------------------------------------------------------|-------------------|
-| **`placeholder`**      | Display this string if value not selected yet. iOS only.     | `'Select Option'` |
-| **`modalTransparent`** | If DatePicker modal is transparent. iOS only.                | _true_            |
-| **`animationType`**    | Type of entry/exit animation for DatePicker modal. iOS only. | `'fade'`          |
-| **`mode`**             | Type of picker mode ('dialog', 'dropdown'). Android only.    | `'dropdown'`      |
-| **`color`**            | Color of the `TextInput` when in focus.                      | _primary_         |
+| Prop                   | Description                                                         | Default           |
+|------------------------|---------------------------------------------------------------------|-------------------|
+| **`placeholder`**      | Display this string if value not selected yet. iOS only.            | `'Select Option'` |
+| **`modalTransparent`** | If Picker modal is transparent. iOS only.                           | _true_            |
+| **`animationType`**    | Type of entry/exit animation for Picker modal. iOS only.            | `'fade'`          |
+| **`mode`**             | Type of picker mode ('dialog', 'dropdown'). Android only.           | `'dropdown'`      |
+| **`color`**            | Color of the `TextInput` when in focus.                             | _primary_         |
+| **`isValid`**          | User defined validation function, that returns true for valid input | _None_            |
+| **`errorMessage`**     | Error message to display below input, if validation fails           | _None_            |
+| **`rounded`**          | If Picker style is rounded edges.                                   | _false_           |
+| **`underline`**        | If Picker style is an underline.                                    | _false_           |
+| **`defaultStyle`**     | If Picker style is default as seen above.                           | _true_            |
+| **`noStyle`**          | If Picker has no framework defined style.                           | _false_           |
+| **`style`**            | Custom Picker inactive style. (Style object)                        | _None_            |
+| **`activeStyle`**      | Custom Picker active style. (Style object)                          | _None_            |
+| **`errorStyle`**       | Custom Picker error style. (Style object)                           | _None_            |
 
 #### TextArea
 
@@ -297,9 +322,17 @@ Renders a `TextInput`, that increases in height with the height of the text ente
 
 You can use any [TextInput property](http://facebook.github.io/react-native/docs/textinput.html) and the following:
 
-| Prop        | Description                             | Default   |
-|-------------|-----------------------------------------|-----------|
-| **`color`** | Color of the `TextInput` when in focus. | _primary_ |
+| Prop               | Description                                                        | Default   |
+|--------------------|--------------------------------------------------------------------|-----------|
+| **`color`**        | Color of the `TextInput` when in focus.                            | _primary_ |
+| **`isValid`**      | User defined validation function, that returns true for valid text | _None_    |
+| **`errorMessage`** | Error message to display below input, if validation fails          | _None_    |
+| **`underline`**    | If DatePicker style is an underline.                               | _false_   |
+| **`defaultStyle`** | If DatePicker style is default as seen above.                      | _true_    |
+| **`noStyle`**      | If DatePicker has no framework defined style.                      | _false_   |
+| **`style`**        | Custom DatePicker inactive style. (Style object)                   | _None_    |
+| **`activeStyle`**  | Custom DatePicker active style. (Style object)                     | _None_    |
+| **`errorStyle`**   | Custom DatePicker error style. (Style object)                      | _None_    |
  
 ### Molecules
 
@@ -665,9 +698,16 @@ formElements = [
 The `Form` Component iterates through the `formElements` array, to render the fields according to the type of input specified in each object. 
 The form object only has one extra prop;
 
-| Prop        | Description                               | Default   |
-|-------------|-------------------------------------------|-----------|
-| **`color`** | Color of all form elements when in focus. | _primary_ |
+| Prop               | Description                                        | Default   |
+|--------------------|----------------------------------------------------|-----------|
+| **`color`**        | Color of all form elements when in focus.          | _primary_ |
+| **`rounded`**      | If form element style is rounded edges.            | _false_   |
+| **`underline`**    | If form element style is an underline.             | _false_   |
+| **`defaultStyle`** | If form element style is default as seen above.    | _true_    |
+| **`noStyle`**      | If form element has no framework defined style.    | _false_   |
+| **`style`**        | Custom form element inactive style. (Style object) | _None_    |
+| **`activeStyle`**  | Custom form element active style. (Style object)   | _None_    |
+| **`errorStyle`**   | Custom form element error style. (Style object)    | _None_    |
 
 But each type of input has corresponding proptypes to the molecules named below;
 

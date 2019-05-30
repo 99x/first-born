@@ -1,21 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Picker with placeholder 1`] = `
-<View>
+<View
+  style={
+    Object {
+      "marginBottom": 5,
+      "width": "100%",
+    }
+  }
+>
   <View
     style={
-      Object {
-        "alignItems": "center",
-        "borderColor": "rgba(33, 33, 33, 0.5)",
-        "borderRadius": 15,
-        "borderWidth": 0.9,
-        "flexDirection": "row",
-        "height": 45,
-        "justifyContent": "center",
-        "marginVertical": 10,
-        "paddingLeft": 10,
-        "width": "100%",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 45,
+          "justifyContent": "center",
+          "marginBottom": 5,
+          "marginTop": 10,
+          "width": "100%",
+        },
+        Object {
+          "borderColor": "rgba(33, 33, 33, 0.5)",
+          "borderWidth": 0.9,
+        },
+        Object {
+          "borderRadius": 15,
+          "paddingHorizontal": 10,
+        },
+      ]
     }
   >
     <Text
@@ -153,21 +167,198 @@ exports[`renders Picker with placeholder 1`] = `
 `;
 
 exports[`renders colored Picker 1`] = `
-<View>
+<View
+  style={
+    Object {
+      "marginBottom": 5,
+      "width": "100%",
+    }
+  }
+>
   <View
     style={
-      Object {
-        "alignItems": "center",
-        "borderColor": "rgba(33, 33, 33, 0.5)",
-        "borderRadius": 15,
-        "borderWidth": 0.9,
-        "flexDirection": "row",
-        "height": 45,
-        "justifyContent": "center",
-        "marginVertical": 10,
-        "paddingLeft": 10,
-        "width": "100%",
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 45,
+          "justifyContent": "center",
+          "marginBottom": 5,
+          "marginTop": 10,
+          "width": "100%",
+        },
+        Object {
+          "borderColor": "rgba(33, 33, 33, 0.5)",
+          "borderWidth": 0.9,
+        },
+        Object {
+          "borderRadius": 15,
+          "paddingHorizontal": 10,
+        },
+      ]
+    }
+  >
+    <Text
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "flex": 1,
+          },
+        ]
       }
+    >
+      Select Option
+    </Text>
+    <Text
+      allowFontScaling={false}
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "fontSize": 24,
+          },
+          Object {
+            "paddingRight": 15,
+          },
+          Object {
+            "fontFamily": "Ionicons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+  <Modal
+    animationType="fade"
+    hardwareAccelerated={false}
+    onRequestClose={[Function]}
+    supportedOrientations={
+      Array [
+        "portrait",
+        "landscape",
+      ]
+    }
+    transparent={true}
+    visible={false}
+  >
+    <Text
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "#FFF",
+          "flex": 1,
+        }
+      }
+    >
+      <RCTPicker
+        items={
+          Array [
+            Object {
+              "label": "1",
+              "textColor": undefined,
+              "value": "1",
+            },
+            Object {
+              "label": "2",
+              "textColor": undefined,
+              "value": "2",
+            },
+            Object {
+              "label": "3",
+              "textColor": undefined,
+              "value": "3",
+            },
+          ]
+        }
+        onChange={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        selectedIndex={0}
+        style={
+          Array [
+            Object {
+              "height": 216,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <Text
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    />
+  </Modal>
+</View>
+`;
+
+exports[`renders custom styled Picker 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 5,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 45,
+          "justifyContent": "center",
+          "marginBottom": 5,
+          "marginTop": 10,
+          "width": "100%",
+        },
+        Object {
+          "borderColor": "black",
+          "borderRadius": 3,
+          "borderWidth": 1,
+        },
+      ]
     }
   >
     <Text
@@ -305,21 +496,526 @@ exports[`renders colored Picker 1`] = `
 `;
 
 exports[`renders regular Picker 1`] = `
-<View>
+<View
+  style={
+    Object {
+      "marginBottom": 5,
+      "width": "100%",
+    }
+  }
+>
   <View
     style={
-      Object {
-        "alignItems": "center",
-        "borderColor": "rgba(33, 33, 33, 0.5)",
-        "borderRadius": 15,
-        "borderWidth": 0.9,
-        "flexDirection": "row",
-        "height": 45,
-        "justifyContent": "center",
-        "marginVertical": 10,
-        "paddingLeft": 10,
-        "width": "100%",
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 45,
+          "justifyContent": "center",
+          "marginBottom": 5,
+          "marginTop": 10,
+          "width": "100%",
+        },
+        Object {
+          "borderColor": "rgba(33, 33, 33, 0.5)",
+          "borderWidth": 0.9,
+        },
+        Object {
+          "borderRadius": 15,
+          "paddingHorizontal": 10,
+        },
+      ]
+    }
+  >
+    <Text
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "flex": 1,
+          },
+        ]
       }
+    >
+      Select Option
+    </Text>
+    <Text
+      allowFontScaling={false}
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "fontSize": 24,
+          },
+          Object {
+            "paddingRight": 15,
+          },
+          Object {
+            "fontFamily": "Ionicons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+  <Modal
+    animationType="fade"
+    hardwareAccelerated={false}
+    onRequestClose={[Function]}
+    supportedOrientations={
+      Array [
+        "portrait",
+        "landscape",
+      ]
+    }
+    transparent={true}
+    visible={false}
+  >
+    <Text
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "#FFF",
+          "flex": 1,
+        }
+      }
+    >
+      <RCTPicker
+        items={
+          Array [
+            Object {
+              "label": "1",
+              "textColor": undefined,
+              "value": "1",
+            },
+            Object {
+              "label": "2",
+              "textColor": undefined,
+              "value": "2",
+            },
+            Object {
+              "label": "3",
+              "textColor": undefined,
+              "value": "3",
+            },
+          ]
+        }
+        onChange={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        selectedIndex={0}
+        style={
+          Array [
+            Object {
+              "height": 216,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <Text
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    />
+  </Modal>
+</View>
+`;
+
+exports[`renders rounded Picker 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 5,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 45,
+          "justifyContent": "center",
+          "marginBottom": 5,
+          "marginTop": 10,
+          "width": "100%",
+        },
+        Object {
+          "borderColor": "rgba(33, 33, 33, 0.5)",
+          "borderWidth": 0.9,
+        },
+        Object {
+          "borderRadius": 15,
+          "paddingHorizontal": 10,
+        },
+        Object {
+          "borderRadius": 22.5,
+          "paddingHorizontal": 10,
+        },
+      ]
+    }
+  >
+    <Text
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      Select Option
+    </Text>
+    <Text
+      allowFontScaling={false}
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "fontSize": 24,
+          },
+          Object {
+            "paddingRight": 15,
+          },
+          Object {
+            "fontFamily": "Ionicons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+  <Modal
+    animationType="fade"
+    hardwareAccelerated={false}
+    onRequestClose={[Function]}
+    supportedOrientations={
+      Array [
+        "portrait",
+        "landscape",
+      ]
+    }
+    transparent={true}
+    visible={false}
+  >
+    <Text
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "#FFF",
+          "flex": 1,
+        }
+      }
+    >
+      <RCTPicker
+        items={
+          Array [
+            Object {
+              "label": "1",
+              "textColor": undefined,
+              "value": "1",
+            },
+            Object {
+              "label": "2",
+              "textColor": undefined,
+              "value": "2",
+            },
+            Object {
+              "label": "3",
+              "textColor": undefined,
+              "value": "3",
+            },
+          ]
+        }
+        onChange={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        selectedIndex={0}
+        style={
+          Array [
+            Object {
+              "height": 216,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <Text
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    />
+  </Modal>
+</View>
+`;
+
+exports[`renders underlined Picker 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 5,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 45,
+          "justifyContent": "center",
+          "marginBottom": 5,
+          "marginTop": 10,
+          "width": "100%",
+        },
+        Object {
+          "borderBottomColor": "rgba(33, 33, 33, 0.5)",
+          "borderBottomWidth": 0.9,
+        },
+      ]
+    }
+  >
+    <Text
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      Select Option
+    </Text>
+    <Text
+      allowFontScaling={false}
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "fontSize": 24,
+          },
+          Object {
+            "paddingRight": 15,
+          },
+          Object {
+            "fontFamily": "Ionicons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+  <Modal
+    animationType="fade"
+    hardwareAccelerated={false}
+    onRequestClose={[Function]}
+    supportedOrientations={
+      Array [
+        "portrait",
+        "landscape",
+      ]
+    }
+    transparent={true}
+    visible={false}
+  >
+    <Text
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "#FFF",
+          "flex": 1,
+        }
+      }
+    >
+      <RCTPicker
+        items={
+          Array [
+            Object {
+              "label": "1",
+              "textColor": undefined,
+              "value": "1",
+            },
+            Object {
+              "label": "2",
+              "textColor": undefined,
+              "value": "2",
+            },
+            Object {
+              "label": "3",
+              "textColor": undefined,
+              "value": "3",
+            },
+          ]
+        }
+        onChange={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        selectedIndex={0}
+        style={
+          Array [
+            Object {
+              "height": 216,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <Text
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    />
+  </Modal>
+</View>
+`;
+
+exports[`renders unstyled Picker 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 5,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 45,
+          "justifyContent": "center",
+          "marginBottom": 5,
+          "marginTop": 10,
+          "width": "100%",
+        },
+        undefined,
+      ]
     }
   >
     <Text

@@ -14,6 +14,37 @@ it("renders regular Input", () => {
     expect(tree).toMatchSnapshot();
 });
 
+it("renders underlined Input", () => {
+    const tree = renderer.create(<Input underlined />).toJSON();
+    expect(tree).toMatchSnapshot();
+});
+
+it("renders rounded Input", () => {
+    const tree = renderer.create(<Input rounded />).toJSON();
+    expect(tree).toMatchSnapshot();
+});
+
+it("renders unstyled Input", () => {
+    const tree = renderer.create(<Input noStyle />).toJSON();
+    expect(tree).toMatchSnapshot();
+});
+
+it("renders custom styled Input", () => {
+    const tree = renderer
+        .create(
+            <Input
+                noStyle
+                style={{
+                    borderWidth: 1,
+                    borderColor: "black",
+                    borderRadius: 3
+                }}
+            />
+        )
+        .toJSON();
+    expect(tree).toMatchSnapshot();
+});
+
 it("renders colored Input", () => {
     const tree = renderer.create(<Input color="red" />).toJSON();
     expect(tree).toMatchSnapshot();
