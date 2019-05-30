@@ -55,7 +55,7 @@ export class TextArea extends Component {
             inputStyle.push(styles.underline);
             inputActiveStyle.push({ borderBottomColor: color, borderBottomWidth: 2 });
             inputErrorStyle.push({ borderBottomColor: errorColor, borderBottomWidth: 2 });
-        } else if (defaultStyle) {
+        } else if (defaultStyle || rounded) {
             if (Platform.OS === "android") {
                 inputStyle.push(styles.default, styles.defaultAndroid);
                 inputActiveStyle.push(styles.default, styles.defaultAndroid, { borderColor: color, borderWidth: 2 });

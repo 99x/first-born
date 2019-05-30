@@ -20,7 +20,7 @@ export class Form extends Component {
                 {formElements.map((element, key) => {
                     return (
                         <View style={styles.formElementContainer} key={key}>
-                            {this.renderElements(element, inputColor)}
+                            {this.renderElements(element, inputColor, otherProps)}
                         </View>
                     );
                 })}
@@ -28,20 +28,20 @@ export class Form extends Component {
         );
     }
 
-    renderElements(element, color) {
+    renderElements(element, color, styleProps) {
         element.color = color;
         const { type, pickerData, ...otherProps } = element;
 
         switch (type) {
             case "text":
-                return <FormInput {...otherProps} />;
+                return <FormInput {...styleProps} {...otherProps} />;
             case "textarea":
-                return <FormTextArea {...otherProps} />;
+                return <FormTextArea {...styleProps} {...otherProps} />;
             case "date":
-                return <FormDatePicker {...otherProps} />;
+                return <FormDatePicker {...styleProps} {...otherProps} />;
             case "picker":
                 return (
-                    <FormPicker {...otherProps}>
+                    <FormPicker {...styleProps} {...otherProps}>
                         {pickerData.map((dataElement, key) => (
                             <Picker.Item {...dataElement} key={key} />
                         ))}
@@ -52,7 +52,14 @@ export class Form extends Component {
 }
 
 Form.propTypes = {
-    color: PropTypes.string
+    color: PropTypes.string,
+    activeStyle: PropTypes.object,
+    errorStyle: PropTypes.object,
+    rounded: PropTypes.bool,
+    underline: PropTypes.bool,
+    defaultStyle: PropTypes.bool,
+    noStyle: PropTypes.bool,
+    errorColor: PropTypes.string,
 };
 
 const styles = StyleSheet.create({
