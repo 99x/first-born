@@ -11,6 +11,7 @@ class PickerAE extends Component {
         super(props);
         this.state = {
             focused: false,
+            error: false,
             chosenValue:
                 !props.placeholder && props.selectedValue
                     ? props.selectedValue
@@ -19,9 +20,15 @@ class PickerAE extends Component {
     }
 
     setValue = value => {
+        const { onValueChange, isValid } = this.props;
         this.setState({ chosenValue: value });
-        if (this.props.onValueChange) {
-            this.props.onValueChange(value);
+
+        if (onValueChange) {
+            onValueChange(value);
+        }
+
+        if (isValid) {
+            this.setState({ error: !isValid(value) });
         }
     };
 
@@ -33,52 +40,92 @@ class PickerAE extends Component {
             modalTransparent,
             selectedValue,
             children,
+            noStyle,
+            rounded,
+            underline,
+            defaultStyle,
+            style,
+            activeStyle,
+            errorStyle,
+            errorMessage,
+            errorColor,
             ...otherProps
         } = this.props;
-        const { focused, chosenValue } = this.state;
+        const { focused, error, chosenValue } = this.state;
+
+        let inputStyle = [Platform.OS === "android" ? styles.inputAndroid : styles.inputIos];
+        let inputActiveStyle = [styles.input];
+        let inputErrorStyle = [styles.input];
+
+        if (noStyle) {
+            inputStyle.push(style);
+            inputActiveStyle.push(activeStyle);
+            inputErrorStyle.push(errorStyle);
+        } else if (underline) {
+            inputStyle.push(styles.underline);
+            inputActiveStyle.push({ borderBottomColor: color, borderBottomWidth: 2 });
+            inputErrorStyle.push({ borderBottomColor: errorColor, borderBottomWidth: 2 });
+        } else if (defaultStyle || rounded) {
+            if (Platform.OS === "android") {
+                inputStyle.push(styles.default, styles.defaultAndroid);
+                inputActiveStyle.push(styles.default, styles.defaultAndroid, { borderColor: color, borderWidth: 2 });
+                inputErrorStyle.push(styles.default, styles.defaultAndroid, { borderColor: errorColor, borderWidth: 2 });
+            } else {
+                inputStyle.push(styles.default, styles.defaultIos);
+                inputActiveStyle.push(styles.default, styles.defaultIos, { borderColor: color, borderWidth: 2 });
+                inputErrorStyle.push(styles.default, styles.defaultIos, { borderColor: errorColor, borderWidth: 2 });
+            }
+
+            if (rounded) {
+                inputStyle.push(styles.rounded);
+                inputActiveStyle.push(styles.rounded, { borderColor: color, borderWidth: 2 });
+                inputErrorStyle.push(styles.rounded, { borderColor: errorColor, borderWidth: 2 });
+            }
+        }
 
         if (Platform.OS === "android") {
             return (
-                <View
-                    style={
-                        focused
-                            ? [
-                                  styles.pickerAndroid,
-                                  { borderColor: color, borderWidth: 2 }
-                              ]
-                            : styles.pickerAndroid
-                    }
-                >
-                    <Picker
-                        style={{ height: 45 }}
-                        ref={c => (this._root = c)}
-                        {...otherProps}
-                        selectedValue={chosenValue}
-                        onValueChange={this.setValue.bind(this)}
+                <View style={styles.inputContainer}>
+                    <View
+                        style={
+                            error
+                                ? inputErrorStyle
+                                : focused
+                                    ? inputActiveStyle
+                                    : inputStyle
+                        }
                     >
-                        {children}
-                    </Picker>
+                        <Picker
+                            style={{ height: 45 }}
+                            ref={c => (this._root = c)}
+                            {...otherProps}
+                            selectedValue={chosenValue}
+                            onValueChange={this.setValue.bind(this)}
+                        >
+                            {children}
+                        </Picker>
+                    </View>
+                    {error && errorMessage && <Text size="caption_big" color={errorColor} >{errorMessage}</Text>}
                 </View>
             );
         }
         return (
-            <View>
+            <View style={styles.inputContainer}>
                 <View
                     style={
-                        focused
-                            ? [
-                                  styles.pickerIos,
-                                  { borderColor: color, borderWidth: 2 }
-                              ]
-                            : styles.pickerIos
+                        error
+                            ? inputErrorStyle
+                            : focused
+                                ? inputActiveStyle
+                                : inputStyle
                     }
                 >
                     <Text
                         ref={c => (this._root = c)}
                         style={
                             !this.state.chosenValue
-                                ? styles.input
-                                : [styles.input, { color: commonColors.black }]
+                                ? styles.inputPlaceholder
+                                : [styles.inputPlaceholder, { color: commonColors.black }]
                         }
                         onPress={() => this.setState({ focused: true })}
                     >
@@ -92,12 +139,13 @@ class PickerAE extends Component {
                         size={24}
                     />
                 </View>
+                {error && errorMessage && <Text size="caption_big" color={errorColor} >{errorMessage}</Text>}
                 <Modal
                     supportedOrientations={["portrait", "landscape"]}
                     animationType={animationType}
                     transparent={modalTransparent}
                     visible={focused}
-                    onRequestClose={() => {}}
+                    onRequestClose={() => { }}
                 >
                     <Text
                         onPress={() => this.setState({ focused: false })}
@@ -131,9 +179,18 @@ PickerAE.Item = createReactClass({
 PickerAE.propTypes = {
     placeholder: PropTypes.string,
     color: PropTypes.string,
+    isValid: PropTypes.func,
+    errorMessage: PropTypes.string,
     animationType: PropTypes.string,
     modalTransparent: PropTypes.bool,
     mode: PropTypes.string,
+    activeStyle: PropTypes.object,
+    errorStyle: PropTypes.object,
+    rounded: PropTypes.bool,
+    underline: PropTypes.bool,
+    defaultStyle: PropTypes.bool,
+    noStyle: PropTypes.bool,
+    errorColor: PropTypes.string,
     ...Picker.propTypes
 };
 
@@ -142,36 +199,61 @@ PickerAE.defaultProps = {
     color: commonColors.primary,
     animationType: "fade",
     mode: "dropdown",
-    placeholder: "Select Option"
+    placeholder: "Select Option",
+    errorColor: commonColors.error,
+    defaultStyle: true
 };
 
 const styles = StyleSheet.create({
-    pickerAndroid: {
+    inputContainer: {
         width: "100%",
-        marginVertical: 10,
-        borderRadius: 10,
-        paddingHorizontal: 5,
-        borderColor: commonColors.inputGrey,
-        borderWidth: 0.9
-    },
-    pickerIos: {
-        width: "100%",
-        flexDirection: "row",
-        borderRadius: 15,
-        marginVertical: 10,
-        borderColor: commonColors.inputGrey,
-        borderWidth: 0.9,
-        justifyContent: "center",
-        alignItems: "center",
-        height: 45,
-        paddingLeft: 10
+        marginBottom: 5
     },
     icon: {
         paddingRight: 15
     },
-    input: {
+    inputPlaceholder: {
         flex: 1,
         color: commonColors.inputGrey
+    },
+    inputAndroid: {
+        marginTop: 10,
+        marginBottom: 5,
+        width: "100%",
+        height: 45,
+    },
+    inputIos: {
+        marginTop: 10,
+        marginBottom: 5,
+        width: "100%",
+        height: 45,
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    default: {
+        borderColor: commonColors.inputGrey,
+        borderWidth: 0.9,
+    },
+    defaultAndroid: {
+        paddingHorizontal: 5,
+        borderRadius: 10,
+    },
+    defaultIos: {
+        paddingHorizontal: 10,
+        borderRadius: 15,
+    },
+    underline: {
+        borderBottomColor: commonColors.inputGrey,
+        borderBottomWidth: 0.9,
+    },
+    rounded: {
+        borderRadius: 45 / 2,
+        paddingHorizontal: 10
+    },
+    iconContainer: {
+        alignItems: "center",
+        justifyContent: "center"
     }
 });
 
