@@ -53,17 +53,35 @@ export class TextArea extends Component {
             inputErrorStyle.push(errorStyle);
         } else if (underline) {
             inputStyle.push(styles.underline);
-            inputActiveStyle.push({ borderBottomColor: color, borderBottomWidth: 2 });
-            inputErrorStyle.push({ borderBottomColor: errorColor, borderBottomWidth: 2 });
+            inputActiveStyle.push({
+                borderBottomColor: color,
+                borderBottomWidth: 2
+            });
+            inputErrorStyle.push({
+                borderBottomColor: errorColor,
+                borderBottomWidth: 2
+            });
         } else if (defaultStyle || rounded) {
             if (Platform.OS === "android") {
                 inputStyle.push(styles.default, styles.defaultAndroid);
-                inputActiveStyle.push(styles.default, styles.defaultAndroid, { borderColor: color, borderWidth: 2 });
-                inputErrorStyle.push(styles.default, styles.defaultAndroid, { borderColor: errorColor, borderWidth: 2 });
+                inputActiveStyle.push(styles.default, styles.defaultAndroid, {
+                    borderColor: color,
+                    borderWidth: 2
+                });
+                inputErrorStyle.push(styles.default, styles.defaultAndroid, {
+                    borderColor: errorColor,
+                    borderWidth: 2
+                });
             } else {
                 inputStyle.push(styles.default, styles.defaultIos);
-                inputActiveStyle.push(styles.default, styles.defaultIos, { borderColor: color, borderWidth: 2 });
-                inputErrorStyle.push(styles.default, styles.defaultIos, { borderColor: errorColor, borderWidth: 2 });
+                inputActiveStyle.push(styles.default, styles.defaultIos, {
+                    borderColor: color,
+                    borderWidth: 2
+                });
+                inputErrorStyle.push(styles.default, styles.defaultIos, {
+                    borderColor: errorColor,
+                    borderWidth: 2
+                });
             }
         }
 
@@ -74,8 +92,8 @@ export class TextArea extends Component {
                         error
                             ? inputErrorStyle
                             : focused
-                                ? inputActiveStyle
-                                : inputStyle
+                            ? inputActiveStyle
+                            : inputStyle
                     }
                 >
                     <TextInput
@@ -100,7 +118,6 @@ export class TextArea extends Component {
                 </View>
             </View>
         );
-
     }
 }
 
@@ -135,18 +152,18 @@ const styles = StyleSheet.create({
     },
     default: {
         borderColor: commonColors.inputGrey,
-        borderWidth: 0.9,
+        borderWidth: 0.9
     },
     defaultAndroid: {
         paddingHorizontal: 5,
-        borderRadius: 10,
+        borderRadius: 10
     },
     defaultIos: {
         paddingHorizontal: 10,
-        borderRadius: 15,
+        borderRadius: 15
     },
     underline: {
         borderBottomColor: commonColors.inputGrey,
-        borderBottomWidth: 0.9,
-    },
+        borderBottomWidth: 0.9
+    }
 });

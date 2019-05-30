@@ -53,7 +53,9 @@ class PickerAE extends Component {
         } = this.props;
         const { focused, error, chosenValue } = this.state;
 
-        let inputStyle = [Platform.OS === "android" ? styles.inputAndroid : styles.inputIos];
+        let inputStyle = [
+            Platform.OS === "android" ? styles.inputAndroid : styles.inputIos
+        ];
         let inputActiveStyle = [styles.input];
         let inputErrorStyle = [styles.input];
 
@@ -63,23 +65,47 @@ class PickerAE extends Component {
             inputErrorStyle.push(errorStyle);
         } else if (underline) {
             inputStyle.push(styles.underline);
-            inputActiveStyle.push({ borderBottomColor: color, borderBottomWidth: 2 });
-            inputErrorStyle.push({ borderBottomColor: errorColor, borderBottomWidth: 2 });
+            inputActiveStyle.push({
+                borderBottomColor: color,
+                borderBottomWidth: 2
+            });
+            inputErrorStyle.push({
+                borderBottomColor: errorColor,
+                borderBottomWidth: 2
+            });
         } else if (defaultStyle || rounded) {
             if (Platform.OS === "android") {
                 inputStyle.push(styles.default, styles.defaultAndroid);
-                inputActiveStyle.push(styles.default, styles.defaultAndroid, { borderColor: color, borderWidth: 2 });
-                inputErrorStyle.push(styles.default, styles.defaultAndroid, { borderColor: errorColor, borderWidth: 2 });
+                inputActiveStyle.push(styles.default, styles.defaultAndroid, {
+                    borderColor: color,
+                    borderWidth: 2
+                });
+                inputErrorStyle.push(styles.default, styles.defaultAndroid, {
+                    borderColor: errorColor,
+                    borderWidth: 2
+                });
             } else {
                 inputStyle.push(styles.default, styles.defaultIos);
-                inputActiveStyle.push(styles.default, styles.defaultIos, { borderColor: color, borderWidth: 2 });
-                inputErrorStyle.push(styles.default, styles.defaultIos, { borderColor: errorColor, borderWidth: 2 });
+                inputActiveStyle.push(styles.default, styles.defaultIos, {
+                    borderColor: color,
+                    borderWidth: 2
+                });
+                inputErrorStyle.push(styles.default, styles.defaultIos, {
+                    borderColor: errorColor,
+                    borderWidth: 2
+                });
             }
 
             if (rounded) {
                 inputStyle.push(styles.rounded);
-                inputActiveStyle.push(styles.rounded, { borderColor: color, borderWidth: 2 });
-                inputErrorStyle.push(styles.rounded, { borderColor: errorColor, borderWidth: 2 });
+                inputActiveStyle.push(styles.rounded, {
+                    borderColor: color,
+                    borderWidth: 2
+                });
+                inputErrorStyle.push(styles.rounded, {
+                    borderColor: errorColor,
+                    borderWidth: 2
+                });
             }
         }
 
@@ -91,8 +117,8 @@ class PickerAE extends Component {
                             error
                                 ? inputErrorStyle
                                 : focused
-                                    ? inputActiveStyle
-                                    : inputStyle
+                                ? inputActiveStyle
+                                : inputStyle
                         }
                     >
                         <Picker
@@ -105,7 +131,11 @@ class PickerAE extends Component {
                             {children}
                         </Picker>
                     </View>
-                    {error && errorMessage && <Text size="caption_big" color={errorColor} >{errorMessage}</Text>}
+                    {error && errorMessage && (
+                        <Text size="caption_big" color={errorColor}>
+                            {errorMessage}
+                        </Text>
+                    )}
                 </View>
             );
         }
@@ -116,8 +146,8 @@ class PickerAE extends Component {
                         error
                             ? inputErrorStyle
                             : focused
-                                ? inputActiveStyle
-                                : inputStyle
+                            ? inputActiveStyle
+                            : inputStyle
                     }
                 >
                     <Text
@@ -125,7 +155,10 @@ class PickerAE extends Component {
                         style={
                             !this.state.chosenValue
                                 ? styles.inputPlaceholder
-                                : [styles.inputPlaceholder, { color: commonColors.black }]
+                                : [
+                                      styles.inputPlaceholder,
+                                      { color: commonColors.black }
+                                  ]
                         }
                         onPress={() => this.setState({ focused: true })}
                     >
@@ -139,13 +172,17 @@ class PickerAE extends Component {
                         size={24}
                     />
                 </View>
-                {error && errorMessage && <Text size="caption_big" color={errorColor} >{errorMessage}</Text>}
+                {error && errorMessage && (
+                    <Text size="caption_big" color={errorColor}>
+                        {errorMessage}
+                    </Text>
+                )}
                 <Modal
                     supportedOrientations={["portrait", "landscape"]}
                     animationType={animationType}
                     transparent={modalTransparent}
                     visible={focused}
-                    onRequestClose={() => { }}
+                    onRequestClose={() => {}}
                 >
                     <Text
                         onPress={() => this.setState({ focused: false })}
@@ -220,7 +257,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
         marginBottom: 5,
         width: "100%",
-        height: 45,
+        height: 45
     },
     inputIos: {
         marginTop: 10,
@@ -229,23 +266,23 @@ const styles = StyleSheet.create({
         height: 45,
         flexDirection: "row",
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: "center"
     },
     default: {
         borderColor: commonColors.inputGrey,
-        borderWidth: 0.9,
+        borderWidth: 0.9
     },
     defaultAndroid: {
         paddingHorizontal: 5,
-        borderRadius: 10,
+        borderRadius: 10
     },
     defaultIos: {
         paddingHorizontal: 10,
-        borderRadius: 15,
+        borderRadius: 15
     },
     underline: {
         borderBottomColor: commonColors.inputGrey,
-        borderBottomWidth: 0.9,
+        borderBottomWidth: 0.9
     },
     rounded: {
         borderRadius: 45 / 2,

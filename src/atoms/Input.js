@@ -12,7 +12,7 @@ export class Input extends Component {
         this.state = {
             focused: false,
             error: false,
-            text: "",
+            text: ""
         };
     }
 
@@ -30,7 +30,21 @@ export class Input extends Component {
     };
 
     render() {
-        const { errorMessage, color, noStyle, rounded, underline, defaultStyle, style, activeStyle, errorStyle, errorColor, iconLeft, iconRight, ...otherProps } = this.props;
+        const {
+            errorMessage,
+            color,
+            noStyle,
+            rounded,
+            underline,
+            defaultStyle,
+            style,
+            activeStyle,
+            errorStyle,
+            errorColor,
+            iconLeft,
+            iconRight,
+            ...otherProps
+        } = this.props;
         const { error, focused } = this.state;
 
         let inputStyle = [styles.input];
@@ -43,23 +57,47 @@ export class Input extends Component {
             inputErrorStyle.push(errorStyle);
         } else if (underline) {
             inputStyle.push(styles.underline);
-            inputActiveStyle.push({ borderBottomColor: color, borderBottomWidth: 2 });
-            inputErrorStyle.push({ borderBottomColor: errorColor, borderBottomWidth: 2 });
+            inputActiveStyle.push({
+                borderBottomColor: color,
+                borderBottomWidth: 2
+            });
+            inputErrorStyle.push({
+                borderBottomColor: errorColor,
+                borderBottomWidth: 2
+            });
         } else if (defaultStyle || rounded) {
             if (Platform.OS === "android") {
                 inputStyle.push(styles.default, styles.defaultAndroid);
-                inputActiveStyle.push(styles.default, styles.defaultAndroid, { borderColor: color, borderWidth: 2 });
-                inputErrorStyle.push(styles.default, styles.defaultAndroid, { borderColor: errorColor, borderWidth: 2 });
+                inputActiveStyle.push(styles.default, styles.defaultAndroid, {
+                    borderColor: color,
+                    borderWidth: 2
+                });
+                inputErrorStyle.push(styles.default, styles.defaultAndroid, {
+                    borderColor: errorColor,
+                    borderWidth: 2
+                });
             } else {
                 inputStyle.push(styles.default, styles.defaultIos);
-                inputActiveStyle.push(styles.default, styles.defaultIos, { borderColor: color, borderWidth: 2 });
-                inputErrorStyle.push(styles.default, styles.defaultIos, { borderColor: errorColor, borderWidth: 2 });
+                inputActiveStyle.push(styles.default, styles.defaultIos, {
+                    borderColor: color,
+                    borderWidth: 2
+                });
+                inputErrorStyle.push(styles.default, styles.defaultIos, {
+                    borderColor: errorColor,
+                    borderWidth: 2
+                });
             }
 
             if (rounded) {
                 inputStyle.push(styles.rounded);
-                inputActiveStyle.push(styles.rounded, { borderColor: color, borderWidth: 2 });
-                inputErrorStyle.push(styles.rounded, { borderColor: errorColor, borderWidth: 2 });
+                inputActiveStyle.push(styles.rounded, {
+                    borderColor: color,
+                    borderWidth: 2
+                });
+                inputErrorStyle.push(styles.rounded, {
+                    borderColor: errorColor,
+                    borderWidth: 2
+                });
             }
         }
 
@@ -70,8 +108,8 @@ export class Input extends Component {
                         error
                             ? inputErrorStyle
                             : focused
-                                ? inputActiveStyle
-                                : inputStyle
+                            ? inputActiveStyle
+                            : inputStyle
                     }
                 >
                     {iconLeft && this.renderIcon(iconLeft, { marginRight: 5 })}
@@ -80,9 +118,7 @@ export class Input extends Component {
                         style={{ width: "100%" }}
                         underlineColorAndroid={"transparent"}
                         placeholderTextColor={
-                            error
-                                ? errorColor
-                                : commonColors.inputGrey
+                            error ? errorColor : commonColors.inputGrey
                         }
                         onFocus={() => this.setState({ focused: true })}
                         onBlur={() => this.setState({ focused: false })}
@@ -95,7 +131,11 @@ export class Input extends Component {
                     />
                     {iconRight && this.renderIcon(iconRight, { marginLeft: 5 })}
                 </View>
-                {error && errorMessage && <Text size="footnote" color={errorColor} >{errorMessage}</Text>}
+                {error && errorMessage && (
+                    <Text size="footnote" color={errorColor}>
+                        {errorMessage}
+                    </Text>
+                )}
             </View>
         );
     }
@@ -105,9 +145,14 @@ export class Input extends Component {
         const { error } = this.state;
         return (
             <View style={styles.iconContainer}>
-                <Icon {...icon} size={25} style={style} color={error ? errorColor : icon.color} />
+                <Icon
+                    {...icon}
+                    size={25}
+                    style={style}
+                    color={error ? errorColor : icon.color}
+                />
             </View>
-        )
+        );
     }
 }
 
@@ -151,19 +196,19 @@ const styles = StyleSheet.create({
     },
     default: {
         borderColor: commonColors.inputGrey,
-        borderWidth: 0.9,
+        borderWidth: 0.9
     },
     defaultAndroid: {
         paddingHorizontal: 5,
-        borderRadius: 10,
+        borderRadius: 10
     },
     defaultIos: {
         paddingHorizontal: 10,
-        borderRadius: 15,
+        borderRadius: 15
     },
     underline: {
         borderBottomColor: commonColors.inputGrey,
-        borderBottomWidth: 0.9,
+        borderBottomWidth: 0.9
     },
     rounded: {
         borderRadius: 45 / 2,

@@ -20,7 +20,11 @@ export class Form extends Component {
                 {formElements.map((element, key) => {
                     return (
                         <View style={styles.formElementContainer} key={key}>
-                            {this.renderElements(element, inputColor, otherProps)}
+                            {this.renderElements(
+                                element,
+                                inputColor,
+                                otherProps
+                            )}
                         </View>
                     );
                 })}
@@ -59,7 +63,7 @@ Form.propTypes = {
     underline: PropTypes.bool,
     defaultStyle: PropTypes.bool,
     noStyle: PropTypes.bool,
-    errorColor: PropTypes.string,
+    errorColor: PropTypes.string
 };
 
 const styles = StyleSheet.create({

@@ -47,7 +47,7 @@ export class DatePicker extends Component {
             activeStyle,
             errorStyle,
             errorMessage,
-            errorColor,
+            errorColor
         } = this.props;
 
         const { focused, chosenDate, defaultDate, error } = this.state;
@@ -62,23 +62,47 @@ export class DatePicker extends Component {
             inputErrorStyle.push(errorStyle);
         } else if (underline) {
             inputStyle.push(styles.underline);
-            inputActiveStyle.push({ borderBottomColor: color, borderBottomWidth: 2 });
-            inputErrorStyle.push({ borderBottomColor: errorColor, borderBottomWidth: 2 });
+            inputActiveStyle.push({
+                borderBottomColor: color,
+                borderBottomWidth: 2
+            });
+            inputErrorStyle.push({
+                borderBottomColor: errorColor,
+                borderBottomWidth: 2
+            });
         } else if (defaultStyle || rounded) {
             if (Platform.OS === "android") {
                 inputStyle.push(styles.default, styles.defaultAndroid);
-                inputActiveStyle.push(styles.default, styles.defaultAndroid, { borderColor: color, borderWidth: 2 });
-                inputErrorStyle.push(styles.default, styles.defaultAndroid, { borderColor: errorColor, borderWidth: 2 });
+                inputActiveStyle.push(styles.default, styles.defaultAndroid, {
+                    borderColor: color,
+                    borderWidth: 2
+                });
+                inputErrorStyle.push(styles.default, styles.defaultAndroid, {
+                    borderColor: errorColor,
+                    borderWidth: 2
+                });
             } else {
                 inputStyle.push(styles.default, styles.defaultIos);
-                inputActiveStyle.push(styles.default, styles.defaultIos, { borderColor: color, borderWidth: 2 });
-                inputErrorStyle.push(styles.default, styles.defaultIos, { borderColor: errorColor, borderWidth: 2 });
+                inputActiveStyle.push(styles.default, styles.defaultIos, {
+                    borderColor: color,
+                    borderWidth: 2
+                });
+                inputErrorStyle.push(styles.default, styles.defaultIos, {
+                    borderColor: errorColor,
+                    borderWidth: 2
+                });
             }
 
             if (rounded) {
                 inputStyle.push(styles.rounded);
-                inputActiveStyle.push(styles.rounded, { borderColor: color, borderWidth: 2 });
-                inputErrorStyle.push(styles.rounded, { borderColor: errorColor, borderWidth: 2 });
+                inputActiveStyle.push(styles.rounded, {
+                    borderColor: color,
+                    borderWidth: 2
+                });
+                inputErrorStyle.push(styles.rounded, {
+                    borderColor: errorColor,
+                    borderWidth: 2
+                });
             }
         }
 
@@ -90,13 +114,17 @@ export class DatePicker extends Component {
                             error
                                 ? inputErrorStyle
                                 : focused
-                                    ? inputActiveStyle
-                                    : inputStyle
+                                ? inputActiveStyle
+                                : inputStyle
                         }
                     >
                         <Text
                             ref={c => (this._root = c)}
-                            style={!chosenDate ? styles.inputPlaceholder : styles.inputValue}
+                            style={
+                                !chosenDate
+                                    ? styles.inputPlaceholder
+                                    : styles.inputValue
+                            }
                             onPress={() =>
                                 mode === "date"
                                     ? this.openAndroidDatePicker()
@@ -121,7 +149,11 @@ export class DatePicker extends Component {
                             />
                         </View>
                     </View>
-                    {error && errorMessage && <Text size="caption_big" color={errorColor} >{errorMessage}</Text>}
+                    {error && errorMessage && (
+                        <Text size="caption_big" color={errorColor}>
+                            {errorMessage}
+                        </Text>
+                    )}
                 </View>
             );
         }
@@ -132,13 +164,17 @@ export class DatePicker extends Component {
                         error
                             ? inputErrorStyle
                             : focused
-                                ? inputActiveStyle
-                                : inputStyle
+                            ? inputActiveStyle
+                            : inputStyle
                     }
                 >
                     <Text
                         ref={c => (this._root = c)}
-                        style={!chosenDate ? styles.inputPlaceholder : styles.inputValue}
+                        style={
+                            !chosenDate
+                                ? styles.inputPlaceholder
+                                : styles.inputValue
+                        }
                         onPress={() => this.openIosDatePicker()}
                     >
                         {chosenDate
@@ -155,13 +191,17 @@ export class DatePicker extends Component {
                         />
                     </View>
                 </View>
-                {error && errorMessage && <Text size="caption_big" color={errorColor} >{errorMessage}</Text>}
+                {error && errorMessage && (
+                    <Text size="caption_big" color={errorColor}>
+                        {errorMessage}
+                    </Text>
+                )}
                 <Modal
                     supportedOrientations={["portrait", "landscape"]}
                     animationType={animationType}
                     transparent={modalTransparent}
                     visible={focused}
-                    onRequestClose={() => { }}
+                    onRequestClose={() => {}}
                 >
                     <Text
                         onPress={() => this.setState({ focused: false })}
@@ -333,26 +373,26 @@ const styles = StyleSheet.create({
         height: 45,
         flexDirection: "row",
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: "center"
     },
     default: {
         borderColor: commonColors.inputGrey,
-        borderWidth: 0.9,
+        borderWidth: 0.9
     },
     defaultAndroid: {
         paddingHorizontal: 5,
-        borderRadius: 10,
+        borderRadius: 10
     },
     defaultIos: {
         paddingHorizontal: 10,
-        borderRadius: 15,
+        borderRadius: 15
     },
     underline: {
         borderBottomColor: commonColors.inputGrey,
-        borderBottomWidth: 0.9,
+        borderBottomWidth: 0.9
     },
     rounded: {
         borderRadius: 45 / 2,
         paddingHorizontal: 10
-    },
+    }
 });
