@@ -22,21 +22,35 @@ exports[`renders FormPicker with placeholder 1`] = `
   >
     Number
   </Text>
-  <View>
+  <View
+    style={
+      Object {
+        "marginBottom": 5,
+        "width": "100%",
+      }
+    }
+  >
     <View
       style={
-        Object {
-          "alignItems": "center",
-          "borderColor": "rgba(33, 33, 33, 0.5)",
-          "borderRadius": 15,
-          "borderWidth": 0.9,
-          "flexDirection": "row",
-          "height": 45,
-          "justifyContent": "center",
-          "marginVertical": 10,
-          "paddingLeft": 10,
-          "width": "100%",
-        }
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "height": 45,
+            "justifyContent": "center",
+            "marginBottom": 5,
+            "marginTop": 10,
+            "width": "100%",
+          },
+          Object {
+            "borderColor": "rgba(33, 33, 33, 0.5)",
+            "borderWidth": 0.9,
+          },
+          Object {
+            "borderRadius": 15,
+            "paddingHorizontal": 10,
+          },
+        ]
       }
     >
       <Text
@@ -196,21 +210,35 @@ exports[`renders colored FormPicker 1`] = `
   >
     Number
   </Text>
-  <View>
+  <View
+    style={
+      Object {
+        "marginBottom": 5,
+        "width": "100%",
+      }
+    }
+  >
     <View
       style={
-        Object {
-          "alignItems": "center",
-          "borderColor": "rgba(33, 33, 33, 0.5)",
-          "borderRadius": 15,
-          "borderWidth": 0.9,
-          "flexDirection": "row",
-          "height": 45,
-          "justifyContent": "center",
-          "marginVertical": 10,
-          "paddingLeft": 10,
-          "width": "100%",
-        }
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "height": 45,
+            "justifyContent": "center",
+            "marginBottom": 5,
+            "marginTop": 10,
+            "width": "100%",
+          },
+          Object {
+            "borderColor": "rgba(33, 33, 33, 0.5)",
+            "borderWidth": 0.9,
+          },
+          Object {
+            "borderRadius": 15,
+            "paddingHorizontal": 10,
+          },
+        ]
       }
     >
       <Text
@@ -370,21 +398,35 @@ exports[`renders regular FormPicker 1`] = `
   >
     Number
   </Text>
-  <View>
+  <View
+    style={
+      Object {
+        "marginBottom": 5,
+        "width": "100%",
+      }
+    }
+  >
     <View
       style={
-        Object {
-          "alignItems": "center",
-          "borderColor": "rgba(33, 33, 33, 0.5)",
-          "borderRadius": 15,
-          "borderWidth": 0.9,
-          "flexDirection": "row",
-          "height": 45,
-          "justifyContent": "center",
-          "marginVertical": 10,
-          "paddingLeft": 10,
-          "width": "100%",
-        }
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "height": 45,
+            "justifyContent": "center",
+            "marginBottom": 5,
+            "marginTop": 10,
+            "width": "100%",
+          },
+          Object {
+            "borderColor": "rgba(33, 33, 33, 0.5)",
+            "borderWidth": 0.9,
+          },
+          Object {
+            "borderRadius": 15,
+            "paddingHorizontal": 10,
+          },
+        ]
       }
     >
       <Text

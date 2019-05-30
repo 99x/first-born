@@ -4,32 +4,49 @@ exports[`renders Input with placeholder 1`] = `
 <View
   style={
     Object {
-      "borderColor": "rgba(33, 33, 33, 0.5)",
-      "borderRadius": 10,
-      "borderWidth": 0.9,
-      "height": 45,
-      "marginVertical": 10,
-      "paddingHorizontal": 5,
+      "marginBottom": 5,
       "width": "100%",
     }
   }
 >
-  <TextInput
-    allowFontScaling={true}
-    onBlur={[Function]}
-    onChangeText={[Function]}
-    onFocus={[Function]}
-    onSubmitEditing={[Function]}
-    placeholder="placeholder"
-    placeholderTextColor="rgba(33, 33, 33, 0.5)"
-    rejectResponderTermination={true}
+  <View
     style={
-      Object {
-        "width": "100%",
-      }
+      Array [
+        Object {
+          "flexDirection": "row",
+          "height": 45,
+          "marginBottom": 5,
+          "marginTop": 10,
+          "width": "100%",
+        },
+        Object {
+          "borderColor": "rgba(33, 33, 33, 0.5)",
+          "borderWidth": 0.9,
+        },
+        Object {
+          "borderRadius": 10,
+          "paddingHorizontal": 5,
+        },
+      ]
     }
-    underlineColorAndroid="transparent"
-  />
+  >
+    <TextInput
+      allowFontScaling={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      onSubmitEditing={[Function]}
+      placeholder="placeholder"
+      placeholderTextColor="rgba(33, 33, 33, 0.5)"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
 </View>
 `;
 
@@ -37,31 +54,94 @@ exports[`renders colored Input 1`] = `
 <View
   style={
     Object {
-      "borderColor": "rgba(33, 33, 33, 0.5)",
-      "borderRadius": 10,
-      "borderWidth": 0.9,
-      "height": 45,
-      "marginVertical": 10,
-      "paddingHorizontal": 5,
+      "marginBottom": 5,
       "width": "100%",
     }
   }
 >
-  <TextInput
-    allowFontScaling={true}
-    onBlur={[Function]}
-    onChangeText={[Function]}
-    onFocus={[Function]}
-    onSubmitEditing={[Function]}
-    placeholderTextColor="rgba(33, 33, 33, 0.5)"
-    rejectResponderTermination={true}
+  <View
     style={
-      Object {
-        "width": "100%",
-      }
+      Array [
+        Object {
+          "flexDirection": "row",
+          "height": 45,
+          "marginBottom": 5,
+          "marginTop": 10,
+          "width": "100%",
+        },
+        Object {
+          "borderColor": "rgba(33, 33, 33, 0.5)",
+          "borderWidth": 0.9,
+        },
+        Object {
+          "borderRadius": 10,
+          "paddingHorizontal": 5,
+        },
+      ]
     }
-    underlineColorAndroid="transparent"
-  />
+  >
+    <TextInput
+      allowFontScaling={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      onSubmitEditing={[Function]}
+      placeholderTextColor="rgba(33, 33, 33, 0.5)"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
+</View>
+`;
+
+exports[`renders custom styled Input 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 5,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "height": 45,
+          "marginBottom": 5,
+          "marginTop": 10,
+          "width": "100%",
+        },
+        Object {
+          "borderColor": "black",
+          "borderRadius": "3",
+          "borderWidth": 1,
+        },
+      ]
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      onSubmitEditing={[Function]}
+      placeholderTextColor="rgba(33, 33, 33, 0.5)"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
 </View>
 `;
 
@@ -69,30 +149,192 @@ exports[`renders regular Input 1`] = `
 <View
   style={
     Object {
-      "borderColor": "rgba(33, 33, 33, 0.5)",
-      "borderRadius": 10,
-      "borderWidth": 0.9,
-      "height": 45,
-      "marginVertical": 10,
-      "paddingHorizontal": 5,
+      "marginBottom": 5,
       "width": "100%",
     }
   }
 >
-  <TextInput
-    allowFontScaling={true}
-    onBlur={[Function]}
-    onChangeText={[Function]}
-    onFocus={[Function]}
-    onSubmitEditing={[Function]}
-    placeholderTextColor="rgba(33, 33, 33, 0.5)"
-    rejectResponderTermination={true}
+  <View
     style={
-      Object {
-        "width": "100%",
-      }
+      Array [
+        Object {
+          "flexDirection": "row",
+          "height": 45,
+          "marginBottom": 5,
+          "marginTop": 10,
+          "width": "100%",
+        },
+        Object {
+          "borderColor": "rgba(33, 33, 33, 0.5)",
+          "borderWidth": 0.9,
+        },
+        Object {
+          "borderRadius": 10,
+          "paddingHorizontal": 5,
+        },
+      ]
     }
-    underlineColorAndroid="transparent"
-  />
+  >
+    <TextInput
+      allowFontScaling={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      onSubmitEditing={[Function]}
+      placeholderTextColor="rgba(33, 33, 33, 0.5)"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
+</View>
+`;
+
+exports[`renders rounded Input 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 5,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "height": 45,
+          "marginBottom": 5,
+          "marginTop": 10,
+          "width": "100%",
+        },
+        Object {
+          "borderColor": "rgba(33, 33, 33, 0.5)",
+          "borderWidth": 0.9,
+        },
+        Object {
+          "borderRadius": 10,
+          "paddingHorizontal": 5,
+        },
+        Object {
+          "borderRadius": 22.5,
+          "paddingHorizontal": 10,
+        },
+      ]
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      onSubmitEditing={[Function]}
+      placeholderTextColor="rgba(33, 33, 33, 0.5)"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
+</View>
+`;
+
+exports[`renders underlined Input 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 5,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "height": 45,
+          "marginBottom": 5,
+          "marginTop": 10,
+          "width": "100%",
+        },
+        Object {
+          "borderColor": "rgba(33, 33, 33, 0.5)",
+          "borderWidth": 0.9,
+        },
+        Object {
+          "borderRadius": 10,
+          "paddingHorizontal": 5,
+        },
+      ]
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      onSubmitEditing={[Function]}
+      placeholderTextColor="rgba(33, 33, 33, 0.5)"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+      underlineColorAndroid="transparent"
+      underlined={true}
+    />
+  </View>
+</View>
+`;
+
+exports[`renders unstyled Input 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 5,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "height": 45,
+          "marginBottom": 5,
+          "marginTop": 10,
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      onSubmitEditing={[Function]}
+      placeholderTextColor="rgba(33, 33, 33, 0.5)"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
 </View>
 `;

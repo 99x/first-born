@@ -4,61 +4,86 @@ exports[`renders DatePicker with placeholder 1`] = `
 <View
   style={
     Object {
-      "alignItems": "center",
-      "borderColor": "rgba(33, 33, 33, 0.5)",
-      "borderRadius": 10,
-      "borderWidth": 0.9,
-      "flexDirection": "row",
-      "height": 45,
-      "justifyContent": "center",
-      "marginVertical": 10,
-      "paddingHorizontal": 10,
+      "marginBottom": 5,
       "width": "100%",
     }
   }
 >
-  <Text
-    onPress={[Function]}
+  <View
     style={
       Array [
         Object {
-          "color": "#000",
-          "fontSize": 16,
-          "fontWeight": "normal",
-          "textAlign": "left",
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 45,
+          "justifyContent": "center",
+          "marginBottom": 5,
+          "marginTop": 10,
+          "width": "100%",
         },
         Object {
-          "color": "rgba(33, 33, 33, 0.5)",
-          "flex": 1,
+          "borderColor": "rgba(33, 33, 33, 0.5)",
+          "borderWidth": 0.9,
+        },
+        Object {
+          "borderRadius": 10,
+          "paddingHorizontal": 5,
         },
       ]
     }
   >
-    placeholder
-  </Text>
-  <Text
-    allowFontScaling={false}
-    onPress={[Function]}
-    style={
-      Array [
+    <Text
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      placeholder
+    </Text>
+    <View
+      style={
         Object {
-          "color": "rgba(33, 33, 33, 0.5)",
-          "fontSize": 20,
-        },
-        Object {
-          "paddingRight": 15,
-        },
-        Object {
-          "fontFamily": "Ionicons",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-        },
-        Object {},
-      ]
-    }
-  >
-    
-  </Text>
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "rgba(33, 33, 33, 0.5)",
+              "fontSize": 20,
+            },
+            Object {
+              "marginRight": 5,
+            },
+            Object {
+              "fontFamily": "Ionicons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
 </View>
 `;
 
@@ -66,61 +91,170 @@ exports[`renders colored DatePicker 1`] = `
 <View
   style={
     Object {
-      "alignItems": "center",
-      "borderColor": "rgba(33, 33, 33, 0.5)",
-      "borderRadius": 10,
-      "borderWidth": 0.9,
-      "flexDirection": "row",
-      "height": 45,
-      "justifyContent": "center",
-      "marginVertical": 10,
-      "paddingHorizontal": 10,
+      "marginBottom": 5,
       "width": "100%",
     }
   }
 >
-  <Text
-    onPress={[Function]}
+  <View
     style={
       Array [
         Object {
-          "color": "#000",
-          "fontSize": 16,
-          "fontWeight": "normal",
-          "textAlign": "left",
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 45,
+          "justifyContent": "center",
+          "marginBottom": 5,
+          "marginTop": 10,
+          "width": "100%",
         },
         Object {
-          "color": "rgba(33, 33, 33, 0.5)",
-          "flex": 1,
+          "borderColor": "rgba(33, 33, 33, 0.5)",
+          "borderWidth": 0.9,
+        },
+        Object {
+          "borderRadius": 10,
+          "paddingHorizontal": 5,
         },
       ]
     }
   >
-    Select Date
-  </Text>
-  <Text
-    allowFontScaling={false}
-    onPress={[Function]}
+    <Text
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      Select Date
+    </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "rgba(33, 33, 33, 0.5)",
+              "fontSize": 20,
+            },
+            Object {
+              "marginRight": 5,
+            },
+            Object {
+              "fontFamily": "Ionicons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`renders custom styled DatePicker 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 5,
+      "width": "100%",
+    }
+  }
+>
+  <View
     style={
       Array [
         Object {
-          "color": "rgba(33, 33, 33, 0.5)",
-          "fontSize": 20,
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 45,
+          "justifyContent": "center",
+          "marginBottom": 5,
+          "marginTop": 10,
+          "width": "100%",
         },
         Object {
-          "paddingRight": 15,
+          "borderColor": "black",
+          "borderRadius": "3",
+          "borderWidth": 1,
         },
-        Object {
-          "fontFamily": "Ionicons",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-        },
-        Object {},
       ]
     }
   >
-    
-  </Text>
+    <Text
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      Select Date
+    </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "rgba(33, 33, 33, 0.5)",
+              "fontSize": 20,
+            },
+            Object {
+              "marginRight": 5,
+            },
+            Object {
+              "fontFamily": "Ionicons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
 </View>
 `;
 
@@ -128,60 +262,339 @@ exports[`renders regular DatePicker 1`] = `
 <View
   style={
     Object {
-      "alignItems": "center",
-      "borderColor": "rgba(33, 33, 33, 0.5)",
-      "borderRadius": 10,
-      "borderWidth": 0.9,
-      "flexDirection": "row",
-      "height": 45,
-      "justifyContent": "center",
-      "marginVertical": 10,
-      "paddingHorizontal": 10,
+      "marginBottom": 5,
       "width": "100%",
     }
   }
 >
-  <Text
-    onPress={[Function]}
+  <View
     style={
       Array [
         Object {
-          "color": "#000",
-          "fontSize": 16,
-          "fontWeight": "normal",
-          "textAlign": "left",
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 45,
+          "justifyContent": "center",
+          "marginBottom": 5,
+          "marginTop": 10,
+          "width": "100%",
         },
         Object {
-          "color": "rgba(33, 33, 33, 0.5)",
-          "flex": 1,
+          "borderColor": "rgba(33, 33, 33, 0.5)",
+          "borderWidth": 0.9,
+        },
+        Object {
+          "borderRadius": 10,
+          "paddingHorizontal": 5,
         },
       ]
     }
   >
-    Select Date
-  </Text>
-  <Text
-    allowFontScaling={false}
-    onPress={[Function]}
+    <Text
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      Select Date
+    </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "rgba(33, 33, 33, 0.5)",
+              "fontSize": 20,
+            },
+            Object {
+              "marginRight": 5,
+            },
+            Object {
+              "fontFamily": "Ionicons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`renders rounded DatePicker 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 5,
+      "width": "100%",
+    }
+  }
+>
+  <View
     style={
       Array [
         Object {
-          "color": "rgba(33, 33, 33, 0.5)",
-          "fontSize": 20,
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 45,
+          "justifyContent": "center",
+          "marginBottom": 5,
+          "marginTop": 10,
+          "width": "100%",
         },
         Object {
-          "paddingRight": 15,
+          "borderColor": "rgba(33, 33, 33, 0.5)",
+          "borderWidth": 0.9,
         },
         Object {
-          "fontFamily": "Ionicons",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
+          "borderRadius": 10,
+          "paddingHorizontal": 5,
         },
-        Object {},
+        Object {
+          "borderRadius": 22.5,
+          "paddingHorizontal": 10,
+        },
       ]
     }
   >
-    
-  </Text>
+    <Text
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      Select Date
+    </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "rgba(33, 33, 33, 0.5)",
+              "fontSize": 20,
+            },
+            Object {
+              "marginRight": 5,
+            },
+            Object {
+              "fontFamily": "Ionicons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`renders underlined DatePicker 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 5,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 45,
+          "justifyContent": "center",
+          "marginBottom": 5,
+          "marginTop": 10,
+          "width": "100%",
+        },
+        Object {
+          "borderBottomColor": "rgba(33, 33, 33, 0.5)",
+          "borderBottomWidth": 0.9,
+        },
+      ]
+    }
+  >
+    <Text
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      Select Date
+    </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "rgba(33, 33, 33, 0.5)",
+              "fontSize": 20,
+            },
+            Object {
+              "marginRight": 5,
+            },
+            Object {
+              "fontFamily": "Ionicons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`renders unstyled DatePicker 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 5,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 45,
+          "justifyContent": "center",
+          "marginBottom": 5,
+          "marginTop": 10,
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "textAlign": "left",
+          },
+          Object {
+            "color": "rgba(33, 33, 33, 0.5)",
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      Select Date
+    </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "rgba(33, 33, 33, 0.5)",
+              "fontSize": 20,
+            },
+            Object {
+              "marginRight": 5,
+            },
+            Object {
+              "fontFamily": "Ionicons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
 </View>
 `;
