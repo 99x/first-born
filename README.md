@@ -241,6 +241,7 @@ You can use any [TextInput property](http://facebook.github.io/react-native/docs
 | **`style`**            | Custom DatePicker inactive style. (Style object)                    | _None_          |
 | **`activeStyle`**      | Custom DatePicker active style. (Style object)                      | _None_          |
 | **`errorStyle`**       | Custom DatePicker error style. (Style object)                       | _None_          |
+| **`errorColor`**       | Color of DatePicker when validation fails                           | _error_         |
 
 #### Input
 
@@ -268,6 +269,9 @@ You can use any [TextInput property](http://facebook.github.io/react-native/docs
 | **`style`**        | Custom Input inactive style. (Style object)                        | _None_    |
 | **`activeStyle`**  | Custom Input active style. (Style object)                          | _None_    |
 | **`errorStyle`**   | Custom  Input error style. (Style object)                          | _None_    |
+| **`errorColor`**   | Color of Input when validation fails                               | _error_   |
+| **`iconLeft`**     | Icon Atom to render on the left of the Input                       | _None_    |
+| **`iconRight`**    | Icon Atom to render on the right of the Input                      | _None_    |
 
 #### Picker
 
@@ -305,6 +309,7 @@ You can use any [Picker property](http://facebook.github.io/react-native/docs/pi
 | **`style`**            | Custom Picker inactive style. (Style object)                        | _None_            |
 | **`activeStyle`**      | Custom Picker active style. (Style object)                          | _None_            |
 | **`errorStyle`**       | Custom Picker error style. (Style object)                           | _None_            |
+| **`errorColor`**       | Color of Picker when validation fails                               | _error_           |
 
 #### TextArea
 
@@ -327,12 +332,13 @@ You can use any [TextInput property](http://facebook.github.io/react-native/docs
 | **`color`**        | Color of the `TextInput` when in focus.                            | _primary_ |
 | **`isValid`**      | User defined validation function, that returns true for valid text | _None_    |
 | **`errorMessage`** | Error message to display below input, if validation fails          | _None_    |
-| **`underline`**    | If DatePicker style is an underline.                               | _false_   |
-| **`defaultStyle`** | If DatePicker style is default as seen above.                      | _true_    |
-| **`noStyle`**      | If DatePicker has no framework defined style.                      | _false_   |
-| **`style`**        | Custom DatePicker inactive style. (Style object)                   | _None_    |
-| **`activeStyle`**  | Custom DatePicker active style. (Style object)                     | _None_    |
-| **`errorStyle`**   | Custom DatePicker error style. (Style object)                      | _None_    |
+| **`underline`**    | If TextArea style is an underline.                                 | _false_   |
+| **`defaultStyle`** | If TextArea style is default as seen above.                        | _true_    |
+| **`noStyle`**      | If TextArea has no framework defined style.                        | _false_   |
+| **`style`**        | Custom TextArea inactive style. (Style object)                     | _None_    |
+| **`activeStyle`**  | Custom TextArea active style. (Style object)                       | _None_    |
+| **`errorStyle`**   | Custom TextArea error style. (Style object)                        | _None_    |
+| **`errorColor`**   | Color of TextArea when validation fails                            | _error_   |
  
 ### Molecules
 
