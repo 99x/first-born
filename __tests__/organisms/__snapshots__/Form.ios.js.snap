@@ -57,7 +57,7 @@ exports[`renders a form with all custom styled input types 1`] = `
               },
               Object {
                 "borderColor": "black",
-                "borderRadius": "3",
+                "borderRadius": 3,
                 "borderWidth": 1,
               },
             ]
@@ -133,7 +133,7 @@ exports[`renders a form with all custom styled input types 1`] = `
               },
               Object {
                 "borderColor": "black",
-                "borderRadius": "3",
+                "borderRadius": 3,
                 "borderWidth": 1,
               },
             ]
@@ -323,7 +323,7 @@ exports[`renders a form with all custom styled input types 1`] = `
               },
               Object {
                 "borderColor": "black",
-                "borderRadius": "3",
+                "borderRadius": 3,
                 "borderWidth": 1,
               },
             ]
@@ -497,7 +497,7 @@ exports[`renders a form with all custom styled input types 1`] = `
               },
               Object {
                 "borderColor": "black",
-                "borderRadius": "3",
+                "borderRadius": 3,
                 "borderWidth": 1,
               },
             ]
@@ -1599,7 +1599,6 @@ exports[`renders a form with all rounded input types 1`] = `
             onContentSizeChange={[Function]}
             onFocus={[Function]}
             rejectResponderTermination={true}
-            rounded={true}
             style={
               Object {
                 "height": 100,

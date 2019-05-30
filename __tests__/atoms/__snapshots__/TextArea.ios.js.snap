@@ -116,7 +116,7 @@ exports[`renders custom styled TextArea 1`] = `
         },
         Object {
           "borderColor": "black",
-          "borderRadius": "3",
+          "borderRadius": 3,
           "borderWidth": 1,
         },
       ]

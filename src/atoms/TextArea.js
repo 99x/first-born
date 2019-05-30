@@ -38,6 +38,7 @@ export class TextArea extends Component {
             errorStyle,
             errorMessage,
             errorColor,
+            rounded,
             ...otherProps
         } = this.props;
 

@@ -130,7 +130,7 @@ exports[`renders custom styled Picker 1`] = `
         },
         Object {
           "borderColor": "black",
-          "borderRadius": "3",
+          "borderRadius": 3,
           "borderWidth": 1,
         },
       ]

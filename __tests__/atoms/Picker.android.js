@@ -89,7 +89,7 @@ it("renders custom styled Picker", () => {
                 style={{
                     borderWidth: 1,
                     borderColor: "black",
-                    borderRadius: "3"
+                    borderRadius: 3
                 }}
             >
                 <Picker.Item value="1" label="1" />

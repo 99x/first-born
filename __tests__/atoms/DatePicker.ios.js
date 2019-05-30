@@ -46,7 +46,7 @@ it("renders custom styled DatePicker", () => {
                 style={{
                     borderWidth: 1,
                     borderColor: "black",
-                    borderRadius: "3"
+                    borderRadius: 3
                 }}
             />
         )

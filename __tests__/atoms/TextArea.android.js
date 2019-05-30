@@ -32,7 +32,7 @@ it("renders custom styled TextArea", () => {
                 style={{
                     borderWidth: 1,
                     borderColor: "black",
-                    borderRadius: "3"
+                    borderRadius: 3
                 }}
             />
         )

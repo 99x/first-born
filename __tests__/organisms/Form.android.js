@@ -167,7 +167,7 @@ it("renders a form with all custom styled input types", () => {
                 style={{
                     borderWidth: 1,
                     borderColor: "black",
-                    borderRadius: "3"
+                    borderRadius: 3
                 }}
             />
         )
