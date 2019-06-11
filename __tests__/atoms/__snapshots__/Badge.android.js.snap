@@ -54,6 +54,8 @@ exports[`renders colored badge 2`] = `
       },
       Object {
         "backgroundColor": "transparent",
+        "borderColor": "red",
+        "borderWidth": 1,
       },
     ]
   }
@@ -135,6 +137,8 @@ exports[`renders icon badge 2`] = `
       },
       Object {
         "backgroundColor": "transparent",
+        "borderColor": "#486c86",
+        "borderWidth": 1,
       },
     ]
   }
@@ -216,6 +220,8 @@ exports[`renders regular badge 2`] = `
       },
       Object {
         "backgroundColor": "transparent",
+        "borderColor": "#486c86",
+        "borderWidth": 1,
       },
     ]
   }

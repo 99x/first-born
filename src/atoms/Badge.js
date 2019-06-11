@@ -18,7 +18,11 @@ export class Badge extends Component {
         if (!outline) {
             badgeStyle.push({ backgroundColor: color });
         } else {
-            badgeStyle.push({ backgroundColor: "transparent" });
+            badgeStyle.push({
+                backgroundColor: "transparent",
+                borderColor: color,
+                borderWidth: 1
+            });
             textStyle = { color: color };
             iconColor = color;
         }
