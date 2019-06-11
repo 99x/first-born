@@ -155,9 +155,10 @@ Only accepts `Text` and `Icon` atoms and `react-native Image` .
 
 You can use any [View property](https://facebook.github.io/react-native/docs/view.html) and the following:
 
-| Prop        | Description          | Default   |
-|-------------|----------------------|-----------|
-| **`color`** | Color of the button. | _primary_ |
+| Prop          | Description                         | Default   |
+|---------------|-------------------------------------|-----------|
+| **`color`**   | Color of the badge.                 | _primary_ |
+| **`outline`** | If the badge has the outline style. | _false_   |
 
 #### Thumbnail
 

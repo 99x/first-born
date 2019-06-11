@@ -6,6 +6,7 @@ exports[`renders colored badge 1`] = `
     Array [
       Object {
         "alignItems": "center",
+        "borderRadius": 15,
         "flexDirection": "row",
         "justifyContent": "center",
         "margin": 5,
@@ -14,7 +15,6 @@ exports[`renders colored badge 1`] = `
       },
       Object {
         "backgroundColor": "red",
-        "borderRadius": 15,
       },
     ]
   }
@@ -39,12 +39,52 @@ exports[`renders colored badge 1`] = `
 </View>
 `;
 
+exports[`renders colored badge 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderRadius": 15,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "margin": 5,
+        "paddingHorizontal": 10,
+        "paddingVertical": 5,
+      },
+      Object {
+        "backgroundColor": "transparent",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+          "fontSize": 13,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+        Object {
+          "color": "red",
+        },
+      ]
+    }
+  >
+    +1
+  </Text>
+</View>
+`;
+
 exports[`renders icon badge 1`] = `
 <View
   style={
     Array [
       Object {
         "alignItems": "center",
+        "borderRadius": 15,
         "flexDirection": "row",
         "justifyContent": "center",
         "margin": 5,
@@ -53,7 +93,6 @@ exports[`renders icon badge 1`] = `
       },
       Object {
         "backgroundColor": "#486c86",
-        "borderRadius": 15,
       },
     ]
   }
@@ -81,12 +120,55 @@ exports[`renders icon badge 1`] = `
 </View>
 `;
 
+exports[`renders icon badge 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderRadius": 15,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "margin": 5,
+        "paddingHorizontal": 10,
+        "paddingVertical": 5,
+      },
+      Object {
+        "backgroundColor": "transparent",
+      },
+    ]
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": "#486c86",
+          "fontSize": 15,
+        },
+        undefined,
+        Object {
+          "fontFamily": "Ionicons",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    
+  </Text>
+</View>
+`;
+
 exports[`renders regular badge 1`] = `
 <View
   style={
     Array [
       Object {
         "alignItems": "center",
+        "borderRadius": 15,
         "flexDirection": "row",
         "justifyContent": "center",
         "margin": 5,
@@ -95,7 +177,6 @@ exports[`renders regular badge 1`] = `
       },
       Object {
         "backgroundColor": "#486c86",
-        "borderRadius": 15,
       },
     ]
   }
@@ -111,6 +192,45 @@ exports[`renders regular badge 1`] = `
         },
         Object {
           "color": "#FFF",
+        },
+      ]
+    }
+  >
+    +1
+  </Text>
+</View>
+`;
+
+exports[`renders regular badge 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderRadius": 15,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "margin": 5,
+        "paddingHorizontal": 10,
+        "paddingVertical": 5,
+      },
+      Object {
+        "backgroundColor": "transparent",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+          "fontSize": 13,
+          "fontWeight": "normal",
+          "textAlign": "left",
+        },
+        Object {
+          "color": "#486c86",
         },
       ]
     }

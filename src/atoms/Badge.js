@@ -7,23 +7,21 @@ import { Text } from "./Text";
 
 export class Badge extends Component {
     render() {
-        const { color, children, ...otherProps } = this.props;
+        const { color, children, outline, ...otherProps } = this.props;
 
-        const badgeColor = color;
+        let badgeStyle = [styles.defaultBadge];
 
-        let badgeStyle = [
-            styles.defaultBadge,
-            {
-                borderRadius: 15,
-                backgroundColor: badgeColor
-            }
-        ];
-
-        let textStyle = {
-            color: commonColors.white
-        };
+        let textStyle = { color: commonColors.white };
 
         let iconColor = commonColors.white;
+
+        if (!outline) {
+            badgeStyle.push({ backgroundColor: color });
+        } else {
+            badgeStyle.push({ backgroundColor: "transparent" });
+            textStyle = { color: color };
+            iconColor = color;
+        }
 
         const newChildren = React.Children.map(children, child =>
             child && child.type === Text
@@ -64,6 +62,7 @@ export class Badge extends Component {
 
 Badge.propTypes = {
     color: PropTypes.string,
+    outline: PropTypes.bool,
     ...View.propTypes
 };
 
@@ -78,6 +77,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         paddingHorizontal: 10,
-        paddingVertical: 5
+        paddingVertical: 5,
+        borderRadius: 15
     }
 });

@@ -43,3 +43,36 @@ it("renders icon badge", () => {
         .toJSON();
     expect(tree).toMatchSnapshot();
 });
+
+it("renders regular badge", () => {
+    const tree = renderer
+        .create(
+            <Badge outline>
+                <Text>+1</Text>
+            </Badge>
+        )
+        .toJSON();
+    expect(tree).toMatchSnapshot();
+});
+
+it("renders colored badge", () => {
+    const tree = renderer
+        .create(
+            <Badge color="red" outline>
+                <Text>+1</Text>
+            </Badge>
+        )
+        .toJSON();
+    expect(tree).toMatchSnapshot();
+});
+
+it("renders icon badge", () => {
+    const tree = renderer
+        .create(
+            <Badge outline>
+                <Icon name="heart" />
+            </Badge>
+        )
+        .toJSON();
+    expect(tree).toMatchSnapshot();
+});
