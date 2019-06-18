@@ -7,12 +7,14 @@ import { Icon } from "../../../atoms/Icon";
 import { Text } from "../../../atoms/Text";
 
 import { commonColors } from "../../../utils/color";
+import { getFontSize } from "first-born/src/variables/textSizeVariables";
 
-const { width, height } = Dimensions.get("window");
+const { width } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
     notificationContainer: {
-        height: height * 0.05,
+        padding: 5,
+        paddingVertical: 10,
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "row",
@@ -56,7 +58,7 @@ export class Notification extends Component {
     getStateByProps(props) {
         return {
             color: props.color || "#007bff",
-            icon: props.icon || "alert",
+            icon: props.icon || { name: "alert" },
             image: props.image || undefined,
             message: props.message,
             duration: props.duration || 3000,
@@ -65,7 +67,10 @@ export class Notification extends Component {
                     ? true
                     : props.shouldHideAfterDelay,
             durationToShow: props.durationToShow || 350,
-            durationToHide: props.durationToHide || 350
+            durationToHide: props.durationToHide || 350,
+            fontSize: props.fontSize || getFontSize("sub_heading"),
+            fontWeight: props.fontWeight || "bold",
+            textColor: props.textColor || commonColors.white,
         };
     }
 
@@ -125,25 +130,27 @@ export class Notification extends Component {
     }
 
     renderIcon() {
-        const { icon, image } = this.state;
+        const { icon, image, textColor } = this.state;
         if (image) {
             return (
                 <View style={styles.iconStyle}>
-                    <Image source={image} style={styles.imageStyle} />
+                    <Image {...image} style={styles.imageStyle} />
                 </View>
             );
         }
         return (
             <View style={styles.iconStyle}>
-                <Icon name={icon} />
+                <Icon {...icon} color={textColor} />
             </View>
         );
     }
 
     renderMessage() {
         if (this.state.message !== null) {
+            const { fontSize, fontWeight, textColor } = this.state;
+            const textFontSize = typeof fontSize === "string" ? getFontSize(fontSize) : fontSize
             return (
-                <Text style={styles.notificationText}>
+                <Text style={[styles.notificationText, { fontSize: textFontSize, fontWeight }]} color={textColor} >
                     {this.state.message}
                 </Text>
             );
@@ -153,13 +160,23 @@ export class Notification extends Component {
 
 Notification.propTypes = {
     message: PropTypes.string,
-    icon: PropTypes.string,
+    icon: PropTypes.shape({
+        ...Icon.propTypes
+    }),
     color: PropTypes.string,
-    image: PropTypes.object,
+    image: PropTypes.shape({
+        ...Image.propTypes
+    }),
     duration: PropTypes.number,
     shouldHideAfterDelay: PropTypes.bool,
     durationToShow: PropTypes.number,
-    durationToHide: PropTypes.number
+    durationToHide: PropTypes.number,
+    fontWeight: PropTypes.string,
+    fontSize: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
+    textColor: PropTypes.string
 };
 
 Notification.defaultProps = {
