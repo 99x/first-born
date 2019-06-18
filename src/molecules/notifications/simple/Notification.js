@@ -7,7 +7,7 @@ import { Icon } from "../../../atoms/Icon";
 import { Text } from "../../../atoms/Text";
 
 import { commonColors } from "../../../utils/color";
-import { getFontSize } from "first-born/src/variables/textSizeVariables";
+import { getFontSize } from "../../../variables/textSizeVariables";
 
 const { width } = Dimensions.get("window");
 
