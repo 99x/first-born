@@ -14,7 +14,7 @@ const { width } = Dimensions.get("window");
 const styles = StyleSheet.create({
     notificationContainer: {
         padding: 5,
-        paddingVertical: 10,
+        paddingVertical: 7,
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "row",
@@ -70,7 +70,7 @@ export class Notification extends Component {
             durationToHide: props.durationToHide || 350,
             fontSize: props.fontSize || getFontSize("sub_heading"),
             fontWeight: props.fontWeight || "bold",
-            textColor: props.textColor || commonColors.white,
+            textColor: props.textColor || commonColors.white
         };
     }
 
@@ -148,9 +148,16 @@ export class Notification extends Component {
     renderMessage() {
         if (this.state.message !== null) {
             const { fontSize, fontWeight, textColor } = this.state;
-            const textFontSize = typeof fontSize === "string" ? getFontSize(fontSize) : fontSize
+            const textFontSize =
+                typeof fontSize === "string" ? getFontSize(fontSize) : fontSize;
             return (
-                <Text style={[styles.notificationText, { fontSize: textFontSize, fontWeight }]} color={textColor} >
+                <Text
+                    style={[
+                        styles.notificationText,
+                        { fontSize: textFontSize, fontWeight }
+                    ]}
+                    color={textColor}
+                >
                     {this.state.message}
                 </Text>
             );
@@ -172,10 +179,7 @@ Notification.propTypes = {
     durationToShow: PropTypes.number,
     durationToHide: PropTypes.number,
     fontWeight: PropTypes.string,
-    fontSize: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number
-    ]),
+    fontSize: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     textColor: PropTypes.string
 };
 
