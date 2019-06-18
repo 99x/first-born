@@ -1,6 +1,6 @@
 {
     "name": "@99xt/first-born",
-    "version": "1.1.5",
+    "version": "1.1.6",
     "description": "React Native UI Framework",
     "main": "index.js",
     "scripts": {
