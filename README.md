@@ -450,7 +450,9 @@ To trigger the Notification display, you will need to run the Notification manag
 ```js
 handleShowNotification = () => {
     NotificationBarManager.showAlert({
-        message: 'Your alert message goes here' // required
+        message: 'Your alert message goes here', // required
+        icon: { name: "alert" },
+        // image: { source: require("./assets/images/accessibility.png") }, // image prop
     });
 }
 ```
@@ -463,16 +465,19 @@ handleShowNotification = () => {
 
 The data that can be passed to the notification are;
 
-| Prop                       | Description                                                    | Default     |
-|----------------------------|----------------------------------------------------------------|-------------|
-| **`message`**              | Message to display. **(Required)**                             | _None_      |
-| **`shouldHideAfterDelay`** | If notification should hide after display or keep being shown. | _true_      |
-| **`durationToHide`**       | Animation duration for the notification to completely hide.    | `350`       |
-| **`durationToShow`**       | Animation duration for the notification to completely show.    | `350`       |
-| **`duration`**             | Duration of time to display the alert                          | `3000`      |
-| **`image`**                | Image to be displayed next to notification message             | _None_      |
-| **`icon`**                 | Icon to be displayed next to notification message              | `'alert'`   |
-| **`color`**                | Background color of the Notification body.                     | `'#007bff'` |
+| Prop                       | Description                                                                                     | Default         |
+|----------------------------|-------------------------------------------------------------------------------------------------|-----------------|
+| **`message`**              | Message to display. **(Required)**                                                              | _None_          |
+| **`shouldHideAfterDelay`** | If notification should hide after display or keep being shown.                                  | _true_          |
+| **`durationToHide`**       | Animation duration for the notification to completely hide.                                     | `350`           |
+| **`durationToShow`**       | Animation duration for the notification to completely show.                                     | `350`           |
+| **`duration`**             | Duration of time to display the alert                                                           | `3000`          |
+| **`image`**                | Image to be displayed next to notification message                                              | _None_          |
+| **`icon`**                 | Icon to be displayed next to notification message                                               | `'alert'`       |
+| **`color`**                | Background color of the Notification body.                                                      | `'#007bff'`     |
+| **`textColor`**            | Color of the Notification text.                                                                 | _white_         |
+| **`fontSize`**             | Font size of Notification text. Accepts text identifier of above Text atom, or specific number. | `'sub_heading'` |
+| **`fontWeight`**           | Font weight of the Notification text.                                                           | `'bold'`        |
 
 #### SnackBars
 
