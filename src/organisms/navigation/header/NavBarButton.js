@@ -26,15 +26,16 @@ export class NavBarButton extends Component {
                     : null
             );
         } else if (type) {
+            idx = newChildren.length;
             switch (type) {
                 case "back":
-                    newChildren.push(<Icon name="arrow-back" size={25} />);
+                    newChildren.push(<Icon name="arrow-back" size={25} key={idx} />);
                     break;
                 case "search":
-                    newChildren.push(<Icon name="search" size={25} />);
+                    newChildren.push(<Icon name="search" size={25} key={idx} />);
                     break;
                 case "drawer":
-                    newChildren.push(<Icon name="menu" size={25} />);
+                    newChildren.push(<Icon name="menu" size={25} key={idx} />);
                     break;
             }
 
