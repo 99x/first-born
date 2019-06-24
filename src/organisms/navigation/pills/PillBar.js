@@ -23,13 +23,13 @@ export class PillBar extends Component {
                     Platform.OS === "android"
                         ? styles.container
                         : [
-                              styles.container,
-                              {
-                                  borderColor: color,
-                                  borderRadius: 15,
-                                  borderWidth: 1.5
-                              }
-                          ]
+                            styles.container,
+                            {
+                                borderColor: color,
+                                borderRadius: 15,
+                                borderWidth: 1.5
+                            }
+                        ]
                 }
             >
                 {pillHeaders &&
@@ -39,6 +39,7 @@ export class PillBar extends Component {
                                 activeColor={color}
                                 onPress={() => onPillChange(index)}
                                 active={index === activePill}
+                                key={index}
                                 {...otherProps}
                             >
                                 {this.getIcon(pill)}
