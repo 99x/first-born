@@ -57,8 +57,8 @@ export class Card extends Component {
 }
 
 Card.propTypes = {
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string,
+    title: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    description: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     image: PropTypes.shape({
         ...Image.propTypes
     }),
