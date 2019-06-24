@@ -26,13 +26,17 @@ export class NavBarButton extends Component {
                     : null
             );
         } else if (type) {
-            idx = newChildren.length;
+            const idx = newChildren.length;
             switch (type) {
                 case "back":
-                    newChildren.push(<Icon name="arrow-back" size={25} key={idx} />);
+                    newChildren.push(
+                        <Icon name="arrow-back" size={25} key={idx} />
+                    );
                     break;
                 case "search":
-                    newChildren.push(<Icon name="search" size={25} key={idx} />);
+                    newChildren.push(
+                        <Icon name="search" size={25} key={idx} />
+                    );
                     break;
                 case "drawer":
                     newChildren.push(<Icon name="menu" size={25} key={idx} />);
@@ -40,7 +44,7 @@ export class NavBarButton extends Component {
             }
 
             if (Platform.OS === "ios" && type === "back") {
-                newChildren.push(<Text>Back</Text>);
+                newChildren.push(<Text key={idx + 1}>Back</Text>);
             }
         }
 

@@ -23,13 +23,13 @@ export class PillBar extends Component {
                     Platform.OS === "android"
                         ? styles.container
                         : [
-                            styles.container,
-                            {
-                                borderColor: color,
-                                borderRadius: 15,
-                                borderWidth: 1.5
-                            }
-                        ]
+                              styles.container,
+                              {
+                                  borderColor: color,
+                                  borderRadius: 15,
+                                  borderWidth: 1.5
+                              }
+                          ]
                 }
             >
                 {pillHeaders &&
