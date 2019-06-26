@@ -180,10 +180,6 @@ NavBar.defaultProps = {
         flexDirection: "row"
     },
     shadowProperties: {
-        elevation: 3,
-        shadowColor: commonColors.black,
-        shadowOffset: { width: 0, height: 3 },
-        shadowOpacity: 0.4,
-        shadowRadius: 1.2
+        elevation: 3
     }
 };

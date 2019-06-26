@@ -1,10 +1,37 @@
 import React, { Component } from "react";
 import { View, StyleSheet, Platform } from "react-native";
 import PropTypes from "prop-types";
+import { deviceVariables } from "../../../variables/deviceVariables";
 import { commonColors } from "../../../utils/color";
 import { isIphoneX } from "../../../utils/platform";
 
 export class TabBar extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            orientation:
+                deviceVariables.height > deviceVariables.width
+                    ? "portrait"
+                    : "landscape"
+        };
+    }
+
+    layoutChange(val) {
+        let maxComp = Math.max(deviceVariables.width, deviceVariables.height);
+        if (val.width >= maxComp) {
+            this.setState({ orientation: "landscape" });
+        } else {
+            this.setState({ orientation: "portrait" });
+        }
+    }
+
+    calculatePadder(mode, inset) {
+        const insetValues =
+            mode === "portrait" ? inset.portrait : inset.landscape;
+        let bottomPadder = insetValues.bottomInset;
+        return bottomPadder;
+    }
+
     render() {
         const {
             color,
@@ -18,7 +45,13 @@ export class TabBar extends Component {
         let tabBarStyle = [styles.container, { backgroundColor: color }];
 
         if (isIphoneX() && !top) {
-            tabBarStyle.push({ paddingBottom: 15 });
+            tabBarStyle.push({
+                paddingBottom:
+                    this.calculatePadder(
+                        this.state.orientation,
+                        deviceVariables.Inset
+                    ) * 0.55
+            });
         }
 
         const newChildren = React.Children.map(children, child =>
