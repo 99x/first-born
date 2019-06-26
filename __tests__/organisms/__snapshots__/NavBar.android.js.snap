@@ -17,13 +17,6 @@ exports[`renders NavBar with back button 1`] = `
         "elevation": 3,
         "flex": 1,
         "flexDirection": "row",
-        "shadowColor": "#000",
-        "shadowOffset": Object {
-          "height": 3,
-          "width": 0,
-        },
-        "shadowOpacity": 0.4,
-        "shadowRadius": 1.2,
       }
     }
   >
@@ -150,13 +143,6 @@ exports[`renders NavBar with custom button 1`] = `
         "elevation": 3,
         "flex": 1,
         "flexDirection": "row",
-        "shadowColor": "#000",
-        "shadowOffset": Object {
-          "height": 3,
-          "width": 0,
-        },
-        "shadowOpacity": 0.4,
-        "shadowRadius": 1.2,
       }
     }
   >
@@ -283,13 +269,6 @@ exports[`renders NavBar with drawer button 1`] = `
         "elevation": 3,
         "flex": 1,
         "flexDirection": "row",
-        "shadowColor": "#000",
-        "shadowOffset": Object {
-          "height": 3,
-          "width": 0,
-        },
-        "shadowOpacity": 0.4,
-        "shadowRadius": 1.2,
       }
     }
   >
@@ -416,13 +395,6 @@ exports[`renders NavBar with search button 1`] = `
         "elevation": 3,
         "flex": 1,
         "flexDirection": "row",
-        "shadowColor": "#000",
-        "shadowOffset": Object {
-          "height": 3,
-          "width": 0,
-        },
-        "shadowOpacity": 0.4,
-        "shadowRadius": 1.2,
       }
     }
   >
@@ -549,13 +521,6 @@ exports[`renders NavBar with title 1`] = `
         "elevation": 3,
         "flex": 1,
         "flexDirection": "row",
-        "shadowColor": "#000",
-        "shadowOffset": Object {
-          "height": 3,
-          "width": 0,
-        },
-        "shadowOpacity": 0.4,
-        "shadowRadius": 1.2,
       }
     }
   >
