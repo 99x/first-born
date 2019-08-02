@@ -64,3 +64,6 @@ export { TabItem } from "./src/organisms/navigation/footer/TabItem";
 export { PillView } from "./src/organisms/navigation/pills/PillView";
 export { PillBar } from "./src/organisms/navigation/pills/PillBar";
 export { PillItem } from "./src/organisms/navigation/pills/PillItem";
+
+// Util methods and classes
+export { getMapStyles } from "./src/utils/map";
