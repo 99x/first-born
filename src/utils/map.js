@@ -1,7 +1,10 @@
 import MAP_STYLES, { getMapObject } from "../variables/mapStyle";
-import { getMapColor } from "../variables/mapColors";
 
+/**
+ * @param {*} mapStyle - 'string' - one of predefined style name from following
+ * light, greynight, dark, silver, aubergine
+ * 
+ */
 export function getMapStyles(mapStyle) {
     return MAP_STYLES[mapStyle];
-    // return getMapObject(getMapColor(mapStyle));
 }
