@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "jest",
-        "pretty": "prettier --write --tab-width 4 \"**/*.{js,jsx,json}\"",
+        "pretty": "prettier --write --tab-width 4 \"**/*.{js,jsx,ts,tsx,json}\"",
         "precommit": "lint-staged && npm run test"
     },
     "keywords": [
@@ -24,6 +24,7 @@
     "devDependencies": {
         "@babel/plugin-proposal-class-properties": "^7.4.0",
         "@babel/plugin-transform-flow-strip-types": "^7.4.0",
+        "@react-native-community/toolbar-android": "0.1.0-rc.2",
         "create-react-class": "^15.6.3",
         "husky": "^1.3.1",
         "jest": "^24.5.0",
@@ -33,8 +34,10 @@
         "prop-types": "^15.7.2",
         "react": "^16.8.6",
         "react-native": "^0.59.3",
+        "react-native-typescript-transformer": "^1.2.13",
         "react-native-vector-icons": "^6.4.2",
-        "react-test-renderer": "^16.8.6"
+        "react-test-renderer": "^16.8.6",
+        "typescript": "^3.7.4"
     },
     "jest": {
         "preset": "react-native"
