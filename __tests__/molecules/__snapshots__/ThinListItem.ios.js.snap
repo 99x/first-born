@@ -282,7 +282,7 @@ exports[`renders thin list item with heading, title and arrow 1`] = `
         ]
       }
     >
-      
+      
     </Text>
   </View>
 </View>
@@ -496,7 +496,7 @@ exports[`renders thin list item with heading, title, image and arrow 1`] = `
         ]
       }
     >
-      
+      
     </Text>
   </View>
 </View>

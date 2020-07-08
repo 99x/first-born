@@ -103,7 +103,7 @@ exports[`renders icon button 1`] = `
       ]
     }
   >
-    
+    
   </Text>
   <Text
     style={

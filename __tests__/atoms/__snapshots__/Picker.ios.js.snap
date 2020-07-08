@@ -72,7 +72,7 @@ exports[`renders Picker with placeholder 1`] = `
         ]
       }
     >
-      
+      
     </Text>
   </View>
   <Modal
@@ -238,7 +238,7 @@ exports[`renders colored Picker 1`] = `
         ]
       }
     >
-      
+      
     </Text>
   </View>
   <Modal
@@ -401,7 +401,7 @@ exports[`renders custom styled Picker 1`] = `
         ]
       }
     >
-      
+      
     </Text>
   </View>
   <Modal
@@ -567,7 +567,7 @@ exports[`renders regular Picker 1`] = `
         ]
       }
     >
-      
+      
     </Text>
   </View>
   <Modal
@@ -737,7 +737,7 @@ exports[`renders rounded Picker 1`] = `
         ]
       }
     >
-      
+      
     </Text>
   </View>
   <Modal
@@ -899,7 +899,7 @@ exports[`renders underlined Picker 1`] = `
         ]
       }
     >
-      
+      
     </Text>
   </View>
   <Modal
@@ -1058,7 +1058,7 @@ exports[`renders unstyled Picker 1`] = `
         ]
       }
     >
-      
+      
     </Text>
   </View>
   <Modal

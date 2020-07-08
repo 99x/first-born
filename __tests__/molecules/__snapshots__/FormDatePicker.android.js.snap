@@ -101,7 +101,7 @@ exports[`renders FormDatePicker with placeholder 1`] = `
             ]
           }
         >
-          
+          
         </Text>
       </View>
     </View>
@@ -210,7 +210,7 @@ exports[`renders colored FormDatePicker 1`] = `
             ]
           }
         >
-          
+          
         </Text>
       </View>
     </View>
@@ -319,7 +319,7 @@ exports[`renders regular FormDatePicker 1`] = `
             ]
           }
         >
-          
+          
         </Text>
       </View>
     </View>

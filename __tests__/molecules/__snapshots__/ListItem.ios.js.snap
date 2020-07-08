@@ -180,7 +180,7 @@ exports[`renders expandable list item with heading and title 1`] = `
           ]
         }
       >
-        
+        
       </Text>
     </View>
   </View>

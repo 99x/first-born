@@ -62,7 +62,7 @@ exports[`renders PillView with icons 1`] = `
           ]
         }
       >
-        
+        
       </Text>
     </View>
     <View
@@ -108,7 +108,7 @@ exports[`renders PillView with icons 1`] = `
           ]
         }
       >
-        
+        
       </Text>
     </View>
     <View
@@ -154,7 +154,7 @@ exports[`renders PillView with icons 1`] = `
           ]
         }
       >
-        
+        
       </Text>
     </View>
   </View>
@@ -416,7 +416,7 @@ exports[`renders PillView with titles and icons 1`] = `
           ]
         }
       >
-        
+        
       </Text>
       <Text
         style={
@@ -476,7 +476,7 @@ exports[`renders PillView with titles and icons 1`] = `
           ]
         }
       >
-        
+        
       </Text>
       <Text
         style={
@@ -536,7 +536,7 @@ exports[`renders PillView with titles and icons 1`] = `
           ]
         }
       >
-        
+        
       </Text>
       <Text
         style={

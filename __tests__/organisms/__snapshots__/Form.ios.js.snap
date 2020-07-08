@@ -179,7 +179,7 @@ exports[`renders a form with all custom styled input types 1`] = `
               ]
             }
           >
-            
+            
           </Text>
         </View>
         <Modal
@@ -377,7 +377,7 @@ exports[`renders a form with all custom styled input types 1`] = `
                 ]
               }
             >
-              
+              
             </Text>
           </View>
         </View>
@@ -711,7 +711,7 @@ exports[`renders a form with all input types 1`] = `
               ]
             }
           >
-            
+            
           </Text>
         </View>
         <Modal
@@ -912,7 +912,7 @@ exports[`renders a form with all input types 1`] = `
                 ]
               }
             >
-              
+              
             </Text>
           </View>
         </View>
@@ -1257,7 +1257,7 @@ exports[`renders a form with all rounded input types 1`] = `
               ]
             }
           >
-            
+            
           </Text>
         </View>
         <Modal
@@ -1462,7 +1462,7 @@ exports[`renders a form with all rounded input types 1`] = `
                 ]
               }
             >
-              
+              
             </Text>
           </View>
         </View>
@@ -1791,7 +1791,7 @@ exports[`renders a form with all underlined input types 1`] = `
               ]
             }
           >
-            
+            
           </Text>
         </View>
         <Modal
@@ -1988,7 +1988,7 @@ exports[`renders a form with all underlined input types 1`] = `
                 ]
               }
             >
-              
+              
             </Text>
           </View>
         </View>
@@ -2307,7 +2307,7 @@ exports[`renders a form with all unstyled input types 1`] = `
               ]
             }
           >
-            
+            
           </Text>
         </View>
         <Modal
@@ -2501,7 +2501,7 @@ exports[`renders a form with all unstyled input types 1`] = `
                 ]
               }
             >
-              
+              
             </Text>
           </View>
         </View>
@@ -3084,7 +3084,7 @@ exports[`renders a form with input types, text, textarea and picker 1`] = `
               ]
             }
           >
-            
+            
           </Text>
         </View>
         <Modal
