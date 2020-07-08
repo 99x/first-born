@@ -117,7 +117,7 @@ exports[`renders icon badge 1`] = `
       ]
     }
   >
-    
+    
   </Text>
 </View>
 `;
@@ -161,7 +161,7 @@ exports[`renders icon badge 2`] = `
       ]
     }
   >
-    
+    
   </Text>
 </View>
 `;

@@ -8,6 +8,7 @@ export function isIphoneX() {
         !Platform.isTVOS &&
         (deviceVariables.height === 812 ||
             deviceVariables.width === 812 ||
-            (deviceVariables.height === 896 || deviceVariables.width === 896))
+            deviceVariables.height === 896 ||
+            deviceVariables.width === 896)
     );
 }

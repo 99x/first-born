@@ -82,7 +82,7 @@ exports[`renders NavBar with back button 1`] = `
             ]
           }
         >
-          
+          
         </Text>
         <Text
           style={
@@ -263,7 +263,7 @@ exports[`renders NavBar with custom button 1`] = `
             ]
           }
         >
-          
+          
         </Text>
       </View>
     </View>
@@ -353,7 +353,7 @@ exports[`renders NavBar with drawer button 1`] = `
             ]
           }
         >
-          
+          
         </Text>
       </View>
     </View>
@@ -479,7 +479,7 @@ exports[`renders NavBar with search button 1`] = `
             ]
           }
         >
-          
+          
         </Text>
       </View>
     </View>

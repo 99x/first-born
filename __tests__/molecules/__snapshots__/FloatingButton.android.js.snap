@@ -238,7 +238,7 @@ exports[`renders regular FloatingButton with multiple actions 1`] = `
               ]
             }
           >
-            
+            
           </Text>
         </View>
       </View>
@@ -370,7 +370,7 @@ exports[`renders regular FloatingButton with multiple actions 1`] = `
               ]
             }
           >
-            
+            
           </Text>
         </View>
       </View>
@@ -502,7 +502,7 @@ exports[`renders regular FloatingButton with multiple actions 1`] = `
               ]
             }
           >
-            
+            
           </Text>
         </View>
       </View>

@@ -30,9 +30,7 @@ export { FloatingButton } from "./src/molecules/floatingButton/FloatingButton";
 // Notification molecules
 import NotificationManager from "./src/molecules/notifications/simple/NotificationManager";
 export { NotificationManager as NotificationBarManager };
-export {
-    Notification
-} from "./src/molecules/notifications/simple/Notification";
+export { Notification } from "./src/molecules/notifications/simple/Notification";
 
 import SnackBarManager from "./src/molecules/notifications/snackbar/SnackBarManager";
 export { SnackBarManager as SnackManager };

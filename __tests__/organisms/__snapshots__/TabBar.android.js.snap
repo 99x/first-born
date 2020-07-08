@@ -55,7 +55,7 @@ exports[`renders bottom TabBar with icons 1`] = `
         ]
       }
     >
-      
+      
     </Text>
   </View>
   <View
@@ -98,7 +98,7 @@ exports[`renders bottom TabBar with icons 1`] = `
         ]
       }
     >
-      
+      
     </Text>
   </View>
   <View
@@ -141,7 +141,7 @@ exports[`renders bottom TabBar with icons 1`] = `
         ]
       }
     >
-      
+      
     </Text>
   </View>
   <View
@@ -184,7 +184,7 @@ exports[`renders bottom TabBar with icons 1`] = `
         ]
       }
     >
-      
+      
     </Text>
   </View>
 </View>
@@ -411,7 +411,7 @@ exports[`renders bottom TabBar with tab titles and icons 1`] = `
         ]
       }
     >
-      
+      
     </Text>
     <Text
       style={
@@ -471,7 +471,7 @@ exports[`renders bottom TabBar with tab titles and icons 1`] = `
         ]
       }
     >
-      
+      
     </Text>
     <Text
       style={
@@ -531,7 +531,7 @@ exports[`renders bottom TabBar with tab titles and icons 1`] = `
         ]
       }
     >
-      
+      
     </Text>
     <Text
       style={
@@ -591,7 +591,7 @@ exports[`renders bottom TabBar with tab titles and icons 1`] = `
         ]
       }
     >
-      
+      
     </Text>
     <Text
       style={
@@ -670,7 +670,7 @@ exports[`renders top TabBar with icons 1`] = `
         ]
       }
     >
-      
+      
     </Text>
   </View>
   <View
@@ -714,7 +714,7 @@ exports[`renders top TabBar with icons 1`] = `
         ]
       }
     >
-      
+      
     </Text>
   </View>
   <View
@@ -758,7 +758,7 @@ exports[`renders top TabBar with icons 1`] = `
         ]
       }
     >
-      
+      
     </Text>
   </View>
   <View
@@ -802,7 +802,7 @@ exports[`renders top TabBar with icons 1`] = `
         ]
       }
     >
-      
+      
     </Text>
   </View>
 </View>
@@ -1034,7 +1034,7 @@ exports[`renders top TabBar with tab titles and icons 1`] = `
         ]
       }
     >
-      
+      
     </Text>
     <Text
       style={
@@ -1095,7 +1095,7 @@ exports[`renders top TabBar with tab titles and icons 1`] = `
         ]
       }
     >
-      
+      
     </Text>
     <Text
       style={
@@ -1156,7 +1156,7 @@ exports[`renders top TabBar with tab titles and icons 1`] = `
         ]
       }
     >
-      
+      
     </Text>
     <Text
       style={
@@ -1217,7 +1217,7 @@ exports[`renders top TabBar with tab titles and icons 1`] = `
         ]
       }
     >
-      
+      
     </Text>
     <Text
       style={

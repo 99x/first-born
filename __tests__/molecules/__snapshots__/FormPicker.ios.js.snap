@@ -93,7 +93,7 @@ exports[`renders FormPicker with placeholder 1`] = `
           ]
         }
       >
-        
+        
       </Text>
     </View>
     <Modal
@@ -281,7 +281,7 @@ exports[`renders colored FormPicker 1`] = `
           ]
         }
       >
-        
+        
       </Text>
     </View>
     <Modal
@@ -469,7 +469,7 @@ exports[`renders regular FormPicker 1`] = `
           ]
         }
       >
-        
+        
       </Text>
     </View>
     <Modal

@@ -80,7 +80,7 @@ exports[`renders DatePicker with placeholder 1`] = `
           ]
         }
       >
-        
+        
       </Text>
     </View>
   </View>
@@ -234,7 +234,7 @@ exports[`renders colored DatePicker 1`] = `
           ]
         }
       >
-        
+        
       </Text>
     </View>
   </View>
@@ -385,7 +385,7 @@ exports[`renders custom styled DatePicker 1`] = `
           ]
         }
       >
-        
+        
       </Text>
     </View>
   </View>
@@ -539,7 +539,7 @@ exports[`renders regular DatePicker 1`] = `
           ]
         }
       >
-        
+        
       </Text>
     </View>
   </View>
@@ -697,7 +697,7 @@ exports[`renders rounded DatePicker 1`] = `
           ]
         }
       >
-        
+        
       </Text>
     </View>
   </View>
@@ -847,7 +847,7 @@ exports[`renders underlined DatePicker 1`] = `
           ]
         }
       >
-        
+        
       </Text>
     </View>
   </View>
@@ -994,7 +994,7 @@ exports[`renders unstyled DatePicker 1`] = `
           ]
         }
       >
-        
+        
       </Text>
     </View>
   </View>
