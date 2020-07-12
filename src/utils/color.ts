@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import { Platform } from "react-native";
 
 export const commonColors = {
@@ -21,14 +20,14 @@ export const commonColors = {
     })
 };
 
-export function shadeColor(color, percent) {
+export function shadeColor(color:string, percent:number):string {
     let R = parseInt(color.substring(1, 3), 16);
     let G = parseInt(color.substring(3, 5), 16);
     let B = parseInt(color.substring(5, 7), 16);
 
-    R = parseInt((R * (100 + percent)) / 100, 0); // eslint-disable-line
-    G = parseInt((G * (100 + percent)) / 100, 0); // eslint-disable-line
-    B = parseInt((B * (100 + percent)) / 100, 0); // eslint-disable-line
+    R = parseInt(((R * (100 + percent)) / 100).toString(), 0);
+    G = parseInt(((G * (100 + percent)) / 100).toString(), 0);
+    B = parseInt(((B * (100 + percent)) / 100).toString(), 0);
 
     R = R < 255 ? R : 255;
     G = G < 255 ? G : 255;
