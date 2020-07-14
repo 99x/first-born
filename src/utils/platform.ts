@@ -1,7 +1,7 @@
-import { Platform } from "react-native";
 import { deviceVariables } from "../variables/deviceVariables";
+import { Platform } from "react-native";
 
-export function isIphoneX():boolean {
+export function isIphoneX(): boolean {
     return (
         Platform.OS === "ios" &&
         !Platform.isPad &&

@@ -1,4 +1,4 @@
-import {ComponentType} from 'react';
+import { ComponentType } from "react";
 import ZocialIcon from "react-native-vector-icons/Zocial";
 import OcticonIcon from "react-native-vector-icons/Octicons";
 import MaterialIcon from "react-native-vector-icons/MaterialIcons";
@@ -11,19 +11,19 @@ import FAIcon from "react-native-vector-icons/FontAwesome";
 import SimpleLineIcon from "react-native-vector-icons/SimpleLineIcons";
 import FeatherIcon from "react-native-vector-icons/Feather";
 import AntIcon from "react-native-vector-icons/AntDesign";
-import {IconProps} from 'react-native-vector-icons/Icon'
+import { IconProps } from "react-native-vector-icons/Icon";
 
-export interface CustomIcons{
-    [id:string]: string;
+export interface CustomIcons {
+    [id: string]: string;
 }
 
-const customIcons:CustomIcons = {};
+const customIcons: CustomIcons = {};
 
-export const registerCustomIconType = (id:string, customIcon:string) => {
+export const registerCustomIconType = (id: string, customIcon: string) => {
     customIcons[id] = customIcon;
 };
 
-export default (type:string):ComponentType<IconProps>|string => {
+export default (type: string): ComponentType<IconProps> | string => {
     switch (type) {
         case "zocial":
             return ZocialIcon;
