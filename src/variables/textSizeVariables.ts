@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Platform } from "react-native";
+import { FontTypes } from "../types";
 
-const fontSizes = {
+const fontSizes: any = {
     ...Platform.select({
         android: {
             h1: 96,
@@ -34,6 +35,6 @@ const fontSizes = {
     })
 };
 
-export function getFontSize(size) {
+export function getFontSize(size: FontTypes) {
     return fontSizes[size];
 }

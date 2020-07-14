@@ -1,27 +1,9 @@
 import { Dimensions } from "react-native";
+import { DeviceVariables } from "../types";
 
 const { width, height } = Dimensions.get("window");
 
-export interface DeviceVariables{
-    width:number,
-    height:number,
-    Inset:{
-        portrait:{
-            topInset:number,
-            leftInset:number,
-            rightInset:number,
-            bottomInset:number,
-        },
-        landscape:{
-            topInset:number,
-            leftInset:number,
-            rightInset:number,
-            bottomInset:number,
-        }
-    }
-}
-
-export const deviceVariables:DeviceVariables = {
+export const deviceVariables: DeviceVariables = {
     width,
     height,
     Inset: {
